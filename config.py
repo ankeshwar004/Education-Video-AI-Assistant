@@ -1,0 +1,72 @@
+
+import os
+from pathlib import Path
+
+
+BASE_DIR=Path(__file__).resolve().parent
+
+DATA_DIR=BASE_DIR/"data"
+VIDEO_DIR=DATA_DIR/"videos"
+AUDIO_DIR=DATA_DIR/"audio"
+TRANSCRIPTS_DIR=DATA_DIR/"transcripts"
+FRAMES_DIR=DATA_DIR/"frames"
+CHROMA_DB_DIR=DATA_DIR/"chroma_db"
+TEXT_DB_PATH=CHROMA_DB_DIR/"text"
+FRAME_DB_PATH=CHROMA_DB_DIR/"frames"
+
+OUTPUTS_DIR=BASE_DIR/"outputs"
+LOG_DIR=OUTPUTS_DIR/"logs"
+RESULTS_DIR=OUTPUTS_DIR/"results"
+LOG_FILE=LOG_DIR/"app.log"
+
+YOUTUBE_URL="https://www.youtube.com/watch?v=NyOYW07-L5g"
+
+DEVICE="cuda"
+WHISPER_MODEL="base"
+AUDIO_CHUNK_MINUTES=10
+
+TEXT_CHUNK_THRESHOLD=1000
+TEXT_EMBEDDING_MODEL="BAAI/bge-base-en-v1.5"
+TEXT_RETRIEVER_K=20
+
+CLIP_MODEL="clip-ViT-B-32"
+FRAME_THRESHOLD=15.0
+FRAME_MIN_GAP_SEC=1.0
+CLIP_SIMILARITY_THRESHOLD=0.95
+FRAME_HISTORY_SIZE=20
+THRESHOLD_SAMPLE_EVERY=5
+THRESHOLD_PERCENTILE=92
+FRAME_COLLECTION_NAME="frames"
+
+BM25_K=20
+ENSEMBLE_WEIGHTS=[0.3, 0.7]
+RERANKER_MODEL="BAAI/bge-reranker-base"
+RERANK_K=5
+CHAT_RERANK_K=3
+FRAME_RESULTS_K=3
+MAX_TURNS=3
+
+LLM_MODEL="nvidia/nemotron-nano-12b-v2-vl:free"
+DECISION_LLM_MODEL="gemini-2.5-flash"
+EVAL_LLM_MODEL="llama-3.3-70b-versatile"
+
+GEMINI_API_KEY=os.getenv("GEMINI_API_KEY")
+GROQ_API_KEY=os.getenv("GROQ_API_KEY")
+OPENROUTER_API_KEY=os.getenv("OPENROUTER_API_KEY")
+
+
+def ensure_directories():
+    for path in [
+        DATA_DIR,
+        VIDEO_DIR,
+        AUDIO_DIR,
+        TRANSCRIPTS_DIR,
+        FRAMES_DIR,
+        CHROMA_DB_DIR,
+        TEXT_DB_PATH,
+        FRAME_DB_PATH,
+        OUTPUTS_DIR,
+        LOG_DIR,
+        RESULTS_DIR,
+    ]:
+        path.mkdir(parents=True, exist_ok=True)

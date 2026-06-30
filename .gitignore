@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment and secrets
+.env
+.env.*
+*.key
+
+# Generated data and media
+data/videos/
+data/audio/
+data/transcripts/
+data/frames/
+data/chroma_db/
+
+# Legacy/generated notebook output paths
+videos/
+db/
+frame_db/
+frame_images/
+
+# Outputs
+outputs/logs/
+outputs/results/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
