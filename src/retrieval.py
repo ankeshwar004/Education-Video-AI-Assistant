@@ -1,13 +1,26 @@
+import chromadb
+import tiktoken
 from langchain_community.retrievers import BM25Retriever
+from langchain_community.vectorstores import Chroma
 from langchain_classic.retrievers import EnsembleRetriever
-from sentence_transformers import CrossEncoder
+from langchain_huggingface import HuggingFaceEmbeddings
+from langsmith import traceable
 
 import config
 from src.logger import get_logger
-from utils import is_similar,token_count
+from src.utils import is_similar,token_count
+from src.loader import load_reranker
 
 
 logger = get_logger(__name__)
+
+
+text_retriever=None
+bm25_retriever=None
+ensemble_retriever=None
+reranker=None
+frame_db=None
+clip_model=None
 
 
 def create_text_retriever(text_db):
@@ -18,8 +31,8 @@ def create_text_retriever(text_db):
 
 
 def create_bm25_retriever(text_docs):
-    bm25_retrieve =BM25Retriever.from_documents(text_docs)
-    bm25_retriever.k = config.BM25_K
+    bm25_retriever=BM25Retriever.from_documents(text_docs)
+    bm25_retriever.k=config.BM25_K
     return bm25_retriever
 
 
@@ -30,21 +43,23 @@ def create_ensemble_retriever(bm25_retriever, text_retriever):
         weights=config.ENSEMBLE_WEIGHTS)
 
 
-def load_reranker(model_name=config.RERANKER_MODEL):
-    
-    return CrossEncoder(model_name)
 
 
-def rerank(query,docs,reranker,k=5):
+
+def rerank(query,docs,reranker_arg=None,k=5):
+
+  active_reranker=reranker_arg if reranker_arg is not None else reranker
+  if active_reranker is None:
+    raise RuntimeError("Retrieval has not been initialized with a reranker")
 
   pairs=[(query,doc.page_content) for doc in docs]
 
-  scores=reranker.predict(pairs)
+  scores=active_reranker.predict(pairs)
   reranked=sorted(zip(docs,scores),key=lambda x:x[1],reverse=True)
 
   return [doc for doc,score in reranked[:k]]
 
-
+@traceable(name="Build Text Context")
 def build_text_context(docs):
   formatted=[]
 
@@ -58,6 +73,7 @@ def build_text_context(docs):
   return "\n\n".join(formatted)
 
 
+@traceable(name="Build OCR Context")
 def build_ocr_context(frames_metadata,max_token=config.MAX_OCR_TOKEN):
 
   if not frames_metadata:
@@ -87,12 +103,15 @@ def build_ocr_context(frames_metadata,max_token=config.MAX_OCR_TOKEN):
 
 
 
+def initialize_retrieval(text_docs, text_db, frame_db_arg=None, clip_model_arg=None):
+    global text_retriever, bm25_retriever, ensemble_retriever, reranker, frame_db, clip_model
 
-def initialize_retrieval(text_docs, text_db):
     text_retriever=create_text_retriever(text_db)
     bm25_retriever=create_bm25_retriever(text_docs)
     ensemble_retriever=create_ensemble_retriever(bm25_retriever, text_retriever)
     reranker=load_reranker(config.RERANKER_MODEL)
+    frame_db=frame_db_arg
+    clip_model=clip_model_arg
     logger.info("Retrieval initialized.")
     return {
         "text_retriever": text_retriever,
@@ -100,3 +119,19 @@ def initialize_retrieval(text_docs, text_db):
         "ensemble_retriever": ensemble_retriever,
         "reranker": reranker,
     }
+
+
+@traceable(name="Frame Retriever")
+def frame_retriever(query,chunk_ids,n=config.FRAME_RETRIEVER_N):
+
+  if frame_db is None or clip_model is None:
+    raise RuntimeError("Retrieval has not been initialized with frame_db and clip_model")
+
+  query_embedding=clip_model.encode(query,convert_to_numpy=True,normalize_embeddings=True)
+
+  return frame_db.query(
+      query_embeddings=[query_embedding.tolist()],
+      where={"chunk_id": {"$in": chunk_ids}},
+      n_results=n,
+      include=["metadatas","distances"]
+      )

@@ -1,9 +1,10 @@
-
 import os
 from pathlib import Path
+from dotenv import load_dotenv
 
 
 BASE_DIR=Path(__file__).resolve().parent
+load_dotenv(BASE_DIR/".env")
 
 DATA_DIR=BASE_DIR/"data"
 VIDEO_DIR=DATA_DIR/"videos"
@@ -21,6 +22,7 @@ LOG_FILE=LOG_DIR/"app.log"
 
 YOUTUBE_URL="https://www.youtube.com/watch?v=NyOYW07-L5g"
 
+
 DEVICE="cuda"
 WHISPER_MODEL="base"
 AUDIO_CHUNK_MINUTES=10
@@ -30,13 +32,15 @@ TEXT_EMBEDDING_MODEL="BAAI/bge-base-en-v1.5"
 TEXT_RETRIEVER_K=20
 
 CLIP_MODEL="clip-ViT-B-32"
-FRAME_THRESHOLD=15.0
 FRAME_MIN_GAP_SEC=1.0
 CLIP_SIMILARITY_THRESHOLD=0.95
 FRAME_HISTORY_SIZE=20
-THRESHOLD_SAMPLE_EVERY=5
-THRESHOLD_PERCENTILE=92
 FRAME_COLLECTION_NAME="frames"
+FRAME_SCORE_THRESHOLD=15
+FRAME_DETECTION_INTERVAL=5
+FRAME_DETECTION_THRESHOLD_PERCENTILE=92
+
+
 
 BM25_K=20
 ENSEMBLE_WEIGHTS=[0.3, 0.7]
@@ -44,29 +48,24 @@ RERANKER_MODEL="BAAI/bge-reranker-base"
 RERANK_K=5
 CHAT_RERANK_K=3
 FRAME_RESULTS_K=3
+FRAME_RETRIEVER_N=FRAME_RESULTS_K
+MAX_OCR_TOKEN=300
 MAX_TURNS=3
 
-LLM_MODEL="nvidia/nemotron-nano-12b-v2-vl:free"
-DECISION_LLM_MODEL="gemini-2.5-flash"
-EVAL_LLM_MODEL="llama-3.3-70b-versatile"
+MAIN_LLM_MODEL="gemini-2.5-flash"
+DECISION_LLM_MODEL="llama-3.1-8b-instant"
+SUMMARY_LLM_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
+EVAL_LLM_MODEL="openai/gpt-oss-120b:free"
 
 GEMINI_API_KEY=os.getenv("GEMINI_API_KEY")
+# GOOGLE_API_KEY=os.getenv("GOOGLE_API_KEY") or GEMINI_API_KEY
 GROQ_API_KEY=os.getenv("GROQ_API_KEY")
 OPENROUTER_API_KEY=os.getenv("OPENROUTER_API_KEY")
 
+# if GOOGLE_API_KEY:
+# 	os.environ.setdefault("GOOGLE_API_KEY", GOOGLE_API_KEY)
 
-def ensure_directories():
-    for path in [
-        DATA_DIR,
-        VIDEO_DIR,
-        AUDIO_DIR,
-        TRANSCRIPTS_DIR,
-        FRAMES_DIR,
-        CHROMA_DB_DIR,
-        TEXT_DB_PATH,
-        FRAME_DB_PATH,
-        OUTPUTS_DIR,
-        LOG_DIR,
-        RESULTS_DIR,
-    ]:
-        path.mkdir(parents=True, exist_ok=True)
+LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING", "true")
+LANGSMITH_ENDPOINT = os.getenv("LANGSMITH_ENDPOINT", "https://apac.api.smith.langchain.com")
+LANGSMITH_PROJECT = os.getenv("LANGSMITH_PROJECT", "RAG_VideoAssistant")
+LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")

@@ -1,7 +1,12 @@
-﻿import os
+import os
+import warnings
+
+import imageio_ffmpeg
 import yt_dlp
-from faster_whisper import WhisperModel
-from pydub import AudioSegment
+
+with warnings.catch_warnings():
+    warnings.filterwarnings("ignore", message="Couldn't find ffmpeg or avconv.*", category=RuntimeWarning)
+    from pydub import AudioSegment
 
 import config
 from src.logger import get_logger
@@ -9,10 +14,12 @@ from src.logger import get_logger
 
 
 logger = get_logger(__name__)
+AudioSegment.converter=imageio_ffmpeg.get_ffmpeg_exe()
 
 
 def download_video(url=config.YOUTUBE_URL, video_dir=config.VIDEO_DIR):
-    
+    os.makedirs(video_dir,exist_ok=True)
+
     video_name=os.path.join(str(video_dir), "%(title)s.%(ext)s")
     ydl_opts = {
         'format':'best[ext=mp4]',
@@ -31,6 +38,8 @@ def extract_audio(video_path, wav_path=None):
     if wav_path is None:
         wav_path=os.path.join(str(config.AUDIO_DIR),"audio.wav")
 
+    os.makedirs(os.path.dirname(wav_path),exist_ok=True)
+
     logger.info("Extracting audio...")
     audio=AudioSegment.from_file(video_path)
     audio.export(wav_path,format="wav")
@@ -47,14 +56,14 @@ def chunk_audio(wav_path,chunk_min=config.AUDIO_CHUNK_MINUTES):
   chunks=[]
   for i,chunk in enumerate(range(0,len(audio),chunk_length)):
     chunk=audio[chunk:chunk+chunk_length]
-    chunk_path=os.path.join(wav_chunk_path,f"{wav_path}_chunk{i}.wav")
+    chunk_name=os.path.splitext(os.path.basename(wav_path))[0]
+    chunk_path=os.path.join(wav_chunk_path,f"{chunk_name}_chunk{i}.wav")
     chunk.export(chunk_path,format="wav")
     chunks.append(chunk_path)
   return chunks
 
 
-def load_whisper_model(model_name=config.WHISPER_MODEL):
-    return WhisperModel(model_name)
+
 
 
 def transcribe(chunks, whisper):

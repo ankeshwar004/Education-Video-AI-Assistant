@@ -10,6 +10,7 @@ langchain-groq
 langchain-huggingface
 langchain-openrouter
 langchain-text-splitters
+langsmith
 numpy
 opencv-python
 pillow
@@ -20,3 +21,7 @@ scikit-learn
 sentence-transformers
 torch
 yt-dlp
+tiktoken
+python-dotenv
+audioop-lts
+imageio-ffmpeg

@@ -1,5 +1,3 @@
-"""Retrieval evaluation functions."""
-
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 
@@ -87,7 +85,6 @@ def evaluate_retrieval(qa_pairs, retrieval_fn, k_values=[1, 3, 5]):
 
 
 def evaluate_configs(qa_pairs, retrieval_components, eval_llm):
-    """Evaluate the retrieval configurations from the notebook."""
     bm25_retriever=retrieval_components["bm25_retriever"]
     text_retriever=retrieval_components["text_retriever"]
     ensemble_retriever=retrieval_components["ensemble_retriever"]

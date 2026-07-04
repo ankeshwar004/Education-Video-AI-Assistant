@@ -1,11 +1,6 @@
 import cv2
-import easyocr
 import numpy as np
 import torch
-
-
-def load_reader():
-    return easyocr.Reader(['en'], gpu=torch.cuda.is_available())
 
 
 def ocr_frame(frame_pil, reader):

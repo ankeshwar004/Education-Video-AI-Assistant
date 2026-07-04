@@ -2,7 +2,7 @@
 
 Video Assistant is a retrieval-augmented assistant for lecture videos. It downloads or accepts a video, extracts audio, transcribes speech with Whisper, extracts important frames, runs OCR, stores transcript and frame evidence in Chroma, and answers student questions using the same LangChain retrieval and LLM pipeline from the original notebook.
 
-The original notebook remains unchanged in `notebooks/VideoAssistant (8).ipynb`.
+The original notebook remains unchanged in `notebooks/VideoAssistant.ipynb`.
 
 ## Folder Structure
 
@@ -29,7 +29,7 @@ VideoAssistant/
 |   |-- logger.py
 |   `-- utils.py
 |-- notebooks/
-|   `-- VideoAssistant (8).ipynb
+|   `-- VideoAssistant.ipynb
 |-- evaluation/
 |   |-- generate_qa.py
 |   |-- retrieval_eval.py
@@ -57,22 +57,16 @@ On macOS or Linux, use `export` instead of `set`.
 
 ## How To Run
 
-Run with the configured YouTube URL:
+Start the app without preprocessing:
 
 ```bash
 python app.py
 ```
 
-Run with a local video file:
+Run preprocessing with the configured YouTube URL:
 
 ```bash
-python app.py --video-path path/to/video.mp4
-```
-
-Run with a different YouTube URL:
-
-```bash
-python app.py --url "https://www.youtube.com/watch?v=..."
+python app.py --preprocess
 ```
 
 ## Preprocessing Pipeline

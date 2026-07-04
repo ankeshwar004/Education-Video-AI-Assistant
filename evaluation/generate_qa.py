@@ -1,9 +1,7 @@
-"""QA dataset generation for evaluation."""
-
 import random
 
 from langchain_core.prompts import PromptTemplate
-from langchain_groq import ChatGroq
+from langchain_openrouter import ChatOpenRouter
 from pydantic import BaseModel
 
 import config
@@ -19,8 +17,7 @@ class QAPairsList(BaseModel):
 
 
 def create_eval_llm():
-    """Create the evaluation LLM used in the notebook."""
-    return ChatGroq(model=config.EVAL_LLM_MODEL)
+    return ChatOpenRouter(model=config.EVAL_LLM_MODEL)
 
 
 def generate_qa_pairs(docs,n=2,eval_llm=None):
@@ -55,7 +52,6 @@ def generate_qa_pairs(docs,n=2,eval_llm=None):
 
     for pair in response.pairs:
       qa_pairs.append({
-      # "source_id":doc.metadata["source"], for multivideo ai assistant
       "question": pair.question,
       "answer": pair.answer,
       "start": doc.metadata["start"],
@@ -66,7 +62,6 @@ def generate_qa_pairs(docs,n=2,eval_llm=None):
 
 
 def sample_and_generate(text_docs, n=2):
-    """Sample documents and generate QA pairs exactly like the notebook."""
     eval_docs=random.sample(text_docs, min(50,len(text_docs)//2))
     qa_pairs=generate_qa_pairs(eval_docs,n=n)
     print(f"Length:{len(qa_pairs)} from docs of length {len(eval_docs)}")

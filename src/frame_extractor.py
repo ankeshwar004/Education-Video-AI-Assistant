@@ -3,7 +3,6 @@ from collections import deque
 import cv2
 import numpy as np
 from PIL import Image
-from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 
 import config
@@ -13,12 +12,10 @@ from src.logger import get_logger
 logger=get_logger(__name__)
 
 
-def load_clip_model(model_name=config.CLIP_MODEL):
-    return SentenceTransformer(model_name)
 
 
-def extract_changed_frames(video_path,clip_model,threshold=15,min_gap_sec=1,
-                           clip_similarity_threshold=0.95, history_size=20):
+def extract_changed_frames(video_path,clip_model,threshold=config.FRAME_SCORE_THRESHOLD,min_gap_sec=config.FRAME_MIN_GAP_SEC,
+                           clip_similarity_threshold=config.CLIP_SIMILARITY_THRESHOLD, history_size=config.FRAME_HISTORY_SIZE):
     cap=cv2.VideoCapture(video_path)
     fps=cap.get(cv2.CAP_PROP_FPS)
     min_gap_frames=int(fps * min_gap_sec)
@@ -71,12 +68,15 @@ def extract_changed_frames(video_path,clip_model,threshold=15,min_gap_sec=1,
         frame_idx += 1
 
     cap.release()
-    logger.info(f"Min:{min(scores):.3f} Max:{max(scores):.3f} Mean:{np.mean(scores):.3f}")
+    if scores:
+        logger.info(f"Min:{min(scores):.3f} Max:{max(scores):.3f} Mean:{np.mean(scores):.3f}")
+    else:
+        logger.warning("No frame difference scores collected")
     
     return frames, timestamps
 
 
-def calibrate_threshold(video_path, sample_every=5, percentile=92):
+def calibrate_threshold(video_path, sample_every=config.FRAME_DETECTION_INTERVAL, percentile=config.FRAME_DETECTION_THRESHOLD_PERCENTILE):
     cap=cv2.VideoCapture(video_path)
     prev_gray=None
     diffs=[]
@@ -93,9 +93,8 @@ def calibrate_threshold(video_path, sample_every=5, percentile=92):
         idx += 1
     cap.release()
     diffs=np.array(diffs)
+    if diffs.size == 0:
+        logger.warning("No frame differences collected; using default frame threshold")
+        return config.FRAME_THRESHOLD
     logger.info(f"frame-to-frame noise floor - median:{np.median(diffs):.3f} p95:{np.percentile(diffs,95):.3f}")
     return max(2.0, np.percentile(diffs, percentile) * 4)
-
-
-def encode_frames(clip_model, frames):
-    return clip_model.encode(frames,convert_to_numpy=True,normalize_embeddings=True,show_progress_bar=True)

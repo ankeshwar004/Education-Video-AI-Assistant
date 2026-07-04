@@ -1,23 +1,22 @@
 import os
+
 import chromadb
 from langchain_community.vectorstores import Chroma
 from langchain_core.documents import Document
-from langchain_huggingface import HuggingFaceEmbeddings
+
 
 import config
+from src.loader import load_text_embedding_model, load_clip_model, load_whisper_model, load_reader
 from src.frame_extractor import (
     calibrate_threshold,
-    encode_frames,
     extract_changed_frames,
-    load_clip_model,
 )
 from src.logger import get_logger
-from src.ocr import load_reader, ocr_frame
+from src.ocr import ocr_frame
 from src.speech import (
     chunk_audio,
     download_video,
     extract_audio,
-    load_whisper_model,
     transcribe,
 )
 from src.utils import format_time
@@ -70,7 +69,7 @@ def create_text_docs(transcripts):
 
 def create_text_db(text_docs):
     logger.info("Creating embeddings...")
-    text_embedding_model=HuggingFaceEmbeddings(model_name=config.TEXT_EMBEDDING_MODEL)
+    text_embedding_model=load_text_embedding_model(config.TEXT_EMBEDDING_MODEL)
     text_db=Chroma.from_documents(
         documents=text_docs,
         embedding=text_embedding_model,
@@ -80,6 +79,7 @@ def create_text_db(text_docs):
 
 
 def create_frame_docs(frames, frame_timestamps, text_docs, reader):
+  os.makedirs(config.FRAMES_DIR,exist_ok=True)
   frame_docs=[]
   chunk_idx=0
   logger.info("Creating frame documents...")
@@ -124,7 +124,7 @@ def create_frame_db(frame_docs, clip_embedding):
     return frame_db
 
 
-def preprocess_video(url=config.YOUTUBE_URL, video_path=None):
+def preprocess_video(url=config.YOUTUBE_URL,video_path=None):
     logger.info("Starting video preprocessing...")
 
     if video_path is None:
@@ -152,7 +152,7 @@ def preprocess_video(url=config.YOUTUBE_URL, video_path=None):
         clip_similarity_threshold=config.CLIP_SIMILARITY_THRESHOLD,
         history_size=config.FRAME_HISTORY_SIZE
     )
-    clip_embedding=encode_frames(clip_model, frames)
+    clip_embedding=clip_model.encode(frames,convert_to_numpy=True,normalize_embeddings=True,show_progress_bar=True)
 
     reader=load_reader()
     frame_docs=create_frame_docs(frames, frame_timestamps, text_docs, reader)

@@ -1,5 +1,3 @@
-"""Answer quality evaluation."""
-
 from langchain_core.prompts import PromptTemplate
 from pydantic import BaseModel
 
@@ -62,7 +60,7 @@ def evaluate_answers(qa_pairs, chat_fn, llm):
 
             scores = judge_answer(
                 question=qa["question"],
-                reference_answer=qa["reference_answer"],
+                reference_answer=qa["answer"],
                 generated_answer=generated,
                 content=qa["content"],
                 llm=llm
@@ -77,10 +75,16 @@ def evaluate_answers(qa_pairs, chat_fn, llm):
             print(f"Error evaluating question: {qa['question']}")
             print(e)
 
+
+    if not all_scores:
+        return all_scores, {}, failures
+
     # Aggregate
     dims = ["correctness", "completeness", "faithfulness", "clarity"]
-    avg_scores = {d: sum(s[d] for s in all_scores) / len(all_scores) for d in dims}
-    avg_scores["overall"] = sum(avg_scores.values()) / len(dims)
+    
+    if len(all_scores)>0:
+        avg_scores = {d: sum(s[d] for s in all_scores) / len(all_scores) for d in dims}
+        avg_scores["overall"] = sum(avg_scores.values()) / len(dims)
 
     print(f"\nAnswer Quality Results ({len(all_scores)} evaluated, {len(failures)} failed)")
     for dim, score in avg_scores.items():

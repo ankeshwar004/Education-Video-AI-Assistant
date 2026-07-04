@@ -2,14 +2,9 @@ import base64
 from difflib import SequenceMatcher
 import json
 import os
+import tiktoken
 import config
-from transformers import AutoTokenizer
 
-tokenizer = AutoTokenizer.from_pretrained(config.LLM_MODEL)
-
-
-def make_dir(path):
-    os.makedirs(path, exist_ok=True)
 
 def format_time(seconds):
   hours=int(seconds//(60*60))
@@ -24,17 +19,19 @@ def is_similar(text,seen_texts,threshold=0.85):
       return True
   return False
 
-def token_count(text,tokenizer):
-    return len(tokenizer.encode(text))
 
+
+enc=tiktoken.get_encoding("cl100k_base")
+
+
+def token_count(text):
+  return len(enc.encode(text))
 def load_json(path):
-    """Load JSON from disk."""
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def save_json(data, path):
-    """Save JSON to disk."""
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, indent=2)
 

@@ -1,5 +1,3 @@
-"""Prompt templates used by the assistant."""
-
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 
 
@@ -62,11 +60,50 @@ If images are attached with this request, they are frames extracted from the lec
 
 
 contextualize_qa_prompt=ChatPromptTemplate.from_messages([
-    ("system","""
-    Given a chat history and the latest user question which might reference
-    context in the chat history, formulate a standalone question which can be
-    understood without the chat history. Do NOT answer the question, just
-    reformulate it if needed and otherwise return it as is"""),
+     ("system","""
+      You are ONLY a query rewriter.
+      Your task is to rewrite the user's last question into a standalone question.
+      Rules:
+      - NEVER answer the question.
+      - NEVER explain.
+      - Output ONLY the rewritten question.
+      - If the question is already standalone, return it unchanged.
+
+      Examples
+
+      History:
+      User: Explain thermodynamics.
+
+      Question:
+      What is system?
+
+      Output:
+      What is the meaning of "system" in thermodynamics?
+
+    """),
     MessagesPlaceholder("chat_history"),
     ("human","{query}")
 ])
+
+
+
+
+summarize_prompt=ChatPromptTemplate.from_template(
+    """
+    Previous summary (may be empty):
+  {summary}
+
+  Messages to fold into the summary:
+  {new_messages}
+
+  Produce one updated summary capturing all important context an LLM
+  would need to continue this conversation. Keep it concise
+    """
+)
+
+
+decision_prompt = ChatPromptTemplate.from_template("""
+  Determine whether the following question strictly requires video frames.
+  Question:
+  {query}
+  """)
