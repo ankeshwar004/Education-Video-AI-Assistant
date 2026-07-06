@@ -1,12 +1,11 @@
 import os
 import warnings
+from pathlib import Path
 
 import imageio_ffmpeg
 import yt_dlp
 
-with warnings.catch_warnings():
-    warnings.filterwarnings("ignore", message="Couldn't find ffmpeg or avconv.*", category=RuntimeWarning)
-    from pydub import AudioSegment
+from pydub import AudioSegment
 
 import config
 from src.logger import get_logger
@@ -15,6 +14,12 @@ from src.logger import get_logger
 
 logger = get_logger(__name__)
 AudioSegment.converter=imageio_ffmpeg.get_ffmpeg_exe()
+
+
+def sanitize_video_id(value):
+  cleaned = "".join(character if character.isalnum() or character in {".", "_", "-"} else "_" for character in str(value))
+  cleaned = cleaned.strip("._-")
+  return cleaned or "video"
 
 
 def download_video(url=config.YOUTUBE_URL, video_dir=config.VIDEO_DIR):
@@ -30,13 +35,15 @@ def download_video(url=config.YOUTUBE_URL, video_dir=config.VIDEO_DIR):
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         info=ydl.extract_info(url,download=True)
         video_path = ydl.prepare_filename(info)
-    return video_path
+    video_id = sanitize_video_id(info.get("id") or Path(video_path).stem)
+    return video_path, video_id
 
 
-def extract_audio(video_path, wav_path=None):
+def extract_audio(video_path, video_id=None, wav_path=None):
     
     if wav_path is None:
-        wav_path=os.path.join(str(config.AUDIO_DIR),"audio.wav")
+      audio_dir = os.path.join(str(config.AUDIO_DIR), video_id)
+      wav_path=os.path.join(audio_dir, f"{video_id}.wav")
 
     os.makedirs(os.path.dirname(wav_path),exist_ok=True)
 
@@ -50,7 +57,8 @@ def chunk_audio(wav_path,chunk_min=config.AUDIO_CHUNK_MINUTES):
   audio=AudioSegment.from_wav(wav_path)
   chunk_length=chunk_min*60*1000
 
-  wav_chunk_path=os.path.join(str(config.AUDIO_DIR),"audio_chunks")
+  wav_chunk_path=os.path.join(os.path.dirname(wav_path),"chunks")
+
   os.makedirs(wav_chunk_path,exist_ok=True)
 
   chunks=[]
