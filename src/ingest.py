@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 
 import chromadb
-from langchain_community.vectorstores import Chroma
+from langchain_chroma import Chroma
 from langchain_core.documents import Document
 
 
@@ -27,7 +27,8 @@ from src.utils import format_time, save_json
 logger=get_logger(__name__)
 
 
-def create_text_docs(transcripts):
+def create_text_docs(transcripts, video_id):
+
   text_docs=[]
 
   curr_text=""
@@ -48,6 +49,7 @@ def create_text_docs(transcripts):
       doc=Document(page_content=curr_text,
                  metadata={
                      'chunk_id':chunk_id,
+                     'video_id':video_id,
                      'start':format_time(start_time),'end':format_time(end_time),
                      'start_sec':start_time,'end_sec':end_time
                  })
@@ -61,21 +63,24 @@ def create_text_docs(transcripts):
     doc=Document(page_content=curr_text,
                  metadata={
                      'chunk_id':chunk_id,
+                     'video_id':video_id,
                      'start':format_time(start_time), 'end':format_time(end_time),
                      'start_sec': start_time, 'end_sec':end_time
                  })
     text_docs.append(doc)
+    return text_docs
 
-  return text_docs
 
-
-def create_text_db(text_docs, persist_directory=None):
+def create_text_db(text_docs, video_id, persist_directory=None):
     logger.info("Creating embeddings...")
     text_embedding_model=load_text_embedding_model(config.TEXT_EMBEDDING_MODEL)
+    
+    text_db_path=os.path.join(persist_directory or config.TEXT_DB_PATH, video_id)
+    os.makedirs(text_db_path, exist_ok=True)
     text_db=Chroma.from_documents(
         documents=text_docs,
         embedding=text_embedding_model,
-        persist_directory=str(persist_directory or config.TEXT_DB_PATH)
+        persist_directory=str(text_db_path)
     )
     return text_db,text_embedding_model
 
@@ -102,6 +107,7 @@ def create_frame_docs(frames, frame_timestamps, text_docs, reader, video_id):
             'frame_path':frame_path,
             'ocr_text':ocr_text,
             'chunk_id':text_docs[chunk_idx].metadata['chunk_id'],
+            'video_id':video_id,
             'frame_idx':i,
             'frame_ts':ts
         }
@@ -110,9 +116,12 @@ def create_frame_docs(frames, frame_timestamps, text_docs, reader, video_id):
   return frame_docs
 
 
-def create_frame_db(frame_docs, clip_embedding, persist_path=None):
+def create_frame_db(frame_docs, video_id, clip_embedding, persist_path=None):
     logger.info("Creating frame vector database...")
-    client=chromadb.PersistentClient(path=str(persist_path or config.FRAME_DB_PATH))
+    
+    frame_db_path=os.path.join(persist_path or config.FRAME_DB_PATH, video_id)
+    os.makedirs(frame_db_path, exist_ok=True)
+    client=chromadb.PersistentClient(path=str(frame_db_path))
 
     frame_db=client.get_or_create_collection(
         config.FRAME_COLLECTION_NAME,
@@ -141,12 +150,18 @@ def preprocess_video(url=config.YOUTUBE_URL,video_path=None, persist_directory=N
 
     whisper=load_whisper_model(config.WHISPER_MODEL)
     transcripts=transcribe(audio_chunks, whisper)
-    text_docs=create_text_docs(transcripts)
-    text_db, text_embedding_model=create_text_db(text_docs, persist_directory=persist_directory)
+    text_docs=create_text_docs(transcripts, video_id=video_id)
+    text_db, text_embedding_model=create_text_db(text_docs, video_id, persist_directory=persist_directory)
 
     transcript_path=os.path.join(config.TRANSCRIPTS_DIR,f"{video_id}.json")
-    os.makedirs(os.path.dirname(transcript_path),exist_ok=True)    
-    save_json(transcripts, transcript_path)
+    os.makedirs(config.TRANSCRIPTS_DIR,exist_ok=True)
+    save_json(transcripts,transcript_path)
+    
+    transcripts_chunk_dir=os.path.join(config.TRANSCRIPTS_CHUNK_DIR,f"{video_id}.json")
+    os.makedirs(config.TRANSCRIPTS_CHUNK_DIR,exist_ok=True)
+    text_chunks=[doc.model_dump() for doc in text_docs]
+    save_json(text_chunks,transcripts_chunk_dir)
+
 
     clip_model=load_clip_model(config.CLIP_MODEL)
     threshold=calibrate_threshold(
@@ -165,8 +180,8 @@ def preprocess_video(url=config.YOUTUBE_URL,video_path=None, persist_directory=N
     clip_embedding=clip_model.encode(frames,convert_to_numpy=True,normalize_embeddings=True,show_progress_bar=True)
 
     reader=load_reader()
-    frame_docs=create_frame_docs(frames, frame_timestamps, text_docs, reader, video_id)
-    frame_db=create_frame_db(frame_docs, clip_embedding, persist_path=frame_persist_directory)
+    frame_docs=create_frame_docs(frames,frame_timestamps, text_docs, reader, video_id)
+    frame_db=create_frame_db(frame_docs, video_id, clip_embedding, persist_path=frame_persist_directory)
 
     logger.info("Preprocessing completed.")
     return {
