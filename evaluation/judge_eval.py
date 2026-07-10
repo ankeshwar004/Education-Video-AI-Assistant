@@ -1,43 +1,27 @@
-from langchain_core.prompts import PromptTemplate
 from pydantic import BaseModel
+from langsmith import traceable
 
+import config
+import os
+from src.utils import save_json
+from evaluation.prompts import judge_prompt
+from src.logger import get_logger
+
+
+logger=get_logger(__name__)
 
 class JudgeScore(BaseModel):
+    reasoning: str
     correctness: int
     completeness: int
     faithfulness: int
     clarity: int
-    reasoning: str
 
 
 def judge_answer(question,reference_answer,generated_answer,content,llm):
 
-    judge_prompt = PromptTemplate(
-    template="""You are evaluating an AI tutor's answer for an educational video assistant.
-
-    Question: {question}
-
-    Reference Answer (from transcript): {reference_answer}
-
-    Source Transcript (what was retrieved): {content}
-
-    Generated Answer: {generated_answer}
-
-    Rate the Generated Answer on each dimension from 1 to 5:
-    - correctness: Is the information factually accurate compared to the reference?
-    - completeness: Does it cover the key points from the reference?
-    - faithfulness: Does it avoid adding false information not in the source?
-    - clarity: Is it clearly explained for a student?
-    """,
-      input_variables=[
-        "question",
-        "reference_answer",
-        "generated_answer",
-        "content"]
-    )
-
     judge_llm=llm.with_structured_output(JudgeScore)
-    chain=judge_prompt|judge_llm
+    chain=(judge_prompt|judge_llm).with_config(run_name="judge_answer")
     response=chain.invoke({
        "question": question,
        "reference_answer": reference_answer,
@@ -45,17 +29,17 @@ def judge_answer(question,reference_answer,generated_answer,content,llm):
        "content": content
     })
 
-    return response.model_dump()
+    return response
 
-
-def evaluate_answers(qa_pairs, chat_fn, llm):
+@traceable(name="evaluate_llm_as_judge")
+def evaluate_llm_as_judge(qa_pairs,chat_fn,retrieval,llm,video_id):
 
     all_scores = []
     failures = []
 
     for qa in qa_pairs:
         try:
-            result = chat_fn(qa["question"])
+            result = chat_fn(qa["question"],retrieval)
             generated = result.response
 
             scores = judge_answer(
@@ -86,8 +70,7 @@ def evaluate_answers(qa_pairs, chat_fn, llm):
         avg_scores = {d: sum(s[d] for s in all_scores) / len(all_scores) for d in dims}
         avg_scores["overall"] = sum(avg_scores.values()) / len(dims)
 
-    print(f"\nAnswer Quality Results ({len(all_scores)} evaluated, {len(failures)} failed)")
-    for dim, score in avg_scores.items():
-        print(f"  {dim}: {score:.2f} / 5.0")
+
+    save_json({"scores": all_scores, "averages": avg_scores, "failures": failures}, os.path.join(config.JUDGE_EVAL_RESULTS_DIR,f"{video_id}.json"))
 
     return all_scores, avg_scores, failures
