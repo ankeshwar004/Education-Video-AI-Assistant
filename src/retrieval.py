@@ -15,14 +15,6 @@ from src.loader import load_reranker
 logger = get_logger(__name__)
 
 
-text_retriever=None
-bm25_retriever=None
-ensemble_retriever=None
-reranker=None
-frame_db=None
-clip_model=None
-
-
 def create_text_retriever(text_db):
     return text_db.as_retriever(
         search_type='similarity',
@@ -46,15 +38,11 @@ def create_ensemble_retriever(bm25_retriever, text_retriever):
 
 
 
-def rerank(query,docs,reranker_arg=None,k=5):
-
-  active_reranker=reranker_arg if reranker_arg is not None else reranker
-  if active_reranker is None:
-    raise RuntimeError("Retrieval has not been initialized with a reranker")
+def rerank(query,docs,reranker,k=config.RERANK_K):
 
   pairs=[(query,doc.page_content) for doc in docs]
 
-  scores=active_reranker.predict(pairs)
+  scores=reranker.predict(pairs)
   reranked=sorted(zip(docs,scores),key=lambda x:x[1],reverse=True)
 
   return [doc for doc,score in reranked[:k]]
@@ -102,30 +90,8 @@ def build_ocr_context(frames_metadata,max_token=config.MAX_OCR_TOKEN):
 
 
 
-
-def initialize_retrieval(text_docs, text_db, frame_db_arg=None, clip_model_arg=None):
-    global text_retriever, bm25_retriever, ensemble_retriever, reranker, frame_db, clip_model
-
-    text_retriever=create_text_retriever(text_db)
-    bm25_retriever=create_bm25_retriever(text_docs)
-    ensemble_retriever=create_ensemble_retriever(bm25_retriever, text_retriever)
-    reranker=load_reranker(config.RERANKER_MODEL)
-    frame_db=frame_db_arg
-    clip_model=clip_model_arg
-    logger.info("Retrieval initialized.")
-    return {
-        "text_retriever": text_retriever,
-        "bm25_retriever": bm25_retriever,
-        "ensemble_retriever": ensemble_retriever,
-        "reranker": reranker,
-    }
-
-
 @traceable(name="Frame Retriever")
-def frame_retriever(query,chunk_ids,n=config.FRAME_RETRIEVER_N):
-
-  if frame_db is None or clip_model is None:
-    raise RuntimeError("Retrieval has not been initialized with frame_db and clip_model")
+def frame_retriever(query,chunk_ids,frame_db,clip_model,n=config.FRAME_RETRIEVER_N):
 
   query_embedding=clip_model.encode(query,convert_to_numpy=True,normalize_embeddings=True)
 
@@ -135,3 +101,8 @@ def frame_retriever(query,chunk_ids,n=config.FRAME_RETRIEVER_N):
       n_results=n,
       include=["metadatas","distances"]
       )
+
+
+@traceable(name="Docs Retriever")
+def docs_retriever(query,retriever):
+  return retriever.invoke(query)
