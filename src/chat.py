@@ -7,7 +7,7 @@ from langsmith import traceable
 
 
 import config
-from src import retrieval
+from src.retrieval import docs_retriever,frame_retriever, build_text_context, build_ocr_context ,rerank
 from src.logger import get_logger
 from src.prompts import contextualize_qa_prompt, qa_prompt
 from src.memory import chat_history, update_memory
@@ -31,7 +31,7 @@ def query_needs_images(query):
 #Option 1
 
 @traceable(name="Python chat pipeline")
-def chat(query):
+def chat(query,retrieval):
 
   if chat_history.messages:
     contextualize_chain=contextualize_qa_prompt|main_llm|StrOutputParser()
@@ -44,29 +44,25 @@ def chat(query):
     
   logger.info("StandAlone Ques:\n%s",standalone_ques)
 
-  docs=retrieval.ensemble_retriever.invoke(standalone_ques)
+  docs=docs_retriever(standalone_ques,retrieval['ensemble_retriever'])
 
-  docs=retrieval.rerank(standalone_ques,docs,k=config.CHAT_RERANK_K)
+  docs=rerank(standalone_ques,docs,retrieval['reranker'],k=config.CHAT_RERANK_K)
 
-  text_context=retrieval.build_text_context(docs)
+  text_context=build_text_context(docs)
 
   chunk_ids=[doc.metadata['chunk_id'] for doc in docs]
 
-  frames=retrieval.frame_retriever(standalone_ques,chunk_ids)
+  frames=frame_retriever(standalone_ques,chunk_ids,retrieval['frame_db'],retrieval['clip_model'],n=config.FRAME_RETRIEVER_N)
  
   frames_metadata=frames['metadatas'][0]
 
-  ocr_context=retrieval.build_ocr_context(frames_metadata)
-  logger.info("Length of OCR Contex: %s",len(ocr_context))
+  ocr_context=build_ocr_context(frames_metadata)
 
   needs_vision = query_needs_images(standalone_ques)
-  logger.info("Needs Vision?: %s",needs_vision)
 
   images=[]
   if needs_vision:
     images=load_images(frames_metadata)
-    logger.info("Length of load images %s",len(images))
-
 
   prompt_value=qa_prompt.invoke({
       "context":text_context,
@@ -77,8 +73,6 @@ def chat(query):
   prompt_value_messages=prompt_value.messages
 
   messages=build_multimodal_message(prompt_value_messages,images)
-  logger.info("Length of messages: %s",len(messages))
-
   try:
     logger.info("Calling LLM")
     start = time.time()
@@ -98,7 +92,7 @@ def chat(query):
 
 #Option 2
 
-def lcel_chat(query):
+def lcel_chat(query,retrieval):
     
     contextualize_chain=contextualize_qa_prompt|main_llm|StrOutputParser()
     standalone_query=RunnableBranch(
@@ -111,26 +105,26 @@ def lcel_chat(query):
         ).with_config({"run_name":"Standalone Query"})
 
     retriever_step=RunnablePassthrough.assign(
-        docs=RunnableLambda(lambda x: x["query"])|retrieval.ensemble_retriever
+        docs=RunnableLambda(lambda x: x["query"])|retrieval['ensemble_retriever']
         ).with_config({"run_name":"Ensemble Retriever"})
 
     reranker_step=RunnableLambda(
-        lambda x: {**x, "docs":retrieval.rerank(x["query"],x["docs"],k=3)}
+        lambda x: {**x, "docs":rerank(x["query"],x["docs"],retrieval['reranker'],k=3)}
         ).with_config({"run_name":"Reranker"})
 
     retrieval_pipeline=retriever_step|reranker_step
 
     text_context_builder=RunnableLambda(
-        lambda x: {**x,"text_context":retrieval.build_text_context(x["docs"]),
+        lambda x: {**x,"text_context":build_text_context(x["docs"]),
         "chunk_ids":[doc.metadata['chunk_id'] for doc in x["docs"]]}
         ).with_config({"run_name":"Build Text Context"})
 
     frame_retrival=RunnableLambda(
-        lambda x: {**x,"frames":retrieval.frame_retriever(x["query"],x["chunk_ids"])}
+        lambda x: {**x,"frames":frame_retriever(x["query"],x["chunk_ids"],retrieval['frame_db'],retrieval['clip_model'],n=config.FRAME_RETRIEVER_N)}
         ).with_config({"run_name":"Frame Retriever"})
 
     ocr_context_builder=RunnableLambda(
-        lambda x: {**x,"ocr_context":retrieval.build_ocr_context(x["frames"]["metadatas"][0])}
+        lambda x: {**x,"ocr_context":build_ocr_context(x["frames"]["metadatas"][0])}
         ).with_config({"run_name":"Build OCR Context"})
 
     vision_decision=RunnablePassthrough.assign(
