@@ -20,7 +20,7 @@ decision_strutured_llm=decision_llm.with_structured_output(Decision)
 eval_llm=ChatOpenRouter(model=config.EVAL_LLM_MODEL)
 
 def build_multimodal_message(prompt_value_messages,images,provider="gemini"):
-  messages=prompt_value_messages
+  messages=prompt_value_messages.messages
 
   if len(images)>0:
         content = [{
