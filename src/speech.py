@@ -27,7 +27,7 @@ def download_video(url=config.YOUTUBE_URL, video_dir=config.VIDEO_DIR):
 
     video_name=os.path.join(str(video_dir), "%(title)s.%(ext)s")
     ydl_opts = {
-        'format':'best[ext=mp4]',
+        'format':'best',
         'outtmpl':video_name,
         'merge_output_format':'mp4'}
 

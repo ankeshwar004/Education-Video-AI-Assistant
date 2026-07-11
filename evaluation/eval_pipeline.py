@@ -38,7 +38,7 @@ def evaluation_pipeline(video_id):
         docs=load_json(f)
     docs=[Document(**item) for item in docs]
     
-    qa_pairs_path=os.path.join(str(config.QA_PAIRS_DIR),f"{video_id}.json")
+    qa_pairs_path=os.path.join(str(config.QA_PAIRS_DIR),"all_qa_pairs",f"{video_id}.json")
     if os.path.exists(qa_pairs_path):
         logger.info(f"Loading existing QA pairs for {video_id}")
         qa_pairs=load_json(qa_pairs_path)

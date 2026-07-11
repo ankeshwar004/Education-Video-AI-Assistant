@@ -10,6 +10,7 @@ DATA_DIR=BASE_DIR/"data"
 VIDEO_DIR=DATA_DIR/"videos"
 AUDIO_DIR=DATA_DIR/"audio"
 TRANSCRIPTS_DIR=DATA_DIR/"transcripts"
+TRANSCRIPTS_CHUNK_DIR=DATA_DIR/"transcripts_chunks"
 FRAMES_DIR=DATA_DIR/"frames"
 CHROMA_DB_DIR=DATA_DIR/"chroma_db"
 CHROMA_DB_EVAL_DIR=DATA_DIR/"chroma_db_eval"
@@ -18,18 +19,18 @@ FRAME_DB_PATH=CHROMA_DB_DIR/"frames"
 EVAL_TEXT_DB_PATH=CHROMA_DB_EVAL_DIR/"text"
 EVAL_FRAME_DB_PATH=CHROMA_DB_EVAL_DIR/"frames"
 
-EVALUATION_DIR=BASE_DIR/"evaluation"
-QA_PAIRS_PATH=EVALUATION_DIR/"qa_pairs.json"
-EVALUATION_RESULTS_DIR=EVALUATION_DIR/"results"
-RETRIEVAL_EVAL_RESULTS_PATH=EVALUATION_RESULTS_DIR/"retrieval_eval_results.json"
-ANSWER_EVAL_RESULTS_PATH=EVALUATION_RESULTS_DIR/"answer_eval_results.json"
+EVALUATION_DIR=BASE_DIR/"evaluation_results"
+QA_PAIRS_DIR=EVALUATION_DIR/"qa_pairs"
+RETRIEVAL_EVAL_RESULTS_DIR=EVALUATION_DIR/"retrieval_eval_results"
+JUDGE_EVAL_RESULTS_DIR=EVALUATION_DIR/"judge_eval_results"
+RERANK_EVAL_RESULTS_DIR=EVALUATION_DIR/"rerank_eval_results"
+
 
 OUTPUTS_DIR=BASE_DIR/"outputs"
 LOG_DIR=OUTPUTS_DIR/"logs"
-RESULTS_DIR=OUTPUTS_DIR/"results"
 LOG_FILE=LOG_DIR/"app.log"
 
-YOUTUBE_URL="https://www.youtube.com/watch?v=NyOYW07-L5g"
+YOUTUBE_URL="https://www.youtube.com/watch?v=INM9H2KFVA0"
 
 
 DEVICE="cuda"
@@ -51,6 +52,7 @@ FRAME_DETECTION_THRESHOLD_PERCENTILE=92
 
 
 
+
 BM25_K=20
 ENSEMBLE_WEIGHTS=[0.3, 0.7]
 RERANKER_MODEL="BAAI/bge-reranker-base"
@@ -61,10 +63,13 @@ FRAME_RETRIEVER_N=FRAME_RESULTS_K
 MAX_OCR_TOKEN=300
 MAX_TURNS=3
 
+EVAL_QA_PAIRS_PER_CHUNK=2
+
 MAIN_LLM_MODEL="gemini-2.5-flash"
 DECISION_LLM_MODEL="llama-3.1-8b-instant"
 SUMMARY_LLM_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
-EVAL_LLM_MODEL="openai/gpt-oss-120b:free"
+EVAL_LLM_MODEL="llama-3.3-70b-versatile"
+JUDGE_LLM_MODEL="mistral-medium-3-5"
 
 GEMINI_API_KEY=os.getenv("GEMINI_API_KEY")
 # GOOGLE_API_KEY=os.getenv("GOOGLE_API_KEY") or GEMINI_API_KEY
@@ -78,3 +83,10 @@ LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING", "true")
 LANGSMITH_ENDPOINT = os.getenv("LANGSMITH_ENDPOINT", "https://apac.api.smith.langchain.com")
 LANGSMITH_PROJECT = os.getenv("LANGSMITH_PROJECT", "RAG_VideoAssistant")
 LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")
+
+OPENAI_API_KEY = os.getenv("NANAROUTER_API_KEY")
+OPENAI_BASE_URL = os.getenv("NANAROUTER_BASE_URL")
+
+
+VIDEO_ID = "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry"
+VIDEO_PATH= "/teamspace/studios/this_studio/RAG_Video_Assistant/data/videos/First Law of Thermodynamics, Basic Introduction - Internal Energy, Heat and Work - Chemistry.mp4"
