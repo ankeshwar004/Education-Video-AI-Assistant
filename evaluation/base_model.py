@@ -1,26 +1,47 @@
-from pydantic import BaseModel
 from typing import Literal
+from pydantic import BaseModel
 
 
-
-class GeneralQA(BaseModel):
-  question: str
-  question_type: Literal["factual","reasoning","application","comparison"]
-  difficulty:Literal["easy","medium","hard"]
-  answer: str
-
-
-class GeneralQA_List(BaseModel):
-  pairs: list[GeneralQA]
-  
-  
-class MisconceptionQA(BaseModel):
-    misconception: str
+class BaseQA(BaseModel):
     question: str
-    difficulty:Literal["easy","medium","hard"]
+    question_type:Literal["factual", "reasoning", "comparison", "application", "misconception"]
+    difficulty:Literal["easy", "medium", "hard"]
     answer: str
-   
 
-class MisconceptionQA_List(BaseModel):
-    qa_pairs: list[MisconceptionQA]
+
+class FactualQA(BaseQA):
+    question_type:Literal["factual"]
+
+
+class ReasoningQA(BaseQA):
+    question_type:Literal["reasoning"]
+
+
+class ComparisonQA(BaseQA):
+    question_type:Literal["comparison"]
+
+
+class ApplicationQA(BaseQA):
+    question_type:Literal["application"]
+    scenario:str
+
+
+class MisconceptionQA(BaseQA):
+    question_type:Literal["misconception"]
+    misconception:str
     
+
+class FactualQA_List(BaseModel):
+    pairs:list[FactualQA]
+
+class ReasoningQA_List(BaseModel):
+    pairs:list[ReasoningQA]
+
+class ComparisonQA_List(BaseModel):
+    pairs:list[ComparisonQA]
+    
+class ApplicationQA_List(BaseModel):
+    pairs:list[ApplicationQA]
+  
+class MisconceptionQA_List(BaseModel):
+    pairs:list[MisconceptionQA]

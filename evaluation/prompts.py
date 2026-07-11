@@ -1,29 +1,10 @@
 from langchain_core.prompts import PromptTemplate
 
 
-
-general_qa_generation_prompt = PromptTemplate.from_template(
-  """
-  You are creating an evaluation dataset for an educational video assistant.
-  Transcript segment: {content}
-
-  Generate between 0 to  {n} question-answer pairs where:
-  - If the chunk contains very little or waste information, return 1 or 0 question-answer pairs.
-  - Mix factual, why, comparison, reasoning and application questions whenever possible.
-  - Aim approximately for below distribution :
-      40%/ factual recall
-      30%/ reasoning ("why"/"how")
-      20%/ application
-      10%/ comparison (only if naturally supported)
-  - Do not copy sentences directly from the transcript.
-  - Questions should require understanding instead of simple keyword matching.
-  - Do not use outside knowledge.
-  - Assign each question a difficulty level:
-    - easy
-    - medium
-    - hard
-  """
-  )
+general_rules="""
+If the transcript contains obvious speech recognition or OCR mistakes (e.g., "not dedicated" instead of "unstructured"), 
+infer the intended academic term when it is unambiguous. Do not preserve obvious transcription errors in the generated question 
+or answer"""
 
 misconception_qa_generation_prompt = PromptTemplate.from_template(
   """
@@ -32,6 +13,7 @@ misconception_qa_generation_prompt = PromptTemplate.from_template(
 
   Generate between 0 to  {n} question-answer pairs where:
   - If the chunk contains very little or waste information, return 1 or 0 question-answer pairs.
+  - If the transcript contains obvious speech recognition or OCR mistakes, infer the intended academic term when it is unambiguous.
   - Create a realistic but incorrect student misconception based only on the transcript.
   - Ask whether the student's statement is correct.
   - The answer should explain why the statement is wrong and provide the correct concept.
@@ -42,6 +24,89 @@ misconception_qa_generation_prompt = PromptTemplate.from_template(
     - hard
   """
 )
+
+factual_qa_generation_prompt = PromptTemplate.from_template(
+  """
+  You are creating factual-based evaluation questions for an educational video assistant.
+
+  Transcript segment: {content}
+
+  Generate between 0 to {n} question-answer pairs where:
+  - If the chunk contains very little or irrelevant information, return 1 or 0 question-answer pairs.
+  - If the transcript contains obvious speech recognition or OCR mistakes, infer the intended academic term when it is unambiguous.
+  - Ask questions whose answers are stated or directly supported by the transcript.
+  - Focus on definitions, concepts, terminology, steps, properties, or important facts.
+  - Do not copy sentences directly from the transcript.
+  - Rephrase both the questions and answers naturally.
+  - Do not require outside knowledge.
+  - Assign each question a difficulty level:
+    - easy
+    - medium
+    - hard
+  """
+)
+
+reasoning_qa_generation_prompt = PromptTemplate.from_template(
+  """
+  You are creating reasoning-based evaluation questions for an educational video assistant.
+
+  Transcript segment: {content}
+
+  Generate between 0 to {n} question-answer pairs where:
+  - If the chunk contains very little or irrelevant information, return 1 or 0 question-answer pairs.
+  - If the transcript contains obvious speech recognition or OCR mistakes, infer the intended academic term when it is unambiguous.
+  - Create "why" or "how" questions that require understanding relationships, causes, or reasoning presented in the transcript.
+  - The answer should explain the reasoning rather than simply quote the transcript.
+  - Do not introduce information not supported by the transcript.
+  - Do not require outside knowledge.
+  - Assign each question a difficulty level:
+    - easy
+    - medium
+    - hard
+  """
+)
+
+application_qa_generation_prompt = PromptTemplate.from_template(
+  """
+  You are creating application-based evaluation questions for an educational video assistant.
+
+  Transcript segment: {content}
+
+  Generate between 0 to {n} question-answer pairs where:
+  - If the chunk contains very little or irrelevant information, return 1 or 0 question-answer pairs.
+  - If the transcript contains obvious speech recognition or OCR mistakes, infer the intended academic term when it is unambiguous.
+  - Create short practical scenarios where the learner must apply a concept explained in the transcript.
+  - The scenario should be realistic and answerable using only the transcript.
+  - Do not require outside knowledge.
+  - The answer should explain how the concept applies to the scenario.
+  - Assign each question a difficulty level:
+    - easy
+    - medium
+    - hard
+  """
+)
+
+comparison_qa_generation_prompt = PromptTemplate.from_template(
+  """
+  You are creating comparison-based evaluation questions for an educational video assistant.
+
+  Transcript segment: {content}
+
+  Generate between 0 to {n} question-answer pairs where:
+  - If the chunk contains very little or irrelevant information, return 1 or 0 question-answer pairs.
+  - If the transcript contains obvious speech recognition or OCR mistakes, infer the intended academic term when it is unambiguous. 
+  - Generate comparison questions only if the transcript discusses two or more related concepts.
+  - Compare differences, similarities, advantages, disadvantages, purposes, or characteristics.
+  - If the transcript does not naturally support comparison, return 0 question-answer pairs.
+  - Do not invent concepts that are not mentioned.
+  - Do not require outside knowledge.
+  - Assign each question a difficulty level:
+    - easy
+    - medium
+    - hard
+  """
+)
+
 
 judge_prompt = PromptTemplate.from_template(
   """
