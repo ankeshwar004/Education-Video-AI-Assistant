@@ -63,7 +63,8 @@ FRAME_RETRIEVER_N=FRAME_RESULTS_K
 MAX_OCR_TOKEN=300
 MAX_TURNS=3
 
-EVAL_QA_PAIRS_PER_CHUNK=2
+TOTAL_QA_PAIRS=60
+
 
 MAIN_LLM_MODEL="gemini-2.5-flash"
 DECISION_LLM_MODEL="llama-3.1-8b-instant"
@@ -72,7 +73,6 @@ EVAL_LLM_MODEL="llama-3.3-70b-versatile"
 JUDGE_LLM_MODEL="mistral-medium-3-5"
 
 GEMINI_API_KEY=os.getenv("GEMINI_API_KEY")
-# GOOGLE_API_KEY=os.getenv("GOOGLE_API_KEY") or GEMINI_API_KEY
 GROQ_API_KEY=os.getenv("GROQ_API_KEY")
 OPENROUTER_API_KEY=os.getenv("OPENROUTER_API_KEY")
 
@@ -87,6 +87,3 @@ LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")
 OPENAI_API_KEY = os.getenv("NANAROUTER_API_KEY")
 OPENAI_BASE_URL = os.getenv("NANAROUTER_BASE_URL")
 
-
-VIDEO_ID = "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry"
-VIDEO_PATH= "/teamspace/studios/this_studio/RAG_Video_Assistant/data/videos/First Law of Thermodynamics, Basic Introduction - Internal Energy, Heat and Work - Chemistry.mp4"
