@@ -19,7 +19,6 @@ logger = get_logger(__name__)
 
 
 def load_existing_artifacts(video_id):
-    """Load persisted databases and initialize retrieval."""
     docs_path=os.path.join(str(config.TRANSCRIPTS_CHUNK_DIR),f"{video_id}.json")
     docs=load_json(docs_path)
     docs=[Document(**item) for item in docs]
@@ -107,7 +106,7 @@ def main(args):
     if args.preprocess:
         logger.info("Starting preprocessing.")
 
-        results = preprocess_video()
+        results = preprocess_video(video_path=config.VIDEO_PATH)
 
         text_docs = results["text_docs"]
         video_id = results["video_id"]
@@ -132,17 +131,8 @@ def main(args):
         run_eval_pipeline(config.VIDEO_ID)
 
 
-    if not any(
-        [
-            args.preprocess,
-            args.chat,
-            args.query,
-            args.eval,
-        ]
-    ):
-        logger.info(
-            "No action specified. Use --preprocess, --chat, --query or --eval."
-        )
+    if not any([args.preprocess, args.chat,args.query,args.eval]):
+        logger.info("No action specified. Use --preprocess, --chat, --query or --eval.")
 
 
 if __name__ == "__main__":
