@@ -35,7 +35,6 @@ def judge_answer(question,reference_answer,generated_answer,content,llm):
 def evaluate_llm_as_judge(qa_pairs,chat_fn,retrieval,llm,video_id):
 
     all_scores = []
-    failures = []
 
     for qa in qa_pairs:
         try:
@@ -55,13 +54,13 @@ def evaluate_llm_as_judge(qa_pairs,chat_fn,retrieval,llm,video_id):
             all_scores.append(scores)
 
         except Exception as e:
-            failures.append({"question": qa["question"], "error": str(e)})
             print(f"Error evaluating question: {qa['question']}")
             print(e)
+            raise e
 
 
     if not all_scores:
-        return all_scores, {}, failures
+        return all_scores, {}
 
     # Aggregate
     dims = ["correctness", "completeness", "faithfulness", "clarity"]
@@ -71,6 +70,6 @@ def evaluate_llm_as_judge(qa_pairs,chat_fn,retrieval,llm,video_id):
         avg_scores["overall"] = sum(avg_scores.values()) / len(dims)
 
 
-    save_json({"scores": all_scores, "averages": avg_scores, "failures": failures}, os.path.join(config.JUDGE_EVAL_RESULTS_DIR,f"{video_id}.json"))
+    save_json({"scores": all_scores, "averages": avg_scores}, os.path.join(config.JUDGE_EVAL_RESULTS_DIR,f"{video_id}.json"))
 
-    return all_scores, avg_scores, failures
+    return all_scores, avg_scores
