@@ -1,0 +1,110 @@
+[
+  {
+    "question": "What is the time complexity of deleting an element from the middle position of a linked list?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "Order of n",
+    "scenario": "You are implementing a linked list and need to delete an element from the middle position.",
+    "start": "18:49",
+    "end": "19:54",
+    "chunk_id": 15,
+    "video_id": "Array_VS_LinkedList",
+    "content": " delete from any position what you can say in average case if you want to delete from the middle position then you have to shift how many elements and by two elements to the left side. So, it depends on or you can say it is proportional to number of elements in the array. So, it is going to take order of n fine. In this case also if you want to delete from starting then simply delete this and what you have to do you have to adjust this head only. Here if you want to delete this one in head you are going to store 1000 only fine. So, it is going to take order of 1. But from the end if you want to delete then you cannot directly delete this 5 why. So, because only sequential access is possible in linked list. So, to reach till this node you have to traverse the complete list after that you can delete this one fine. So, it depends on number of elements you have to traverse n elements after that you can delete the last node. So, at the end if you want to delete then it is going to take order of n time. From any position if you want"
+  },
+  {
+    "question": "What is the time complexity of deleting an element from the start of a linked list?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "Order of 1",
+    "scenario": "You are implementing a linked list and need to delete an element from the start.",
+    "start": "18:49",
+    "end": "19:54",
+    "chunk_id": 15,
+    "video_id": "Array_VS_LinkedList",
+    "content": " delete from any position what you can say in average case if you want to delete from the middle position then you have to shift how many elements and by two elements to the left side. So, it depends on or you can say it is proportional to number of elements in the array. So, it is going to take order of n fine. In this case also if you want to delete from starting then simply delete this and what you have to do you have to adjust this head only. Here if you want to delete this one in head you are going to store 1000 only fine. So, it is going to take order of 1. But from the end if you want to delete then you cannot directly delete this 5 why. So, because only sequential access is possible in linked list. So, to reach till this node you have to traverse the complete list after that you can delete this one fine. So, it depends on number of elements you have to traverse n elements after that you can delete the last node. So, at the end if you want to delete then it is going to take order of n time. From any position if you want"
+  },
+  {
+    "question": "Suppose you have a linked list with nodes having values 1, 2, and 3, and addresses 1000, 2000, and 3000 respectively. If you want to insert a new node with value 4 at the end of the list, what steps would you take?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "You would traverse the list starting from the head node with address 1000, then move to the node with address 2000, and finally to the node with address 3000. Once you reach the end of the list, you can insert the new node with value 4 and adjust the links accordingly.",
+    "scenario": "Inserting a new node at the end of a linked list",
+    "start": "16:16",
+    "end": "17:39",
+    "chunk_id": 13,
+    "video_id": "Array_VS_LinkedList",
+    "content": " But here you have to traverse first of all suppose one at beginning in linked list it is order of 1 right now suppose if you want to insert a node having value 5 at the end and suppose the address is 5000 you cannot directly insert here because when you are writing a program then we are having only this head value the head pointer value that is 4000. So, here where we can reach to this location 4000 now check out the address part here we have 1000. So, we can reach to this node now here in the address part we have 2000. So, we can reach here here is 3000. So, we can reach at 3000 address now we have reached at the end of the list now you can insert this node here how you will insert this 5000 would be you have to simply adjust the links 5000 would be stored here now you can see this this node is this node is going to point here fine and here simply you will store now we will discuss these operations in detail here I am just giving you an overview. So, you have to traverse the complete list right. So, it depends on the number of nodes in the list"
+  },
+  {
+    "question": "What is the time complexity of accessing an element in an array?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "Constant time, O(1)",
+    "scenario": "You are given an array of integers and you want to access the element at a specific index.",
+    "start": "02:30",
+    "end": "03:41",
+    "chunk_id": 2,
+    "video_id": "Array_VS_LinkedList",
+    "content": " base address plus i value is 2 into the size of the data type integer is going to take 4 bytes into 4 that is 108. So, this is 108. So, directly you can access this data by simply writing this thing. So, it is going to take constant time right you want to access this data this data or this data it does not depends on the number of elements in the array it is going to take constant time that is order of 1 only. Now, in case of linked list how we are going to represent a linked list see. So, this is how we are going to represent a linked list linked list is having only 3 nodes. Now, if you want to access this one from the linked list then you cannot directly go because in linked list only sequential access is possible right because see these nodes are not in continuous blocks in array the data is stored in continuous block in you know in consecutive locations. But here these are stored at random positions right. So, this is the linked list we have the head pointer head pointer is having 1000. So, using this address we we can reach"
+  },
+  {
+    "question": "How do you access an element in a linked list?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "You can access an element in a linked list by traversing the list sequentially from the head pointer.",
+    "scenario": "You are given a linked list with 5 nodes and you want to access the 3rd node.",
+    "start": "02:30",
+    "end": "03:41",
+    "chunk_id": 2,
+    "video_id": "Array_VS_LinkedList",
+    "content": " base address plus i value is 2 into the size of the data type integer is going to take 4 bytes into 4 that is 108. So, this is 108. So, directly you can access this data by simply writing this thing. So, it is going to take constant time right you want to access this data this data or this data it does not depends on the number of elements in the array it is going to take constant time that is order of 1 only. Now, in case of linked list how we are going to represent a linked list see. So, this is how we are going to represent a linked list linked list is having only 3 nodes. Now, if you want to access this one from the linked list then you cannot directly go because in linked list only sequential access is possible right because see these nodes are not in continuous blocks in array the data is stored in continuous block in you know in consecutive locations. But here these are stored at random positions right. So, this is the linked list we have the head pointer head pointer is having 1000. So, using this address we we can reach"
+  },
+  {
+    "question": "Consider a scenario where you need to store 5 elements in an array. If each element requires 4 bytes of memory, how much memory will be allocated in total?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "20 bytes",
+    "scenario": "Array memory allocation",
+    "start": "07:10",
+    "end": "08:39",
+    "chunk_id": 6,
+    "video_id": "Array_VS_LinkedList",
+    "content": " memory has been allocated to the array for 7 elements are there and each element is going to get 4 bytes that is 28 bytes is to be allocated, but actually how much memory is in use only 1, 2 and 3 elements 3 into 4 that is only 12 bytes this is what unused space. Now, in case of linked list if you want to store only 3 elements then you will create only 3 nodes no need to give the size of the linked list in advance right at runtime only you are going to create a node fine. So, now, see this is the linked list having 3 nodes only. So, the memory requirement is how much see in the linked list this node is going to take some extra space for storing this pointer variable. In 32 bit compiler the pointer variable the size of this is what 4 bytes in 64 bit compiler it is going to take 8 bytes right. So, here I am taking 4 bytes for storing the pointer variable. So, total for one node total bytes would be 8, 4 for integer and 4 for storing this pointer variable or the set base means 8 bytes. So, total size is 8 into 3 for 3 nodes that is 24 bytes fine and here 28 bytes right."
+  },
+  {
+    "question": "Suppose you want to store 5 elements in a linked list. If each node requires 8 bytes of memory (4 bytes for the integer and 4 bytes for the pointer variable), how much memory will be required in total?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "40 bytes",
+    "scenario": "Linked list memory allocation",
+    "start": "07:10",
+    "end": "08:39",
+    "chunk_id": 6,
+    "video_id": "Array_VS_LinkedList",
+    "content": " memory has been allocated to the array for 7 elements are there and each element is going to get 4 bytes that is 28 bytes is to be allocated, but actually how much memory is in use only 1, 2 and 3 elements 3 into 4 that is only 12 bytes this is what unused space. Now, in case of linked list if you want to store only 3 elements then you will create only 3 nodes no need to give the size of the linked list in advance right at runtime only you are going to create a node fine. So, now, see this is the linked list having 3 nodes only. So, the memory requirement is how much see in the linked list this node is going to take some extra space for storing this pointer variable. In 32 bit compiler the pointer variable the size of this is what 4 bytes in 64 bit compiler it is going to take 8 bytes right. So, here I am taking 4 bytes for storing the pointer variable. So, total for one node total bytes would be 8, 4 for integer and 4 for storing this pointer variable or the set base means 8 bytes. So, total size is 8 into 3 for 3 nodes that is 24 bytes fine and here 28 bytes right."
+  },
+  {
+    "question": "A programmer wants to store 7 elements of integer data type. Which data structure would require less memory: array or linked list?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "Array",
+    "scenario": "Memory efficient data structure for integer data type",
+    "start": "10:00",
+    "end": "11:33",
+    "chunk_id": 8,
+    "video_id": "Array_VS_LinkedList",
+    "content": " this one right. So, this is why I am saying that memory requirement in case of error is less than linked list. In 28 bytes only you can store how many elements 7 elements maximum. But in this case if you want to insert if you want to create 7 nodes then this memory requirement would be 7 into 8 that is 56 bytes right and here only 28 bytes. But memory utilization see memory requirement and utilization both are different factors. Memory requirement is less in error more in linked list but memory utilization is efficient in linked list but it is not so much efficient in error because here wastage of space is a major drawback in error fine. Now, second case is if that is the here we are taking integer data fine. So, it is going to take 4 bytes. Now, suppose we are going to take a complex data type that is going to take 16 bytes to store right. So, now if 16 bytes is to be taken then 16 into how much size is to be allocated for this array for 7 elements 16 into 7 that is 112 bytes fine and we are going to store only suppose 3 elements fine. Now, in case of linked list"
+  },
+  {
+    "question": "Suppose we are storing a complex data type that takes 16 bytes to store. If we are storing only 3 elements, which data structure would be more memory efficient: array or linked list?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "Linked list",
+    "scenario": "Memory efficient data structure for complex data type",
+    "start": "10:00",
+    "end": "11:33",
+    "chunk_id": 8,
+    "video_id": "Array_VS_LinkedList",
+    "content": " this one right. So, this is why I am saying that memory requirement in case of error is less than linked list. In 28 bytes only you can store how many elements 7 elements maximum. But in this case if you want to insert if you want to create 7 nodes then this memory requirement would be 7 into 8 that is 56 bytes right and here only 28 bytes. But memory utilization see memory requirement and utilization both are different factors. Memory requirement is less in error more in linked list but memory utilization is efficient in linked list but it is not so much efficient in error because here wastage of space is a major drawback in error fine. Now, second case is if that is the here we are taking integer data fine. So, it is going to take 4 bytes. Now, suppose we are going to take a complex data type that is going to take 16 bytes to store right. So, now if 16 bytes is to be taken then 16 into how much size is to be allocated for this array for 7 elements 16 into 7 that is 112 bytes fine and we are going to store only suppose 3 elements fine. Now, in case of linked list"
+  }
+]

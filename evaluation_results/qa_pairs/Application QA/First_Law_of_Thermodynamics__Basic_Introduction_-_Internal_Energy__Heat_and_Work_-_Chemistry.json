@@ -1,0 +1,122 @@
+[
+  {
+    "question": "A cup of coffee is left on a table in a room. After some time, the coffee becomes cooler. What happens to the internal energy of the coffee?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The internal energy of the coffee decreases as heat flows out of the coffee and into the surroundings.",
+    "scenario": "A cup of coffee is left on a table in a room.",
+    "start": "00:00",
+    "end": "01:44",
+    "chunk_id": 0,
+    "video_id": "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+    "content": " In this video, we're going to talk about the first law of thermodynamics, and how it relates to internal energy, heat, and work. So what is the basic idea behind the first law of thermodynamics? The gist of it is this. Energy cannot be created or destroyed. It can simply be transferred from one place to another. So let's say if we have a system, and everything outside of it is the surroundings. Energy can flow into or out of the system, and there's two ways in which energy can do so, and that is through heat and work. So if heat flows into the system, the system gains energy, and that energy is known as the internal energy of the system, represented by the symbol capital U. Now the surroundings can do work on a system, so those are the two ways in which a system can increase its internal energy, is by the transfer of heat energy into the system, or if the surroundings perform work on a system. So let's say if the surroundings perform 300 joules on a system, that means the system's internal energy goes up by 300, so the change is positive, so delta U increases."
+  },
+  {
+    "question": "A car engine performs 500 joules of work on the air inside the engine. What happens to the internal energy of the air?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The internal energy of the air increases by 500 joules as the work done by the engine is transferred to the air.",
+    "scenario": "A car engine performs work on the air inside the engine.",
+    "start": "00:00",
+    "end": "01:44",
+    "chunk_id": 0,
+    "video_id": "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+    "content": " In this video, we're going to talk about the first law of thermodynamics, and how it relates to internal energy, heat, and work. So what is the basic idea behind the first law of thermodynamics? The gist of it is this. Energy cannot be created or destroyed. It can simply be transferred from one place to another. So let's say if we have a system, and everything outside of it is the surroundings. Energy can flow into or out of the system, and there's two ways in which energy can do so, and that is through heat and work. So if heat flows into the system, the system gains energy, and that energy is known as the internal energy of the system, represented by the symbol capital U. Now the surroundings can do work on a system, so those are the two ways in which a system can increase its internal energy, is by the transfer of heat energy into the system, or if the surroundings perform work on a system. So let's say if the surroundings perform 300 joules on a system, that means the system's internal energy goes up by 300, so the change is positive, so delta U increases."
+  },
+  {
+    "question": "A car engine does work on the surroundings by pushing the car forward. From the viewpoint of the surroundings, is the work done positive or negative?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "Positive",
+    "scenario": "A car engine does work on the surroundings.",
+    "start": "07:42",
+    "end": "08:59",
+    "chunk_id": 5,
+    "video_id": "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+    "content": " And W is positive when work is done by the system. So let's analyze these two cases when work is done by the system. So in chemistry, when work is done by the system as we said before, the internal energy decreases. And because the energy of the system is decreasing, work is negative. Remember, we're taking the viewpoint of the system. In physics, we want to take the viewpoint of the surroundings. So when work is done by the system, the internal energy of the system still decreases. However, we say W is positive because the surroundings is gaining energy. We're taking the viewpoint of the surroundings. And so since the surroundings gain energy, W is positive. In the case of chemistry, when work is done by the system, the system loses energy, so we say W is negative. And so it's the viewpoint. And that's why the equations are a bit different. In chemistry, we take the viewpoint of the system. But in physics, we take the viewpoint on the surroundings. So when work is done by the system, the system loses energy."
+  },
+  {
+    "question": "A chemical reaction in a container releases energy to the surroundings. From the viewpoint of the system (the chemical reaction), is the work done positive or negative?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "Negative",
+    "scenario": "A chemical reaction in a container releases energy to the surroundings.",
+    "start": "07:42",
+    "end": "08:59",
+    "chunk_id": 5,
+    "video_id": "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+    "content": " And W is positive when work is done by the system. So let's analyze these two cases when work is done by the system. So in chemistry, when work is done by the system as we said before, the internal energy decreases. And because the energy of the system is decreasing, work is negative. Remember, we're taking the viewpoint of the system. In physics, we want to take the viewpoint of the surroundings. So when work is done by the system, the internal energy of the system still decreases. However, we say W is positive because the surroundings is gaining energy. We're taking the viewpoint of the surroundings. And so since the surroundings gain energy, W is positive. In the case of chemistry, when work is done by the system, the system loses energy, so we say W is negative. And so it's the viewpoint. And that's why the equations are a bit different. In chemistry, we take the viewpoint of the system. But in physics, we take the viewpoint on the surroundings. So when work is done by the system, the system loses energy."
+  },
+  {
+    "question": "A person is lifting weights at the gym. Is work being done by the system or on the system in this scenario?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "Work is being done by the system.",
+    "scenario": "A person lifting weights at the gym",
+    "start": "06:05",
+    "end": "07:41",
+    "chunk_id": 4,
+    "video_id": "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+    "content": " So in chemistry, W is negative when work is done by the system. Any time work is done by the system, the system has to expend energy to do work. And so the internal energy of the system decreases. Imagine if you're going to the gym to work out. And as you lift weights, your body is burning energy. The internal energy of your body decreases as you burn calories. And so work is being done by the system. That is, you're the system. You're doing the work. And the surroundings might be the weights that you're lifting. So as you burn calories to lift up a weight from, let's say, the ground to an elevated position, the potential energy of that weight increases. But the internal energy of your body decreases because you're burning calories. You're losing weight. In this case, whenever W is negative, work is done by the system in a case of chemistry. And when W is positive, work is done on a system. Now in physics, it's different. We take the surroundings point of view in physics. So W is negative when work is done on a system."
+  },
+  {
+    "question": "A car is being lifted by a crane. Is the work being done by the system or on the system from the perspective of physics?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "From the perspective of physics, work is being done on the system.",
+    "scenario": "A car being lifted by a crane",
+    "start": "06:05",
+    "end": "07:41",
+    "chunk_id": 4,
+    "video_id": "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+    "content": " So in chemistry, W is negative when work is done by the system. Any time work is done by the system, the system has to expend energy to do work. And so the internal energy of the system decreases. Imagine if you're going to the gym to work out. And as you lift weights, your body is burning energy. The internal energy of your body decreases as you burn calories. And so work is being done by the system. That is, you're the system. You're doing the work. And the surroundings might be the weights that you're lifting. So as you burn calories to lift up a weight from, let's say, the ground to an elevated position, the potential energy of that weight increases. But the internal energy of your body decreases because you're burning calories. You're losing weight. In this case, whenever W is negative, work is done by the system in a case of chemistry. And when W is positive, work is done on a system. Now in physics, it's different. We take the surroundings point of view in physics. So W is negative when work is done on a system."
+  },
+  {
+    "question": "A chemistry student is studying a reaction in a closed system. If the system gains 50 Joules of heat energy and does 20 Joules of work, what is the change in internal energy of the system?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The change in internal energy is Q + W, so it is 50 + 20 = 70 Joules.",
+    "scenario": "A chemistry student is studying a reaction in a closed system.",
+    "start": "04:38",
+    "end": "06:05",
+    "chunk_id": 3,
+    "video_id": "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+    "content": " However, energy can still flow into a closed system. So in a closed system, only energy can go into and out of a closed system, but matter cannot. In an isolated system, energy or matter cannot enter or leave an isolated system. So the mass within an isolated system is fixed. It doesn't change. And the total energy of an isolated system also doesn't change because no energy can flow into it or out of it. The equation for the change in the internal energy of a system is Q plus W. And this is the equation that you'll see in a typical chemistry textbook. Q represents the heat energy that flows into or out of the system and W represents the work. Now in physics, the equation is a bit different. In a physics textbook, you'll see delta U is equal to Q minus W. Now you might be wondering, why is it different? Why is it not the same? And the reason for that is the point of view taken by the scientists. And chemistry, we take the systems point of view. In physics, engineers take the viewpoint of the surroundings."
+  },
+  {
+    "question": "A physics engineer is analyzing a system that does 30 Joules of work and loses 10 Joules of heat energy. What is the change in internal energy of the system from the surroundings point of view?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The change in internal energy is Q - W, so it is -10 - 30 = -40 Joules.",
+    "scenario": "A physics engineer is analyzing a system.",
+    "start": "04:38",
+    "end": "06:05",
+    "chunk_id": 3,
+    "video_id": "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+    "content": " However, energy can still flow into a closed system. So in a closed system, only energy can go into and out of a closed system, but matter cannot. In an isolated system, energy or matter cannot enter or leave an isolated system. So the mass within an isolated system is fixed. It doesn't change. And the total energy of an isolated system also doesn't change because no energy can flow into it or out of it. The equation for the change in the internal energy of a system is Q plus W. And this is the equation that you'll see in a typical chemistry textbook. Q represents the heat energy that flows into or out of the system and W represents the work. Now in physics, the equation is a bit different. In a physics textbook, you'll see delta U is equal to Q minus W. Now you might be wondering, why is it different? Why is it not the same? And the reason for that is the point of view taken by the scientists. And chemistry, we take the systems point of view. In physics, engineers take the viewpoint of the surroundings."
+  },
+  {
+    "question": "A car engine is an example of what type of system, given that it takes in oxygen from the air and releases heat energy?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "An open system, because matter and energy can be transferred into and out of it.",
+    "scenario": "A car engine in operation",
+    "start": "03:06",
+    "end": "04:38",
+    "chunk_id": 2,
+    "video_id": "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+    "content": " And energy follows that same principle. Unless you're a god, energy cannot be created or destroyed, as far as we know. But in today's world, under practical conditions, energy is simply transferred from one place to another. So in our example, if the system gains 300 joules of energy, that means the surroundings loses 300 joules of energy. If the system loses 500 joules of energy, the surroundings have to gain 500 joules of energy. And in that sense, within that practical area, energy is not created or destroyed. Thus, we have the first law of thermodynamics. Now the three types of systems that you want to be familiar with. The first one is an open system. The second is a closed system. And the third is an isolated system. So in an open system, matter can enter into an open system. So oxygen from the air can go inside of it, and also heat energy can flow into an open system. So matter and energy can be transferred into and out of an open system. Now in a closed system, matter cannot flow into it. So oxygen just, it can't go inside of a closed system."
+  },
+  {
+    "question": "If a cup of coffee gains 200 joules of energy, what happens to the energy in the surroundings?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The surroundings lose 200 joules of energy, as energy is transferred from one place to another.",
+    "scenario": "A cup of coffee being heated",
+    "start": "03:06",
+    "end": "04:38",
+    "chunk_id": 2,
+    "video_id": "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+    "content": " And energy follows that same principle. Unless you're a god, energy cannot be created or destroyed, as far as we know. But in today's world, under practical conditions, energy is simply transferred from one place to another. So in our example, if the system gains 300 joules of energy, that means the surroundings loses 300 joules of energy. If the system loses 500 joules of energy, the surroundings have to gain 500 joules of energy. And in that sense, within that practical area, energy is not created or destroyed. Thus, we have the first law of thermodynamics. Now the three types of systems that you want to be familiar with. The first one is an open system. The second is a closed system. And the third is an isolated system. So in an open system, matter can enter into an open system. So oxygen from the air can go inside of it, and also heat energy can flow into an open system. So matter and energy can be transferred into and out of an open system. Now in a closed system, matter cannot flow into it. So oxygen just, it can't go inside of a closed system."
+  }
+]

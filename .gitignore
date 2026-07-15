@@ -23,6 +23,7 @@ ENV/
 *.key
 
 # Generated data and media
+data/
 data/videos/
 data/audio/
 data/transcripts/

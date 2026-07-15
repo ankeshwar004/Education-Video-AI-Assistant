@@ -1,0 +1,394 @@
+{
+  "mrr_before": 0.6430413672349156,
+  "mrr_after": 0.7623725736628962,
+  "hit_rate_before": {
+    "1": 0.532258064516129,
+    "3": 0.6774193548387096,
+    "5": 0.8064516129032258
+  },
+  "hit_rate_after": {
+    "1": 0.6451612903225806,
+    "3": 0.8548387096774194,
+    "5": 0.8709677419354839
+  },
+  "rank_movement": {
+    "improved": 22,
+    "worsened": 10,
+    "unchanged": 28,
+    "average_movement": 1.3333333333333333
+  },
+  "per_question": [
+    {
+      "question": "What does the phrase 'beckoned me in' mean in the context of the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the transcript define the word 'griver'?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the title of the short story being discussed in the video?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Which syllabus does the story 'The Photographer' belong to?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What key phrases in the transcript describe the photographer's temperament and physical appearance?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What does the color 'gray' and the term 'insipid' convey about the photographer in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What expression did the photographer have when he finally captured the perfect photo?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How does the narrator describe the term 'animation' in the context of the photograph?",
+      "pre_rank": 13,
+      "post_rank": 1,
+      "movement": 12
+    },
+    {
+      "question": "What specific behavior of the photographer is criticized in the transcript?",
+      "pre_rank": 3,
+      "post_rank": 5,
+      "movement": -2
+    },
+    {
+      "question": "According to the narrator, how do faces change when viewed three-quarters full?",
+      "pre_rank": 3,
+      "post_rank": 2,
+      "movement": 1
+    },
+    {
+      "question": "What does the term 'cowhide' refer to in the context of the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What does the speaker mean by the phrase 'emboss it' in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the purpose of the process referred to as 'self-ide' in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What causes the subject's temperament to change in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why does the narrator believe his actions were unwarranted toward the photographer?",
+      "pre_rank": 2,
+      "post_rank": 6,
+      "movement": -4
+    },
+    {
+      "question": "How does the narrator feel about his own physical appearance in the transcript?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "What type of expression is typically required for a USA visa photograph?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why was the narrator's expression described as 'animated' in the photograph?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What new photographic process is mentioned in the transcript?",
+      "pre_rank": 4,
+      "post_rank": 2,
+      "movement": 2
+    },
+    {
+      "question": "Why did the photographer draw a little black cloth over himself in the machine?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What effect does the statement 'I knew that he was praying and I kept still' have on the narrative?",
+      "pre_rank": 4,
+      "post_rank": 2,
+      "movement": 2
+    },
+    {
+      "question": "Why are photographers described as warm people in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What does the narrator find unusual about the photographer mentioned in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 7,
+      "movement": -6
+    },
+    {
+      "question": "What trait does the narrator's action of waiting for an hour convey?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "What negative trait of the photographer is implied by the narrator's long wait?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the photographer in the story compare to the general perception of photographers?",
+      "pre_rank": 2,
+      "post_rank": 6,
+      "movement": -4
+    },
+    {
+      "question": "What is the difference between the photographer's initial and final behavior in the story?",
+      "pre_rank": 5,
+      "post_rank": 18,
+      "movement": -13
+    },
+    {
+      "question": "How does the theme of power dynamics in the story compare to the message of being true to oneself?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What is the difference between the narrator's desired representation and the actual photograph taken by the photographer?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the narrator's experience with the photograph compare to his expectation of how his friends would remember him after his death?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the narrator feel about his own looks?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "What is the difference between how the narrator perceives himself and how the photographer perceives him?",
+      "pre_rank": 7,
+      "post_rank": 2,
+      "movement": 5
+    },
+    {
+      "question": "What is the difference between the narrator's personality and the photographer's demeanor?",
+      "pre_rank": 14,
+      "post_rank": 1,
+      "movement": 13
+    },
+    {
+      "question": "How does the photographer's observation style compare to that of a scientist in a biology lab?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the difference between the narrator's perception of the photograph and its potential value to his friends?",
+      "pre_rank": 4,
+      "post_rank": 2,
+      "movement": 2
+    },
+    {
+      "question": "How does the speaker's tone change when saying 'stop'?",
+      "pre_rank": null,
+      "post_rank": null,
+      "movement": null
+    },
+    {
+      "question": "How does the narrator's patience compare to the photographer's attitude towards keeping a customer waiting?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the comparison between the narrator's perception of their actions and the photographer's behavior?",
+      "pre_rank": 20,
+      "post_rank": 3,
+      "movement": 17
+    },
+    {
+      "question": "Why do photographers often ask subjects to look up?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does the photographer adjust the subject's pose to achieve the desired effect?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is the narrator feeling uneasy during the photograph?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the narrator's behavior reveal his intimidation by the photographer?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why did the speaker hesitate when asking about the eyes in the photograph?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How did the photographer explain the difference in the speaker's eyebrows in the photograph?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why does the photographer use a fictional process called delified?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the photographer's tone change throughout the conversation?",
+      "pre_rank": null,
+      "post_rank": null,
+      "movement": null
+    },
+    {
+      "question": "Why is the speaker becoming emotional during the conversation with the photographer?",
+      "pre_rank": 6,
+      "post_rank": 2,
+      "movement": 4
+    },
+    {
+      "question": "What is the narrator's perception of his own looks?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What instruction did the speaker give to adjust the position of the face?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How did the speaker want the subject to position their neck and waist?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What can be inferred about the photographer's attitude towards his craft?",
+      "pre_rank": 10,
+      "post_rank": 1,
+      "movement": 9
+    },
+    {
+      "question": "How does the photographer use rhetorical questions in his conversation?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "What does 'drawing myself up' mean in the context of the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the speaker feel when they say 'with withering scorn'?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the general perception of photographers according to the narrator?",
+      "pre_rank": 1,
+      "post_rank": 11,
+      "movement": -10
+    },
+    {
+      "question": "How does the narrator's description of the photographer in the story deviate from the general perception of photographers?",
+      "pre_rank": 1,
+      "post_rank": 9,
+      "movement": -8
+    },
+    {
+      "question": "The speaker in the transcript is upset because someone is criticizing their face.",
+      "pre_rank": 11,
+      "post_rank": 2,
+      "movement": 9
+    },
+    {
+      "question": "The speaker owns their face and knows its faults, so they can change it if they want to.",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "Is the photographer's inability to communicate politely an example of a humane behavior?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is the speaker's face actually flawed in terms of physical proportions?",
+      "pre_rank": 14,
+      "post_rank": 1,
+      "movement": 13
+    },
+    {
+      "question": "The speaker in the transcript is satisfied with the editing of the photograph.",
+      "pre_rank": 14,
+      "post_rank": 2,
+      "movement": 12
+    },
+    {
+      "question": "The speaker wants the editor to add more embellishments to the photograph.",
+      "pre_rank": 13,
+      "post_rank": 1,
+      "movement": 12
+    }
+  ]
+}

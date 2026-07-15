@@ -1,0 +1,74 @@
+[
+  {
+    "question": "When inserting a node at the end of a linked list, can you directly insert the node without traversing the list?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, you cannot directly insert a node at the end of a linked list without traversing the list. The correct process involves traversing the list to find the last node and then adjusting the links to insert the new node.",
+    "misconception": "Direct insertion is possible without traversing the list.",
+    "start": "16:16",
+    "end": "17:39",
+    "chunk_id": 13,
+    "video_id": "Array_VS_LinkedList",
+    "content": " But here you have to traverse first of all suppose one at beginning in linked list it is order of 1 right now suppose if you want to insert a node having value 5 at the end and suppose the address is 5000 you cannot directly insert here because when you are writing a program then we are having only this head value the head pointer value that is 4000. So, here where we can reach to this location 4000 now check out the address part here we have 1000. So, we can reach to this node now here in the address part we have 2000. So, we can reach here here is 3000. So, we can reach at 3000 address now we have reached at the end of the list now you can insert this node here how you will insert this 5000 would be you have to simply adjust the links 5000 would be stored here now you can see this this node is this node is going to point here fine and here simply you will store now we will discuss these operations in detail here I am just giving you an overview. So, you have to traverse the complete list right. So, it depends on the number of nodes in the list"
+  },
+  {
+    "question": "Is it true that memory utilization is always more efficient in arrays than in linked lists?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, it's not true. Memory utilization is actually more efficient in linked lists because each node only allocates memory for the data it needs, whereas arrays allocate a fixed amount of memory for all elements, which can lead to wasted space if not all elements are used.",
+    "misconception": "Memory utilization is always more efficient in arrays than in linked lists",
+    "start": "10:00",
+    "end": "11:33",
+    "chunk_id": 8,
+    "video_id": "Array_VS_LinkedList",
+    "content": " this one right. So, this is why I am saying that memory requirement in case of error is less than linked list. In 28 bytes only you can store how many elements 7 elements maximum. But in this case if you want to insert if you want to create 7 nodes then this memory requirement would be 7 into 8 that is 56 bytes right and here only 28 bytes. But memory utilization see memory requirement and utilization both are different factors. Memory requirement is less in error more in linked list but memory utilization is efficient in linked list but it is not so much efficient in error because here wastage of space is a major drawback in error fine. Now, second case is if that is the here we are taking integer data fine. So, it is going to take 4 bytes. Now, suppose we are going to take a complex data type that is going to take 16 bytes to store right. So, now if 16 bytes is to be taken then 16 into how much size is to be allocated for this array for 7 elements 16 into 7 that is 112 bytes fine and we are going to store only suppose 3 elements fine. Now, in case of linked list"
+  },
+  {
+    "question": "Is it true that memory utilization in linked lists is less efficient than in arrays?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, it's not true. Memory utilization in linked lists is generally more efficient than in arrays because linked lists only use the space needed for the data, whereas arrays require a fixed amount of space to be declared.",
+    "misconception": "Memory utilization in linked lists is less efficient than in arrays",
+    "start": "12:53",
+    "end": "14:00",
+    "chunk_id": 10,
+    "video_id": "Array_VS_LinkedList",
+    "content": " unused space you are taking in array or you are using the complete space you have declared in the array it depends on many factors fine, but generally we say that memory utilization in linked list very efficient than this array and memory requirement in array is less and memory requirement in linked list is more. Now, third factor is cost of insertion and deletion. So, first of all we will discuss what is cost of insertion 3 cases can be there at beginning you can insert at end you can insert and at any ith position you want to insert. So, now in array if sorted array is there then if you want to insert at the end suppose first of all you are taking at the end. So, directly you can insert here in the array because random excesses possible you can directly calculate this address, compile can directly calculate this address using that formula and simply insert value here. Suppose I want to insert 4 here right. So, at the end it is going to take order of 1 constant time, but if you want to insert here in the beginning of the array then how you will"
+  },
+  {
+    "question": "In an array, if only 3 elements are being used, then only 12 bytes of memory are allocated.",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "This statement is incorrect because in an array, memory is allocated for all elements, regardless of whether they are being used or not. In this case, 28 bytes of memory are allocated for the array, even though only 3 elements are being used.",
+    "misconception": "Memory is allocated only for used elements in an array.",
+    "start": "07:10",
+    "end": "08:39",
+    "chunk_id": 6,
+    "video_id": "Array_VS_LinkedList",
+    "content": " memory has been allocated to the array for 7 elements are there and each element is going to get 4 bytes that is 28 bytes is to be allocated, but actually how much memory is in use only 1, 2 and 3 elements 3 into 4 that is only 12 bytes this is what unused space. Now, in case of linked list if you want to store only 3 elements then you will create only 3 nodes no need to give the size of the linked list in advance right at runtime only you are going to create a node fine. So, now, see this is the linked list having 3 nodes only. So, the memory requirement is how much see in the linked list this node is going to take some extra space for storing this pointer variable. In 32 bit compiler the pointer variable the size of this is what 4 bytes in 64 bit compiler it is going to take 8 bytes right. So, here I am taking 4 bytes for storing the pointer variable. So, total for one node total bytes would be 8, 4 for integer and 4 for storing this pointer variable or the set base means 8 bytes. So, total size is 8 into 3 for 3 nodes that is 24 bytes fine and here 28 bytes right."
+  },
+  {
+    "question": "In a linked list, the memory requirement is less than that of an array because it only allocates memory for the nodes that are being used.",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "This statement is incorrect because while it is true that a linked list only allocates memory for the nodes that are being used, each node in a linked list also requires additional memory to store the pointer variable, which can make the total memory requirement of a linked list greater than or equal to that of an array, depending on the number of elements and the size of the pointer variable.",
+    "misconception": "Linked lists always require less memory than arrays.",
+    "start": "07:10",
+    "end": "08:39",
+    "chunk_id": 6,
+    "video_id": "Array_VS_LinkedList",
+    "content": " memory has been allocated to the array for 7 elements are there and each element is going to get 4 bytes that is 28 bytes is to be allocated, but actually how much memory is in use only 1, 2 and 3 elements 3 into 4 that is only 12 bytes this is what unused space. Now, in case of linked list if you want to store only 3 elements then you will create only 3 nodes no need to give the size of the linked list in advance right at runtime only you are going to create a node fine. So, now, see this is the linked list having 3 nodes only. So, the memory requirement is how much see in the linked list this node is going to take some extra space for storing this pointer variable. In 32 bit compiler the pointer variable the size of this is what 4 bytes in 64 bit compiler it is going to take 8 bytes right. So, here I am taking 4 bytes for storing the pointer variable. So, total for one node total bytes would be 8, 4 for integer and 4 for storing this pointer variable or the set base means 8 bytes. So, total size is 8 into 3 for 3 nodes that is 24 bytes fine and here 28 bytes right."
+  },
+  {
+    "question": "Is it true that in a linked list, you can directly access any node without traversing the previous nodes?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, that's incorrect. In a linked list, you need to traverse the previous nodes to access a node, because each node only contains the address of the next node.",
+    "misconception": "Direct access to any node in a linked list",
+    "start": "03:41",
+    "end": "04:51",
+    "chunk_id": 3,
+    "video_id": "Array_VS_LinkedList",
+    "content": " to here to the first node right. Now, check out in the first node this is the address part see I have already discussed all the fundamentals about linked list in the previous video you can check out that video first of all right. So, now the address is 2000. Now, you can go here at this node now here check out the address part here we have 3000 now you can go to 3000 at this address and now you can access this one and now suppose in linked list there are 10 nodes and if you want to access the 10th node then you have to traverse all the previous node first of all then you can reach to that node only. So, accessing of element depends on the number of node in the linked list right. If you want to access this data first then obviously, then you can directly access if the head node addresses this one and in the first node only you found the data right. If you want to access the in average case if you want to access the middle element then you have to traverse how many nodes and by two nodes right. After that you can reach to that middle node"
+  }
+]

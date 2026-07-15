@@ -1,0 +1,394 @@
+{
+  "mrr_before": 0.6928945606364961,
+  "mrr_after": 0.8361436950146628,
+  "hit_rate_before": {
+    "1": 0.5161290322580645,
+    "3": 0.8064516129032258,
+    "5": 0.9032258064516129
+  },
+  "hit_rate_after": {
+    "1": 0.7096774193548387,
+    "3": 0.9516129032258065,
+    "5": 0.967741935483871
+  },
+  "rank_movement": {
+    "improved": 22,
+    "worsened": 9,
+    "unchanged": 31,
+    "average_movement": 1.1290322580645162
+  },
+  "per_question": [
+    {
+      "question": "What data type is used for the 'type' column in the swipes table?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What data type is assigned to the 'date_time' and 'amount' columns in the swipes table?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is one advantage of using floating-point values over integers in representing monetary amounts?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What determines whether to use integers or real (floating-point) values in data storage?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What type affinity is assigned to the ID column in the 'riders' table?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What data type is used to represent the 'name' column in both the 'riders' and 'stations' tables?",
+      "pre_rank": 5,
+      "post_rank": 1,
+      "movement": 4
+    },
+    {
+      "question": "What are the key components needed to create a well-structured table in SQL according to the transcript?",
+      "pre_rank": 1,
+      "post_rank": 4,
+      "movement": -3
+    },
+    {
+      "question": "What is the purpose of type affinities in SQL as mentioned in the transcript?",
+      "pre_rank": 2,
+      "post_rank": 6,
+      "movement": -4
+    },
+    {
+      "question": "Which subway stop is mentioned as a central hub in Boston?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Which subway line connects Harvard and MIT in Boston?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the name of the SQL keyword or statement used to create a new table in a database?",
+      "pre_rank": 8,
+      "post_rank": 1,
+      "movement": 7
+    },
+    {
+      "question": "What name was given to the new database created to represent riders and stations?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What special value can be used as the default for a column to automatically insert the current date and time in SQLite?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How can you enforce a rule that prevents a column from containing a zero value in SQLite?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "Which database management systems are mentioned in the transcript?",
+      "pre_rank": 9,
+      "post_rank": 1,
+      "movement": 8
+    },
+    {
+      "question": "What is the default type affinity assigned by SQLite to a column if no data type is specified?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Which SQLite command is used to display the SQL statement that created a table?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What columns and data types are revealed when using the `.schema` command on the 'long list' table?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is assigning a unique ID to each person important in the table design?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the term used to describe a unique identifier for each person in a database table?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What are the possible values for the 'type' column in the swipes table as mentioned in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Which columns are explicitly mentioned as part of the swipes table in the transcript?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "What are the two main properties of a primary key as described in the transcript?",
+      "pre_rank": 14,
+      "post_rank": 11,
+      "movement": 3
+    },
+    {
+      "question": "What is the purpose of a table constraint in SQLite according to the transcript?",
+      "pre_rank": 13,
+      "post_rank": 1,
+      "movement": 12
+    },
+    {
+      "question": "How do data types and storage classes differ in SQLite, as described in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is using an integer data type preferred over a floating-point data type for storing fares in this context?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the relationship between riders and stations differ in terms of minimum association requirements?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What is the difference between using a joint primary key (rider ID + station ID) and SQLite's implicit row ID as the primary key in this table design?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the purpose of type affinity in SQLite differ from the purpose of the DROP TABLE statement?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How do the relationships between riders and stations differ in terms of cardinality?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the difference between the NOT NULL and UNIQUE constraints in database columns?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "How does the PRIMARY KEY constraint compare to the UNIQUE constraint in terms of null values and uniqueness?",
+      "pre_rank": 4,
+      "post_rank": 2,
+      "movement": 2
+    },
+    {
+      "question": "How does SQLite's approach to integer storage differ from its approach to storing text or blob data?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How are the 'writers' and 'stations' tables related in the database schema described in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What attributes are explicitly mentioned for the 'stations' table, and how does this compare to the information provided about the 'writers' table?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How does the purpose of the 'create table' SQL statement differ from the purpose of the database 'mbta.db' mentioned in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why might someone choose to use a floating-point value instead of an integer for representing monetary amounts, and what are the potential downsides of this choice?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How does the trade-off between floating-point values and integers relate to the accuracy of calculations in a system?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Why is it problematic to use the same ID for both riders and stations in a database design?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "How would you describe the relationship between riders and stations based on the transcript, and what database design element is needed to represent it?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How are data types and storage classes related but distinct in the context of SQLite?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is the BLOB storage class in SQLite described as representing data 'exactly as I give it to this value'?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is the type column in the swipes table restricted to certain values like 'enter', 'exit', or 'deposit'?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the correction from 'riders' to 'rider ID' in the swipes table improve the data model?",
+      "pre_rank": 20,
+      "post_rank": 2,
+      "movement": 18
+    },
+    {
+      "question": "Why is it recommended to include a comma after each column name in a SQL table definition, even if it is the last one?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does the placement of a comma affect the addition of a PRIMARY KEY constraint in a SQL table definition?",
+      "pre_rank": 2,
+      "post_rank": 3,
+      "movement": -1
+    },
+    {
+      "question": "How would you enforce a primary key constraint on the 'ID' column in the 'riders' table to ensure each rider has a unique identifier?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "How would you enforce a foreign key constraint to ensure that every entry in the 'rider_id' column of the 'visits' table corresponds to an existing 'ID' in the 'riders' table?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "In a database schema definition, is it mandatory to use four spaces for indentation before each column name? Explain your reasoning.",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What key elements are missing from the schema described in the transcript, and why are they important?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Write the SQL statement to create a table named 'riders' with an integer column for ID and a text column for name.",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Write the SQL statement to create a table named 'stations' with columns for ID (integer), name (text), and line (text).",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "In a database table, the ID column is defined as a primary key. Is it necessary to also explicitly add a NOT NULL constraint to this column?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "In a bike-sharing database, the table has foreign key constraints on rider_id and station_id, referencing the primary keys of the riders and stations tables, respectively. Should you also add explicit NOT NULL constraints to rider_id and station_id?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How would you design a database schema to organize the past five years of books long-listed for the International Booker Prize, as mentioned in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How can you use the concept of 'relating' tables to connect books and their authors in a database?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is it correct to say that the `SELECT` command is used to open a SQLite database file?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "If I set a `DEFAULT` constraint on a timestamp column in my database, will it automatically fill in the current time for every new row I add?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "Is it correct to say that the 'create table' command in SQL is used to physically construct real-world structures like Boston's subway system?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "A student claims: 'SQLite has a BOOLEAN data type to store true or false values, just like other database systems.' Is this statement correct?",
+      "pre_rank": 8,
+      "post_rank": 1,
+      "movement": 7
+    },
+    {
+      "question": "A student claims: 'If I run `SELECT * FROM riders` in SQLite, I will always see data in the results, even if the table is empty.' Is this statement correct?",
+      "pre_rank": 5,
+      "post_rank": 1,
+      "movement": 4
+    },
+    {
+      "question": "Is it necessary to explicitly add a NOT NULL constraint to a column that is already a primary key or a foreign key referencing a primary key?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    }
+  ]
+}

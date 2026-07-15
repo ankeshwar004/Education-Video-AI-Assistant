@@ -1,0 +1,51 @@
+{
+  "macro": {
+    "mrr_before": {
+      "mean": 0.7311142619839262,
+      "std": 0.07350784673250091
+    },
+    "mrr_after": {
+      "mean": 0.8070987353337069,
+      "std": 0.07682650166587027
+    },
+    "hit_rate_before": {
+      "1": 0.5864234427287784,
+      "3": 0.8410672214857516,
+      "5": 0.9243650928808096
+    },
+    "hit_rate_after": {
+      "1": 0.6881469774050151,
+      "3": 0.9147884880692381,
+      "5": 0.9525215430069824
+    },
+    "rank_movement": {
+      "improved_total": 172,
+      "worsened_total": 100,
+      "unchanged_total": 328,
+      "average_movement_of_video_means": 0.5259784734800197
+    },
+    "n_videos": 10
+  },
+  "micro": {
+    "mrr_before": 0.7303963174529166,
+    "mrr_after": 0.8054341587633007,
+    "hit_rate_before": {
+      "1": 0.585,
+      "3": 0.84,
+      "5": 0.9233333333333333
+    },
+    "hit_rate_after": {
+      "1": 0.685,
+      "3": 0.9133333333333333,
+      "5": 0.9516666666666667
+    },
+    "rank_movement": {
+      "improved": 172,
+      "worsened": 100,
+      "unchanged": 328,
+      "average_movement": 0.525
+    },
+    "n_pairs": 600
+  },
+  "n_videos_evaluated": 10
+}

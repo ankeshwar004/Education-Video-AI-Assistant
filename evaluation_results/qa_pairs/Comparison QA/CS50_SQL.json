@@ -1,0 +1,134 @@
+[
+  {
+    "question": "How do data types and storage classes differ in SQLite, as described in the transcript?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Data types define the kind of data a column can hold (e.g., INTEGER, REAL, TEXT), while storage classes in SQLite refer to the five categories of values (NULL, INTEGER, REAL, TEXT, BLOB) that determine how data is stored and interpreted.",
+    "start": "27:09",
+    "end": "28:24",
+    "chunk_id": 22,
+    "video_id": "CS50_SQL",
+    "content": " Like we have column names, but as we saw before, we should ideally specify what kind of data should be able to go into each of these columns. And for that, we'll need some new ideas to talk about here. So let's focus now on this idea of data types and storage classes. Data types and storage classes are two very similar but distinct ideas. And they're distinct in a way we'll talk about in just a minute. Now, SQLite has five storage classes. Five kind of storage, five kind of types, so to speak, of values that can hold. So let's talk about the first one. No, for instance. No, in this case, means nothing. There's nothing that actually is inside of this value. It's kind of a central value to mean nothing is here. Integer means a whole number, like one, two, three, four, five, real talks about decimals, like floating points, like 1.2 or 2.4 and so on. Text is used for characters and blob, kind of a funny one. Blob stands for binary, large object. And it represents the data exactly as I give it to this value."
+  },
+  {
+    "question": "Why is using an integer data type preferred over a floating-point data type for storing fares in this context?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Using integers to store fares is preferred because they allow for precise calculations, especially when summing fares over many riders, as integers are perfectly represented without rounding errors. Floats, while capable of representing fractional values, can introduce inaccuracies in calculations due to their nature.",
+    "start": "32:08",
+    "end": "33:21",
+    "chunk_id": 26,
+    "video_id": "CS50_SQL",
+    "content": " down below here. So trade-offs and challenges overall. Let's look at these three, though. I have the first one to store as an integer. I'm trying to store fares here. Second one as text and the third one as a floating point or a real in this case. Let me ask for some opinions here. Which one would you use? And why? For trying to represent fares in this case. Thank you. I prefer using integers because, of course, I need to get the calculation very accurately. That's my point of view. So sometimes I can use float, but, you know, like he said before, it can get very wonky if I get, you know, if I really need that kind of position, I don't really recommend using floats. Yeah, good point. So I'll go back to some slides here. You might argue for the integer because you know, you can precisely represent integers. And let's say I want to add up fares over a lot, a lot of riders. This might be useful for me because I know that each number would be perfectly precisely represented. I can do lots of big kind of math with this number here."
+  },
+  {
+    "question": "How does the relationship between riders and stations differ in terms of minimum association requirements?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "A rider must be associated with at least one station, but a station can have zero or more riders.",
+    "start": "16:00",
+    "end": "17:10",
+    "chunk_id": 13,
+    "video_id": "CS50_SQL",
+    "content": " at some station later on. So a rider could be associated with not just one station, but multiple. And if you're familiar, at least with any subway system, really the Boston one too, it can often get pretty busy. And so riders might not just go to, of course, one station or two, stations could also have multiple riders that are on a particular station here. So to recap, one rider might be associated with more than one station. They might get on at this first one and get off at this later one. But each station could presumably have more than one rider. Each station here could have rider A or rider B, the rider up here or the rider down below, and even many more than that as well. So to put it in the language of our ER diagrams, our entity relation diagrams from last week, we could look at a bit like this. We have riders and stations, riders, visit stations, and they're associated like this. A rider must have at least one station associated with them. That's what this horizontal line means. If they aren't at a station,"
+  },
+  {
+    "question": "What is the difference between using a joint primary key (rider ID + station ID) and SQLite's implicit row ID as the primary key in this table design?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "A joint primary key constraint ensures that the combination of rider ID and station ID is unique, preventing duplicate entries for the same rider-station pair. In contrast, using SQLite's implicit row ID as a primary key allows multiple visits by the same rider to the same station, as each row gets a unique identifier regardless of the rider-station combination.",
+    "start": "48:38",
+    "end": "49:46",
+    "chunk_id": 39,
+    "video_id": "CS50_SQL",
+    "content": " I could follow this up and I could say similarly, the primary key of this table is not just rider ID like this, but it's also station ID. Now this is a joint primary key constraint. But if we think about this logically, I mean, it kind of stands to reason that somebody would visit a station more than once. And I don't want to make sure that every combination of rider and station ID should be unique. I want people to be able to visit a station more than once. So maybe not the best design for this table, but I could certainly use it in other cases or other contexts. One other option would be to do it before and to have maybe the ID column here of type integer. And then down below, make that our primary key a bit like this. And now, visits has its own ID column. But actually, SQLite by default will give me, it's a very own primary key, one called row ID. It's implicit. I can't see it, but it actually could query it. I could query for row ID, all one word and get back a unique primary key for this table. SQLite is automatically created for me."
+  },
+  {
+    "question": "How does the purpose of type affinity in SQLite differ from the purpose of the DROP TABLE statement?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Type affinity in SQLite allows a column to have a preference for storing a specific data type (e.g., INTEGER, TEXT), and SQLite will attempt to convert inserted values to that type if possible. The DROP TABLE statement, on the other hand, is used to delete an entire table and its data from the database.",
+    "start": "37:03",
+    "end": "38:23",
+    "chunk_id": 30,
+    "video_id": "CS50_SQL",
+    "content": " I'll get back not 10, the text, but 10, the integer. Because again, a mount, this column here, has an affinity for the integer storage class. Let's try this. 25, some text again, all inserted into this table. Now, I'll have 25 as an integer. So this is how SQLite allows us to give certain columns an affinity for certain types. They'll try to store values of that type. So long as we insert values, it could be fees we converted to that type here. So let's go back to our schema and try to improve it now to use not just column names, but also type affinities to store certain data of a certain type. Go back to my computer here and let's improve this once more. So I'll go over to my table. And now, I probably want to improve the design here. And often, if I want to improve this, I might just need to erase what I've already done. So let me introduce this new keyword, this new statement called drop table. To drop a table means to delete it, to remove it. So let me try doing this for riders, station, and visits."
+  },
+  {
+    "question": "How do the relationships between riders and stations differ in terms of cardinality?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "A rider can be associated with many stations (one-to-many), while a station can have zero to many riders (also one-to-many). The key difference is that riders are the primary entity with multiple station associations, whereas stations are secondary entities that may or may not have riders.",
+    "start": "17:10",
+    "end": "18:24",
+    "chunk_id": 14,
+    "video_id": "CS50_SQL",
+    "content": " they're earlier rider, right? A rider though could have many stations associated with them. That's what this three prongs down here means. They could have one, two, three, four. They could have many stations they could get on and get off of. Now, a station could have anywhere between zero riders, if it's maybe out of commission or isn't very popular. Upwards to many could have two, three, four, five, even hundreds of riders associated with this particular station. So here is our entity relation diagram for these particular riders and these stations here. So let me ask what questions do we have on these relationships between riders and stations and how to design this table so far? So I want to ask that you have used the same ID for stations and riders. So that maybe gave us a problem in coding. Yeah, a good observation. So you might have noticed that in the riders table and in the stations table, I gave the same kind of ID, like I had one, two, three for each of them. And let me just show you that again here. I'll come back to some slides and I'll show you again"
+  },
+  {
+    "question": "What is the difference between the NOT NULL and UNIQUE constraints in database columns?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "The NOT NULL constraint ensures a column always has a value (no nulls), while the UNIQUE constraint ensures all values in a column are distinct (no duplicates).",
+    "start": "57:10",
+    "end": "58:22",
+    "chunk_id": 46,
+    "video_id": "CS50_SQL",
+    "content": " When you have columns that are neither primary keys nor foreign keys, and you want to make sure that they have, they always have a value that they are never null, effectively. Okay, so that is not null. And we could keep going here. We also had one called unique that makes sure every value, every row, in this column, is unique. Where could we apply this? I could try to apply it, let's say, to the name of a station. Like station should have unique names. So I'll say, not null and unique. Now this column has two constraints. The first, not null. It should always have a value. A second, unique. The value shouldn't repeat throughout this column. Line, I might leave without this constraint. I could imagine two stations being on the same line, like both on blue, I'll allow that in this case. Now again, we could try to apply unique to our primary keys or our foreign keys, as I just did here. But it's already taken care of for us, using this primary key constraint. A primary key, again, is always going to be unique"
+  },
+  {
+    "question": "How does the PRIMARY KEY constraint compare to the UNIQUE constraint in terms of null values and uniqueness?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The PRIMARY KEY constraint inherently enforces both NOT NULL and UNIQUE, meaning it cannot be null and must be unique. The UNIQUE constraint alone only enforces distinct values but allows nulls unless combined with NOT NULL.",
+    "start": "57:10",
+    "end": "58:22",
+    "chunk_id": 46,
+    "video_id": "CS50_SQL",
+    "content": " When you have columns that are neither primary keys nor foreign keys, and you want to make sure that they have, they always have a value that they are never null, effectively. Okay, so that is not null. And we could keep going here. We also had one called unique that makes sure every value, every row, in this column, is unique. Where could we apply this? I could try to apply it, let's say, to the name of a station. Like station should have unique names. So I'll say, not null and unique. Now this column has two constraints. The first, not null. It should always have a value. A second, unique. The value shouldn't repeat throughout this column. Line, I might leave without this constraint. I could imagine two stations being on the same line, like both on blue, I'll allow that in this case. Now again, we could try to apply unique to our primary keys or our foreign keys, as I just did here. But it's already taken care of for us, using this primary key constraint. A primary key, again, is always going to be unique"
+  },
+  {
+    "question": "How does SQLite's approach to integer storage differ from its approach to storing text or blob data?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "SQLite allows programmers to use integers without worrying about their byte size (e.g., one-byte, two-byte, or eight-byte), while text and blob storage classes are used for character data and binary data (like images), respectively. Integers are for whole numbers, text for quoted characters, and blob for raw binary data.",
+    "start": "29:42",
+    "end": "30:53",
+    "chunk_id": 24,
+    "video_id": "CS50_SQL",
+    "content": " it'll probably use a one-byte or a two-byte integer for that. But SQLite's idea is that I, as a programmer, shouldn't have to care if I use an eight-byte or a one-byte or a two-byte integer. I just care that I'm using integers, whole numbers and they give me a storage class. to use any of these up to their choice here as well. Now, let's look at a few examples of values in SQLite that we could store. Well, we have perhaps the red line as some text, and because this is characters that's quoted, we could use the text storage class to represent this particular value here. We could have maybe an image, and to the earlier point, we could say, well, this image might be best represented using a blob, a binary, large object, to keep all of these pixels exactly as they are in this image. But we do get some choice, some interesting design challenges. We look at the idea of fares. So let's say to your point earlier, fares are 10 cents back in the 1950s or so. Well, 10 cents, we could store as an integer,"
+  },
+  {
+    "question": "How are the 'writers' and 'stations' tables related in the database schema described in the transcript?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The 'writers' and 'stations' tables are related through a many-to-many relationship, meaning a writer can be associated with multiple stations, and a station can be associated with multiple writers.",
+    "start": "23:27",
+    "end": "24:40",
+    "chunk_id": 19,
+    "video_id": "CS50_SQL",
+    "content": " And now I'll similarly include an ID for each of these stations. I'll say ID, comma. And then what else should I have? Well, stations tend to have a name like the Kendall MIT station, the Harvard station, the Park Street station. So I'll say I'll give each of these the very own name. comma. What else do stations have? Well, they might also have a line that they're on. Let's say it's the red line or the blue line or the green line. And so on, I'll have a space for them to write in their line that they're a part of. OK, and maybe I'll leave it that to keep it simple. I'll say stations have an ID, a name, and a line. Now I'll close this out. I'll say end, parentheses, sum my colon, hit enter. And nothing seems to happen. But if I type dot schema, I'll now see my writers and my stations tables inside of my database. Now one more step here. We have writers. We have stations. But we have to relate them. We have to relate them using this many to many relationships as we saw last week. So let me try making a table to implement"
+  },
+  {
+    "question": "What attributes are explicitly mentioned for the 'stations' table, and how does this compare to the information provided about the 'writers' table?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The 'stations' table includes attributes like ID, name, and line, while the 'writers' table is not explicitly described with attributes in the transcript. The comparison highlights that 'stations' have specific fields for identification and categorization, whereas 'writers' are only mentioned as a related entity.",
+    "start": "23:27",
+    "end": "24:40",
+    "chunk_id": 19,
+    "video_id": "CS50_SQL",
+    "content": " And now I'll similarly include an ID for each of these stations. I'll say ID, comma. And then what else should I have? Well, stations tend to have a name like the Kendall MIT station, the Harvard station, the Park Street station. So I'll say I'll give each of these the very own name. comma. What else do stations have? Well, they might also have a line that they're on. Let's say it's the red line or the blue line or the green line. And so on, I'll have a space for them to write in their line that they're a part of. OK, and maybe I'll leave it that to keep it simple. I'll say stations have an ID, a name, and a line. Now I'll close this out. I'll say end, parentheses, sum my colon, hit enter. And nothing seems to happen. But if I type dot schema, I'll now see my writers and my stations tables inside of my database. Now one more step here. We have writers. We have stations. But we have to relate them. We have to relate them using this many to many relationships as we saw last week. So let me try making a table to implement"
+  },
+  {
+    "question": "How does the purpose of the 'create table' SQL statement differ from the purpose of the database 'mbta.db' mentioned in the transcript?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The 'create table' SQL statement is used to create a new table in a database, while the database itself (e.g., 'mbta.db') is a container that holds one or more tables. The database organizes and stores data, whereas the 'create table' command defines the structure of a specific table within that database.",
+    "start": "19:40",
+    "end": "20:52",
+    "chunk_id": 16,
+    "video_id": "CS50_SQL",
+    "content": " there are stations that were built, but aren't really being used right now, or aren't really in service yet. That could be a station that has no visitors. So you could argue, let's make sure every station has at least one rider and every rider may or may not have to visit a station. For that, I would say, let's just kind of, we can probably reason we disagree. and talk about how we could represent the diagram here, too. But a great observation and a good other critique of this system here. All right. So let's now turn to representing this in our database. I'll go back to my computer and we'll learn about this new SQL keyword, SQL statement. This one called create table. Create table allows us to, as the name suggests, create a brand new table. So let's do just that in our new database, to represent riders and stations. I'll go into my terminal and I want to make a brand new database. I'll call this one, mbta.db, because mbta stands for the Massachusetts Bay Transportation Authority, the people who run the subway essentially."
+  }
+]

@@ -1,0 +1,560 @@
+{
+  "scores": [
+    {
+      "reasoning": "The generated answer is partially correct but missing or incorrect important facts. It covers the main point but misses a secondary key point. The answer contains one unsupported claim or a claim that overreaches the transcript. The answer is understandable but awkward, verbose, or poorly organized.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "What happens when you try to drop the teacher's string in the code?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear and well-structured, making it easy for a student to follow. However, it does not cover the main point of the Reference Answer, which is to type the conversion from the given options. The generated answer is factually correct in terms of converting a floating-point number to an integer in Python. Nevertheless, it contains information not present in the Source Transcript, such as the explanation of the `int()` function and the example `int(10/5)`, which makes it unfaithful to the Source Transcript.",
+      "correctness": 5,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 5,
+      "question": "How can you convert a floating point number to an integer in Python?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately states that dictionaries are denoted using curly braces {}, which matches the reference answer. It also covers the main point and includes extra accurate detail from the source transcript. The answer is clear, well-structured, and easy to follow. Every claim in the generated answer is directly supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What is used to denote a dictionary?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately reflects the reference answer and source transcript, providing a clear and well-structured explanation of dictionaries in Python. It correctly states that dictionaries store key-value pairs and provides a relevant example. The answer is faithful to the source transcript and fully satisfies the criteria for completeness and correctness.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What can be stored in a dictionary?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It fully covers the key points in the reference answer and is factually correct. However, it includes extra information not present in the source transcript, which reduces its faithfulness score.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 3,
+      "clarity": 5,
+      "question": "What is the purpose of the capitalize function in Python strings?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers all key points in the reference answer and is factually correct. However, it does not directly support every claim from the source transcript, as some details are not mentioned in the transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 3,
+      "clarity": 5,
+      "question": "How does Python index its strings?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the key difference between tuples and lists, and is well-structured and clear. However, it does not perfectly reflect the source transcript, which contains some inaccuracies and confusing statements.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What is the key difference between a tuple and a list in programming?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It correctly states that the data type of a variable can be determined using the type() function, which matches the reference answer. The generated answer also covers all key points in the reference answer and provides additional examples. However, it does not directly support its claims with the source transcript, which contains unrelated information about tuples and lists.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 1,
+      "clarity": 5,
+      "question": "How do you determine the data type of a variable in programming?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly incorrect, misses the main point, contains fabricated information, and is understandable but awkward.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 3,
+      "question": "What is the speaker's request to the viewers at the end of the video?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear and well-structured, but it could be more concise. It covers the main point of the reference answer but misses some secondary key points. The answer is factually correct and mostly faithful to the source transcript, but it includes some minor overreaching claims.",
+      "correctness": 5,
+      "completeness": 3,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What type of programming language is being discussed in the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately and clearly explains how to change the first element in a list in Python, matching the reference answer and being supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "How do you change the first element in a list in Python?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It correctly identifies the method to print all items in a dictionary as directly using `print(dict_name)` and mentions an alternative method using `dict_name.items()`. However, it does not mention the 'dot gate method' as stated in the Reference Answer, which is a minor factual error. The completeness is 4 because it covers the main point but misses a secondary key point. The faithfulness is 3 because it contains one unsupported claim about using `dict_name.items()` which is not directly supported by the Source Transcript. The correctness is 4 due to the minor factual error of not mentioning the 'dot gate method'. The clarity is 5 because the answer is well-structured and easy to understand.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 3,
+      "clarity": 5,
+      "question": "What method can be used to print all items in a dictionary?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately reflects the reference answer and source transcript, providing a clear and well-structured explanation of how to print only the keys in a dictionary. It correctly identifies the .keys() method as the solution and provides a relevant example. The answer is easy to follow, and all claims are directly supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "How can you print only the keys in a dictionary?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately states that to read a file, one should open it in read mode by specifying 'r' as the mode argument in the `open()` function. This matches the reference answer and is supported by the source transcript. The answer is clear, well-structured, and easy to follow, covering all key points from the reference answer and directly supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What mode should be used to open a file for reading?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear and well-structured, but it does not match the reference answer, misses the main point, and contains information not present in the source transcript.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 5,
+      "question": "What is the purpose of closing a file after it has been opened?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer does not match the reference answer, misses the main point, and contains information not present in the source transcript.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 5,
+      "question": "What function is used to read the contents of a file?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct and provides some relevant information, but it does not fully match the reference answer. It also includes some extra details not present in the reference answer but drawn from the source transcript. The clarity is good but not perfect, as the answer is well-structured but could be more concise. The faithfulness is partial, as some claims are supported by the source transcript, but others are not directly mentioned.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "What is the purpose of installing dependencies in a module?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly clear and well-structured, but it could be improved with more concise language. It covers the main point of importing built-in modules in Python but misses the simplicity and directness of the Reference Answer. The answer is largely faithful to the Source Transcript but includes some claims that overreach the transcript. The correctness is good, with only minor factual errors, such as the specific example used.",
+      "correctness": 4,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "How do you import a built-in module in Python?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main point of using loops to avoid repetitive code and provides a relevant example. The answer is mostly correct, faithful to the source transcript, and complete in covering the key points. However, it does not fully satisfy all criteria to warrant a score of 5 in each dimension.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What is the purpose of using a loop in programming?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It correctly explains the range function and its usage in a for loop, covering the main point of the Reference Answer. The answer also includes accurate details from the Source Transcript, demonstrating faithfulness. However, it does not fully satisfy the criteria for a perfect score in any dimension, as it could be slightly more comprehensive and precise in its explanation.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "How does the range function work in a for loop?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer does not match the reference answer, misses the main point, contains fabricated information, and is understandable but awkward.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 3,
+      "question": "What is the first step to start working with Python?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear and well-structured, but it includes the extra detail '.0' which is not present in the reference answer. The completeness is 5 because it covers the main point and does not miss any key points. The faithfulness is 4 because the claim about the instructor stating they are downloading Python version 3.7 is supported by the source transcript, but the mention of 'OCR text and the visual of the Python download page' is not present in the source transcript. The correctness is 4 because the generated answer is mostly correct but includes a minor factual error by adding '.0' to the version number.",
+      "correctness": 4,
+      "completeness": 5,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What version of Python is being downloaded in the video?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer does not match the reference answer, misses the main point, contains fabricated information, and is mostly incorrect. However, it is well-structured and easy to follow.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 4,
+      "question": "What happens to a string when it is capitalized?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers all key points in the reference answer and is factually correct. However, it includes extra information not present in the source transcript, which reduces its faithfulness score.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 3,
+      "clarity": 5,
+      "question": "What is a list in Python?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the difference between handling an exception and letting a program error through, as stated in the reference answer. It also provides additional context from the source transcript, making it comprehensive and faithful to the original material. The answer is well-structured and clear, making it easy for a student to follow.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What is the difference between handling an exception and letting a program error through?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately explains the difference between a list and a dictionary in Python, matching the reference answer. It covers all key points, is clear and well-structured, and factually correct. However, it does not directly support its claims with the source transcript, which is why faithfulness is scored low.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 1,
+      "clarity": 5,
+      "question": "What is the main difference between a list and a dictionary in Python?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, complete, and correct. However, it does not faithfully represent the source transcript, which does not clearly explain the difference between a list and a set in Python.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 1,
+      "clarity": 5,
+      "question": "What is the difference between a list and a set in Python?",
+      "source": "general_knowledge"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It correctly identifies the data types of variables A and C, matching the reference answer. However, it claims the instructor demonstrates this by using the type() function, which is not supported by the source transcript. This overreach in claims reduces the faithfulness score.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 2,
+      "clarity": 4,
+      "question": "How do the data types of variables A and C differ?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main points of the reference answer and provides additional accurate details. However, it contains some information not present in the source transcript, which affects its faithfulness.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 2,
+      "clarity": 4,
+      "question": "What is the difference between writing code from scratch and using modules in Python programming?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately explains the difference between printing a dictionary and printing its keys, matching the reference answer. It covers all key points, is well-structured and clear, and its claims are supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "What is the difference between printing a dictionary and printing its keys?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main points of the reference answer and provides additional accurate details from the source transcript. The answer is mostly correct, with no major factual errors. However, it does not fully satisfy the criteria for a perfect score in each dimension, hence the scores of 4.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What is the difference between the if and else statements in programming?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main point of the difference between using an if-else statement and a loop to print the 100th number. The answer is mostly correct, with one minor factual error. The answer is faithful to the source transcript, with most claims directly supported by the transcript. However, the answer does not fully satisfy all the criteria, so it does not deserve a score of 5 in any dimension.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What is the difference between using an if-else statement and a loop to print the 100th number?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow, but it contains some minor errors and lacks direct support from the source transcript for all claims.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "How do for loops and while loops differ in their implementation?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately explains the difference between built-in and installed modules in Python, matching the reference answer. It covers all key points, is clear and well-structured, and mostly faithful to the source transcript, although it does not directly quote or reference specific parts of the transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 3,
+      "clarity": 5,
+      "question": "What is the difference between built-in and installed modules in Python?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow, but it does not fully capture the main difference between a list in Python and an array as stated in the Reference Answer. It also includes information not present in the Source Transcript, which affects its faithfulness.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 2,
+      "clarity": 4,
+      "question": "What is the main difference between a list in Python and an array?",
+      "source": "hybrid"
+    },
+    {
+      "reasoning": "The generated answer accurately reflects the reference answer, is well-structured and clear, and does not contain any unsupported claims.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "What is the similarity between a list in Python and an array in terms of indexing?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately describes how indexing works in Python lists, matching the reference answer. It covers all key points and is clear and well-structured. However, it includes some information from the source transcript that is not present in the reference answer, and while mostly faithful to the transcript, it does not directly support every claim with a quote or exact detail from the transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "How does indexing work in Python lists?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately explains the importance of paying attention to indexing when changing elements in a list, matching the reference answer and source transcript. It clearly states that Python lists use zero-based indexing and provides a correct example. The answer is well-structured, easy to follow, and directly supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "Why is it important to pay attention to indexing when changing elements in a list?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct but contains some incorrect information. It does not fully match the reference answer and misses the main point. The answer is understandable but not well-structured, and it contains some unsupported claims.",
+      "correctness": 2,
+      "completeness": 2,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "Why does the speaker mention that they cannot drop the teacher's string?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct and clear, but it misses a secondary key point about using the plus operator (+) between strings and numbers. It also contains one unsupported claim about using the `str()` function, which is not directly mentioned in the Source Transcript. The answer is well-structured and easy to follow, but it could be improved with more accurate and complete information.",
+      "correctness": 4,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "How does the speaker concatenate strings and numbers in the code?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main points of the reference answer and provides some extra accurate details. However, it does not fully capture the nuances of the reference answer and contains some information not directly supported by the source transcript.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 2,
+      "clarity": 4,
+      "question": "Why are some modules installed in the scope of the module, while others are built-in?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct and faithful to the source transcript, but lacks completeness and has some minor factual errors in terms of correctness. The clarity is good but not perfect.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "How does the map.flow function relate to the map.cost function in the given Python program?",
+      "source": "hybrid"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main point of the reference answer and includes accurate details from the source transcript. The answer is mostly correct, with no major factual errors. However, it does not fully capture the nuance of the reference answer, and some minor details are not perfectly aligned with the source transcript.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "Why is using a dictionary useful in this context?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately explains how to add new values to an existing dictionary, matching the reference answer. It covers all key points, is well-structured, and directly supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "How can you add new values to an existing dictionary?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct and understandable, but it contains some unsupported claims and misses a secondary key point from the Reference Answer.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "Why does the speaker ask viewers to like the video?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main point of printing all items in a dictionary and provides additional information about accessing key-value pairs. However, it does not fully match the reference answer and contains some information not directly supported by the source transcript.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 2,
+      "clarity": 4,
+      "question": "How can you print all the items in a dictionary?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately reflects the reference answer and is well-structured, clear, and easy to follow. It correctly states that to print only the keys of a dictionary, you use the `.keys()` method. The answer is complete, covering all key points in the reference answer, and is faithful to the source transcript. The language used is clear and concise, making it easy for a student to understand.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "How can you print only the keys in a dictionary?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers all key points in the reference answer and is factually correct. However, it does not directly support every claim from the source transcript, and some information is not present in the transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What happens when you try to change the value of a tuple?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately reflects the reference answer and is clear, well-structured, and easy to follow. However, it does not entirely faithfully represent the source transcript, which contains inaccuracies and confusing explanations.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 3,
+      "clarity": 5,
+      "question": "How do you determine if a variable is a tuple or a list?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and faithful to the source transcript. It accurately describes the purpose of 'try-except' in handling exceptions and provides a clear example. However, it contains a minor factual error by referring to 'try-except' instead of 'try Accept' as mentioned in the source transcript. The answer is well-structured and easy to follow, but may benefit from more precise terminology.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What is the purpose of using 'try Accept' in the given code snippet?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main point of defining the variable before use and also mentions using a try-except block as an alternative. The answer is mostly correct, faithful to the source transcript, and complete, but it does not fully satisfy all the criteria to warrant a score of 5 in each dimension.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "How would you modify the code to avoid the 'index not defined' error?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It fully covers the key points in the reference answer and provides accurate information about printing lists in Python. However, it does not directly support its claims with the source transcript, which discusses unrelated topics.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 1,
+      "clarity": 4,
+      "question": "What happens when you print a list in Python?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately reflects the reference answer, is complete, clear, and faithful to the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "How do you remove repeated items from a list in Python?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It correctly states how to concatenate strings in Python and provides a relevant example. The answer covers all key points in the reference answer and provides additional accurate details. However, it does not directly follow the source transcript, which does not provide a clear explanation of string concatenation. The generated answer is mostly faithful to the source transcript but contains some information not present in it.",
+      "correctness": 5,
+      "completeness": 4,
+      "faithfulness": 1,
+      "clarity": 4,
+      "question": "If you want to concatenate the strings 'Hello', 'World', and 'Python', how would you do it?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers all key points in the reference answer and is factually correct. However, it includes extra information about converting input to a number, which is not directly supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 3,
+      "clarity": 5,
+      "question": "If you want to take a user's input in Python and store it in a variable, what function would you use?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and faithful to the source transcript. It accurately conveys the concept of exception handling and its limitations. However, it does not fully satisfy the criteria for a perfect score in each dimension. The clarity is good but could be improved with more precise language. The completeness is also good, but the answer could benefit from a clearer explanation of the difference between exception handling and error prevention. The faithfulness is good, as the answer is supported by the source transcript. The correctness is also good, but the answer could be more precise in its explanation of the limitations of exception handling.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "Is it correct to say that using 'try Accept' will prevent all errors in a program?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately reflects the reference answer, is well-structured and clear, and does not contain any unsupported claims.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "Is it true that printing the type of a dictionary will display its key-value pairs?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly incorrect, misses the main point, and contains one unsupported claim. It is understandable but awkward and poorly organized.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 3,
+      "clarity": 3,
+      "question": "Is it necessary to click on the 'new file' to write Python code?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially incorrect, misses the main point, and contains fabricated information. It implies that PowerShell is necessary for installing modules, which is not the case. The answer also mentions built-in modules, which is not relevant to the question. The clarity is understandable but awkward and poorly organized.",
+      "correctness": 2,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 3,
+      "question": "Do you need to use the power shell to install a module in Python?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is correct, complete, and clear. It accurately identifies the mistake in the Source Transcript and provides the correct information. However, it does not directly support every claim with the Source Transcript, hence the faithfulness score is 3.",
+      "correctness": 5,
+      "completeness": 4,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "Is it true that the 'capitalized' function in Python is used to capitalize the first letter of any string?",
+      "source": "hybrid"
+    },
+    {
+      "reasoning": "The generated answer accurately states that Python indexing starts from 0, which matches the reference answer. It also provides a clear example of how indexing works in lists and strings. The answer is well-structured and easy to follow, but may lack a bit of detail in explaining the implications of zero-based indexing. The faithfulness score is 4 because the generated answer does not directly quote or closely paraphrase the source transcript, but it does capture the essential information about Python indexing starting from 0.",
+      "correctness": 5,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "Does Python indexing start from 1?",
+      "source": "video"
+    }
+  ],
+  "averages": {
+    "correctness": 4.098360655737705,
+    "completeness": 3.918032786885246,
+    "faithfulness": 3.2131147540983607,
+    "clarity": 4.295081967213115,
+    "overall": 3.8811475409836067
+  }
+}

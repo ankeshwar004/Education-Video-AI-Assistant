@@ -1,0 +1,145 @@
+[
+  {
+    "question": "What is the main difference in accessing elements between arrays and linked lists?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "Arrays allow for random or direct access, while linked lists do not.",
+    "start": "01:09",
+    "end": "02:28",
+    "chunk_id": 1,
+    "video_id": "Array_VS_LinkedList",
+    "content": " to talk about advantageous and drawbacks of arrays and linked list right. So, now the first factor is cost of accessing the element from the data structure see both our data structure arrays also data structure the linked list is also a data structure. So, first factor is cost of accessing an element first of all we are going to talk about array see have you are going to represent an array see. So, this is have you are going to represent an array suppose we have some elements here 6701 right and you want to access some data from the array now as we know random access is possible in the array or you can say direct access is possible. If you know the base address of the array then you can easily compute address of any element in the array in constant time right and the formalize suppose the base address for this is 100 for integer it is going to take 4 bytes it is 104 108 112 and 116. So, you want to access this data indexes to simply how you will access simply write a of to suppose array name is a array name and index value. How the compiler is going to compute"
+  },
+  {
+    "question": "How do arrays and linked lists compare in terms of accessing an element's location?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Arrays can compute the address of any element in constant time if the base address is known, whereas linked lists do not have this capability.",
+    "start": "01:09",
+    "end": "02:28",
+    "chunk_id": 1,
+    "video_id": "Array_VS_LinkedList",
+    "content": " to talk about advantageous and drawbacks of arrays and linked list right. So, now the first factor is cost of accessing the element from the data structure see both our data structure arrays also data structure the linked list is also a data structure. So, first factor is cost of accessing an element first of all we are going to talk about array see have you are going to represent an array see. So, this is have you are going to represent an array suppose we have some elements here 6701 right and you want to access some data from the array now as we know random access is possible in the array or you can say direct access is possible. If you know the base address of the array then you can easily compute address of any element in the array in constant time right and the formalize suppose the base address for this is 100 for integer it is going to take 4 bytes it is 104 108 112 and 116. So, you want to access this data indexes to simply how you will access simply write a of to suppose array name is a array name and index value. How the compiler is going to compute"
+  },
+  {
+    "question": "What is the memory requirement for storing 7 elements in an array versus a linked list?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "Array requires 28 bytes while linked list requires 56 bytes",
+    "start": "10:00",
+    "end": "11:33",
+    "chunk_id": 8,
+    "video_id": "Array_VS_LinkedList",
+    "content": " this one right. So, this is why I am saying that memory requirement in case of error is less than linked list. In 28 bytes only you can store how many elements 7 elements maximum. But in this case if you want to insert if you want to create 7 nodes then this memory requirement would be 7 into 8 that is 56 bytes right and here only 28 bytes. But memory utilization see memory requirement and utilization both are different factors. Memory requirement is less in error more in linked list but memory utilization is efficient in linked list but it is not so much efficient in error because here wastage of space is a major drawback in error fine. Now, second case is if that is the here we are taking integer data fine. So, it is going to take 4 bytes. Now, suppose we are going to take a complex data type that is going to take 16 bytes to store right. So, now if 16 bytes is to be taken then 16 into how much size is to be allocated for this array for 7 elements 16 into 7 that is 112 bytes fine and we are going to store only suppose 3 elements fine. Now, in case of linked list"
+  },
+  {
+    "question": "How does the memory utilization of an array compare to a linked list when storing complex data types?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Linked list has more efficient memory utilization, while array has wastage of space",
+    "start": "10:00",
+    "end": "11:33",
+    "chunk_id": 8,
+    "video_id": "Array_VS_LinkedList",
+    "content": " this one right. So, this is why I am saying that memory requirement in case of error is less than linked list. In 28 bytes only you can store how many elements 7 elements maximum. But in this case if you want to insert if you want to create 7 nodes then this memory requirement would be 7 into 8 that is 56 bytes right and here only 28 bytes. But memory utilization see memory requirement and utilization both are different factors. Memory requirement is less in error more in linked list but memory utilization is efficient in linked list but it is not so much efficient in error because here wastage of space is a major drawback in error fine. Now, second case is if that is the here we are taking integer data fine. So, it is going to take 4 bytes. Now, suppose we are going to take a complex data type that is going to take 16 bytes to store right. So, now if 16 bytes is to be taken then 16 into how much size is to be allocated for this array for 7 elements 16 into 7 that is 112 bytes fine and we are going to store only suppose 3 elements fine. Now, in case of linked list"
+  },
+  {
+    "question": "What are the factors that determine whether to use an array or a linked list?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "The size of the data, type of operation to be performed frequently, and requirements.",
+    "start": "00:00",
+    "end": "01:09",
+    "chunk_id": 0,
+    "video_id": "Array_VS_LinkedList",
+    "content": " See we cannot say that array is better or linked list is better because it all depends on the requirement, requirements. Maybe in one type of requirement, array is good to use and maybe in another type of requirement it is good to use linked list data structure fine. So, it all depends on the requirements plus it depends on the you know that size of the data you are dealing with or another factor is it also depends on which. Type of operation you want to perform frequently with your data whether you want to access the data very frequently whether you are going to insert some another data very frequently or you are going to delete some data from your existing data fine. So, which type of operation you are going to perform frequently with your data right. So, it all depends on many factors in this video we are going to compare all the factors where to use array and where it is good to use array and where it is good to use linked list. Or you can say in this video we are going to compare array and linked list or we are going"
+  },
+  {
+    "question": "What is the main difference between using an array and a linked list?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The choice between using an array and a linked list depends on the specific requirements and factors such as data size and type of operation.",
+    "start": "00:00",
+    "end": "01:09",
+    "chunk_id": 0,
+    "video_id": "Array_VS_LinkedList",
+    "content": " See we cannot say that array is better or linked list is better because it all depends on the requirement, requirements. Maybe in one type of requirement, array is good to use and maybe in another type of requirement it is good to use linked list data structure fine. So, it all depends on the requirements plus it depends on the you know that size of the data you are dealing with or another factor is it also depends on which. Type of operation you want to perform frequently with your data whether you want to access the data very frequently whether you are going to insert some another data very frequently or you are going to delete some data from your existing data fine. So, which type of operation you are going to perform frequently with your data right. So, it all depends on many factors in this video we are going to compare all the factors where to use array and where it is good to use array and where it is good to use linked list. Or you can say in this video we are going to compare array and linked list or we are going"
+  },
+  {
+    "question": "What is the main difference in memory allocation between arrays and linked lists?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "In arrays, memory is allocated for all elements at once, whereas in linked lists, memory is allocated for each node as it is created.",
+    "start": "07:10",
+    "end": "08:39",
+    "chunk_id": 6,
+    "video_id": "Array_VS_LinkedList",
+    "content": " memory has been allocated to the array for 7 elements are there and each element is going to get 4 bytes that is 28 bytes is to be allocated, but actually how much memory is in use only 1, 2 and 3 elements 3 into 4 that is only 12 bytes this is what unused space. Now, in case of linked list if you want to store only 3 elements then you will create only 3 nodes no need to give the size of the linked list in advance right at runtime only you are going to create a node fine. So, now, see this is the linked list having 3 nodes only. So, the memory requirement is how much see in the linked list this node is going to take some extra space for storing this pointer variable. In 32 bit compiler the pointer variable the size of this is what 4 bytes in 64 bit compiler it is going to take 8 bytes right. So, here I am taking 4 bytes for storing the pointer variable. So, total for one node total bytes would be 8, 4 for integer and 4 for storing this pointer variable or the set base means 8 bytes. So, total size is 8 into 3 for 3 nodes that is 24 bytes fine and here 28 bytes right."
+  },
+  {
+    "question": "How does the memory requirement for storing 3 elements compare between arrays and linked lists?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "The memory requirement for storing 3 elements is 28 bytes for an array and 24 bytes for a linked list.",
+    "start": "07:10",
+    "end": "08:39",
+    "chunk_id": 6,
+    "video_id": "Array_VS_LinkedList",
+    "content": " memory has been allocated to the array for 7 elements are there and each element is going to get 4 bytes that is 28 bytes is to be allocated, but actually how much memory is in use only 1, 2 and 3 elements 3 into 4 that is only 12 bytes this is what unused space. Now, in case of linked list if you want to store only 3 elements then you will create only 3 nodes no need to give the size of the linked list in advance right at runtime only you are going to create a node fine. So, now, see this is the linked list having 3 nodes only. So, the memory requirement is how much see in the linked list this node is going to take some extra space for storing this pointer variable. In 32 bit compiler the pointer variable the size of this is what 4 bytes in 64 bit compiler it is going to take 8 bytes right. So, here I am taking 4 bytes for storing the pointer variable. So, total for one node total bytes would be 8, 4 for integer and 4 for storing this pointer variable or the set base means 8 bytes. So, total size is 8 into 3 for 3 nodes that is 24 bytes fine and here 28 bytes right."
+  },
+  {
+    "question": "How does the time complexity of inserting an element at the beginning of an array compare to inserting an element at the middle of the array?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Both have a time complexity of order of n.",
+    "start": "14:00",
+    "end": "15:03",
+    "chunk_id": 11,
+    "video_id": "Array_VS_LinkedList",
+    "content": " insert you have to shift all the elements right side if you want to insert here then you have to shift 4 here then 0 then 7 then 6 and after that you can insert here. So, this thing how to insert data in array we have already discussed. So, you can check out that video fine. So, you have to shift how many elements and elements. So, it depends on the number of elements. So, it is going to take order of n if you want to insert at beginning the coast is order of n. If you want to insert suppose at middle at any ith position or you can say in average case this is the best case sorry this is the best case this is the worst case in average case if you want to insert in the middle of the array then you have to shift how many elements and by 2 elements fine. So, obviously, it depends it is proportional to the number of elements in the array. So, in at ith position also we are going to take order of n or you can say we have already discussed theta n minus p p is the position where you want to insert it depends on the position right. So, now in case of linked"
+  },
+  {
+    "question": "What is the primary difference between inserting a node at the beginning and inserting a node at the end of a linked list?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Inserting at the beginning only requires updating the head pointer, while inserting at the end requires traversing the entire list to find the last node.",
+    "start": "16:16",
+    "end": "17:39",
+    "chunk_id": 13,
+    "video_id": "Array_VS_LinkedList",
+    "content": " But here you have to traverse first of all suppose one at beginning in linked list it is order of 1 right now suppose if you want to insert a node having value 5 at the end and suppose the address is 5000 you cannot directly insert here because when you are writing a program then we are having only this head value the head pointer value that is 4000. So, here where we can reach to this location 4000 now check out the address part here we have 1000. So, we can reach to this node now here in the address part we have 2000. So, we can reach here here is 3000. So, we can reach at 3000 address now we have reached at the end of the list now you can insert this node here how you will insert this 5000 would be you have to simply adjust the links 5000 would be stored here now you can see this this node is this node is going to point here fine and here simply you will store now we will discuss these operations in detail here I am just giving you an overview. So, you have to traverse the complete list right. So, it depends on the number of nodes in the list"
+  },
+  {
+    "question": "How does memory utilization in linked lists compare to arrays?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "Memory utilization in linked lists is more efficient than in arrays.",
+    "start": "12:53",
+    "end": "14:00",
+    "chunk_id": 10,
+    "video_id": "Array_VS_LinkedList",
+    "content": " unused space you are taking in array or you are using the complete space you have declared in the array it depends on many factors fine, but generally we say that memory utilization in linked list very efficient than this array and memory requirement in array is less and memory requirement in linked list is more. Now, third factor is cost of insertion and deletion. So, first of all we will discuss what is cost of insertion 3 cases can be there at beginning you can insert at end you can insert and at any ith position you want to insert. So, now in array if sorted array is there then if you want to insert at the end suppose first of all you are taking at the end. So, directly you can insert here in the array because random excesses possible you can directly calculate this address, compile can directly calculate this address using that formula and simply insert value here. Suppose I want to insert 4 here right. So, at the end it is going to take order of 1 constant time, but if you want to insert here in the beginning of the array then how you will"
+  },
+  {
+    "question": "What is the difference in memory requirements between arrays and linked lists?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Memory requirement in array is less and memory requirement in linked list is more.",
+    "start": "12:53",
+    "end": "14:00",
+    "chunk_id": 10,
+    "video_id": "Array_VS_LinkedList",
+    "content": " unused space you are taking in array or you are using the complete space you have declared in the array it depends on many factors fine, but generally we say that memory utilization in linked list very efficient than this array and memory requirement in array is less and memory requirement in linked list is more. Now, third factor is cost of insertion and deletion. So, first of all we will discuss what is cost of insertion 3 cases can be there at beginning you can insert at end you can insert and at any ith position you want to insert. So, now in array if sorted array is there then if you want to insert at the end suppose first of all you are taking at the end. So, directly you can insert here in the array because random excesses possible you can directly calculate this address, compile can directly calculate this address using that formula and simply insert value here. Suppose I want to insert 4 here right. So, at the end it is going to take order of 1 constant time, but if you want to insert here in the beginning of the array then how you will"
+  },
+  {
+    "question": "How does the cost of insertion and deletion compare between arrays and linked lists?",
+    "question_type": "comparison",
+    "difficulty": "hard",
+    "answer": "Not explicitly stated in the transcript, but it is mentioned that there are 3 cases for insertion: at the beginning, at the end, and at any ith position.",
+    "start": "12:53",
+    "end": "14:00",
+    "chunk_id": 10,
+    "video_id": "Array_VS_LinkedList",
+    "content": " unused space you are taking in array or you are using the complete space you have declared in the array it depends on many factors fine, but generally we say that memory utilization in linked list very efficient than this array and memory requirement in array is less and memory requirement in linked list is more. Now, third factor is cost of insertion and deletion. So, first of all we will discuss what is cost of insertion 3 cases can be there at beginning you can insert at end you can insert and at any ith position you want to insert. So, now in array if sorted array is there then if you want to insert at the end suppose first of all you are taking at the end. So, directly you can insert here in the array because random excesses possible you can directly calculate this address, compile can directly calculate this address using that formula and simply insert value here. Suppose I want to insert 4 here right. So, at the end it is going to take order of 1 constant time, but if you want to insert here in the beginning of the array then how you will"
+  }
+]

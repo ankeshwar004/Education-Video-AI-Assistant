@@ -1,0 +1,122 @@
+[
+  {
+    "question": "How would you enforce a primary key constraint on the 'ID' column in the 'riders' table to ensure each rider has a unique identifier?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "To enforce a primary key constraint on the 'ID' column in the 'riders' table, you would modify the schema.SQL file to declare 'ID' as the primary key. This ensures that every rider has a unique identifier and no duplicates are allowed. For example: `CREATE TABLE riders (ID INTEGER PRIMARY KEY, ...);`.",
+    "scenario": "You are designing a database schema for a bike-sharing system. The 'riders' table contains a column named 'ID' that should uniquely identify each rider.",
+    "start": "46:12",
+    "end": "47:20",
+    "chunk_id": 37,
+    "video_id": "CS50_SQL",
+    "content": " Similarly, for foreign keys, well, a constraint is that if you have a foreign key, you better find that value in some other table. Otherwise, you violated this constraint to having a foreign key. So we have two kinds of table constraints, among others, but two of these are primary key and foreign key. And we can apply these to our table by applying them underneath the columns we tend to say will be inside of our table. Let's try these two here now. So we come back to my terminal here. So we can implement our very own primary key and foreign key constraints. We'll go back to my SQLite terminal and clear my screen. And let's then pull up our schema.SQL file so we can keep modifying our schema. I can now see I have the riders table stations and visits and I have some columns that could be primary keys or foreign keys, but I need to declare them as such. So here in the riders table, what was our primary key? Well, it was ID. Every rider should have their own unique ID that should not be duplicated across any two riders. So to ensure that"
+  },
+  {
+    "question": "How would you enforce a foreign key constraint to ensure that every entry in the 'rider_id' column of the 'visits' table corresponds to an existing 'ID' in the 'riders' table?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "To enforce a foreign key constraint, you would modify the schema.SQL file to reference the primary key of another table. For example, if the 'visits' table has a column 'rider_id' that should reference the 'ID' column in the 'riders' table, you would declare it as: `CREATE TABLE visits (rider_id INTEGER, FOREIGN KEY (rider_id) REFERENCES riders(ID), ...);`. This ensures that every 'rider_id' in the 'visits' table must exist in the 'riders' table.",
+    "scenario": "You are extending the bike-sharing system database. The 'visits' table tracks which riders visited which stations, and it includes a 'rider_id' column that must match an 'ID' in the 'riders' table.",
+    "start": "46:12",
+    "end": "47:20",
+    "chunk_id": 37,
+    "video_id": "CS50_SQL",
+    "content": " Similarly, for foreign keys, well, a constraint is that if you have a foreign key, you better find that value in some other table. Otherwise, you violated this constraint to having a foreign key. So we have two kinds of table constraints, among others, but two of these are primary key and foreign key. And we can apply these to our table by applying them underneath the columns we tend to say will be inside of our table. Let's try these two here now. So we come back to my terminal here. So we can implement our very own primary key and foreign key constraints. We'll go back to my SQLite terminal and clear my screen. And let's then pull up our schema.SQL file so we can keep modifying our schema. I can now see I have the riders table stations and visits and I have some columns that could be primary keys or foreign keys, but I need to declare them as such. So here in the riders table, what was our primary key? Well, it was ID. Every rider should have their own unique ID that should not be duplicated across any two riders. So to ensure that"
+  },
+  {
+    "question": "In a database schema definition, is it mandatory to use four spaces for indentation before each column name? Explain your reasoning.",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "No, it is not required to use four spaces for indentation in the schema. However, it improves readability for yourself and colleagues. The schema can technically be written on a single line, but proper formatting (like using new lines and indentation) makes it easier to understand and maintain.",
+    "scenario": "You are writing a database schema for a small project and want to ensure it is both functional and easy to read.",
+    "start": "26:01",
+    "end": "27:09",
+    "chunk_id": 21,
+    "video_id": "CS50_SQL",
+    "content": " Good questions. So we're going to get there in just a minute. But if I look back at my terminal here, my schema, I'll see, I really just have column names. And we saw before, we typed dot schema on our long list, dot DB. We had more than just column names. We had column names. We had perhaps data types. We had primary keys and foreign keys. So we'll get to that in just a minute. But it's a fight to say for now, we're going to keep improving this over time. Let's take one more. Is it required to put spaces, the four spaces, the indents, or that's just for the visual look? Yeah, great questions. It required to have these four spaces before each column name. And in fact, no, it's not. But it makes the code more readable. So if I could put this all on one line, I shouldn't, but I could. If I have, instead, this new line followed by four spaces, I can make this more readable for myself and for my colleagues too. Good question. OK. So to our earlier point, there are things that are missing from this schema."
+  },
+  {
+    "question": "What key elements are missing from the schema described in the transcript, and why are they important?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The current schema only includes column names, but it is missing additional details such as data types, primary keys, and foreign keys. These elements are important for defining the structure, constraints, and relationships within the database.",
+    "scenario": "You are reviewing a database schema for a new application and notice it lacks certain details. Based on the transcript, identify what is missing and explain their significance.",
+    "start": "26:01",
+    "end": "27:09",
+    "chunk_id": 21,
+    "video_id": "CS50_SQL",
+    "content": " Good questions. So we're going to get there in just a minute. But if I look back at my terminal here, my schema, I'll see, I really just have column names. And we saw before, we typed dot schema on our long list, dot DB. We had more than just column names. We had column names. We had perhaps data types. We had primary keys and foreign keys. So we'll get to that in just a minute. But it's a fight to say for now, we're going to keep improving this over time. Let's take one more. Is it required to put spaces, the four spaces, the indents, or that's just for the visual look? Yeah, great questions. It required to have these four spaces before each column name. And in fact, no, it's not. But it makes the code more readable. So if I could put this all on one line, I shouldn't, but I could. If I have, instead, this new line followed by four spaces, I can make this more readable for myself and for my colleagues too. Good question. OK. So to our earlier point, there are things that are missing from this schema."
+  },
+  {
+    "question": "Write the SQL statement to create a table named 'riders' with an integer column for ID and a text column for name.",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "CREATE TABLE riders (ID INTEGER, name TEXT);",
+    "scenario": "You are designing a database for a bike-sharing system and need to create a table to store rider information.",
+    "start": "39:42",
+    "end": "40:58",
+    "chunk_id": 32,
+    "video_id": "CS50_SQL",
+    "content": " So let's just try this once more. I'll type create table riders. And inside, I'll say it has the ID column of what type affinity? ID's are whole numbers, so perhaps integer in this case. I could say ID has the ID column. integer type affinity. Now, let me say the writers also have a name. And how could names be best represented? Maybe text, right? Characters here. So I'll say name and text. Now, I'll include a semicolon to say this is the end of my create table statement. And before, remember how I had to kind of err out or I had to like backspace and so on to improve the design? Here, I can literally just point and click and edit this file to improve my schema. And I'll later on apply this in my database using a command that we'll see a bit later. So let's keep going here. I'll say create table stations. And inside of this station's table, I'll make sure it has an ID column of type integer, a name column that probably stores some text, and a line column that also stores some text, where name is the name of the station,"
+  },
+  {
+    "question": "Write the SQL statement to create a table named 'stations' with columns for ID (integer), name (text), and line (text).",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "CREATE TABLE stations (ID INTEGER, name TEXT, line TEXT);",
+    "scenario": "You are extending the bike-sharing system database to include a table for storing station details.",
+    "start": "39:42",
+    "end": "40:58",
+    "chunk_id": 32,
+    "video_id": "CS50_SQL",
+    "content": " So let's just try this once more. I'll type create table riders. And inside, I'll say it has the ID column of what type affinity? ID's are whole numbers, so perhaps integer in this case. I could say ID has the ID column. integer type affinity. Now, let me say the writers also have a name. And how could names be best represented? Maybe text, right? Characters here. So I'll say name and text. Now, I'll include a semicolon to say this is the end of my create table statement. And before, remember how I had to kind of err out or I had to like backspace and so on to improve the design? Here, I can literally just point and click and edit this file to improve my schema. And I'll later on apply this in my database using a command that we'll see a bit later. So let's keep going here. I'll say create table stations. And inside of this station's table, I'll make sure it has an ID column of type integer, a name column that probably stores some text, and a line column that also stores some text, where name is the name of the station,"
+  },
+  {
+    "question": "In a database table, the ID column is defined as a primary key. Is it necessary to also explicitly add a NOT NULL constraint to this column?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "No, it is not necessary. Since the ID column is defined as a primary key, it inherently enforces the NOT NULL constraint. Adding an explicit NOT NULL constraint would be redundant.",
+    "scenario": "You are designing a database table for a bike-sharing system where the ID column is the primary key. A colleague suggests adding a NOT NULL constraint to the ID column for clarity.",
+    "start": "55:56",
+    "end": "57:10",
+    "chunk_id": 45,
+    "video_id": "CS50_SQL",
+    "content": " Well, it turns out that when you apply the primary key table constraint down below here, this already insured. So there are several constraints applied to this particular column called ID, among them being that ID cannot be null. So no need to duplicate this and say that this ID cannot be null. When I already have it specified down below, that ID is a primary key. Let me check others here. You might also think, could I do it for rider ID and station ID? Should I include not null here? Rider ID, not null, station ID, not null? Well, that would be a good thought, but again, we're taken care of by our table constraint using our foreign key here. Again, this constraint will say, if rider ID doesn't already exist in the ID column of riders, I can't insert that value. And we could probably presume that if rider's ID is a primary key, well, null will not be part of this column. And therefore, I already can't insert null for rider ID or station ID, this would be in this case redundant. So not null is good."
+  },
+  {
+    "question": "In a bike-sharing database, the table has foreign key constraints on rider_id and station_id, referencing the primary keys of the riders and stations tables, respectively. Should you also add explicit NOT NULL constraints to rider_id and station_id?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "No, it is not necessary. The foreign key constraints on rider_id and station_id ensure that these columns reference valid primary keys in their respective tables (riders and stations). Since primary keys cannot be NULL, the foreign key constraints implicitly prevent NULL values in rider_id and station_id, making explicit NOT NULL constraints redundant.",
+    "scenario": "You are reviewing a database schema for a bike-sharing application. The table includes foreign key references to riders and stations, and a colleague asks if NOT NULL constraints should be added to these foreign key columns.",
+    "start": "55:56",
+    "end": "57:10",
+    "chunk_id": 45,
+    "video_id": "CS50_SQL",
+    "content": " Well, it turns out that when you apply the primary key table constraint down below here, this already insured. So there are several constraints applied to this particular column called ID, among them being that ID cannot be null. So no need to duplicate this and say that this ID cannot be null. When I already have it specified down below, that ID is a primary key. Let me check others here. You might also think, could I do it for rider ID and station ID? Should I include not null here? Rider ID, not null, station ID, not null? Well, that would be a good thought, but again, we're taken care of by our table constraint using our foreign key here. Again, this constraint will say, if rider ID doesn't already exist in the ID column of riders, I can't insert that value. And we could probably presume that if rider's ID is a primary key, well, null will not be part of this column. And therefore, I already can't insert null for rider ID or station ID, this would be in this case redundant. So not null is good."
+  },
+  {
+    "question": "How would you design a database schema to organize the past five years of books long-listed for the International Booker Prize, as mentioned in the transcript?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "To design a database schema for the International Booker Prize long-listed books, you would create tables for entities like 'Books', 'Authors', and 'Years'. For example, the 'Books' table could have columns for book_id, title, and author_id (a foreign key linking to the 'Authors' table), while the 'Authors' table could have author_id and author_name. The 'Years' table could track the year each book was long-listed, with a foreign key to the 'Books' table. This schema organizes the data by relating tables to each other, mirroring real-world relationships.",
+    "scenario": "You are tasked with creating a database schema for tracking books nominated for the International Booker Prize over the past five years.",
+    "start": "00:00",
+    "end": "01:17",
+    "chunk_id": 0,
+    "video_id": "CS50_SQL",
+    "content": " Well, hello, one and all, and welcome back to CS50's introduction to databases with SQL. My name is Carter Zanky, and last we left off, we learned about relating that is how to have multiple tables in our database for people, places, and things, and how to have them relate to one another, and the way they might do in the real world. Now today we'll take a step forward, and we'll talk about how to put you in the driver's seat, designing your very own database schemas to organize your data. Now, we'll pick up what we left off, which is with this database of books. So we had this database, it was full of books that have been long listed for the International Booker Prize. To be long listed means to be nominated for some prize, let's say. So we had the past five years of books in this database, and we worked on improving this database over time, from week zero to week one. Now this week, we'll actually look underneath the hood and see what commands we had used to create these very databases."
+  },
+  {
+    "question": "How can you use the concept of 'relating' tables to connect books and their authors in a database?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The concept of 'relating' tables allows you to link data across multiple tables, such as connecting a 'Books' table to an 'Authors' table using a foreign key (e.g., author_id). This way, you can store information about authors separately from books while still maintaining the relationship between them. For example, if a book is written by an author, the 'Books' table would include a column like author_id that references the author_id in the 'Authors' table.",
+    "scenario": "You are building a database for a library and need to link books to their respective authors.",
+    "start": "00:00",
+    "end": "01:17",
+    "chunk_id": 0,
+    "video_id": "CS50_SQL",
+    "content": " Well, hello, one and all, and welcome back to CS50's introduction to databases with SQL. My name is Carter Zanky, and last we left off, we learned about relating that is how to have multiple tables in our database for people, places, and things, and how to have them relate to one another, and the way they might do in the real world. Now today we'll take a step forward, and we'll talk about how to put you in the driver's seat, designing your very own database schemas to organize your data. Now, we'll pick up what we left off, which is with this database of books. So we had this database, it was full of books that have been long listed for the International Booker Prize. To be long listed means to be nominated for some prize, let's say. So we had the past five years of books in this database, and we worked on improving this database over time, from week zero to week one. Now this week, we'll actually look underneath the hood and see what commands we had used to create these very databases."
+  }
+]

@@ -1,0 +1,376 @@
+{
+  "mrr_before": 0.6255252280676009,
+  "mrr_after": 0.777542372881356,
+  "hit_rate_before": {
+    "1": 0.4745762711864407,
+    "3": 0.6949152542372882,
+    "5": 0.8305084745762712
+  },
+  "hit_rate_after": {
+    "1": 0.6610169491525424,
+    "3": 0.864406779661017,
+    "5": 0.9491525423728814
+  },
+  "rank_movement": {
+    "improved": 24,
+    "worsened": 6,
+    "unchanged": 29,
+    "average_movement": 1.0
+  },
+  "per_question": [
+    {
+      "question": "What alternative approach is described in the transcript for solving the problem more efficiently?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "What is the time complexity of the approach described in the transcript?",
+      "pre_rank": 6,
+      "post_rank": 3,
+      "movement": 3
+    },
+    {
+      "question": "What is the purpose of breaking out of the for loop when dp[i] is true in the described word break algorithm?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "In what direction does the described word break algorithm process the indices?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the purpose of caching the result of DP[index] in the described dynamic programming approach for word breaking?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "What is the base case value for DP[length of the string] in this word-breaking algorithm?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "If the input string is 'leadlead' and the word dictionary contains 'lead', would the function return true?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How many ways are mentioned to structure a brute force solution for the problem described in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "After finding a matching word in the string, what is the next step in the described approach?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What does the approach involve doing from every starting position in the string?",
+      "pre_rank": 5,
+      "post_rank": 1,
+      "movement": 4
+    },
+    {
+      "question": "What is the purpose of comparing s[i:i+len(w)] with w in the described algorithm?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "According to the transcript, what relationship is established for dp[i] when a valid word break is found starting at index i?",
+      "pre_rank": 5,
+      "post_rank": 1,
+      "movement": 4
+    },
+    {
+      "question": "What action is taken with the pointer 'I' after matching four characters in the string?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What value does the function return when the entire string is matched?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Which word in the dictionary matches the first four characters of the string being checked in the example?",
+      "pre_rank": 3,
+      "post_rank": 2,
+      "movement": 1
+    },
+    {
+      "question": "How many characters are checked at a time when comparing words in the dictionary to the string?",
+      "pre_rank": 8,
+      "post_rank": 1,
+      "movement": 7
+    },
+    {
+      "question": "What is the purpose of checking the remainder of the string after matching a portion of it in the dynamic programming solution for word break problems?",
+      "pre_rank": 2,
+      "post_rank": 4,
+      "movement": -2
+    },
+    {
+      "question": "In the given example, why is dp[0] set to true after matching the word 'neat'?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How is the cache (or dp array) initialized in the described dynamic programming approach for the string problem?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the base case for the dynamic programming solution described in the transcript, and how is it initialized?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "In the described backtracking solution, what single variable is being tracked to represent the current state of the problem?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What determines the decisions in the decision tree for this backtracking approach?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the value of dp[3] in the described dynamic programming approach for word breaking?",
+      "pre_rank": 5,
+      "post_rank": 8,
+      "movement": -3
+    },
+    {
+      "question": "What is the value of dp[4] in the described dynamic programming approach for word breaking?",
+      "pre_rank": 5,
+      "post_rank": 5,
+      "movement": 0
+    },
+    {
+      "question": "How does the efficiency of the new approach (checking words in the dictionary as prefixes) compare to the original approach (checking every possible prefix)?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do the two string-matching approaches described in the transcript differ in terms of the number of comparisons they perform?",
+      "pre_rank": 6,
+      "post_rank": 6,
+      "movement": 0
+    },
+    {
+      "question": "How does the bottom-up approach described in the transcript differ from a typical top-down approach in dynamic programming for word break problems?",
+      "pre_rank": 5,
+      "post_rank": 2,
+      "movement": 3
+    },
+    {
+      "question": "How does the brute force approach described in the transcript compare to the alternative, more efficient approach mentioned for checking if an input string can be segmented into dictionary words?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the general problem statement of 'word break' compare to the example provided with the input string 'leadcode' and the word dictionary ['lead', 'code']?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the decision tree approach differ from the alternative approach mentioned in the transcript for solving the subproblem?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the caching approach (memoization) compare to the dynamic programming (DP) solution in terms of implementation and efficiency, as described in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the algorithm decide whether to continue down a path when comparing the strings 'elite', 'code', and 'neat' to the target string?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does the described word-breaking approach compare to a method that only checks the first matching prefix at each position?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the described algorithm handle the problem of breaking a string into words from a dictionary?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "Why does the algorithm need to check every prefix from every starting position in the string?",
+      "pre_rank": 5,
+      "post_rank": 3,
+      "movement": 2
+    },
+    {
+      "question": "How does the dynamic programming approach determine if the entire string can be segmented into dictionary words starting from index 0?",
+      "pre_rank": 9,
+      "post_rank": 1,
+      "movement": 8
+    },
+    {
+      "question": "Why is the equation dp[0] = dp[0 + length of the word] valid for determining if the string can be segmented starting at index 0?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How would you structure a brute force solution to check if an input string can be segmented into words from a given dictionary, as described in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why would the input string 'leadlead' return true when checked against a dictionary containing the word 'lead'?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "Why does the code compare the substring of 's' starting at index 'i' with the word 'w'?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does finding a valid word break at index 'i' allow the loop to terminate early?",
+      "pre_rank": 6,
+      "post_rank": 1,
+      "movement": 5
+    },
+    {
+      "question": "Why are the DP values for indices 7, 6, and 5 false in the bottom-up approach described in the transcript?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does the bottom-up approach described in the transcript help in solving the word break problem?",
+      "pre_rank": 3,
+      "post_rank": 3,
+      "movement": 0
+    },
+    {
+      "question": "How does the described approach handle the problem of breaking a string into words from a dictionary when a valid prefix is found?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "In the context of the word break problem, how does the algorithm ensure it explores all possible ways to segment a string into dictionary words?",
+      "pre_rank": 2,
+      "post_rank": 4,
+      "movement": -2
+    },
+    {
+      "question": "In the described algorithm, how does the system decide whether to continue checking a word from the dictionary against the input string?",
+      "pre_rank": 11,
+      "post_rank": 10,
+      "movement": 1
+    },
+    {
+      "question": "Given the input string 'neatcode', which dictionary words ('elite', 'code', 'neat') would the algorithm skip, and which would it continue checking?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Given a word dictionary containing the word 'lead', would the input string 'leadlead' return true when checking if it can be segmented into words from the dictionary?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How would you structure a brute force solution to check if the input string 'leadlead' can be segmented into words from a dictionary containing 'lead'?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the described approach improve the efficiency of checking prefixes in a string compared to the naive method?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the time complexity of the approach described in the transcript, and how is it derived?",
+      "pre_rank": 8,
+      "post_rank": 5,
+      "movement": 3
+    },
+    {
+      "question": "If the input string is 'apple', how many different substrings will the algorithm described in the transcript try in the worst case?",
+      "pre_rank": 9,
+      "post_rank": 4,
+      "movement": 5
+    },
+    {
+      "question": "Given the string 'leadgold' and a dictionary containing the word 'lead', how does the algorithm described in the transcript determine if 'lead' is a valid word in the string?",
+      "pre_rank": 7,
+      "post_rank": 2,
+      "movement": 5
+    },
+    {
+      "question": "A student claims: 'The base case for the DP array in this word break problem should be set to `true` for the last index of the string, since that\u2019s where the string ends.' Is this correct?",
+      "pre_rank": 6,
+      "post_rank": 2,
+      "movement": 4
+    },
+    {
+      "question": "A student claims: 'The DP array should be initialized to `true` for all positions to ensure we cover all possible word breaks.' Is this correct?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "A student claims: 'In the bottom-up approach for the word break problem, DP[i] is true only if the substring starting at index i exactly matches a word in the dictionary.' Is this statement correct?",
+      "pre_rank": 4,
+      "post_rank": 3,
+      "movement": 1
+    },
+    {
+      "question": "Is it true that each word in the word dictionary can only be used once when solving the word break problem?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A student claims: 'The time complexity of checking every word in the dictionary as a prefix for the string is O(N) because the dictionary size is smaller than the string length.' Is this statement correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A student claims that the time complexity of the algorithm described in the transcript is O(N * M) because it processes each of the N characters in the string once for each of the M patterns. Is this correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    }
+  ]
+}

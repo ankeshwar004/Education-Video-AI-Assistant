@@ -1,0 +1,122 @@
+[
+  {
+    "question": "Two vectors, A and B, are parallel. What is the length of their cross product, and why?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The length of the cross product of vectors A and B is given by |A \u00d7 B| = |A| |B| sin(\u03b8), where \u03b8 is the angle between them. If \u03b8 = 0\u00b0 or 180\u00b0, sin(\u03b8) = 0, so the cross product length becomes zero. This means the vectors are parallel (or antiparallel), and the area of the parallelogram they form is zero, as they lie on the same line.",
+    "scenario": "You are given two vectors in a physics problem and need to determine the magnitude of their cross product based on their orientation.",
+    "start": "15:01",
+    "end": "16:10",
+    "chunk_id": 13,
+    "video_id": "Vectors_Intro",
+    "content": " their cross product. To show some of the properties of the cross product I'm going to introduce this alternative formula that says that the length of the cross product of vector A and B is equal to the length of vector A times the length of vector B times the sine of theta and theta is once again the angle between vector A and B. Another way to think of the length of the cross product of A and B is to think of it as the area of the parallelogram between vector A and B. According to this formula the length of the cross product will become shorter if vector A or B get shorter. The cross product will also get shorter if the angle between A and B gets smaller. To show why that is I'm going to draw once again vector A and B and I'm going to display the angle between them. If the angle becomes zero degrees then the sine of theta in other words the sine of zero degrees will be equal to zero. The same goes for an angle of 180 degrees. This means that just like with the dot product we can also simplify this formula by saying that"
+  },
+  {
+    "question": "How does the length of the cross product of two vectors change if the angle between them decreases from 90\u00b0 to 30\u00b0?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The length of the cross product |A \u00d7 B| = |A| |B| sin(\u03b8). If the angle \u03b8 between A and B decreases, sin(\u03b8) decreases, so the length of the cross product (and thus the area of the parallelogram) also decreases. For example, if \u03b8 changes from 90\u00b0 to 30\u00b0, sin(\u03b8) drops from 1 to 0.5, halving the cross product length.",
+    "scenario": "You are analyzing the effect of changing the angle between two force vectors in a mechanical system.",
+    "start": "15:01",
+    "end": "16:10",
+    "chunk_id": 13,
+    "video_id": "Vectors_Intro",
+    "content": " their cross product. To show some of the properties of the cross product I'm going to introduce this alternative formula that says that the length of the cross product of vector A and B is equal to the length of vector A times the length of vector B times the sine of theta and theta is once again the angle between vector A and B. Another way to think of the length of the cross product of A and B is to think of it as the area of the parallelogram between vector A and B. According to this formula the length of the cross product will become shorter if vector A or B get shorter. The cross product will also get shorter if the angle between A and B gets smaller. To show why that is I'm going to draw once again vector A and B and I'm going to display the angle between them. If the angle becomes zero degrees then the sine of theta in other words the sine of zero degrees will be equal to zero. The same goes for an angle of 180 degrees. This means that just like with the dot product we can also simplify this formula by saying that"
+  },
+  {
+    "question": "Represent the vectors A and B as 2D vectors in component form based on the following descriptions: Vector A moves 3 units downward, and Vector B moves 4 units to the left and 2 units up.",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The vector A can be represented as [0, -3] because it moves 0 units in the x-direction and 3 units downward (negative y-direction). The vector B can be represented as [-4, 2] because it moves 4 units to the left (negative x-direction) and 2 units upward (positive y-direction).",
+    "scenario": "You are given two vectors described by their motion in a 2D plane. Write their component forms.",
+    "start": "02:21",
+    "end": "03:28",
+    "chunk_id": 2,
+    "video_id": "Vectors_Intro",
+    "content": " numbers downward motion. The vector's components are written between square brackets, like so, with the x-component on top and the y-component at the bottom. Just for fun, let's also add an other vector, B. To calculate its components, we take four steps to the left, which gives us negative four, and we take two steps up. We can then write these components once again between square brackets. As I said earlier, vectors do not have a position. However, we assume that the tail of a vector is sitting at the origin, then we can think of a vector as being a point. Let's quickly have a word about notation. This is a two-dimensional vector, we write the x and y components between the square brackets. For a three-dimensional vector, we can add a z-component, and we would also add a z-axis, which would point outside of the screen. We can expand this vector even further by adding a w-component. Now you might be thinking for dimensional vectors, wait, what? Well, we'll talk about that in the video about matrices."
+  },
+  {
+    "question": "A vector moves 2 units to the right, 1 unit downward, and 5 units outward from the screen. Represent this vector in 3D component form.",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The vector can be represented as [2, -1, 5] because it moves 2 units in the x-direction, -1 unit in the y-direction, and 5 units in the z-direction (assuming the z-axis points outward from the screen).",
+    "scenario": "You are tasked with describing a vector in 3D space based on its motion along the x, y, and z axes.",
+    "start": "02:21",
+    "end": "03:28",
+    "chunk_id": 2,
+    "video_id": "Vectors_Intro",
+    "content": " numbers downward motion. The vector's components are written between square brackets, like so, with the x-component on top and the y-component at the bottom. Just for fun, let's also add an other vector, B. To calculate its components, we take four steps to the left, which gives us negative four, and we take two steps up. We can then write these components once again between square brackets. As I said earlier, vectors do not have a position. However, we assume that the tail of a vector is sitting at the origin, then we can think of a vector as being a point. Let's quickly have a word about notation. This is a two-dimensional vector, we write the x and y components between the square brackets. For a three-dimensional vector, we can add a z-component, and we would also add a z-axis, which would point outside of the screen. We can expand this vector even further by adding a w-component. Now you might be thinking for dimensional vectors, wait, what? Well, we'll talk about that in the video about matrices."
+  },
+  {
+    "question": "If vector A is (1, 0, 0) and vector B is (0, 1, 0), what is the relationship between the cross product of A and B and the cross product of B and A?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The cross product of vector B and vector A is equal to the negative of the cross product of vector A and vector B (i.e., B \u00d7 A = - (A \u00d7 B)). This is because the cross product is anti-commutative, meaning the order of the vectors affects the direction of the resulting vector.",
+    "scenario": "You are working with two 3D vectors and need to determine how reversing their order affects the cross product result.",
+    "start": "13:51",
+    "end": "15:01",
+    "chunk_id": 12,
+    "video_id": "Vectors_Intro",
+    "content": " that result is equal to this massive formula. However if you take a closer look at this you might recognize unit vector notation which means that we can actually rewrite this formula between our beloved square brackets. Also notice that the cross product is only defined in three dimensions. To visualize what the cross product means I'm going to once again draw vector A and the vector B. Their cross product is equal to this white vector. Unlike the dot product the order in which you take the cross product of two vectors actually matters because if you take the cross product of B and A you get a vector that points in the opposite direction. So you could therefore say that the cross product of B and A is equal to the opposite of the cross product of A and B. The cross product results in a vector that is perpendicular to the original vectors. You can visualize this using the right hand rule. If you take your right hand and point your index finger in the direction of vector A your middle finger in the direction of vector B then your thumb will point in the direction of"
+  },
+  {
+    "question": "How can you determine the direction of the cross product of two vectors A and B using your hand?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The cross product of two vectors results in a vector that is perpendicular to both original vectors. Using the right-hand rule: point your index finger in the direction of vector A, your middle finger in the direction of vector B, and your thumb will point in the direction of the cross product (A \u00d7 B).",
+    "scenario": "You are visualizing the cross product of two vectors in 3D space and need to confirm its direction.",
+    "start": "13:51",
+    "end": "15:01",
+    "chunk_id": 12,
+    "video_id": "Vectors_Intro",
+    "content": " that result is equal to this massive formula. However if you take a closer look at this you might recognize unit vector notation which means that we can actually rewrite this formula between our beloved square brackets. Also notice that the cross product is only defined in three dimensions. To visualize what the cross product means I'm going to once again draw vector A and the vector B. Their cross product is equal to this white vector. Unlike the dot product the order in which you take the cross product of two vectors actually matters because if you take the cross product of B and A you get a vector that points in the opposite direction. So you could therefore say that the cross product of B and A is equal to the opposite of the cross product of A and B. The cross product results in a vector that is perpendicular to the original vectors. You can visualize this using the right hand rule. If you take your right hand and point your index finger in the direction of vector A your middle finger in the direction of vector B then your thumb will point in the direction of"
+  },
+  {
+    "question": "Vector A is a unit vector, and vector B forms a right-angled triangle with a width equal to the dot product of A and B. If the angle between A and B is \u03b8, how is the width of the triangle related to the length of B and \u03b8?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The dot product of vectors A and B is equal to the length of A times the length of B times the cosine of the angle between them. If vector A is a unit vector (length = 1), the dot product simplifies to the length of B times the cosine of the angle. In the scenario, since A is a unit vector, the dot product equals the width of the right-angled triangle beneath B, which is the adjacent side to the angle \u03b8. Thus, the width is |B| * cos(\u03b8).",
+    "scenario": "You are given two vectors, A and B, where A is a unit vector. Vector B forms a right-angled triangle, and the width of this triangle is equal to the dot product of A and B. The angle between A and B is \u03b8.",
+    "start": "10:09",
+    "end": "11:28",
+    "chunk_id": 9,
+    "video_id": "Vectors_Intro",
+    "content": " draw a vector A and a vector B. I'll then draw a triangle beneath vector B like so and once again this is a right angled triangle. The dot product of A and B is now equal to the width of this triangle. However there is a catch and that is that I'm assuming that vector A is a unit vector. To explain this further I'm going to introduce this alternative formula which says that the dot product of vector A and B is equal to the length of vector A times the length of vector B times the cosine of theta where theta is the angle between vector A and B. According to this formula the dot product will get smaller if vector B gets shorter. It will get larger if the angle between A and B gets smaller and finally here's the catch I've been assuming that vector A is a unit vector because if it's not then the dot product will also be scaled by a vector A and it will no longer be the width of our triangle. To dive it bit deeper into how the dot product changes based on the angle between vector A and B I'm going to draw vector A and vector B and write our angle next to it. If the"
+  },
+  {
+    "question": "Vector A has a length of 2, and vector B has a length of 3. The angle between them is 60 degrees. If a right-angled triangle is drawn beneath B, will the width of this triangle equal the dot product of A and B? Explain your reasoning.",
+    "question_type": "application",
+    "difficulty": "hard",
+    "answer": "Using the formula: dot product = |A| * |B| * cos(\u03b8). If vector A is not a unit vector, the dot product scales by |A|. In the scenario, |A| = 2, |B| = 3, and \u03b8 = 60\u00b0. The dot product is 2 * 3 * cos(60\u00b0) = 6 * 0.5 = 3. Since A is not a unit vector, the dot product (3) is not equal to the width of the triangle beneath B. The width would only equal the dot product if A were a unit vector.",
+    "scenario": "You are given two vectors, A and B, with lengths 2 and 3, respectively. The angle between them is 60 degrees. A right-angled triangle is drawn beneath vector B.",
+    "start": "10:09",
+    "end": "11:28",
+    "chunk_id": 9,
+    "video_id": "Vectors_Intro",
+    "content": " draw a vector A and a vector B. I'll then draw a triangle beneath vector B like so and once again this is a right angled triangle. The dot product of A and B is now equal to the width of this triangle. However there is a catch and that is that I'm assuming that vector A is a unit vector. To explain this further I'm going to introduce this alternative formula which says that the dot product of vector A and B is equal to the length of vector A times the length of vector B times the cosine of theta where theta is the angle between vector A and B. According to this formula the dot product will get smaller if vector B gets shorter. It will get larger if the angle between A and B gets smaller and finally here's the catch I've been assuming that vector A is a unit vector because if it's not then the dot product will also be scaled by a vector A and it will no longer be the width of our triangle. To dive it bit deeper into how the dot product changes based on the angle between vector A and B I'm going to draw vector A and vector B and write our angle next to it. If the"
+  },
+  {
+    "question": "If vector A is perpendicular to vector B, what is their dot product?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The dot product of vectors A and B is zero because the angle between them is 90 degrees, and the cosine of 90 degrees is zero. According to the transcript, when vectors are perpendicular, their dot product simplifies to zero.",
+    "scenario": "You are given two vectors in a 2D plane, and you need to determine their dot product without calculating their magnitudes or the angle between them.",
+    "start": "11:28",
+    "end": "12:42",
+    "chunk_id": 10,
+    "video_id": "Vectors_Intro",
+    "content": " angle between vector A and B is zero degrees then the cosine of that angle between them which is zero degrees will be equal to one. This means that we can simplify our formula in the case that theta is zero degrees because then the dot product of A and B is just the product of their lengths. Alternatively if the angle between A and B is 90 degrees or if it is 270 degrees then the cosine of that angle will be equal to zero and therefore we can once again simplify our formula for the dot product by saying that if A and B are perpendicular to each other then their dot product will be equal to zero. Finally if the angle between A and B is 180 degrees then the cosine of that angle is going to be equal to negative one and then the dot product of vector A and B is going to be equal to the opposite of the lengths of A and B multiplied. We can simplify all these formulas even further if we assume that vector A and B are unit vectors. Out of this we can conclude that the dot product is equal to one if both vectors"
+  },
+  {
+    "question": "If vector A points directly opposite to vector B (angle of 180 degrees), how can you express their dot product in terms of their magnitudes?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The dot product of vectors A and B is equal to the negative product of their magnitudes because the angle between them is 180 degrees, and the cosine of 180 degrees is -1. According to the transcript, this simplifies the dot product formula to the opposite of the product of their lengths.",
+    "scenario": "You are analyzing two force vectors acting in exactly opposite directions and need to compute their dot product.",
+    "start": "11:28",
+    "end": "12:42",
+    "chunk_id": 10,
+    "video_id": "Vectors_Intro",
+    "content": " angle between vector A and B is zero degrees then the cosine of that angle between them which is zero degrees will be equal to one. This means that we can simplify our formula in the case that theta is zero degrees because then the dot product of A and B is just the product of their lengths. Alternatively if the angle between A and B is 90 degrees or if it is 270 degrees then the cosine of that angle will be equal to zero and therefore we can once again simplify our formula for the dot product by saying that if A and B are perpendicular to each other then their dot product will be equal to zero. Finally if the angle between A and B is 180 degrees then the cosine of that angle is going to be equal to negative one and then the dot product of vector A and B is going to be equal to the opposite of the lengths of A and B multiplied. We can simplify all these formulas even further if we assume that vector A and B are unit vectors. Out of this we can conclude that the dot product is equal to one if both vectors"
+  }
+]

@@ -105,8 +105,9 @@ def lcel_chat(query,retrieval):
         ).with_config({"run_name":"Standalone Query"})
 
     retriever_step=RunnablePassthrough.assign(
-        docs=RunnableLambda(lambda x: x["query"])|retrieval['ensemble_retriever']
-        ).with_config({"run_name":"Ensemble Retriever"})
+        docs=RunnableLambda(
+        lambda x: docs_retriever(x["query"], retrieval["ensemble_retriever"])
+        )).with_config({"run_name":"Ensemble Retriever"})
 
     reranker_step=RunnableLambda(
         lambda x: {**x, "docs":rerank(x["query"],x["docs"],retrieval['reranker'],k=3)}

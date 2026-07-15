@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Is it correct to say that the `SELECT` command is used to open a SQLite database file?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, the statement is incorrect. The command to open a SQLite database file is `sqlite3` followed by the filename (e.g., `sqlite3 long_list.db`). Once inside the SQLite shell, you can execute SQL commands like `SELECT` to query the database. The `SELECT` command is used to retrieve data from a table, not to open the database file itself.",
+    "misconception": "A student might think that the `SELECT` command is used to open a SQLite database file, rather than querying data from an already opened database.",
+    "start": "01:17",
+    "end": "02:34",
+    "chunk_id": 1,
+    "video_id": "CS50_SQL",
+    "content": " So let's reveal now what we had done all along. I'll go back to my terminal here, and if you remember, I could use a command to open up a database file, which was this command here, SQLite 3, and on the name of the file I want to open. So let's try this. I'll go back to week zero to my week zero folder like this, and I'll open up my long list database, week zero slash long list dot db. Okay, I'll hit enter. Now I'm in my SQLite Pro, so I could work on typing some SQL commands, SQL statements, or queries inside of this terminal prompt here. So if I want to get a fuel for what's inside this database, we saw I could use a command called select. So I'll select now some rows from this table. I'll say select, let's say the title, and also the author columns from my long list table, semicolon, and enter. Now I'll see all the titles and all the authors that were inside of this long list table. But I only want to peek here. I only want to see roughly what kind of data is inside, so I could probably improve this"
+  },
+  {
+    "question": "If I set a `DEFAULT` constraint on a timestamp column in my database, will it automatically fill in the current time for every new row I add?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the statement is incorrect. The `DEFAULT` constraint in SQL provides an initial value for a column if no value is explicitly provided during insertion. However, it does not automatically update the column to the current timestamp for each new row unless explicitly configured (e.g., using `CURRENT_TIMESTAMP` or a function like `NOW()`). The `NOT NULL` constraint ensures the column must have a value, but it does not imply dynamic default behavior.",
+    "misconception": "A student might think that setting a `DEFAULT` constraint on a timestamp column automatically populates it with the current time for every new row without additional configuration.",
+    "start": "01:12:27",
+    "end": "01:13:42",
+    "chunk_id": 58,
+    "video_id": "CS50_SQL",
+    "content": " I'll go back to my schema and let me just make sure that I'm making all the columns that I want to be required actually required. I'll go into my swipes table and I'll say that type, I mean, this should be required. I should know whether I entered exit or deposited some funds. So I'll say text not null. Similarly, for the timestamp, the time this swipe happened, I want that to be not null as well. I must know what time I swiped the card and also it makes sense for there to always be some amount associated with this swipe. Either I added some funds to my balance or I removed some funds overall. So I'll make this not null as well. Well, let's see what we could do here with default. Default gives me some default value, some initial value to add to this column. If I don't specify what kind of value to add, what could be good for date time? Date time here is again the time stamp, the time I swiped this card to enter, let's say, Harvard Station. Well, if I want this to always have the current time, I could use default."
+  },
+  {
+    "question": "Is it correct to say that the 'create table' command in SQL is used to physically construct real-world structures like Boston's subway system?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the statement is incorrect. The transcript describes the creation of a database table to represent real-world entities (like Boston's subway system), not the physical construction of the subway itself. The 'create table' command is a SQL command used in database design to define the structure of a table, including columns for different data types (e.g., integers, text). The subway construction in Boston is an example of a real-world entity that could be modeled in a database, but the command itself does not build physical infrastructure.",
+    "misconception": "A student might think that the 'create table' command in SQL is used to physically build real-world structures like Boston's subway system, as the transcript mentions both database creation and the subway's construction.",
+    "start": "06:22",
+    "end": "07:32",
+    "chunk_id": 5,
+    "video_id": "CS50_SQL",
+    "content": " Each one has their own kind of data they could support or take into this column, like integers, text, and so on. So again, what we'll do today is have you all learned how to write your very own create table commands to build your very own databases that represent what you want to represent in the real world. So let me exit this prompt here and let me propose that we'll have a bit of a design challenge today to actually try to represent a real world entity with some database here. And if you're not already familiar, Boston is perhaps famous for being among the first cities to have a subway system in the United States. So here is a picture from the late 1800s of a subway being built in Boston's city streets. Underneath the streets here, there would be trolley cars would go and trans people across Boston. Here's another picture of a trolley actually working underneath the streets. People would go down underneath, they would hop on a trolley, be able to go to different parts of Boston, perhaps from Harvard to the MIT or downtown up to, let's say, brain"
+  },
+  {
+    "question": "A student claims: 'SQLite has a BOOLEAN data type to store true or false values, just like other database systems.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the statement is incorrect. SQLite does not have a dedicated BOOLEAN data type. Instead, it uses INTEGER values where 0 represents FALSE and 1 (or any non-zero value) represents TRUE. The transcript explicitly mentions that SQLite does not include a Boolean type, and the schema check confirms only INTEGER was used.",
+    "misconception": "SQLite has a dedicated BOOLEAN data type for storing true/false values.",
+    "start": "43:43",
+    "end": "44:58",
+    "chunk_id": 35,
+    "video_id": "CS50_SQL",
+    "content": " in our terminal, and that is actually a mode of SQL, light, I think, type like dot mode table to see results in that version. Here, though, we have no data inside of our tables. So we can't only select anything from them. Like if I go to my terminal here, and I try to select some data from this rider's table, let me say select star from riders. So my colon, I won't get anything back. Next week, though, we'll see how to insert and add and update and delete data inside of these tables, at which point you could write select star from riders and see some data you've inserted yourself. Great question. Let's take one more here. Yes, I would like to know if you have a column that type Boolean? Yeah, do we have a Boolean type of FenderD? Let's see. So here, we don't, at least in SQL light, some other DBMSs database management systems might have Boolean, true or false, right? Let me show you this instead. If I go to my terminal, I can see, if I type dot schema, I haven't used Boolean. There's no need for me in this case, but I have used integer."
+  },
+  {
+    "question": "A student claims: 'If I run `SELECT * FROM riders` in SQLite, I will always see data in the results, even if the table is empty.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, the statement is incorrect. The transcript explains that the tables are empty, so running `SELECT * FROM riders` will return no results. The query itself is syntactically correct, but it will not return data until rows are inserted, which is covered in the next week's lesson.",
+    "misconception": "Running `SELECT * FROM riders` will always return data, even if the table is empty.",
+    "start": "43:43",
+    "end": "44:58",
+    "chunk_id": 35,
+    "video_id": "CS50_SQL",
+    "content": " in our terminal, and that is actually a mode of SQL, light, I think, type like dot mode table to see results in that version. Here, though, we have no data inside of our tables. So we can't only select anything from them. Like if I go to my terminal here, and I try to select some data from this rider's table, let me say select star from riders. So my colon, I won't get anything back. Next week, though, we'll see how to insert and add and update and delete data inside of these tables, at which point you could write select star from riders and see some data you've inserted yourself. Great question. Let's take one more here. Yes, I would like to know if you have a column that type Boolean? Yeah, do we have a Boolean type of FenderD? Let's see. So here, we don't, at least in SQL light, some other DBMSs database management systems might have Boolean, true or false, right? Let me show you this instead. If I go to my terminal, I can see, if I type dot schema, I haven't used Boolean. There's no need for me in this case, but I have used integer."
+  },
+  {
+    "question": "Is it necessary to explicitly add a NOT NULL constraint to a column that is already a primary key or a foreign key referencing a primary key?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the statement is incorrect. In the transcript, it is explained that if a column is a primary key, it automatically cannot be null. Additionally, foreign key constraints ensure that referenced columns (like rider ID and station ID) cannot be null if they reference a primary key column, which by definition cannot contain null values. Therefore, explicitly adding NOT NULL constraints to these columns would be redundant.",
+    "misconception": "A student might think that even if a column is a primary key or a foreign key referencing a primary key, they still need to explicitly add a NOT NULL constraint to ensure the column does not accept null values.",
+    "start": "55:56",
+    "end": "57:10",
+    "chunk_id": 45,
+    "video_id": "CS50_SQL",
+    "content": " Well, it turns out that when you apply the primary key table constraint down below here, this already insured. So there are several constraints applied to this particular column called ID, among them being that ID cannot be null. So no need to duplicate this and say that this ID cannot be null. When I already have it specified down below, that ID is a primary key. Let me check others here. You might also think, could I do it for rider ID and station ID? Should I include not null here? Rider ID, not null, station ID, not null? Well, that would be a good thought, but again, we're taken care of by our table constraint using our foreign key here. Again, this constraint will say, if rider ID doesn't already exist in the ID column of riders, I can't insert that value. And we could probably presume that if rider's ID is a primary key, well, null will not be part of this column. And therefore, I already can't insert null for rider ID or station ID, this would be in this case redundant. So not null is good."
+  }
+]

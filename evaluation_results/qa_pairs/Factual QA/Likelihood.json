@@ -1,0 +1,211 @@
+[
+  {
+    "question": "How does the algorithm find the line with the maximum likelihood in logistic regression?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "By rotating the line in a way that increases the log likelihood until the optimal fit is found.",
+    "start": "09:01",
+    "end": "10:18",
+    "chunk_id": 6,
+    "video_id": "Likelihood",
+    "content": " Note, the algorithm that finds the line with the maximum likelihood is pretty smart. Each time it rotates the line, it does so in a way that increases the log likelihood. Thus, the algorithm can find the optimal fit after a few rotations. Ultimately, we get a line that maximizes the likelihood and that's the one chosen to have the best fit. Bam! That's all there is to it. But just like with linear regression, there's more to logistic regression than just fitting a line. We want to know if that line represents a useful model, and that means we need an R-squared value and a P-value. However, in logistic regression, we have to do that without the usual residuals. So we'll learn about R-squared and P-values for logistic regression in the next stack Cool. Hooray! We've made it to the end of another exciting stat quest. If you like this stat quest and want to see more of them, please subscribe. And if you want to support stat quest, well, click the like button below and consider buying one or two of my original songs."
+  },
+  {
+    "question": "What metrics are used to determine if the fitted line in logistic regression represents a useful model?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "answer": "R-squared value and P-value.",
+    "start": "09:01",
+    "end": "10:18",
+    "chunk_id": 6,
+    "video_id": "Likelihood",
+    "content": " Note, the algorithm that finds the line with the maximum likelihood is pretty smart. Each time it rotates the line, it does so in a way that increases the log likelihood. Thus, the algorithm can find the optimal fit after a few rotations. Ultimately, we get a line that maximizes the likelihood and that's the one chosen to have the best fit. Bam! That's all there is to it. But just like with linear regression, there's more to logistic regression than just fitting a line. We want to know if that line represents a useful model, and that means we need an R-squared value and a P-value. However, in logistic regression, we have to do that without the usual residuals. So we'll learn about R-squared and P-values for logistic regression in the next stack Cool. Hooray! We've made it to the end of another exciting stat quest. If you like this stat quest and want to see more of them, please subscribe. And if you want to support stat quest, well, click the like button below and consider buying one or two of my original songs."
+  },
+  {
+    "question": "How does logistic regression calculate R-squared and P-values differently from linear regression?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "Without using the usual residuals.",
+    "start": "09:01",
+    "end": "10:18",
+    "chunk_id": 6,
+    "video_id": "Likelihood",
+    "content": " Note, the algorithm that finds the line with the maximum likelihood is pretty smart. Each time it rotates the line, it does so in a way that increases the log likelihood. Thus, the algorithm can find the optimal fit after a few rotations. Ultimately, we get a line that maximizes the likelihood and that's the one chosen to have the best fit. Bam! That's all there is to it. But just like with linear regression, there's more to logistic regression than just fitting a line. We want to know if that line represents a useful model, and that means we need an R-squared value and a P-value. However, in logistic regression, we have to do that without the usual residuals. So we'll learn about R-squared and P-values for logistic regression in the next stack Cool. Hooray! We've made it to the end of another exciting stat quest. If you like this stat quest and want to see more of them, please subscribe. And if you want to support stat quest, well, click the like button below and consider buying one or two of my original songs."
+  },
+  {
+    "question": "How is the overall likelihood for all obese mice calculated according to the transcript?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "The product of the individual likelihoods.",
+    "start": "05:53",
+    "end": "07:29",
+    "chunk_id": 4,
+    "video_id": "Likelihood",
+    "content": " the y-axis value. And that's why it's the same as the likelihood. The likelihood that this mouse is obese is 0.9. The likelihood that these mice are obese are 0.91, 0.91, and 0.92. The likelihood for all of the obese mice is just the product of the individual likelihoods. Now we'll figure out the likelihoods for the mice that are not obese. Note, the lower the probability of being obese, the higher the probability of not being obese. Thus, for these mice, the likelihood equals 1 minus the probability the mouse is obese. The probability that this mouse is obese is 0.9, so the probability and likelihood that it is not obese is 1 minus 0.9. The probability that this mouse is obese is 0.3, so the probability and likelihood that it is not obese is 1 minus 0.3. The probabilities that these mice are obese are both 0.01, so the probability and the likelihood that they are not obese is 1 minus 0.01. Now we can include the individual likelihoods for the mice that are not obese to the equation for the overall likelihood."
+  },
+  {
+    "question": "What is the formula for calculating the likelihood that a mouse is not obese?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "answer": "1 minus the probability the mouse is obese.",
+    "start": "05:53",
+    "end": "07:29",
+    "chunk_id": 4,
+    "video_id": "Likelihood",
+    "content": " the y-axis value. And that's why it's the same as the likelihood. The likelihood that this mouse is obese is 0.9. The likelihood that these mice are obese are 0.91, 0.91, and 0.92. The likelihood for all of the obese mice is just the product of the individual likelihoods. Now we'll figure out the likelihoods for the mice that are not obese. Note, the lower the probability of being obese, the higher the probability of not being obese. Thus, for these mice, the likelihood equals 1 minus the probability the mouse is obese. The probability that this mouse is obese is 0.9, so the probability and likelihood that it is not obese is 1 minus 0.9. The probability that this mouse is obese is 0.3, so the probability and likelihood that it is not obese is 1 minus 0.3. The probabilities that these mice are obese are both 0.01, so the probability and the likelihood that they are not obese is 1 minus 0.01. Now we can include the individual likelihoods for the mice that are not obese to the equation for the overall likelihood."
+  },
+  {
+    "question": "If the probability that a mouse is obese is 0.9, what is the likelihood that it is not obese?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "answer": "0.1",
+    "start": "05:53",
+    "end": "07:29",
+    "chunk_id": 4,
+    "video_id": "Likelihood",
+    "content": " the y-axis value. And that's why it's the same as the likelihood. The likelihood that this mouse is obese is 0.9. The likelihood that these mice are obese are 0.91, 0.91, and 0.92. The likelihood for all of the obese mice is just the product of the individual likelihoods. Now we'll figure out the likelihoods for the mice that are not obese. Note, the lower the probability of being obese, the higher the probability of not being obese. Thus, for these mice, the likelihood equals 1 minus the probability the mouse is obese. The probability that this mouse is obese is 0.9, so the probability and likelihood that it is not obese is 1 minus 0.9. The probability that this mouse is obese is 0.3, so the probability and likelihood that it is not obese is 1 minus 0.3. The probabilities that these mice are obese are both 0.01, so the probability and the likelihood that they are not obese is 1 minus 0.01. Now we can include the individual likelihoods for the mice that are not obese to the equation for the overall likelihood."
+  },
+  {
+    "question": "What is the criterion used to select the best-fitting line in linear regression according to the transcript?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "Least squares minimizes the sum of squared residuals, which are the distances between the data points and the fitted line.",
+    "start": "01:21",
+    "end": "02:49",
+    "chunk_id": 1,
+    "video_id": "Likelihood",
+    "content": " quick review of how lines are fit in linear regression. We start with some data and we fit a line to it using least squares. In other words, we measure the residuals, the distances between the data and the line, then square them so that negative values do not cancel out positive values and then add them all up. Then we rotate the line a little bit and do the same thing. Measure the residuals, square them, and add them up. And the line with the smallest sum of squared residuals, the least squares, is the line chosen to fit best. Okay, now that we remember how to fit a line in linear regression, let's talk about logistic regression. In this example, we are using logistic regression to determine the effect of weight on obesity. These mice are obese and these mice are not obese. Our goal is to draw the best fitting squiggle for this data. As we know, in logistic regression, we transform the y-axis from the probability of obesity to the log odds of obesity. We can draw a candidate best fitting line on the graph."
+  },
+  {
+    "question": "In logistic regression, how is the y-axis transformed when fitting the model?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "The y-axis is transformed from the probability of obesity to the log odds of obesity.",
+    "start": "01:21",
+    "end": "02:49",
+    "chunk_id": 1,
+    "video_id": "Likelihood",
+    "content": " quick review of how lines are fit in linear regression. We start with some data and we fit a line to it using least squares. In other words, we measure the residuals, the distances between the data and the line, then square them so that negative values do not cancel out positive values and then add them all up. Then we rotate the line a little bit and do the same thing. Measure the residuals, square them, and add them up. And the line with the smallest sum of squared residuals, the least squares, is the line chosen to fit best. Okay, now that we remember how to fit a line in linear regression, let's talk about logistic regression. In this example, we are using logistic regression to determine the effect of weight on obesity. These mice are obese and these mice are not obese. Our goal is to draw the best fitting squiggle for this data. As we know, in logistic regression, we transform the y-axis from the probability of obesity to the log odds of obesity. We can draw a candidate best fitting line on the graph."
+  },
+  {
+    "question": "What method is used instead of least squares to find the best fitting line when residuals are infinite?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "Maximum likelihood",
+    "start": "02:49",
+    "end": "04:21",
+    "chunk_id": 2,
+    "video_id": "Likelihood",
+    "content": " The only problem is that the transformation pushes the raw data to positive and negative infinity. And this means that the residuals, the distance from the data points to the line, are also equal to positive and negative infinity. And this means we can't use least squares to find the best fitting line. Instead, we use maximum likelihood. The first thing we do is project the original data points onto the candidate line. This gives each sample a candidate log odds value. In other words, the log odds of this point is 2.1. And the log odds of this point is 1.4. Then we transform the candidate log odds to candidate probabilities using this fancy looking formula, which is just a reordering of the transformation from probability to log odds. For those at home keeping score, here's how to convert the equation that takes probability as input and outputs log odds into an equation that takes log odds as input and outputs probability. First, we exponentiate both sides. Then we multiply both sides by 1 minus p, and then multiply 1 minus p and e to the log"
+  },
+  {
+    "question": "What is the first step in the maximum likelihood approach described in the transcript?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "answer": "Project the original data points onto the candidate line",
+    "start": "02:49",
+    "end": "04:21",
+    "chunk_id": 2,
+    "video_id": "Likelihood",
+    "content": " The only problem is that the transformation pushes the raw data to positive and negative infinity. And this means that the residuals, the distance from the data points to the line, are also equal to positive and negative infinity. And this means we can't use least squares to find the best fitting line. Instead, we use maximum likelihood. The first thing we do is project the original data points onto the candidate line. This gives each sample a candidate log odds value. In other words, the log odds of this point is 2.1. And the log odds of this point is 1.4. Then we transform the candidate log odds to candidate probabilities using this fancy looking formula, which is just a reordering of the transformation from probability to log odds. For those at home keeping score, here's how to convert the equation that takes probability as input and outputs log odds into an equation that takes log odds as input and outputs probability. First, we exponentiate both sides. Then we multiply both sides by 1 minus p, and then multiply 1 minus p and e to the log"
+  },
+  {
+    "question": "What are the steps to convert the equation from probability to log odds into an equation from log odds to probability?",
+    "question_type": "factual",
+    "difficulty": "hard",
+    "answer": "Exponentiate both sides, then multiply both sides by (1 - p), and finally multiply (1 - p) and e to the log odds",
+    "start": "02:49",
+    "end": "04:21",
+    "chunk_id": 2,
+    "video_id": "Likelihood",
+    "content": " The only problem is that the transformation pushes the raw data to positive and negative infinity. And this means that the residuals, the distance from the data points to the line, are also equal to positive and negative infinity. And this means we can't use least squares to find the best fitting line. Instead, we use maximum likelihood. The first thing we do is project the original data points onto the candidate line. This gives each sample a candidate log odds value. In other words, the log odds of this point is 2.1. And the log odds of this point is 1.4. Then we transform the candidate log odds to candidate probabilities using this fancy looking formula, which is just a reordering of the transformation from probability to log odds. For those at home keeping score, here's how to convert the equation that takes probability as input and outputs log odds into an equation that takes log odds as input and outputs probability. First, we exponentiate both sides. Then we multiply both sides by 1 minus p, and then multiply 1 minus p and e to the log"
+  },
+  {
+    "question": "What method is used to fit a line in logistic regression according to the transcript?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "answer": "Maximum likelihood",
+    "start": "00:00",
+    "end": "01:21",
+    "chunk_id": 0,
+    "video_id": "Likelihood",
+    "content": " Maximum likelihood in your neighborhood, I think that you should learn about it. StepQuest Hello, I'm Josh Starmer and welcome to StepQuest. Today we're going to follow up on our series of videos on logistic regression. This time we're going to talk about fitting a line using maximum likelihood. That is to say, we're going to talk about how this squiggle is optimized to fit the data the best. In the first video in this series, logistic regression details part one, coefficients, we saw that logistic regression is very similar to regular old linear models. Like linear regression, T-tests, and fancy stuff like multiple regression and ANOVA. The big difference is that logistic regression uses the log odds on the y-axis. However, you may recall that in that statQuest, I said, just take my word for it that this is the best fitting line. Well, the time for blindly trusting me is over. Let's see how this line is fit to the data. However, before we talk about how lines are fit in logistic regression, let's do a super"
+  },
+  {
+    "question": "What does logistic regression use on the y-axis, unlike regular linear models?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "Log odds",
+    "start": "00:00",
+    "end": "01:21",
+    "chunk_id": 0,
+    "video_id": "Likelihood",
+    "content": " Maximum likelihood in your neighborhood, I think that you should learn about it. StepQuest Hello, I'm Josh Starmer and welcome to StepQuest. Today we're going to follow up on our series of videos on logistic regression. This time we're going to talk about fitting a line using maximum likelihood. That is to say, we're going to talk about how this squiggle is optimized to fit the data the best. In the first video in this series, logistic regression details part one, coefficients, we saw that logistic regression is very similar to regular old linear models. Like linear regression, T-tests, and fancy stuff like multiple regression and ANOVA. The big difference is that logistic regression uses the log odds on the y-axis. However, you may recall that in that statQuest, I said, just take my word for it that this is the best fitting line. Well, the time for blindly trusting me is over. Let's see how this line is fit to the data. However, before we talk about how lines are fit in logistic regression, let's do a super"
+  },
+  {
+    "question": "In the example provided, what is the predicted probability (p) when the log odds is -2.1?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "answer": "0.1",
+    "start": "04:21",
+    "end": "05:53",
+    "chunk_id": 3,
+    "video_id": "Likelihood",
+    "content": " odds. Then we add p times e to the log odds to both sides. Then we pull p out on the left side of the equation. Lastly, we divide both sides by 1 plus e to the log odds. Bam! Now let's see this fancy equation in action. For example, for this point, we substitute negative 2.1 for the log odds. And that gives us p equals 0.1. And that gives us a y-coordinate on the squiggle. And we do the same thing for all of the points. Now we use the observed status, obese or not obese, to calculate their likelihood given the shape of the squiggly line. We'll start by calculating the likelihood of the obese mice given the shape of the squiggle. The likelihood that this mouse is obese, given the shape of the squiggle, is the value on the y-axis where the point intersects the squiggle, 0.49. In other words, the likelihood that this mouse is obese, given the shape of the squiggle, is the same as the predicted probability. In this case, the probability is not calculated as the area under a curve, but instead is"
+  },
+  {
+    "question": "How is the likelihood of a mouse being obese determined using the squiggly line in the example?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "The predicted probability (p) is the value on the y-axis where the point intersects the squiggly line.",
+    "start": "04:21",
+    "end": "05:53",
+    "chunk_id": 3,
+    "video_id": "Likelihood",
+    "content": " odds. Then we add p times e to the log odds to both sides. Then we pull p out on the left side of the equation. Lastly, we divide both sides by 1 plus e to the log odds. Bam! Now let's see this fancy equation in action. For example, for this point, we substitute negative 2.1 for the log odds. And that gives us p equals 0.1. And that gives us a y-coordinate on the squiggle. And we do the same thing for all of the points. Now we use the observed status, obese or not obese, to calculate their likelihood given the shape of the squiggly line. We'll start by calculating the likelihood of the obese mice given the shape of the squiggle. The likelihood that this mouse is obese, given the shape of the squiggle, is the value on the y-axis where the point intersects the squiggle, 0.49. In other words, the likelihood that this mouse is obese, given the shape of the squiggle, is the same as the predicted probability. In this case, the probability is not calculated as the area under a curve, but instead is"
+  },
+  {
+    "question": "What is the final algebraic step described to solve for p in the equation?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "By dividing both sides by 1 plus e to the log odds.",
+    "start": "04:21",
+    "end": "05:53",
+    "chunk_id": 3,
+    "video_id": "Likelihood",
+    "content": " odds. Then we add p times e to the log odds to both sides. Then we pull p out on the left side of the equation. Lastly, we divide both sides by 1 plus e to the log odds. Bam! Now let's see this fancy equation in action. For example, for this point, we substitute negative 2.1 for the log odds. And that gives us p equals 0.1. And that gives us a y-coordinate on the squiggle. And we do the same thing for all of the points. Now we use the observed status, obese or not obese, to calculate their likelihood given the shape of the squiggly line. We'll start by calculating the likelihood of the obese mice given the shape of the squiggle. The likelihood that this mouse is obese, given the shape of the squiggle, is the value on the y-axis where the point intersects the squiggle, 0.49. In other words, the likelihood that this mouse is obese, given the shape of the squiggle, is the same as the predicted probability. In this case, the probability is not calculated as the area under a curve, but instead is"
+  },
+  {
+    "question": "Why do statisticians often use the log of the likelihood instead of the likelihood itself when finding the best-fitting model?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "Because the parameter (squiggle) that maximizes the likelihood also maximizes the log of the likelihood.",
+    "start": "07:29",
+    "end": "09:01",
+    "chunk_id": 5,
+    "video_id": "Likelihood",
+    "content": " Note, although it is possible to calculate the likelihood as the product of the individual likelihoods, statisticians prefer to calculate the log of the likelihood instead. Either way works because the squiggle that maximizes the likelihood is the same one that maximizes the log of the likelihood. With the log of the likelihood or log likelihood to those in the now, we add the logs of the individual likelihoods instead of multiplying the individual likelihoods. Thus, the log likelihood of the data given the squiggle is negative 3.77. And this means that the log likelihood of the original line is negative 3.77. Now we rotate the line and calculate its log likelihood by projecting the data onto it, transforming the log odds to probabilities, and then calculating the log likelihood. And the final value for the log likelihood is negative 4.15. So this one is not as good as the first line. And we just keep rotating the log odds line and projecting the data onto it. And then transforming it to probabilities and calculating the log likelihood."
+  },
+  {
+    "question": "How is the log likelihood calculated from individual likelihoods?",
+    "question_type": "factual",
+    "difficulty": "easy",
+    "answer": "By adding the logs of the individual likelihoods.",
+    "start": "07:29",
+    "end": "09:01",
+    "chunk_id": 5,
+    "video_id": "Likelihood",
+    "content": " Note, although it is possible to calculate the likelihood as the product of the individual likelihoods, statisticians prefer to calculate the log of the likelihood instead. Either way works because the squiggle that maximizes the likelihood is the same one that maximizes the log of the likelihood. With the log of the likelihood or log likelihood to those in the now, we add the logs of the individual likelihoods instead of multiplying the individual likelihoods. Thus, the log likelihood of the data given the squiggle is negative 3.77. And this means that the log likelihood of the original line is negative 3.77. Now we rotate the line and calculate its log likelihood by projecting the data onto it, transforming the log odds to probabilities, and then calculating the log likelihood. And the final value for the log likelihood is negative 4.15. So this one is not as good as the first line. And we just keep rotating the log odds line and projecting the data onto it. And then transforming it to probabilities and calculating the log likelihood."
+  },
+  {
+    "question": "What is the log likelihood of the rotated line, and how does it compare to the original line?",
+    "question_type": "factual",
+    "difficulty": "medium",
+    "answer": "The log likelihood of the rotated line is -4.15, which is worse than the original line's log likelihood of -3.77.",
+    "start": "07:29",
+    "end": "09:01",
+    "chunk_id": 5,
+    "video_id": "Likelihood",
+    "content": " Note, although it is possible to calculate the likelihood as the product of the individual likelihoods, statisticians prefer to calculate the log of the likelihood instead. Either way works because the squiggle that maximizes the likelihood is the same one that maximizes the log of the likelihood. With the log of the likelihood or log likelihood to those in the now, we add the logs of the individual likelihoods instead of multiplying the individual likelihoods. Thus, the log likelihood of the data given the squiggle is negative 3.77. And this means that the log likelihood of the original line is negative 3.77. Now we rotate the line and calculate its log likelihood by projecting the data onto it, transforming the log odds to probabilities, and then calculating the log likelihood. And the final value for the log likelihood is negative 4.15. So this one is not as good as the first line. And we just keep rotating the log odds line and projecting the data onto it. And then transforming it to probabilities and calculating the log likelihood."
+  }
+]

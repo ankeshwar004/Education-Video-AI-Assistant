@@ -1,0 +1,112 @@
+[
+  {
+    "question": "Why is inserting a node at the beginning of a linked list a constant time operation?",
+    "question_type": "reasoning",
+    "difficulty": "easy",
+    "answer": "Because when inserting at the beginning, we only need to update the head node to point to the new node and store the address of the original first node in the new node, which takes the same amount of time regardless of the size of the list.",
+    "start": "15:03",
+    "end": "16:16",
+    "chunk_id": 12,
+    "video_id": "Array_VS_LinkedList",
+    "content": " list when you want to insert at beginning then here you want to insert this is the first node here suppose I want to insert one another node having value 4 right and suppose address of this node is in memory address 4000 has been allocated to this node you simply have to do what you simply how to adjust these links how you will insert see here in this node at the beginning if you want to insert then here at the address part of this node you will store address of this node 1000 1000 you are going to store here fine. So, you can say this is now going to link here and in the head node you are going to store address of this one that is 4000 now head is going to point here this is the first node right. So, at beginning it is going to take what constant time? So, at beginning it is going to take order of 1 in case of linked list now at end here here after this if you want to insert then you cannot directly go there because in linked list only sequential excess is possible here you can directly go there that is why it is order of 1."
+  },
+  {
+    "question": "How does the sequential access nature of linked lists affect the time complexity of inserting a node at the end?",
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "answer": "The sequential access nature of linked lists means that to insert a node at the end, we have to traverse the entire list to find the last node, which takes longer for larger lists, resulting in a time complexity greater than constant time.",
+    "start": "15:03",
+    "end": "16:16",
+    "chunk_id": 12,
+    "video_id": "Array_VS_LinkedList",
+    "content": " list when you want to insert at beginning then here you want to insert this is the first node here suppose I want to insert one another node having value 4 right and suppose address of this node is in memory address 4000 has been allocated to this node you simply have to do what you simply how to adjust these links how you will insert see here in this node at the beginning if you want to insert then here at the address part of this node you will store address of this node 1000 1000 you are going to store here fine. So, you can say this is now going to link here and in the head node you are going to store address of this one that is 4000 now head is going to point here this is the first node right. So, at beginning it is going to take what constant time? So, at beginning it is going to take order of 1 in case of linked list now at end here here after this if you want to insert then you cannot directly go there because in linked list only sequential excess is possible here you can directly go there that is why it is order of 1."
+  },
+  {
+    "question": "Why does deleting an element from the end of a linked list take order of n time?",
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "answer": "Because only sequential access is possible in a linked list, and to delete the last node, you have to traverse the complete list, which requires traversing n elements.",
+    "start": "18:49",
+    "end": "19:54",
+    "chunk_id": 15,
+    "video_id": "Array_VS_LinkedList",
+    "content": " delete from any position what you can say in average case if you want to delete from the middle position then you have to shift how many elements and by two elements to the left side. So, it depends on or you can say it is proportional to number of elements in the array. So, it is going to take order of n fine. In this case also if you want to delete from starting then simply delete this and what you have to do you have to adjust this head only. Here if you want to delete this one in head you are going to store 1000 only fine. So, it is going to take order of 1. But from the end if you want to delete then you cannot directly delete this 5 why. So, because only sequential access is possible in linked list. So, to reach till this node you have to traverse the complete list after that you can delete this one fine. So, it depends on number of elements you have to traverse n elements after that you can delete the last node. So, at the end if you want to delete then it is going to take order of n time. From any position if you want"
+  },
+  {
+    "question": "How does the time complexity of deleting an element from a linked list vary based on the position of the element?",
+    "question_type": "reasoning",
+    "difficulty": "hard",
+    "answer": "The time complexity varies based on the position of the element: deleting from the start takes order of 1 time, deleting from the middle takes order of n time, and deleting from the end also takes order of n time.",
+    "start": "18:49",
+    "end": "19:54",
+    "chunk_id": 15,
+    "video_id": "Array_VS_LinkedList",
+    "content": " delete from any position what you can say in average case if you want to delete from the middle position then you have to shift how many elements and by two elements to the left side. So, it depends on or you can say it is proportional to number of elements in the array. So, it is going to take order of n fine. In this case also if you want to delete from starting then simply delete this and what you have to do you have to adjust this head only. Here if you want to delete this one in head you are going to store 1000 only fine. So, it is going to take order of 1. But from the end if you want to delete then you cannot directly delete this 5 why. So, because only sequential access is possible in linked list. So, to reach till this node you have to traverse the complete list after that you can delete this one fine. So, it depends on number of elements you have to traverse n elements after that you can delete the last node. So, at the end if you want to delete then it is going to take order of n time. From any position if you want"
+  },
+  {
+    "question": "Why is random access possible in an array?",
+    "question_type": "reasoning",
+    "difficulty": "easy",
+    "answer": "Because the compiler can easily compute the address of any element in the array in constant time if the base address of the array is known.",
+    "start": "01:09",
+    "end": "02:28",
+    "chunk_id": 1,
+    "video_id": "Array_VS_LinkedList",
+    "content": " to talk about advantageous and drawbacks of arrays and linked list right. So, now the first factor is cost of accessing the element from the data structure see both our data structure arrays also data structure the linked list is also a data structure. So, first factor is cost of accessing an element first of all we are going to talk about array see have you are going to represent an array see. So, this is have you are going to represent an array suppose we have some elements here 6701 right and you want to access some data from the array now as we know random access is possible in the array or you can say direct access is possible. If you know the base address of the array then you can easily compute address of any element in the array in constant time right and the formalize suppose the base address for this is 100 for integer it is going to take 4 bytes it is 104 108 112 and 116. So, you want to access this data indexes to simply how you will access simply write a of to suppose array name is a array name and index value. How the compiler is going to compute"
+  },
+  {
+    "question": "How does the compiler compute the address of an element in an array?",
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "answer": "By using the base address of the array and the index value of the element, the compiler can calculate the address of the element in constant time.",
+    "start": "01:09",
+    "end": "02:28",
+    "chunk_id": 1,
+    "video_id": "Array_VS_LinkedList",
+    "content": " to talk about advantageous and drawbacks of arrays and linked list right. So, now the first factor is cost of accessing the element from the data structure see both our data structure arrays also data structure the linked list is also a data structure. So, first factor is cost of accessing an element first of all we are going to talk about array see have you are going to represent an array see. So, this is have you are going to represent an array suppose we have some elements here 6701 right and you want to access some data from the array now as we know random access is possible in the array or you can say direct access is possible. If you know the base address of the array then you can easily compute address of any element in the array in constant time right and the formalize suppose the base address for this is 100 for integer it is going to take 4 bytes it is 104 108 112 and 116. So, you want to access this data indexes to simply how you will access simply write a of to suppose array name is a array name and index value. How the compiler is going to compute"
+  },
+  {
+    "question": "Why is memory utilization in an array considered ineffective?",
+    "question_type": "reasoning",
+    "difficulty": "easy",
+    "answer": "Memory utilization in an array is considered ineffective because when an array is declared with a fixed size, some space may remain unused if the actual number of elements stored is less than the declared size, leading to wastage of memory.",
+    "start": "06:00",
+    "end": "07:10",
+    "chunk_id": 5,
+    "video_id": "Array_VS_LinkedList",
+    "content": " at starting we have declared what size for 10 integers fine. So, that is what wastage of memory. So, in this array memory utilization is ineffective you can say fine, but linked list is what dynamic size there we do not have to give the size at starting if you want to create another node at runtime only you create that node there is no wastage of space. So, in that case you can say linked list memory utilization is very efficient fine. Now, if we talk about memory requirement see although memory requirement in arrays less rather than linked list how see. Now, see suppose we have declared an array of size 7 right although we are we can take maximum limit 50 or 100, but I am going to take a simple example here a small example. Array size is 7, but actually I have stored only 3 integers. So, this is what unused space why? So, because further maybe if you want to insert another data you can insert this array because fixed size so in starting only be declared maximum limit right. So, now in this case how much"
+  },
+  {
+    "question": "How does the dynamic size of a linked list contribute to its memory efficiency?",
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "answer": "The dynamic size of a linked list allows it to create nodes only when needed at runtime, thereby avoiding the wastage of space that can occur in arrays when they are declared with a fixed size, making linked lists more memory-efficient.",
+    "start": "06:00",
+    "end": "07:10",
+    "chunk_id": 5,
+    "video_id": "Array_VS_LinkedList",
+    "content": " at starting we have declared what size for 10 integers fine. So, that is what wastage of memory. So, in this array memory utilization is ineffective you can say fine, but linked list is what dynamic size there we do not have to give the size at starting if you want to create another node at runtime only you create that node there is no wastage of space. So, in that case you can say linked list memory utilization is very efficient fine. Now, if we talk about memory requirement see although memory requirement in arrays less rather than linked list how see. Now, see suppose we have declared an array of size 7 right although we are we can take maximum limit 50 or 100, but I am going to take a simple example here a small example. Array size is 7, but actually I have stored only 3 integers. So, this is what unused space why? So, because further maybe if you want to insert another data you can insert this array because fixed size so in starting only be declared maximum limit right. So, now in this case how much"
+  },
+  {
+    "question": "Why is accessing an element in a linked list dependent on the number of nodes?",
+    "question_type": "reasoning",
+    "difficulty": "easy",
+    "answer": "Accessing an element in a linked list is dependent on the number of nodes because to reach a specific node, you have to traverse all the previous nodes first.",
+    "start": "03:41",
+    "end": "04:51",
+    "chunk_id": 3,
+    "video_id": "Array_VS_LinkedList",
+    "content": " to here to the first node right. Now, check out in the first node this is the address part see I have already discussed all the fundamentals about linked list in the previous video you can check out that video first of all right. So, now the address is 2000. Now, you can go here at this node now here check out the address part here we have 3000 now you can go to 3000 at this address and now you can access this one and now suppose in linked list there are 10 nodes and if you want to access the 10th node then you have to traverse all the previous node first of all then you can reach to that node only. So, accessing of element depends on the number of node in the linked list right. If you want to access this data first then obviously, then you can directly access if the head node addresses this one and in the first node only you found the data right. If you want to access the in average case if you want to access the middle element then you have to traverse how many nodes and by two nodes right. After that you can reach to that middle node"
+  },
+  {
+    "question": "How does the location of an element in a linked list affect the number of nodes that need to be traversed to access it?",
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "answer": "The location of an element in a linked list affects the number of nodes that need to be traversed to access it because elements located at the beginning of the list can be accessed directly, while elements in the middle or end of the list require traversing more nodes.",
+    "start": "03:41",
+    "end": "04:51",
+    "chunk_id": 3,
+    "video_id": "Array_VS_LinkedList",
+    "content": " to here to the first node right. Now, check out in the first node this is the address part see I have already discussed all the fundamentals about linked list in the previous video you can check out that video first of all right. So, now the address is 2000. Now, you can go here at this node now here check out the address part here we have 3000 now you can go to 3000 at this address and now you can access this one and now suppose in linked list there are 10 nodes and if you want to access the 10th node then you have to traverse all the previous node first of all then you can reach to that node only. So, accessing of element depends on the number of node in the linked list right. If you want to access this data first then obviously, then you can directly access if the head node addresses this one and in the first node only you found the data right. If you want to access the in average case if you want to access the middle element then you have to traverse how many nodes and by two nodes right. After that you can reach to that middle node"
+  }
+]

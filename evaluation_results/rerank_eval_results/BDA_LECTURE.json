@@ -1,0 +1,376 @@
+{
+  "mrr_before": 0.7768361581920904,
+  "mrr_after": 0.8714689265536723,
+  "hit_rate_before": {
+    "1": 0.6101694915254238,
+    "3": 0.9661016949152542,
+    "5": 1.0
+  },
+  "hit_rate_after": {
+    "1": 0.7627118644067796,
+    "3": 0.9830508474576272,
+    "5": 1.0
+  },
+  "rank_movement": {
+    "improved": 15,
+    "worsened": 4,
+    "unchanged": 40,
+    "average_movement": 0.2711864406779661
+  },
+  "per_question": [
+    {
+      "question": "What is the purpose of using spatial tools in analyzing big data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do companies like Amazon and Netflix utilize big data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What characterizes small data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is small data ideal for individuals and businesses?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What types of data models are mentioned?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What are the characteristics of a data model?",
+      "pre_rank": 1,
+      "post_rank": 4,
+      "movement": -3
+    },
+    {
+      "question": "What types of data are included in big data?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is the nature of a data model?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What is big data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What are the main sources of big data?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Why are special tools and techniques required for big data?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "What types of data models are mentioned in the context?",
+      "pre_rank": 3,
+      "post_rank": 3,
+      "movement": 0
+    },
+    {
+      "question": "What are some potential risks associated with the collection, storage, and analysis of large volumes of data?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is one of the challenges in ensuring data quality?",
+      "pre_rank": 3,
+      "post_rank": 2,
+      "movement": 1
+    },
+    {
+      "question": "Why is it important to consider data quality?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "What is a significant challenge for smaller organizations when dealing with big data?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What are some examples of regulatory departments and regulations mentioned in the context of big data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the cost of acquiring and analyzing big data affect smaller organizations?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is affected by the high cost and resource intensiveness of handling big data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What can affect the accuracy and reliability of data?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What type of skills are required to implement and manage big data infrastructure?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What laws require strict handling of personal data?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Why is regulatory compliance important for organizations?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the main difference between technical complexity and regulatory compliance in the context of big data infrastructure?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What are the main differences between structured, semi-structured, and unstructured data models in terms of their characteristics?",
+      "pre_rank": 3,
+      "post_rank": 2,
+      "movement": 1
+    },
+    {
+      "question": "How do the privacy and security concerns of collecting, storing, and analyzing large volumes of data compare to not collecting, storing, and analyzing data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What are the main types of data models mentioned in the transcript?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is the main difference between big data and small data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do companies like Amazon and Netflix use big data compared to how a small store uses small data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the main difference between transactional data and machine data?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "How do social data and transactional data differ in terms of their sources?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "What is the difference in the impact of cost and resource intensiveness on smaller organizations versus larger organizations?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What types of data are mentioned in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the transcript describe a data model?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "Why is ensuring the accuracy and completeness of data challenging?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "How do privacy and security concerns arise in data collection, storage, and analysis?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why are special tools and techniques required to analyze big data effectively?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "How do the three main sources of big data contribute to its complexity?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why do companies like Amazon and Netflix use big data to recommend products and shows?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the use of big data enable businesses to make better decisions?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why do organizations face technical challenges in implementing and managing big data infrastructure and analytics tools?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do data protection laws like GDPR affect organizations handling personal data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is a data model considered structured, semi-structured, and not dedicated?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "A small bookstore wants to determine which books to restock. What type of data should they use to make this decision?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How can a company like Amazon use big data to improve its services?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A company wants to analyze customer purchase history to understand buying trends. What type of data would this be an example of?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "A sensor in a manufacturing plant is recording temperature and pressure readings. What type of data is being generated?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "A small organization wants to acquire and store big data, but it has a limited budget and resources. What challenge will it likely face?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the cost and resource intensiveness of big data affect smaller organizations in terms of regulatory compliances and data quality?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A company is collecting and storing large volumes of customer data. What kind of risks may they be exposing themselves to?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A researcher is working with a dataset that consists of unstructured and heterogeneous data sources. What challenges may they face in ensuring the accuracy and completeness of the data?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What type of data can a data model be?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "Is it true that all data models are structured, semi-structured, and unstructured?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is a data model always structured?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "Is it true that big data is only used by large companies like Amazon and Netflix?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is it true that a data model is always structured?",
+      "pre_rank": 3,
+      "post_rank": 3,
+      "movement": 0
+    },
+    {
+      "question": "Does ensuring the accuracy and completeness of data quality only apply to structured data sources?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is it true that the technical complexity of big data infrastructure is not a significant challenge for organizations?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Does regulatory compliance with data protection laws like GDPR mean that organizations can handle personal data in any way they want?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    }
+  ]
+}

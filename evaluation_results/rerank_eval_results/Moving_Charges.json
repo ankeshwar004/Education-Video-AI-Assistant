@@ -1,0 +1,382 @@
+{
+  "mrr_before": 0.6653305709635633,
+  "mrr_after": 0.6835888648388649,
+  "hit_rate_before": {
+    "1": 0.55,
+    "3": 0.7333333333333333,
+    "5": 0.8
+  },
+  "hit_rate_after": {
+    "1": 0.55,
+    "3": 0.7666666666666667,
+    "5": 0.8666666666666667
+  },
+  "rank_movement": {
+    "improved": 16,
+    "worsened": 16,
+    "unchanged": 27,
+    "average_movement": 0.864406779661017
+  },
+  "per_question": [
+    {
+      "question": "What are the three sources of magnetic fields mentioned in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 5,
+      "movement": -4
+    },
+    {
+      "question": "According to the transcript, why do students often find magnetism boring or difficult?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What are the three different representations or sources of magnetic fields mentioned in the transcript?",
+      "pre_rank": 5,
+      "post_rank": 1,
+      "movement": 4
+    },
+    {
+      "question": "According to the transcript, what is the simple reason why the magnetic field appears complex?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What does the chart in the transcript provide regarding the magnetic field?",
+      "pre_rank": 1,
+      "post_rank": 5,
+      "movement": -4
+    },
+    {
+      "question": "Are electric and magnetic fields dependent on the observer's frame of reference?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "Can an observer in a non-inertial frame of reference observe a magnetic field produced by stationary charges?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "In what direction does the electric field of a single positive charge point?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the direction of the magnetic field inside a magnet?",
+      "pre_rank": 5,
+      "post_rank": 1,
+      "movement": 4
+    },
+    {
+      "question": "What is the shape of the magnetic field lines produced by a point charge?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the spacing of magnetic field lines relate to magnetic field intensity?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What topic will be covered in the next video session?",
+      "pre_rank": 2,
+      "post_rank": 5,
+      "movement": -3
+    },
+    {
+      "question": "What are the three key concepts related to magnetic fields mentioned in the transcript?",
+      "pre_rank": 2,
+      "post_rank": 4,
+      "movement": -2
+    },
+    {
+      "question": "How many chapters are stated to depend on the concepts of magnetic fields, moving charges, and magnetism in matter?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What are the three ways magnetism can be demonstrated according to the transcript?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "Which law governs the magnetic field produced by a current-carrying conductor as mentioned in the transcript?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "In what direction do magnetic field lines flow around a bar magnet?",
+      "pre_rank": 2,
+      "post_rank": 3,
+      "movement": -1
+    },
+    {
+      "question": "What are some examples of matter that can exhibit magnetism?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What law is mentioned in the transcript for studying the magnetic field due to a moving charge or current-carrying conductor?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Which applications of magnetic force are discussed in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What are the types of materials mentioned in the context of magnetism in the transcript?",
+      "pre_rank": 7,
+      "post_rank": 2,
+      "movement": 5
+    },
+    {
+      "question": "Which force and its associated rule are discussed in relation to current-carrying conductors in the transcript?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What concept is introduced after discussing the electric field for moving charges?",
+      "pre_rank": 5,
+      "post_rank": 3,
+      "movement": 2
+    },
+    {
+      "question": "What is the most important application mentioned that requires resolving questions about the magnetic field?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What are the three different sources of magnetic fields mentioned in the transcript, and how do they compare in terms of their origin?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do the properties of electric field lines compare to those of magnetic field lines as described in the transcript?",
+      "pre_rank": 11,
+      "post_rank": 5,
+      "movement": 6
+    },
+    {
+      "question": "How do moving charges and current-carrying conductors differ in how they produce a magnetic field?",
+      "pre_rank": 4,
+      "post_rank": 7,
+      "movement": -3
+    },
+    {
+      "question": "How does the electric field differ from the magnetic field in terms of the type of charges they are associated with?",
+      "pre_rank": 2,
+      "post_rank": 11,
+      "movement": -9
+    },
+    {
+      "question": "How do the directions of magnetic field lines differ from electric field lines as described in the transcript?",
+      "pre_rank": 6,
+      "post_rank": 1,
+      "movement": 5
+    },
+    {
+      "question": "What is the primary difference between the study of electrostatics and the study of current electricity or capacitors in terms of charge behavior?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the key difference between the sources of electric fields and magnetic fields?",
+      "pre_rank": 14,
+      "post_rank": 2,
+      "movement": 12
+    },
+    {
+      "question": "How does the chapter 'moving charges and magnetism' relate to other chapters like EMI, magnetism and matter, and alternating current?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do the right-hand rule and Fleming's left-hand rule differ in their applications related to magnetic fields?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do electric fields and magnetic fields differ in terms of their sources?",
+      "pre_rank": 21,
+      "post_rank": 3,
+      "movement": 18
+    },
+    {
+      "question": "How do electric and magnetic fields differ in their dependence on the observer's frame of reference?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How does the behavior of a charge differ in producing electric and magnetic fields when it is stationary versus when it is moving?",
+      "pre_rank": 7,
+      "post_rank": 2,
+      "movement": 5
+    },
+    {
+      "question": "Why do students often find magnetism boring or difficult to understand, according to the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How are magnetic fields introduced in the transcript, and what are the three sources mentioned?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the experiment with a circuit and a magnetic compass demonstrate the relationship between electric current and magnetic fields?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why does a moving charge produce a magnetic field while a stationary charge does not?",
+      "pre_rank": 14,
+      "post_rank": 5,
+      "movement": 9
+    },
+    {
+      "question": "Why does the speaker suggest moving slowly and steadily when studying the magnetic field?",
+      "pre_rank": 11,
+      "post_rank": 1,
+      "movement": 10
+    },
+    {
+      "question": "How does the speaker indicate the topic for the next session is related to the current discussion?",
+      "pre_rank": 17,
+      "post_rank": 22,
+      "movement": -5
+    },
+    {
+      "question": "Why does the instructor state that there are two different sources of magnetic fields?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does the instructor justify keeping the lecture on magnetism short?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "What are the sources of a magnetic field according to the transcript?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Why does the magnetic field appear complex to students, and how can this complexity be reduced according to the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How should a student use the chart mentioned in the transcript to improve their understanding of magnetic field concepts in future lessons?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A straight wire carries a steady electric current. Does this setup produce a magnetic field? Explain using the concepts from the transcript.",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A student observes that the magnetic field lines around a point charge are closely spaced near the charge and become more spread out farther away. How does the magnetic field intensity change with distance from the charge?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A straight wire carries an electric current. According to the transcript, what is the source of the magnetic field observed around the wire?",
+      "pre_rank": null,
+      "post_rank": null,
+      "movement": null
+    },
+    {
+      "question": "An iron nail is placed near a current-carrying wire and becomes magnetized. Based on the transcript, why does the nail exhibit magnetism in this scenario?",
+      "pre_rank": 23,
+      "post_rank": 2,
+      "movement": 21
+    },
+    {
+      "question": "An observer is initially at rest near a stationary charge and only detects an electric field. If the observer begins moving with a constant velocity relative to the charge, will they observe a magnetic field as well?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A wire carrying an electric current is placed near a compass. The compass needle deflects, indicating the presence of a magnetic field. Which of the three sources of magnetic fields mentioned in the transcript is responsible for this observation?",
+      "pre_rank": 1,
+      "post_rank": 8,
+      "movement": -7
+    },
+    {
+      "question": "A bar magnet is brought close to iron filings, and the filings align themselves in a pattern around the magnet. Which source of magnetic field, as described in the transcript, is responsible for this behavior?",
+      "pre_rank": 3,
+      "post_rank": 8,
+      "movement": -5
+    },
+    {
+      "question": "A student claims: 'Magnetic field lines start at the North Pole and end at the South Pole, and do not exist inside the magnet.' Is this statement correct?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "A student claims: 'The magnetic field produced by a moving charge is independent of the observer's frame of reference.' Is this statement correct?",
+      "pre_rank": 7,
+      "post_rank": 9,
+      "movement": -2
+    },
+    {
+      "question": "A student claims: 'A stationary point charge produces a magnetic field in the form of concentric circles around it.' Is this statement correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A student claims: 'The magnetic field is produced by a book.' Is this statement correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A student claims that magnetism is just one chapter in the syllabus. Is this statement correct?",
+      "pre_rank": 1,
+      "post_rank": 8,
+      "movement": -7
+    },
+    {
+      "question": "A student claims that the magnetic field lines around a moving point charge disappear as you move away from the charge. Is this statement correct?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    }
+  ]
+}

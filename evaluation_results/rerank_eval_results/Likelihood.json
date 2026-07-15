@@ -1,0 +1,334 @@
+{
+  "mrr_before": 0.8243589743589743,
+  "mrr_after": 0.9487179487179488,
+  "hit_rate_before": {
+    "1": 0.6730769230769231,
+    "3": 0.9807692307692307,
+    "5": 1.0
+  },
+  "hit_rate_after": {
+    "1": 0.9038461538461539,
+    "3": 1.0,
+    "5": 1.0
+  },
+  "rank_movement": {
+    "improved": 15,
+    "worsened": 4,
+    "unchanged": 33,
+    "average_movement": 0.3076923076923077
+  },
+  "per_question": [
+    {
+      "question": "How does the algorithm find the line with the maximum likelihood in logistic regression?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What metrics are used to determine if the fitted line in logistic regression represents a useful model?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does logistic regression calculate R-squared and P-values differently from linear regression?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How is the overall likelihood for all obese mice calculated according to the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the formula for calculating the likelihood that a mouse is not obese?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "If the probability that a mouse is obese is 0.9, what is the likelihood that it is not obese?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the criterion used to select the best-fitting line in linear regression according to the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "In logistic regression, how is the y-axis transformed when fitting the model?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What method is used instead of least squares to find the best fitting line when residuals are infinite?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the first step in the maximum likelihood approach described in the transcript?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "What are the steps to convert the equation from probability to log odds into an equation from log odds to probability?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What method is used to fit a line in logistic regression according to the transcript?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What does logistic regression use on the y-axis, unlike regular linear models?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "In the example provided, what is the predicted probability (p) when the log odds is -2.1?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How is the likelihood of a mouse being obese determined using the squiggly line in the example?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the final algebraic step described to solve for p in the equation?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why do statisticians often use the log of the likelihood instead of the likelihood itself when finding the best-fitting model?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How is the log likelihood calculated from individual likelihoods?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the log likelihood of the rotated line, and how does it compare to the original line?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How do the methods for calculating the likelihood of obese mice and non-obese mice differ based on the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do the log likelihood values of the original line and the rotated line compare, and which line provides a better fit to the data?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "How does the calculation of R-squared and P-values differ between linear regression and logistic regression based on the transcript?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Why can't least squares be used to find the best fitting line in this scenario, and what method is used instead?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does the method of calculating the likelihood of a mouse being obese in this context differ from calculating probability as the area under a curve?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do the fitting processes of linear regression and logistic regression differ based on the transcript?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does logistic regression differ from linear regression, T-tests, multiple regression, and ANOVA in terms of the y-axis?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the algorithm in the transcript efficiently find the line with the maximum likelihood for the best fit?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why can't the usual residuals be used to calculate R-squared and P-values in logistic regression, according to the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is the sum of squared residuals used to determine the best-fitting line in linear regression?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does transforming the y-axis from probability to log odds help in logistic regression?",
+      "pre_rank": 5,
+      "post_rank": 1,
+      "movement": 4
+    },
+    {
+      "question": "How does substituting the log odds into the equation result in the predicted probability p, and what does this value represent in the context of the squiggle?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is the likelihood of a mouse being obese given the shape of the squiggle equal to the predicted probability, and how is this different from calculating probability as the area under a curve?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is the likelihood for all the obese mice the product of the individual likelihoods?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How is the likelihood that a mouse is not obese determined from its probability of being obese?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why do statisticians prefer to calculate the log of the likelihood instead of the likelihood itself?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do we determine that the rotated line is not as good as the original line based on their log likelihoods?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "In the given example, the log odds for a data point is -2.1. What is the predicted probability (p) for this point, and how is it derived from the logistic regression equation described in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "If a mouse's data point intersects the logistic curve (squiggle) at a y-axis value of 0.49, what is the likelihood that this mouse is obese, given the shape of the curve?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "Why can't least squares be used to find the best-fitting line in this scenario, and what method is used instead?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Given a candidate log odds value of 2.1 for a data point, how would you convert this to a candidate probability?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How is the best-fitting line determined in logistic regression, and how does it differ from linear regression?",
+      "pre_rank": 2,
+      "post_rank": 3,
+      "movement": -1
+    },
+    {
+      "question": "In logistic regression, how does the algorithm ensure it finds the line with the maximum likelihood?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why can't we use the usual residuals-based R-squared and P-values to assess the fit of a logistic regression model, and what alternatives are mentioned in the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "You are comparing two lines in a logistic regression model. The log likelihood of the first line is -3.77, and the log likelihood of a rotated version of the line is -4.15. Which line is better, and why?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How is the best-fitting line determined in linear regression according to the transcript?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does logistic regression transform the y-axis to fit a line to the data, and what is the goal of this transformation?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A student claims: 'In linear regression, the best-fitting line is the one that minimizes the sum of the absolute residuals between the data points and the line.' Is this statement correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A student claims: 'In logistic regression, the best-fitting squiggle is drawn directly on the probability scale of the y-axis without any transformation.' Is this statement correct?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "A student claims: 'The residuals are infinite because the transformation pushes the raw data to positive and negative infinity, so we cannot use least squares.' Is this statement correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is it true that logistic regression fits the line by minimizing the sum of squared errors, similar to linear regression?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "A student claims: 'In logistic regression, the algorithm fits a straight line to the data, just like in linear regression, and uses R-squared and residuals to evaluate the model.' Is this statement correct?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "A student claims: 'The likelihood that a mouse is not obese is the same as the likelihood that it is obese.' Is this statement correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    }
+  ]
+}

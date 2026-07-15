@@ -1,0 +1,101 @@
+[
+  {
+    "question": "How does the efficiency of the new approach (checking words in the dictionary as prefixes) compare to the original approach (checking every possible prefix)?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The original approach checks every possible prefix of any length (O(N^2)), while the new approach checks every word in the word dictionary as a prefix (O(N * M), where M is the size of the word dictionary). The new approach is more efficient when M is smaller than N.",
+    "start": "03:48",
+    "end": "04:43",
+    "chunk_id": 4,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " This does not match lead, right? So now let's check the next word in our word dictionary and check. Does that match the characters over here? It does, right? We found code. So this is basically another way to do this problem. Instead of checking every single possible prefix, right? Of any length, what we're going to be doing is we're going to be checking every single word in our word dictionary as the prefix. So instead of being O of N times N, we're going to be doing O of N because to potentially we are going to be going through every single starting position, but we're going to be multiplying by the number of words in our word dictionary, which is, let's call it M. And the reason why we're going to be doing this approach is because it's going to be a little bit more efficient. And the reason is they, they tell us below in the problem statement that the max size of word dictionary is going to be smaller than the max size of the string. So this is overall probably going to be more efficient."
+  },
+  {
+    "question": "How do the two string-matching approaches described in the transcript differ in terms of the number of comparisons they perform?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The first approach tries all possible substrings (n x n operations), while the second approach checks only words from a predefined dictionary, reducing the number of comparisons to the size of the dictionary.",
+    "start": "02:51",
+    "end": "03:48",
+    "chunk_id": 3,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " So basically, we're going to try every word. How many different words are we going to end up trying? We're going to try, let's say n is the size of our string, n, and we're going to try basically from every single starting position to the end. So that's going to basically be n times n. Now, we could also do it a different way. Instead of trying every single possible, you know, prefix, let's just check every word in our word dictionary and see if that matches. For example, this first word is four characters long, right? So what we're going to do is we're going to check the first four characters in our string. Does this match this word? Clearly it does, right? So what does that tell us? That tells us now, you know, we have the same sub problem as before. We're going to start from this next position now, right? And check and from here, we're basically going to be doing the same thing, right? So we're going to check is lead basically, you know, the first four characters, does that match lead?"
+  },
+  {
+    "question": "How does the bottom-up approach described in the transcript differ from a typical top-down approach in dynamic programming for word break problems?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The bottom-up approach checks if a substring starting from a given index can be segmented into dictionary words by working backwards from the end of the string, while the top-down approach typically starts from the beginning and builds up solutions for smaller subproblems. In the transcript, the bottom-up method is explicitly described as starting from the last character (index 7) and moving in reverse order.",
+    "start": "09:14",
+    "end": "10:17",
+    "chunk_id": 10,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " So what we're going to do is now do the bottom up approach, right? We're going to go through every single index in reverse order, right? So we would start at the last character, which is position seven, right? And see, can we word break the remainder of this string? You know, and we would try every single word, right? Like, neat, does neat match this string? Well, they're not even the same size, right? If we tried to match neat on four characters starting from here, we would go out of bounds of this string, right? There's not enough character. So of course, this is going to be false, right? It wouldn't match neat. It wouldn't match the other two words in our dictionary either. And that's obviously going to be true for DP of six, DP of five as well. So both of these are also going to be false. basically if we started from 6 or if we started from 5 we would not be able to match any of the words in our dictionary. But now if we start here index 4 so we're now trying to figure out dp of 4 is that true? Well yes it is right it doesn't match neat it doesn't match elite but it"
+  },
+  {
+    "question": "How does the brute force approach described in the transcript compare to the alternative, more efficient approach mentioned for checking if an input string can be segmented into dictionary words?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The first approach checks prefixes of the input string incrementally (e.g., first character, first two characters, etc.) to see if they match a word in the dictionary, while the second approach (implied but not fully described) is more efficient but not explicitly detailed in the transcript.",
+    "start": "01:07",
+    "end": "01:58",
+    "chunk_id": 1,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " So in that case, we would have to return false. And you know, let's say we had an input string instead called lead and lead again, right? So two leads in a row, would we return true? Yes, because we're allowed to use this word from our word dictionary multiple times, right? Clearly, it matches this and it also matches the first portion. Now, let's start off with the brute force approach. How would we even structure a brute force solution? Well, there's actually two ways to do it. But one of them happens to be more efficient and I'll tell you why. So one thing we could try for an input string like this one, we could check, okay, the first character, right? Basically, the first prefix of this string, L by itself, right? Is this a word that's found in our word dictionary? It's not, right? So let's try maybe the first two characters together are a word, right? That's not it either. We would try the first three, right? Basically, we would try every single portion from the beginning until we"
+  },
+  {
+    "question": "How does the general problem statement of 'word break' compare to the example provided with the input string 'leadcode' and the word dictionary ['lead', 'code']?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The problem requires checking if the input string can be segmented into one or more dictionary words, while the example demonstrates a specific case where the string 'leadcode' can be split into 'lead' and 'code', both of which are in the dictionary. The problem defines the general rule, while the example illustrates its application.",
+    "start": "00:00",
+    "end": "01:07",
+    "chunk_id": 0,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " Hey everyone, welcome back and let's write some more neat code today. So today, let's solve the problem word break. So we're given an input string and a dictionary of strings called word dict. And we want to return true if and only if S can be broken up into separate strings such that every separate string in S is also found inside of our word dict. And we are allowed to use words from the word dict multiple times. So for example, let's say we're given an input string, lead code and we're given a word dictionary of words called lead and code. So obviously, in this case, we could split this string right into separate strings, lead, right, break it down in this middle position. And then the second string would be code, right? So clearly, this can be broken up into words that are found in the word dictionary. So therefore, we are going to return true. Now, what if we took code outside of our word dictionary? Well, then in that case, this portion lead is a word, right? But we have no matching word in our dictionary for the remainder code."
+  },
+  {
+    "question": "How does the decision tree approach differ from the alternative approach mentioned in the transcript for solving the subproblem?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The decision tree approach uses decisions based on the number of words in the word dictionary (e.g., 'neat', 'elite', 'code'), while the alternative approach checks every single prefix of the string.",
+    "start": "05:36",
+    "end": "06:29",
+    "chunk_id": 6,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " So what the decision tree is going to be is we're going to start at the first position, right? For example, I equals zero. We're going to be keeping track of whatever index we're at, right? Because we know that if we can find a word, you know, that matches neat, for example, then the sub problem is going to be, you know, finding words that can match the remainder of the string. For example, if we did that, our I, instead of starting at index zero, would basically be starting at index four, right? So that's going to what this, that's what the sub problem is going to be. So really, we're only going to have one variable that we're keeping track of in this backtracking solution. And so remember, we mentioned we're not going to be doing it like this. We're not going to check every single prefix. We're going to have decisions in our decision tree based on the number of words that are in the word dictionary. So we're going to have a decision for a neat. We're going to have a decision for elite and we're going to have a decision for code."
+  },
+  {
+    "question": "How does the caching approach (memoization) compare to the dynamic programming (DP) solution in terms of implementation and efficiency, as described in the transcript?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The caching approach (memoization) involves storing results of subproblems to avoid repeated work, while the dynamic programming (DP) solution builds the solution bottom-up by solving smaller subproblems iteratively. The DP solution is often more efficient in terms of code simplicity and avoids the overhead of recursive calls and cache lookups.",
+    "start": "04:43",
+    "end": "05:36",
+    "chunk_id": 5,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " Now this isn't going to be the overall time complexity. We are actually going to multiply it by another N because when we're checking, for example, you know, this brief, this string, when we're checking, does that match the first four characters here? That's also a N time operation because it could, you know, potentially be the size of the input string S. So this is basically going to be the overall time complexity N squared multiplied by M. So I'm just going to basically show you the same formula that I usually do. I'm going to give you a quick illustration of what the decision tree would look like. Then we're going to understand how we could cash that to eliminate repeated work. And then by understanding that, we're going to go to the optimal dynamic programming solution, the bottom up approach. And then we're going to code that up. Usually the DP solution is a lot less code than caching. So we're going to be looking at our input string neat code. So I think that's a little bit better than neat code, wouldn't you say?"
+  },
+  {
+    "question": "How does the algorithm decide whether to continue down a path when comparing the strings 'elite', 'code', and 'neat' to the target string?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The string 'neat' matches the first four characters of the target string, while 'elite' and 'code' do not. Therefore, the algorithm continues down the path for 'neat' but not for 'elite' or 'code'.",
+    "start": "06:29",
+    "end": "07:21",
+    "chunk_id": 7,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " Now, what we're going to notice is when we try elite on here, right, basically, elite is four characters. Therefore, we're going to check the first four characters of here. Compare it. Does that match? Elite, it does not, right? We're just one character off that first one. So basically, that means we're not going to continue down this path. Now, let's try code. Does code match the first four characters? Definitely not. So we're not even going to continue down this path either. Of course, neat does match this. So we are going to continue down here. We're going to do three more decisions, basically one for every single word in our word dictionary. Now, one thing though is when we are starting here, we know we matched the first four characters. So by this point, we are now going to be at I equals four, meaning we're going to be looking at this part of the string. So as we can see, checking neat, that's four characters long. So let's check four characters starting from here. That's not matching."
+  },
+  {
+    "question": "How does the described word-breaking approach compare to a method that only checks the first matching prefix at each position?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "The approach checks every prefix starting from each position in the string to see if it matches a word in the dictionary, then recursively attempts to break up the remaining substring. This ensures all possible word breaks are explored.",
+    "start": "01:58",
+    "end": "02:51",
+    "chunk_id": 2,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " found a matching word that does exist in our word dictionary. And we know that we are going to find one like this, right? The first four characters of the string are a word, right? So once we found that, what are we going to do? Clearly, we have a sub problem, right? We found a matching word for this portion, but now we want to know, can we break up the rest of this string with words from our dictionary? So that's kind of how we're going to do it, right? That's what's going to be the sub problem, basically. So instead of starting from the first position in the string, we would start at this position and the string and try to word break it. Now in this approach, what we're going to basically be doing, potentially is from every single starting position, right? We're going to check every prefix, right? So from the first starting position, we might also get if, you know, this happened to be a word, then we would start at this position and then do the same thing for this, right? Every word starting here."
+  }
+]

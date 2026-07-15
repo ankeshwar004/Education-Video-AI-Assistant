@@ -1,0 +1,122 @@
+[
+  {
+    "question": "How can you print all the items in a dictionary?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "You can print all the items in a dictionary by using the .items method, for example, print(Dict1.items).",
+    "scenario": "You have a dictionary called Dict1 and you want to print all its items.",
+    "start": "09:26",
+    "end": "10:18",
+    "chunk_id": 10,
+    "video_id": "Python_Intro",
+    "content": " If I write the print Dict1, then you can see here that it is a hundred. For the value of the value of the print, I used the dot gate method. And I will write the dot gate in the dot gate. Therefore, I will show you the dot gate method. After the function, I will tell you in a little bit about it. But I will explain it in a little bit about the function of the dot gate method. Which is a value and returns something. In this case, it is doing a hundred of return. For any dictionary, you can print the dictionary. The items you will find are the print Dict1. If I do this, then you can see here that I have shown all the items in the dictionary. Now, I will only show you the fake items in the dictionary. If there are many items, you can show them to all items. If you want to print only keys in this edition, then you can click printdict1.keys. And if you want to run the program, you can see that I have all the keys in this case. There are only Virat in this case. But if I add the date 1 and Sachin, then you can make it 5th round and then run it 5th round."
+  },
+  {
+    "question": "How can you print only the keys in a dictionary?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "You can print only the keys in a dictionary by using the .keys method, for example, print(Dict1.keys).",
+    "scenario": "You have a dictionary called Dict1 and you want to print only its keys.",
+    "start": "09:26",
+    "end": "10:18",
+    "chunk_id": 10,
+    "video_id": "Python_Intro",
+    "content": " If I write the print Dict1, then you can see here that it is a hundred. For the value of the value of the print, I used the dot gate method. And I will write the dot gate in the dot gate. Therefore, I will show you the dot gate method. After the function, I will tell you in a little bit about it. But I will explain it in a little bit about the function of the dot gate method. Which is a value and returns something. In this case, it is doing a hundred of return. For any dictionary, you can print the dictionary. The items you will find are the print Dict1. If I do this, then you can see here that I have shown all the items in the dictionary. Now, I will only show you the fake items in the dictionary. If there are many items, you can show them to all items. If you want to print only keys in this edition, then you can click printdict1.keys. And if you want to run the program, you can see that I have all the keys in this case. There are only Virat in this case. But if I add the date 1 and Sachin, then you can make it 5th round and then run it 5th round."
+  },
+  {
+    "question": "What happens when you try to change the value of a tuple?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "You will get an error because tuples do not support item assignment.",
+    "scenario": "You have a tuple called 'my_tuple' with the values (1, 2, 3) and you try to change the value of the first element to 4.",
+    "start": "07:42",
+    "end": "08:34",
+    "chunk_id": 8,
+    "video_id": "Python_Intro",
+    "content": " And if you have a list in your list, then you can reference the list in the list. If I want to change my list's element, then I am making a tuple. Tuple and list is almost the same. Now it is the difference that you can't change the elements of the tuple. To make a tuple, I used a square bracket list. I will also comment on it, I will show you the code and I will show you the shoes. I will tell you what is tuple. If I write tuple is equal to tuple. And here I will write the parenthesis of tuple 1, 2, 3. And after that I will print the tuple 1. If I run F5, then you can see that there are 1, 2, 3. If I write the type of tuple, then you can see here. This is the last tuple, this means that it is a tuple. If I want to change the value of my tuple, then I will do a tuple equal to 2. And if I run F5, then you can see that the tuple object does not support a sign. That is, you can't change the value of your tuple, it will be error. So if you want to change the value of the container, then you can use a tuple."
+  },
+  {
+    "question": "How do you determine if a variable is a tuple or a list?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "You can use the type() function to check if a variable is a tuple or a list.",
+    "scenario": "You have a variable called 'my_variable' and you want to know if it is a tuple or a list.",
+    "start": "07:42",
+    "end": "08:34",
+    "chunk_id": 8,
+    "video_id": "Python_Intro",
+    "content": " And if you have a list in your list, then you can reference the list in the list. If I want to change my list's element, then I am making a tuple. Tuple and list is almost the same. Now it is the difference that you can't change the elements of the tuple. To make a tuple, I used a square bracket list. I will also comment on it, I will show you the code and I will show you the shoes. I will tell you what is tuple. If I write tuple is equal to tuple. And here I will write the parenthesis of tuple 1, 2, 3. And after that I will print the tuple 1. If I run F5, then you can see that there are 1, 2, 3. If I write the type of tuple, then you can see here. This is the last tuple, this means that it is a tuple. If I want to change the value of my tuple, then I will do a tuple equal to 2. And if I run F5, then you can see that the tuple object does not support a sign. That is, you can't change the value of your tuple, it will be error. So if you want to change the value of the container, then you can use a tuple."
+  },
+  {
+    "question": "What is the purpose of using 'try Accept' in the given code snippet?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The purpose of using 'try Accept' is to handle exceptions and prevent the program from exiting when an error occurs.",
+    "scenario": "You are writing a program that may encounter errors, and you want to handle them without exiting the program.",
+    "start": "15:10",
+    "end": "16:07",
+    "chunk_id": 16,
+    "video_id": "Python_Intro",
+    "content": " I will tell you how to handle this comment. Try Accept. How to handle this comment? If you are a coder who can do this error, and you are scared that if you do this error, your next program will not work. If you think that if you do this error, then skip this program and start doing this. So you try Accept. For that you write try and call and enter and you will get a level of 1 in 1. Now I will write in index. I have not defined index in my entire program, so this will obviously error through. I do not want to error through. When you handle the exception, that is, do not exit the program. So I will use Accept. Accept is E and I will print the exception. I will write print. I will show you this error through. I will print it here. I will tell you this error. This program has generated and this index is not defined. The error comes from our data color. If I define index in my entire program, then I will write index is equal to 3. Then I will show you this error through. And I will print it here."
+  },
+  {
+    "question": "How would you modify the code to avoid the 'index not defined' error?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "You would define the 'index' variable before using it, for example, 'index = 3'.",
+    "scenario": "You are writing a program that uses an 'index' variable, but you haven't defined it yet.",
+    "start": "15:10",
+    "end": "16:07",
+    "chunk_id": 16,
+    "video_id": "Python_Intro",
+    "content": " I will tell you how to handle this comment. Try Accept. How to handle this comment? If you are a coder who can do this error, and you are scared that if you do this error, your next program will not work. If you think that if you do this error, then skip this program and start doing this. So you try Accept. For that you write try and call and enter and you will get a level of 1 in 1. Now I will write in index. I have not defined index in my entire program, so this will obviously error through. I do not want to error through. When you handle the exception, that is, do not exit the program. So I will use Accept. Accept is E and I will print the exception. I will write print. I will show you this error through. I will print it here. I will tell you this error. This program has generated and this index is not defined. The error comes from our data color. If I define index in my entire program, then I will write index is equal to 3. Then I will show you this error through. And I will print it here."
+  },
+  {
+    "question": "What happens when you print a list in Python?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The list will be printed with all its elements.",
+    "scenario": "You have a list of items and you want to print it.",
+    "start": "10:18",
+    "end": "11:20",
+    "chunk_id": 11,
+    "video_id": "Python_Intro",
+    "content": " You can see that Virat and Sachin are both shown. You can read the documents about the other functions of this edition. I will comment on all these codes. And I will tell you the set. If I make a list of items in this case, then I will print the list from 1 to 2, 3, 4 and 4 to 1. And if I print it, then you will see that this list will be print. If I want to repeat the items in this case, then I will type it in the set. The type of the item is that I will type the list to the Tupel Tupel list. Or I can type the list in the set or the set or the list. I will show you the list in the set. If I write S1 is equal to set of list 1, then my S1 is set. And if I print this set, then you will see that all the repeated items will be removed. To know about the set, search Google for the set data type Python and read it from the other side. I will comment on this code and then talk about the operators. If I write A is equal to 5, B is equal to 10, and I print A plus B, then I only get 15. But if I write C is equal to Harry, which is a string because I have used double quotes."
+  },
+  {
+    "question": "How do you remove repeated items from a list in Python?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "You can convert the list to a set, which automatically removes repeated items.",
+    "scenario": "You have a list with duplicate items and you want to remove the duplicates.",
+    "start": "10:18",
+    "end": "11:20",
+    "chunk_id": 11,
+    "video_id": "Python_Intro",
+    "content": " You can see that Virat and Sachin are both shown. You can read the documents about the other functions of this edition. I will comment on all these codes. And I will tell you the set. If I make a list of items in this case, then I will print the list from 1 to 2, 3, 4 and 4 to 1. And if I print it, then you will see that this list will be print. If I want to repeat the items in this case, then I will type it in the set. The type of the item is that I will type the list to the Tupel Tupel list. Or I can type the list in the set or the set or the list. I will show you the list in the set. If I write S1 is equal to set of list 1, then my S1 is set. And if I print this set, then you will see that all the repeated items will be removed. To know about the set, search Google for the set data type Python and read it from the other side. I will comment on this code and then talk about the operators. If I write A is equal to 5, B is equal to 10, and I print A plus B, then I only get 15. But if I write C is equal to Harry, which is a string because I have used double quotes."
+  },
+  {
+    "question": "If you want to concatenate the strings 'Hello', 'World', and 'Python', how would you do it?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "You can concatenate the strings using the '+' operator, like this: 'Hello' + 'World' + 'Python'.",
+    "scenario": "You are creating a greeting program that prints out a concatenated string.",
+    "start": "11:20",
+    "end": "12:18",
+    "chunk_id": 12,
+    "video_id": "Python_Intro",
+    "content": " And I write C plus A plus B plus C, then you will see that the error is that you cannot drop the teacher's string. If you know that I have 5, 10 and Harry, then I want to concatenate these things. You will also type A and B in string, or I will change the teacher's string. I will write here STR in some way, and if I do F5, then you will see that 510 and Harry is here. If I write 10 minus 5 is 10 minus 5, then you will see that 10 minus 5 is 5, then you will see that I can print two things in my print statement, how to write it, and then you will see that you should use more operators like this. If I do F5, then you will see that everything is printed here, which you can understand. Now, you will see that 10 divided by 5 is floating point number. And if you want to convert it into an integer, then you can type it from this. As soon as I have made a string here, I will comment on this code. If you want to take Python input from users, then you will have to write a variable name. I will write here, then you will have to write input."
+  },
+  {
+    "question": "If you want to take a user's input in Python and store it in a variable, what function would you use?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "You would use the 'input()' function to take the user's input and store it in a variable.",
+    "scenario": "You are creating a program that asks the user for their name and then prints out a greeting.",
+    "start": "11:20",
+    "end": "12:18",
+    "chunk_id": 12,
+    "video_id": "Python_Intro",
+    "content": " And I write C plus A plus B plus C, then you will see that the error is that you cannot drop the teacher's string. If you know that I have 5, 10 and Harry, then I want to concatenate these things. You will also type A and B in string, or I will change the teacher's string. I will write here STR in some way, and if I do F5, then you will see that 510 and Harry is here. If I write 10 minus 5 is 10 minus 5, then you will see that 10 minus 5 is 5, then you will see that I can print two things in my print statement, how to write it, and then you will see that you should use more operators like this. If I do F5, then you will see that everything is printed here, which you can understand. Now, you will see that 10 divided by 5 is floating point number. And if you want to convert it into an integer, then you can type it from this. As soon as I have made a string here, I will comment on this code. If you want to take Python input from users, then you will have to write a variable name. I will write here, then you will have to write input."
+  }
+]

@@ -1,0 +1,123 @@
+[
+  {
+    "question": "What is the main difference between technical complexity and regulatory compliance in the context of big data infrastructure?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Technical complexity refers to the challenges of implementing and managing big data infrastructure, while regulatory compliance refers to the challenges of meeting data protection laws.",
+    "start": "09:44",
+    "end": "10:55",
+    "chunk_id": 5,
+    "video_id": "BDA_LECTURE",
+    "content": " And the accuracy, reliability, and completeness will also be affected. And the quality of the data is also the disadvantage of these issues. Next is the disadvantage of this. Technical complexity. The technicality of the data may be a bit complicated. like implementing and managing data, big data infrastructure, and NL days, tools requires specialized skills and expertise. Lending to technical challenges and resource constant for organization, just to implement and manage big data infrastructure, analytics tools. In that, we need specialized skills as well, which are used to make technical challenges, because we don't get specialized skills or technical skills, so we can see one thing. Next, regulatory compliance. Organization faced challenges in meeting data protection laws like GDPR, general data protection, legal regulation, and digital personal data protection, protection Act 2023. These laws require strict handling of personal data, making compliance as a shield to avoid legal risks and penalties,"
+  },
+  {
+    "question": "What are the main differences between structured, semi-structured, and unstructured data models in terms of their characteristics?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Structured data models are organized and easily searchable, semi-structured data models have some level of organization but are not as easily searchable, and unstructured data models lack organization and are difficult to search.",
+    "start": "08:21",
+    "end": "09:44",
+    "chunk_id": 4,
+    "video_id": "BDA_LECTURE",
+    "content": " For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. These privacy and security concerns may be the collection, storage and analysis of large volumes of data, raise, significant privacy and security risks. Including unauthorized access, data breaches, and misuse of personal information. As soon as someone doesn't collect data, store, and analyze it, they run the risk of privacy and security. And through unauthorized access, we get a lot of personal information. They also get misuse. So this is one of the advantages of this. Next data quality is you. Ensuring the accuracy. Relief-reaching completeness of data can be challenging as being data often consists of unstructured and heterogeneous data sources. Lending to potential errors and biases and analysis. In this data can be unstructured and heterogeneous. The data may be errors in some areas."
+  },
+  {
+    "question": "How do the privacy and security concerns of collecting, storing, and analyzing large volumes of data compare to not collecting, storing, and analyzing data?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "Collecting, storing, and analyzing large volumes of data raises significant privacy and security risks, including unauthorized access, data breaches, and misuse of personal information, whereas not collecting, storing, and analyzing data reduces these risks.",
+    "start": "08:21",
+    "end": "09:44",
+    "chunk_id": 4,
+    "video_id": "BDA_LECTURE",
+    "content": " For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. These privacy and security concerns may be the collection, storage and analysis of large volumes of data, raise, significant privacy and security risks. Including unauthorized access, data breaches, and misuse of personal information. As soon as someone doesn't collect data, store, and analyze it, they run the risk of privacy and security. And through unauthorized access, we get a lot of personal information. They also get misuse. So this is one of the advantages of this. Next data quality is you. Ensuring the accuracy. Relief-reaching completeness of data can be challenging as being data often consists of unstructured and heterogeneous data sources. Lending to potential errors and biases and analysis. In this data can be unstructured and heterogeneous. The data may be errors in some areas."
+  },
+  {
+    "question": "What are the main types of data models mentioned in the transcript?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "structured, semi-structured and not dedicated",
+    "start": "06:01",
+    "end": "08:21",
+    "chunk_id": 3,
+    "video_id": "BDA_LECTURE",
+    "content": " For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated."
+  },
+  {
+    "question": "What is the main difference between big data and small data?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "Big data is complex and difficult to comprehend, while small data is easily accessible and informative.",
+    "start": "01:09",
+    "end": "03:03",
+    "chunk_id": 1,
+    "video_id": "BDA_LECTURE",
+    "content": " valuable insights hidden in the data. So, to analyze big data effectively, spatial tools are used to help the organization through valuable explanations, innovations and better decision making in the process. Like companies like Amazon's Netflix, they use big data to recommend products and shows based on users' past activity. The past activity of users, Amazon and Netflix use big data and help to recommend products like their growth and see the Amazon market. In the next big data set, in user behavior, Internet, other sources, through sensing and mobile data, you can write information. This is our big data. Small data. Small data refers to a data set that are easily comprehensible by people as they're easily accessible informative and actionable. So, this is an easy, easy, This makes its ideal for individual and businesses to find useful information and make better choices in everyday task. For example, a small store might track daily sales to decide what product to restore. For example, a small store has a shop, so they analyze their daily sales to decide which product to restore."
+  },
+  {
+    "question": "How do companies like Amazon and Netflix use big data compared to how a small store uses small data?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Companies like Amazon and Netflix use big data to recommend products and shows based on users' past activity, while a small store uses small data to track daily sales and decide what product to restore.",
+    "start": "01:09",
+    "end": "03:03",
+    "chunk_id": 1,
+    "video_id": "BDA_LECTURE",
+    "content": " valuable insights hidden in the data. So, to analyze big data effectively, spatial tools are used to help the organization through valuable explanations, innovations and better decision making in the process. Like companies like Amazon's Netflix, they use big data to recommend products and shows based on users' past activity. The past activity of users, Amazon and Netflix use big data and help to recommend products like their growth and see the Amazon market. In the next big data set, in user behavior, Internet, other sources, through sensing and mobile data, you can write information. This is our big data. Small data. Small data refers to a data set that are easily comprehensible by people as they're easily accessible informative and actionable. So, this is an easy, easy, This makes its ideal for individual and businesses to find useful information and make better choices in everyday task. For example, a small store might track daily sales to decide what product to restore. For example, a small store has a shop, so they analyze their daily sales to decide which product to restore."
+  },
+  {
+    "question": "What is the main difference between transactional data and machine data?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "Transactional data refers to online purchases and business transactions, while machine data refers to data recorded by sensors.",
+    "start": "00:00",
+    "end": "01:09",
+    "chunk_id": 0,
+    "video_id": "BDA_LECTURE",
+    "content": " Hello, everyone. Welcome to SMRINKERS YouTube channel. Today we will study Class 12 artificial intelligence which is called introduction to big data and data analytics. Big data means that the name of the name is big data and its analytics means that it will analyze it. Now we will talk about six marks in our paper. So, let's start it. So, first of all, topic is big data. Big data means big data. So, let's look at its definition. It refers to extremely large and complex data sets that regular computer programs and data sets basis can not handle. This is mainly a large, extremely large data set. This is a complex data set. The regular computer programs are not handled. This is mainly three main sources. Transection and data. Machine and data are only social data. Transection and data means all the online purchases from business to transactions. Machine data means that the sensor is recording. And social data means that social media is posted. So, analyzing used big data effectively, spatial tools and techniques are required to help organizations find"
+  },
+  {
+    "question": "How do social data and transactional data differ in terms of their sources?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Social data comes from social media posts, while transactional data comes from online purchases and business transactions.",
+    "start": "00:00",
+    "end": "01:09",
+    "chunk_id": 0,
+    "video_id": "BDA_LECTURE",
+    "content": " Hello, everyone. Welcome to SMRINKERS YouTube channel. Today we will study Class 12 artificial intelligence which is called introduction to big data and data analytics. Big data means that the name of the name is big data and its analytics means that it will analyze it. Now we will talk about six marks in our paper. So, let's start it. So, first of all, topic is big data. Big data means big data. So, let's look at its definition. It refers to extremely large and complex data sets that regular computer programs and data sets basis can not handle. This is mainly a large, extremely large data set. This is a complex data set. The regular computer programs are not handled. This is mainly three main sources. Transection and data. Machine and data are only social data. Transection and data means all the online purchases from business to transactions. Machine data means that the sensor is recording. And social data means that social media is posted. So, analyzing used big data effectively, spatial tools and techniques are required to help organizations find"
+  },
+  {
+    "question": "What is the difference in the impact of cost and resource intensiveness on smaller organizations versus larger organizations?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Smaller organizations are more affected by cost and resource intensiveness due to their limited budget and resources.",
+    "start": "10:55",
+    "end": "12:10",
+    "chunk_id": 6,
+    "video_id": "BDA_LECTURE",
+    "content": " which are regulatory departments and regulations, which are a general data protection Act, or a digital personal data protection Act. We also need to evaluate some of these challenges, which are the challenges of the data. We also feel some challenges. Next, a cost and resource intensiveness. The cost of acquiring, storing, processing, and analyzing big data, along with hiring skilled staff can be high, this is a specially challenging for smaller organization with limited budget and resources. Now, as we have acquired and stored, or analyzed big data, and with that, we need skilled staff, so this costs a lot higher, because of the smaller organization, they have limited budget and resources, so the cost and resources are also affected by that. So, what is the disadvantage of this? In privacy, it affects data quality, because of the cost high, because of the cost and resources intensiveness, the regularity compliances X, and the technical complexity. Thank you for watching my video. If you like it, please share, subscribe, and comment on it."
+  },
+  {
+    "question": "What types of data are mentioned in the transcript?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "structured, semi-structured, and unstructured",
+    "start": "03:03",
+    "end": "06:01",
+    "chunk_id": 2,
+    "video_id": "BDA_LECTURE",
+    "content": " For example, a big data is structured, semi-structured and unstructured. For example, a qualitative, quantitative mix is not an unstructured or formal rule. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not an unstructured or formal rule. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated."
+  },
+  {
+    "question": "How does the transcript describe a data model?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "structured, semi-structured, and not dedicated",
+    "start": "03:03",
+    "end": "06:01",
+    "chunk_id": 2,
+    "video_id": "BDA_LECTURE",
+    "content": " For example, a big data is structured, semi-structured and unstructured. For example, a qualitative, quantitative mix is not an unstructured or formal rule. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not an unstructured or formal rule. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated."
+  }
+]

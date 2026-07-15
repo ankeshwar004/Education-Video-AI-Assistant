@@ -1,0 +1,134 @@
+[
+  {
+    "question": "What is the difference between handling an exception and letting a program error through?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Handling an exception prevents the program from exiting, while letting a program error through causes it to stop running.",
+    "start": "15:10",
+    "end": "16:07",
+    "chunk_id": 16,
+    "video_id": "Python_Intro",
+    "content": " I will tell you how to handle this comment. Try Accept. How to handle this comment? If you are a coder who can do this error, and you are scared that if you do this error, your next program will not work. If you think that if you do this error, then skip this program and start doing this. So you try Accept. For that you write try and call and enter and you will get a level of 1 in 1. Now I will write in index. I have not defined index in my entire program, so this will obviously error through. I do not want to error through. When you handle the exception, that is, do not exit the program. So I will use Accept. Accept is E and I will print the exception. I will write print. I will show you this error through. I will print it here. I will tell you this error. This program has generated and this index is not defined. The error comes from our data color. If I define index in my entire program, then I will write index is equal to 3. Then I will show you this error through. And I will print it here."
+  },
+  {
+    "question": "What is the main difference between a list and a dictionary in Python?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "A list is an ordered collection of items, while a dictionary is an unordered collection of key-value pairs.",
+    "start": "08:34",
+    "end": "09:26",
+    "chunk_id": 9,
+    "video_id": "Python_Intro",
+    "content": " If you want to change it again, then you can use a list. Another important thing is that I will comment on it in the dictionary. I will show you a dictionary. And I will write it in the dictionary. We will denote the dictionary from the curly braces. I will write the curly braces in the empty dictionary. Now if I will write the print type of Dict1, then you can see here that it is a dictionary. If I will write the type of Dict1, then I will print the dictionary as you can see here. Basically, this is the key value of the dictionary. So I will show you that I want to store in my dictionary the players and their run. I will write the dictionary in the dictionary, Dict1. And I will write the value of the value of my key and the value of the value. If I want to print my dictionary, then I will write the print Dict1. And after that, I will run the program and you can see here that it is a hundred. Similarly, I can add all the values in it. And I can increase my dictionary. I will write the print Dict1."
+  },
+  {
+    "question": "What is the difference between a list and a set in Python?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "A list can contain duplicate items, while a set automatically removes duplicates.",
+    "start": "10:18",
+    "end": "11:20",
+    "chunk_id": 11,
+    "video_id": "Python_Intro",
+    "content": " You can see that Virat and Sachin are both shown. You can read the documents about the other functions of this edition. I will comment on all these codes. And I will tell you the set. If I make a list of items in this case, then I will print the list from 1 to 2, 3, 4 and 4 to 1. And if I print it, then you will see that this list will be print. If I want to repeat the items in this case, then I will type it in the set. The type of the item is that I will type the list to the Tupel Tupel list. Or I can type the list in the set or the set or the list. I will show you the list in the set. If I write S1 is equal to set of list 1, then my S1 is set. And if I print this set, then you will see that all the repeated items will be removed. To know about the set, search Google for the set data type Python and read it from the other side. I will comment on this code and then talk about the operators. If I write A is equal to 5, B is equal to 10, and I print A plus B, then I only get 15. But if I write C is equal to Harry, which is a string because I have used double quotes."
+  },
+  {
+    "question": "How do the data types of variables A and C differ?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Variable A is an integer, while variable C is a string.",
+    "start": "10:18",
+    "end": "11:20",
+    "chunk_id": 11,
+    "video_id": "Python_Intro",
+    "content": " You can see that Virat and Sachin are both shown. You can read the documents about the other functions of this edition. I will comment on all these codes. And I will tell you the set. If I make a list of items in this case, then I will print the list from 1 to 2, 3, 4 and 4 to 1. And if I print it, then you will see that this list will be print. If I want to repeat the items in this case, then I will type it in the set. The type of the item is that I will type the list to the Tupel Tupel list. Or I can type the list in the set or the set or the list. I will show you the list in the set. If I write S1 is equal to set of list 1, then my S1 is set. And if I print this set, then you will see that all the repeated items will be removed. To know about the set, search Google for the set data type Python and read it from the other side. I will comment on this code and then talk about the operators. If I write A is equal to 5, B is equal to 10, and I print A plus B, then I only get 15. But if I write C is equal to Harry, which is a string because I have used double quotes."
+  },
+  {
+    "question": "What is the difference between writing code from scratch and using modules in Python programming?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Writing code from scratch involves creating all the code yourself, while using modules involves importing pre-written code to use in your program.",
+    "start": "00:59",
+    "end": "01:54",
+    "chunk_id": 1,
+    "video_id": "Python_Intro",
+    "content": " After that, click on the new file and you can write your Python code here. You can do any basic programming language that you want to print on the console. You write some things in Python programming for printing. Same files like print statement, you open the bracket and then write hello world. You can close the bracket and you have applied the app file in your keyboard. You can save the file and click on save and run it. Now, look at my skin on the hello world. It means that my program is done. Whatever I will write here, it will show here. As you can see, I am talking about the hello world. Now, let's talk about the modules. You can use the code that you have written for someone else and you can import it. To use the modules, you have to write your start button. Now, the power shell is the command prompt option. Select the module and then you can install the name of the module. Now, I will write the name of the module that I will install in the file. I will write the name of the module and it will enter the file."
+  },
+  {
+    "question": "What is the difference between printing a dictionary and printing its keys?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "Printing a dictionary displays all its items, while printing its keys only displays the keys.",
+    "start": "09:26",
+    "end": "10:18",
+    "chunk_id": 10,
+    "video_id": "Python_Intro",
+    "content": " If I write the print Dict1, then you can see here that it is a hundred. For the value of the value of the print, I used the dot gate method. And I will write the dot gate in the dot gate. Therefore, I will show you the dot gate method. After the function, I will tell you in a little bit about it. But I will explain it in a little bit about the function of the dot gate method. Which is a value and returns something. In this case, it is doing a hundred of return. For any dictionary, you can print the dictionary. The items you will find are the print Dict1. If I do this, then you can see here that I have shown all the items in the dictionary. Now, I will only show you the fake items in the dictionary. If there are many items, you can show them to all items. If you want to print only keys in this edition, then you can click printdict1.keys. And if you want to run the program, you can see that I have all the keys in this case. There are only Virat in this case. But if I add the date 1 and Sachin, then you can make it 5th round and then run it 5th round."
+  },
+  {
+    "question": "What is the difference between the if and else statements in programming?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "The if statement is used to check a condition, while the else statement is used to specify what to do if the condition is not met.",
+    "start": "12:18",
+    "end": "13:08",
+    "chunk_id": 13,
+    "video_id": "Python_Intro",
+    "content": " The input in the variable will be a string, so if you are working with the number, then you will have to type this variable into an integer. For that, I will write a var is equal to int input. Input function, we will have input, and the integer will have an integer type. I will print it here, and run this program. If I write 4, then you will see that 4 is printed here. This means that the var is stored in our force. Now, I will talk to you about the condition. I also want to check that the user has input, the variable size is small. I will write you if statement. If var is greater than 4, print variable is greater. Let me show you this. So, if I will enter the 6th, then you will see that variable is greater. Now, if I want to know that if it is greater, then this variable is not greater. I will use the else statement. I have marked the enter mark here, where I have given the space here, indentation. We will use it for indentation, because we don't use JavaScript or C++ here. Inditation is also known that we have got it in the if statement."
+  },
+  {
+    "question": "What is the difference between using an if-else statement and a loop to print the 100th number?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "Using an if-else statement would require writing 100th print statements, whereas a loop can achieve the same result with a single block of code.",
+    "start": "13:08",
+    "end": "14:04",
+    "chunk_id": 14,
+    "video_id": "Python_Intro",
+    "content": " I will put it in the else, and run it. If you see, I will put 7 here, it is variable is greater. And if I put 2, it is variable is not greater. It also comes with AFU, which we have to check in additional conditions. If I want to check that my variable is 2, then I can print it. Variable is 2, which you can see here. My 2 prints are already there. After commenting on this code, we will see what are the loops. I will explain you an example of loop. If you want to print 100th number, then it will be the same. You will write 100th print statement, but it will be the same. I will teach you to use the full loop. I will write it for I in range, which is a function of 0 to 100. I will write you in the print I. From this, you can see the 100th print, which you can see here. From 30th to 90th print, you start from 0th and end from n minus 1th. If you want to do 100th from 0th, then you can see here, From 0th to 100th print. If I do it with a while loop, then I will not do anything. I will write while I is less than 100th."
+  },
+  {
+    "question": "How do for loops and while loops differ in their implementation?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "For loops use a range function to iterate, whereas while loops require a conditional statement to terminate.",
+    "start": "13:08",
+    "end": "14:04",
+    "chunk_id": 14,
+    "video_id": "Python_Intro",
+    "content": " I will put it in the else, and run it. If you see, I will put 7 here, it is variable is greater. And if I put 2, it is variable is not greater. It also comes with AFU, which we have to check in additional conditions. If I want to check that my variable is 2, then I can print it. Variable is 2, which you can see here. My 2 prints are already there. After commenting on this code, we will see what are the loops. I will explain you an example of loop. If you want to print 100th number, then it will be the same. You will write 100th print statement, but it will be the same. I will teach you to use the full loop. I will write it for I in range, which is a function of 0 to 100. I will write you in the print I. From this, you can see the 100th print, which you can see here. From 30th to 90th print, you start from 0th and end from n minus 1th. If you want to do 100th from 0th, then you can see here, From 0th to 100th print. If I do it with a while loop, then I will not do anything. I will write while I is less than 100th."
+  },
+  {
+    "question": "What is the difference between built-in and installed modules in Python?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "Built-in modules are already available in Python, while installed modules need to be installed separately.",
+    "start": "01:54",
+    "end": "02:50",
+    "chunk_id": 2,
+    "video_id": "Python_Intro",
+    "content": " The module is called module install. All the dependencies are installed. You can also look at the screen on the screen. I will close the power shell and you can use the module that I will name it. In Python, some modules are already built in. And some modules have to be installed in the scope of the module. As I have shown you. Now, I will use a built-in module that I will name it as a map. I will write it as an import map. After this, I will show you the map in the code that I will use. If I write a map.flow, which is the flow value. And I will write it as a 3.65. Now, I will close the brackets for a map and a print statement. In the Python program, you can see how many brackets you are opening and closing the brackets. After that, I will run this program for F5. And you can see here that after the first word, I have written a 3. Which means that after this point, whatever happens to it, Just like the map.flow function is made in mathematics. You can also use the map.cost function. Which gives us the cost of 3."
+  },
+  {
+    "question": "What is the main difference between a list in Python and an array?",
+    "question_type": "comparison",
+    "difficulty": "medium",
+    "answer": "A list in Python is more powerful and can contain different data types, whereas an array is a collection of elements of the same data type.",
+    "start": "06:40",
+    "end": "07:42",
+    "chunk_id": 7,
+    "video_id": "Python_Intro",
+    "content": " If I run it, you'll see that I'm telling a list of the list. The list is not necessary that all the elements are same. There is 1 integer, 2 string, 2 integer, 1 string. If it's a 2 integer list, I'll add a list of the items. I'll print a list of the items. I'll print a list of the items. If I'm adding items, I'll print a list of the items. I'll print a list of the items. If you've downloaded a new list of items, it's almost like an array. This is very powerful. This is a Python programming language. This is a very good programming language. For beginners. In this case, I want to change the items first value. I'll write item 0 is equal to money. Now if I print items and run F5, you can see that my first element is the money show. If I want to change the second element, then I have to write 1. But since it is 0, you have to pay attention to it. So to change the second element, I am using 1 index. If I run F5, you can see that the second is Harry, the second is money. Because I have changed items like this, you can change items."
+  },
+  {
+    "question": "What is the similarity between a list in Python and an array in terms of indexing?",
+    "question_type": "comparison",
+    "difficulty": "easy",
+    "answer": "Both lists and arrays are 0-indexed, meaning the first element is accessed using index 0.",
+    "start": "06:40",
+    "end": "07:42",
+    "chunk_id": 7,
+    "video_id": "Python_Intro",
+    "content": " If I run it, you'll see that I'm telling a list of the list. The list is not necessary that all the elements are same. There is 1 integer, 2 string, 2 integer, 1 string. If it's a 2 integer list, I'll add a list of the items. I'll print a list of the items. I'll print a list of the items. If I'm adding items, I'll print a list of the items. I'll print a list of the items. If you've downloaded a new list of items, it's almost like an array. This is very powerful. This is a Python programming language. This is a very good programming language. For beginners. In this case, I want to change the items first value. I'll write item 0 is equal to money. Now if I print items and run F5, you can see that my first element is the money show. If I want to change the second element, then I have to write 1. But since it is 0, you have to pay attention to it. So to change the second element, I am using 1 index. If I run F5, you can see that the second is Harry, the second is money. Because I have changed items like this, you can change items."
+  }
+]

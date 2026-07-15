@@ -1,0 +1,101 @@
+[
+  {
+    "question": "How does indexing work in Python lists?",
+    "question_type": "reasoning",
+    "difficulty": "easy",
+    "answer": "In Python, lists are indexed starting from 0, meaning the first element is at index 0, the second element at index 1, and so on.",
+    "start": "06:40",
+    "end": "07:42",
+    "chunk_id": 7,
+    "video_id": "Python_Intro",
+    "content": " If I run it, you'll see that I'm telling a list of the list. The list is not necessary that all the elements are same. There is 1 integer, 2 string, 2 integer, 1 string. If it's a 2 integer list, I'll add a list of the items. I'll print a list of the items. I'll print a list of the items. If I'm adding items, I'll print a list of the items. I'll print a list of the items. If you've downloaded a new list of items, it's almost like an array. This is very powerful. This is a Python programming language. This is a very good programming language. For beginners. In this case, I want to change the items first value. I'll write item 0 is equal to money. Now if I print items and run F5, you can see that my first element is the money show. If I want to change the second element, then I have to write 1. But since it is 0, you have to pay attention to it. So to change the second element, I am using 1 index. If I run F5, you can see that the second is Harry, the second is money. Because I have changed items like this, you can change items."
+  },
+  {
+    "question": "Why is it important to pay attention to indexing when changing elements in a list?",
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "answer": "It's crucial to pay attention to indexing because Python uses zero-based indexing. If you want to change the second element, you need to use index 1, not 2, to avoid modifying the wrong element or going out of bounds.",
+    "start": "06:40",
+    "end": "07:42",
+    "chunk_id": 7,
+    "video_id": "Python_Intro",
+    "content": " If I run it, you'll see that I'm telling a list of the list. The list is not necessary that all the elements are same. There is 1 integer, 2 string, 2 integer, 1 string. If it's a 2 integer list, I'll add a list of the items. I'll print a list of the items. I'll print a list of the items. If I'm adding items, I'll print a list of the items. I'll print a list of the items. If you've downloaded a new list of items, it's almost like an array. This is very powerful. This is a Python programming language. This is a very good programming language. For beginners. In this case, I want to change the items first value. I'll write item 0 is equal to money. Now if I print items and run F5, you can see that my first element is the money show. If I want to change the second element, then I have to write 1. But since it is 0, you have to pay attention to it. So to change the second element, I am using 1 index. If I run F5, you can see that the second is Harry, the second is money. Because I have changed items like this, you can change items."
+  },
+  {
+    "question": "Why does the speaker mention that they cannot drop the teacher's string?",
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "answer": "The speaker mentions that they cannot drop the teacher's string because it is likely a required or essential part of the code, and removing it would cause an error.",
+    "start": "11:20",
+    "end": "12:18",
+    "chunk_id": 12,
+    "video_id": "Python_Intro",
+    "content": " And I write C plus A plus B plus C, then you will see that the error is that you cannot drop the teacher's string. If you know that I have 5, 10 and Harry, then I want to concatenate these things. You will also type A and B in string, or I will change the teacher's string. I will write here STR in some way, and if I do F5, then you will see that 510 and Harry is here. If I write 10 minus 5 is 10 minus 5, then you will see that 10 minus 5 is 5, then you will see that I can print two things in my print statement, how to write it, and then you will see that you should use more operators like this. If I do F5, then you will see that everything is printed here, which you can understand. Now, you will see that 10 divided by 5 is floating point number. And if you want to convert it into an integer, then you can type it from this. As soon as I have made a string here, I will comment on this code. If you want to take Python input from users, then you will have to write a variable name. I will write here, then you will have to write input."
+  },
+  {
+    "question": "How does the speaker concatenate strings and numbers in the code?",
+    "question_type": "reasoning",
+    "difficulty": "easy",
+    "answer": "The speaker concatenates strings and numbers by using the plus operator (+) between them, or by converting numbers to strings using a function or method.",
+    "start": "11:20",
+    "end": "12:18",
+    "chunk_id": 12,
+    "video_id": "Python_Intro",
+    "content": " And I write C plus A plus B plus C, then you will see that the error is that you cannot drop the teacher's string. If you know that I have 5, 10 and Harry, then I want to concatenate these things. You will also type A and B in string, or I will change the teacher's string. I will write here STR in some way, and if I do F5, then you will see that 510 and Harry is here. If I write 10 minus 5 is 10 minus 5, then you will see that 10 minus 5 is 5, then you will see that I can print two things in my print statement, how to write it, and then you will see that you should use more operators like this. If I do F5, then you will see that everything is printed here, which you can understand. Now, you will see that 10 divided by 5 is floating point number. And if you want to convert it into an integer, then you can type it from this. As soon as I have made a string here, I will comment on this code. If you want to take Python input from users, then you will have to write a variable name. I will write here, then you will have to write input."
+  },
+  {
+    "question": "Why are some modules installed in the scope of the module, while others are built-in?",
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "answer": "The reasoning behind installing some modules in the scope of the module is to make them available for use, whereas built-in modules are already available in Python and do not require installation.",
+    "start": "01:54",
+    "end": "02:50",
+    "chunk_id": 2,
+    "video_id": "Python_Intro",
+    "content": " The module is called module install. All the dependencies are installed. You can also look at the screen on the screen. I will close the power shell and you can use the module that I will name it. In Python, some modules are already built in. And some modules have to be installed in the scope of the module. As I have shown you. Now, I will use a built-in module that I will name it as a map. I will write it as an import map. After this, I will show you the map in the code that I will use. If I write a map.flow, which is the flow value. And I will write it as a 3.65. Now, I will close the brackets for a map and a print statement. In the Python program, you can see how many brackets you are opening and closing the brackets. After that, I will run this program for F5. And you can see here that after the first word, I have written a 3. Which means that after this point, whatever happens to it, Just like the map.flow function is made in mathematics. You can also use the map.cost function. Which gives us the cost of 3."
+  },
+  {
+    "question": "How does the map.flow function relate to the map.cost function in the given Python program?",
+    "question_type": "reasoning",
+    "difficulty": "hard",
+    "answer": "The map.flow function and map.cost function are related in that they are both used in the context of the map module, with map.flow potentially representing a value and map.cost representing the cost associated with that value, indicating a cause-and-effect relationship between the two functions.",
+    "start": "01:54",
+    "end": "02:50",
+    "chunk_id": 2,
+    "video_id": "Python_Intro",
+    "content": " The module is called module install. All the dependencies are installed. You can also look at the screen on the screen. I will close the power shell and you can use the module that I will name it. In Python, some modules are already built in. And some modules have to be installed in the scope of the module. As I have shown you. Now, I will use a built-in module that I will name it as a map. I will write it as an import map. After this, I will show you the map in the code that I will use. If I write a map.flow, which is the flow value. And I will write it as a 3.65. Now, I will close the brackets for a map and a print statement. In the Python program, you can see how many brackets you are opening and closing the brackets. After that, I will run this program for F5. And you can see here that after the first word, I have written a 3. Which means that after this point, whatever happens to it, Just like the map.flow function is made in mathematics. You can also use the map.cost function. Which gives us the cost of 3."
+  },
+  {
+    "question": "Why is using a dictionary useful in this context?",
+    "question_type": "reasoning",
+    "difficulty": "easy",
+    "answer": "Using a dictionary is useful because it allows for the storage and organization of key-value pairs, such as players and their runs, which can be easily accessed and printed.",
+    "start": "08:34",
+    "end": "09:26",
+    "chunk_id": 9,
+    "video_id": "Python_Intro",
+    "content": " If you want to change it again, then you can use a list. Another important thing is that I will comment on it in the dictionary. I will show you a dictionary. And I will write it in the dictionary. We will denote the dictionary from the curly braces. I will write the curly braces in the empty dictionary. Now if I will write the print type of Dict1, then you can see here that it is a dictionary. If I will write the type of Dict1, then I will print the dictionary as you can see here. Basically, this is the key value of the dictionary. So I will show you that I want to store in my dictionary the players and their run. I will write the dictionary in the dictionary, Dict1. And I will write the value of the value of my key and the value of the value. If I want to print my dictionary, then I will write the print Dict1. And after that, I will run the program and you can see here that it is a hundred. Similarly, I can add all the values in it. And I can increase my dictionary. I will write the print Dict1."
+  },
+  {
+    "question": "How can you add new values to an existing dictionary?",
+    "question_type": "reasoning",
+    "difficulty": "medium",
+    "answer": "You can add new values to an existing dictionary by assigning a new key-value pair to the dictionary, which will increase the size of the dictionary and allow for the storage of more data.",
+    "start": "08:34",
+    "end": "09:26",
+    "chunk_id": 9,
+    "video_id": "Python_Intro",
+    "content": " If you want to change it again, then you can use a list. Another important thing is that I will comment on it in the dictionary. I will show you a dictionary. And I will write it in the dictionary. We will denote the dictionary from the curly braces. I will write the curly braces in the empty dictionary. Now if I will write the print type of Dict1, then you can see here that it is a dictionary. If I will write the type of Dict1, then I will print the dictionary as you can see here. Basically, this is the key value of the dictionary. So I will show you that I want to store in my dictionary the players and their run. I will write the dictionary in the dictionary, Dict1. And I will write the value of the value of my key and the value of the value. If I want to print my dictionary, then I will write the print Dict1. And after that, I will run the program and you can see here that it is a hundred. Similarly, I can add all the values in it. And I can increase my dictionary. I will write the print Dict1."
+  },
+  {
+    "question": "Why does the speaker ask viewers to like the video?",
+    "question_type": "reasoning",
+    "difficulty": "easy",
+    "answer": "The speaker asks viewers to like the video because they want to encourage viewers to engage with their content and possibly learn more about programming languages.",
+    "start": "17:07",
+    "end": "17:27",
+    "chunk_id": 18,
+    "video_id": "Python_Intro",
+    "content": " So I hope that you will like my print in 15 minutes. Press will be good. If you want to learn more programming languages, please give me a like. Let me know in the comment section. Thank you so much for watching this video. And I will see you next time. Thanks for watching."
+  }
+]

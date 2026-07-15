@@ -1,0 +1,110 @@
+[
+  {
+    "question": "A small bookstore wants to determine which books to restock. What type of data should they use to make this decision?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "Small data",
+    "scenario": "A small bookstore needs to decide which books to restock.",
+    "start": "01:09",
+    "end": "03:03",
+    "chunk_id": 1,
+    "video_id": "BDA_LECTURE",
+    "content": " valuable insights hidden in the data. So, to analyze big data effectively, spatial tools are used to help the organization through valuable explanations, innovations and better decision making in the process. Like companies like Amazon's Netflix, they use big data to recommend products and shows based on users' past activity. The past activity of users, Amazon and Netflix use big data and help to recommend products like their growth and see the Amazon market. In the next big data set, in user behavior, Internet, other sources, through sensing and mobile data, you can write information. This is our big data. Small data. Small data refers to a data set that are easily comprehensible by people as they're easily accessible informative and actionable. So, this is an easy, easy, This makes its ideal for individual and businesses to find useful information and make better choices in everyday task. For example, a small store might track daily sales to decide what product to restore. For example, a small store has a shop, so they analyze their daily sales to decide which product to restore."
+  },
+  {
+    "question": "How can a company like Amazon use big data to improve its services?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "By analyzing user behavior and using spatial tools to provide valuable explanations and innovations, and make better decisions.",
+    "scenario": "A company like Amazon wants to improve its services using big data.",
+    "start": "01:09",
+    "end": "03:03",
+    "chunk_id": 1,
+    "video_id": "BDA_LECTURE",
+    "content": " valuable insights hidden in the data. So, to analyze big data effectively, spatial tools are used to help the organization through valuable explanations, innovations and better decision making in the process. Like companies like Amazon's Netflix, they use big data to recommend products and shows based on users' past activity. The past activity of users, Amazon and Netflix use big data and help to recommend products like their growth and see the Amazon market. In the next big data set, in user behavior, Internet, other sources, through sensing and mobile data, you can write information. This is our big data. Small data. Small data refers to a data set that are easily comprehensible by people as they're easily accessible informative and actionable. So, this is an easy, easy, This makes its ideal for individual and businesses to find useful information and make better choices in everyday task. For example, a small store might track daily sales to decide what product to restore. For example, a small store has a shop, so they analyze their daily sales to decide which product to restore."
+  },
+  {
+    "question": "A company wants to analyze customer purchase history to understand buying trends. What type of data would this be an example of?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "Transaction data",
+    "scenario": "A company wants to analyze customer purchase history to understand buying trends.",
+    "start": "00:00",
+    "end": "01:09",
+    "chunk_id": 0,
+    "video_id": "BDA_LECTURE",
+    "content": " Hello, everyone. Welcome to SMRINKERS YouTube channel. Today we will study Class 12 artificial intelligence which is called introduction to big data and data analytics. Big data means that the name of the name is big data and its analytics means that it will analyze it. Now we will talk about six marks in our paper. So, let's start it. So, first of all, topic is big data. Big data means big data. So, let's look at its definition. It refers to extremely large and complex data sets that regular computer programs and data sets basis can not handle. This is mainly a large, extremely large data set. This is a complex data set. The regular computer programs are not handled. This is mainly three main sources. Transection and data. Machine and data are only social data. Transection and data means all the online purchases from business to transactions. Machine data means that the sensor is recording. And social data means that social media is posted. So, analyzing used big data effectively, spatial tools and techniques are required to help organizations find"
+  },
+  {
+    "question": "A sensor in a manufacturing plant is recording temperature and pressure readings. What type of data is being generated?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "Machine data",
+    "scenario": "A sensor in a manufacturing plant is recording temperature and pressure readings.",
+    "start": "00:00",
+    "end": "01:09",
+    "chunk_id": 0,
+    "video_id": "BDA_LECTURE",
+    "content": " Hello, everyone. Welcome to SMRINKERS YouTube channel. Today we will study Class 12 artificial intelligence which is called introduction to big data and data analytics. Big data means that the name of the name is big data and its analytics means that it will analyze it. Now we will talk about six marks in our paper. So, let's start it. So, first of all, topic is big data. Big data means big data. So, let's look at its definition. It refers to extremely large and complex data sets that regular computer programs and data sets basis can not handle. This is mainly a large, extremely large data set. This is a complex data set. The regular computer programs are not handled. This is mainly three main sources. Transection and data. Machine and data are only social data. Transection and data means all the online purchases from business to transactions. Machine data means that the sensor is recording. And social data means that social media is posted. So, analyzing used big data effectively, spatial tools and techniques are required to help organizations find"
+  },
+  {
+    "question": "A small organization wants to acquire and store big data, but it has a limited budget and resources. What challenge will it likely face?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The cost and resource intensiveness of acquiring, storing, processing, and analyzing big data, as well as hiring skilled staff.",
+    "scenario": "A small organization with limited budget and resources wants to acquire and store big data.",
+    "start": "10:55",
+    "end": "12:10",
+    "chunk_id": 6,
+    "video_id": "BDA_LECTURE",
+    "content": " which are regulatory departments and regulations, which are a general data protection Act, or a digital personal data protection Act. We also need to evaluate some of these challenges, which are the challenges of the data. We also feel some challenges. Next, a cost and resource intensiveness. The cost of acquiring, storing, processing, and analyzing big data, along with hiring skilled staff can be high, this is a specially challenging for smaller organization with limited budget and resources. Now, as we have acquired and stored, or analyzed big data, and with that, we need skilled staff, so this costs a lot higher, because of the smaller organization, they have limited budget and resources, so the cost and resources are also affected by that. So, what is the disadvantage of this? In privacy, it affects data quality, because of the cost high, because of the cost and resources intensiveness, the regularity compliances X, and the technical complexity. Thank you for watching my video. If you like it, please share, subscribe, and comment on it."
+  },
+  {
+    "question": "How does the cost and resource intensiveness of big data affect smaller organizations in terms of regulatory compliances and data quality?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The cost and resource intensiveness affects data quality and regulatory compliances, making it challenging for smaller organizations to comply with regulations such as the general data protection Act or digital personal data protection Act.",
+    "scenario": "A smaller organization is trying to comply with regulatory requirements for big data.",
+    "start": "10:55",
+    "end": "12:10",
+    "chunk_id": 6,
+    "video_id": "BDA_LECTURE",
+    "content": " which are regulatory departments and regulations, which are a general data protection Act, or a digital personal data protection Act. We also need to evaluate some of these challenges, which are the challenges of the data. We also feel some challenges. Next, a cost and resource intensiveness. The cost of acquiring, storing, processing, and analyzing big data, along with hiring skilled staff can be high, this is a specially challenging for smaller organization with limited budget and resources. Now, as we have acquired and stored, or analyzed big data, and with that, we need skilled staff, so this costs a lot higher, because of the smaller organization, they have limited budget and resources, so the cost and resources are also affected by that. So, what is the disadvantage of this? In privacy, it affects data quality, because of the cost high, because of the cost and resources intensiveness, the regularity compliances X, and the technical complexity. Thank you for watching my video. If you like it, please share, subscribe, and comment on it."
+  },
+  {
+    "question": "A company is collecting and storing large volumes of customer data. What kind of risks may they be exposing themselves to?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "They may be exposing themselves to significant privacy and security risks, including unauthorized access, data breaches, and misuse of personal information.",
+    "scenario": "A company is collecting and storing large volumes of customer data.",
+    "start": "08:21",
+    "end": "09:44",
+    "chunk_id": 4,
+    "video_id": "BDA_LECTURE",
+    "content": " For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. These privacy and security concerns may be the collection, storage and analysis of large volumes of data, raise, significant privacy and security risks. Including unauthorized access, data breaches, and misuse of personal information. As soon as someone doesn't collect data, store, and analyze it, they run the risk of privacy and security. And through unauthorized access, we get a lot of personal information. They also get misuse. So this is one of the advantages of this. Next data quality is you. Ensuring the accuracy. Relief-reaching completeness of data can be challenging as being data often consists of unstructured and heterogeneous data sources. Lending to potential errors and biases and analysis. In this data can be unstructured and heterogeneous. The data may be errors in some areas."
+  },
+  {
+    "question": "A researcher is working with a dataset that consists of unstructured and heterogeneous data sources. What challenges may they face in ensuring the accuracy and completeness of the data?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "They may face challenges such as potential errors and biases in the analysis, as the data may contain errors in some areas.",
+    "scenario": "A researcher is working with a dataset that consists of unstructured and heterogeneous data sources.",
+    "start": "08:21",
+    "end": "09:44",
+    "chunk_id": 4,
+    "video_id": "BDA_LECTURE",
+    "content": " For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. These privacy and security concerns may be the collection, storage and analysis of large volumes of data, raise, significant privacy and security risks. Including unauthorized access, data breaches, and misuse of personal information. As soon as someone doesn't collect data, store, and analyze it, they run the risk of privacy and security. And through unauthorized access, we get a lot of personal information. They also get misuse. So this is one of the advantages of this. Next data quality is you. Ensuring the accuracy. Relief-reaching completeness of data can be challenging as being data often consists of unstructured and heterogeneous data sources. Lending to potential errors and biases and analysis. In this data can be unstructured and heterogeneous. The data may be errors in some areas."
+  },
+  {
+    "question": "What type of data can a data model be?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "A data model can be structured, semi-structured.",
+    "scenario": "You are tasked with creating a data model for a new project. What type of data can your model be?",
+    "start": "03:03",
+    "end": "06:01",
+    "chunk_id": 2,
+    "video_id": "BDA_LECTURE",
+    "content": " For example, a big data is structured, semi-structured and unstructured. For example, a qualitative, quantitative mix is not an unstructured or formal rule. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not an unstructured or formal rule. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated. For example, a data model is structured, semi-structured and not dedicated."
+  }
+]

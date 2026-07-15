@@ -1,0 +1,400 @@
+{
+  "mrr_before": 0.7004409171075838,
+  "mrr_after": 0.7525132275132275,
+  "hit_rate_before": {
+    "1": 0.5238095238095238,
+    "3": 0.8253968253968254,
+    "5": 0.9841269841269841
+  },
+  "hit_rate_after": {
+    "1": 0.5714285714285714,
+    "3": 0.9047619047619048,
+    "5": 0.9682539682539683
+  },
+  "rank_movement": {
+    "improved": 22,
+    "worsened": 16,
+    "unchanged": 25,
+    "average_movement": 0.2698412698412698
+  },
+  "per_question": [
+    {
+      "question": "What is the time complexity of deleting an element from the middle of a linked list?",
+      "pre_rank": 1,
+      "post_rank": 3,
+      "movement": -2
+    },
+    {
+      "question": "What is the time complexity of deleting an element from the start of a linked list?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is the time complexity of deleting an element from the end of a linked list?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is the time complexity of accessing data in an array?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is a characteristic of arrays in terms of size?",
+      "pre_rank": 3,
+      "post_rank": 4,
+      "movement": -1
+    },
+    {
+      "question": "What is the time complexity of inserting at the end of a list?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is the time complexity of deleting from the beginning of a list?",
+      "pre_rank": 2,
+      "post_rank": 6,
+      "movement": -4
+    },
+    {
+      "question": "What is the time complexity of inserting a node at the beginning of a linked list?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why can't you directly insert a node at the end of a linked list?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the primary advantage of using arrays in terms of accessing elements?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the compiler compute the address of an element in an array?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is the total memory allocated for an array with 7 elements, each taking 4 bytes?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How much memory is required to store 3 elements in a linked list, considering each node takes 8 bytes?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the primary drawback of using an array in terms of memory utilization?",
+      "pre_rank": 5,
+      "post_rank": 1,
+      "movement": 4
+    },
+    {
+      "question": "How does the memory requirement of an array compare to a linked list when storing 7 elements?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What determines whether to use an array or a linked list?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What factors influence the choice between arrays and linked lists?",
+      "pre_rank": 3,
+      "post_rank": 2,
+      "movement": 1
+    },
+    {
+      "question": "What is the time complexity of inserting an element at the beginning of an array?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How does the number of elements to be shifted affect the time complexity of inserting an element in an array?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is required to insert a node at the end of a linked list?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How do you insert a new node at the end of a linked list?",
+      "pre_rank": 2,
+      "post_rank": 8,
+      "movement": -6
+    },
+    {
+      "question": "What is the time complexity of accessing data in an array?",
+      "pre_rank": 3,
+      "post_rank": 2,
+      "movement": 1
+    },
+    {
+      "question": "Why is sequential access the only possibility in a linked list?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is the main difference in memory utilization between arrays and linked lists?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "Why do arrays have unused space?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What is the main difference in accessing elements between arrays and linked lists?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do arrays and linked lists compare in terms of accessing an element's location?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the memory requirement for storing 7 elements in an array versus a linked list?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the memory utilization of an array compare to a linked list when storing complex data types?",
+      "pre_rank": 3,
+      "post_rank": 2,
+      "movement": 1
+    },
+    {
+      "question": "What are the factors that determine whether to use an array or a linked list?",
+      "pre_rank": 3,
+      "post_rank": 2,
+      "movement": 1
+    },
+    {
+      "question": "What is the main difference between using an array and a linked list?",
+      "pre_rank": 5,
+      "post_rank": 2,
+      "movement": 3
+    },
+    {
+      "question": "What is the main difference in memory allocation between arrays and linked lists?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the memory requirement for storing 3 elements compare between arrays and linked lists?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does the time complexity of inserting an element at the beginning of an array compare to inserting an element at the middle of the array?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is the primary difference between inserting a node at the beginning and inserting a node at the end of a linked list?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "How does memory utilization in linked lists compare to arrays?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "What is the difference in memory requirements between arrays and linked lists?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "How does the cost of insertion and deletion compare between arrays and linked lists?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is inserting a node at the beginning of a linked list a constant time operation?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the sequential access nature of linked lists affect the time complexity of inserting a node at the end?",
+      "pre_rank": 9,
+      "post_rank": 2,
+      "movement": 7
+    },
+    {
+      "question": "Why does deleting an element from the end of a linked list take order of n time?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the time complexity of deleting an element from a linked list vary based on the position of the element?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "Why is random access possible in an array?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the compiler compute the address of an element in an array?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Why is memory utilization in an array considered ineffective?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the dynamic size of a linked list contribute to its memory efficiency?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is accessing an element in a linked list dependent on the number of nodes?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does the location of an element in a linked list affect the number of nodes that need to be traversed to access it?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is the time complexity of deleting an element from the middle position of a linked list?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the time complexity of deleting an element from the start of a linked list?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "Suppose you have a linked list with nodes having values 1, 2, and 3, and addresses 1000, 2000, and 3000 respectively. If you want to insert a new node with value 4 at the end of the list, what steps would you take?",
+      "pre_rank": 2,
+      "post_rank": 5,
+      "movement": -3
+    },
+    {
+      "question": "What is the time complexity of accessing an element in an array?",
+      "pre_rank": 4,
+      "post_rank": 4,
+      "movement": 0
+    },
+    {
+      "question": "How do you access an element in a linked list?",
+      "pre_rank": 4,
+      "post_rank": 2,
+      "movement": 2
+    },
+    {
+      "question": "Consider a scenario where you need to store 5 elements in an array. If each element requires 4 bytes of memory, how much memory will be allocated in total?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Suppose you want to store 5 elements in a linked list. If each node requires 8 bytes of memory (4 bytes for the integer and 4 bytes for the pointer variable), how much memory will be required in total?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A programmer wants to store 7 elements of integer data type. Which data structure would require less memory: array or linked list?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "Suppose we are storing a complex data type that takes 16 bytes to store. If we are storing only 3 elements, which data structure would be more memory efficient: array or linked list?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "When inserting a node at the end of a linked list, can you directly insert the node without traversing the list?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is it true that memory utilization is always more efficient in arrays than in linked lists?",
+      "pre_rank": 5,
+      "post_rank": 4,
+      "movement": 1
+    },
+    {
+      "question": "Is it true that memory utilization in linked lists is less efficient than in arrays?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "In an array, if only 3 elements are being used, then only 12 bytes of memory are allocated.",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "In a linked list, the memory requirement is less than that of an array because it only allocates memory for the nodes that are being used.",
+      "pre_rank": 2,
+      "post_rank": 3,
+      "movement": -1
+    },
+    {
+      "question": "Is it true that in a linked list, you can directly access any node without traversing the previous nodes?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    }
+  ]
+}

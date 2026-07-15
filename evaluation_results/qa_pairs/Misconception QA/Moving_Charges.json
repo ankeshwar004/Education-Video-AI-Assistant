@@ -1,0 +1,74 @@
+[
+  {
+    "question": "A student claims: 'Magnetic field lines start at the North Pole and end at the South Pole, and do not exist inside the magnet.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, this is incorrect. Magnetic field lines do not start or end at the poles; they form continuous closed loops. Outside the magnet, they appear to move from the North Pole to the South Pole, but inside the magnet, they continue from the South Pole back to the North Pole, creating a complete loop. This is a fundamental property of magnetic fields, as there are no magnetic monopoles (isolated North or South Poles).",
+    "misconception": "Magnetic field lines start at the North Pole and end at the South Pole, with no continuation inside the magnet.",
+    "start": "18:16",
+    "end": "19:49",
+    "chunk_id": 13,
+    "video_id": "Moving_Charges",
+    "content": " but the magnetic field lines, right, this is how the moving charge that produces like the magnetic field like this way, right, now if I am talking about, right, if you are talking about, right, the magnetism that is showing the, this is a North Pole, this is a South Pole, right, that is a matter that is showing the magnetism, now what kind of the matter that can show the magnetism, even aluminum, steel, matter, earth, earth itself is a matter that shows the magnetism, bar magnet is the best example of the depictions of the magnetic fields around it, right, generally it is says that magnetic field starts from North Pole and you all at the South Pole, right, it starts from North Pole and it, right, ends at the South Pole and inside the magnet, it moves on from South to North, right, this kind of the depiction of the magnetic field we are having, this kind of the depiction, the magnetic field we are having, right, this is as because of the how magnet, this is a pictorial representation of the magnetic"
+  },
+  {
+    "question": "A student claims: 'The magnetic field produced by a moving charge is independent of the observer's frame of reference.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, this statement is incorrect. The magnetic field does depend on the frame of reference. For a stationary charge, there is no magnetic field, but for a moving charge, a magnetic field is generated. If you switch to a frame where the charge is stationary, the magnetic field disappears, and only an electric field exists. This shows that magnetic fields are relative to the observer's frame of reference.",
+    "misconception": "The magnetic field does not depend on the frame of reference.",
+    "start": "11:18",
+    "end": "12:33",
+    "chunk_id": 8,
+    "video_id": "Moving_Charges",
+    "content": " the spite of a matter having in magnetism. Charges moving, see, till now, we have moved on to the concept of the electric field. Now, for the moving charges, we are going to move forward with the magnetic field now. Lots of things we are having into the mind. How magnetic field is, right, what will be its respective direction, how you are going to identify that what is the pictorial representation of the magnetic field, right, how you want to classify the magnetic field, whether the magnetic field depends on the frame or not, right, lots of questions you might be having into a mind and it is okay. This all are the myths, right, this all are the questions. You can say whether it is a myth or a question needs to be resolved before moving on to the most important application that is bio-saberts law. It is important to resolve. So, how you are going to resolve this stuff, very simple. First, for a moving charge, see, there is a difference, okay, if I am talking about the magnetic field, see, it is a very simple cause I am going to, a very simple message that"
+  },
+  {
+    "question": "A student claims: 'A stationary point charge produces a magnetic field in the form of concentric circles around it.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the student's statement is incorrect. A stationary point charge does not produce a magnetic field. Magnetic fields are generated only by moving charges (electric currents) or changing electric fields, as described by Maxwell's equations. The magnetic field lines around a moving charge are indeed concentric circles, but this only occurs when the charge is in motion. A charge at rest produces only an electric field, not a magnetic field.",
+    "misconception": "A stationary point charge produces a magnetic field in the form of concentric circles around it.",
+    "start": "16:46",
+    "end": "18:16",
+    "chunk_id": 12,
+    "video_id": "Moving_Charges",
+    "content": " okay, like this way, magnetic field ends up producing. Now suppose that T is equal to 0, this is a position of the charge, okay, now let us take an example at T is equal to time T1, the position of the charge is somewhat this, right, okay, then the magnetic field is produced like this way around it, right, yes or no? Okay, suppose let us take an example, this was the time when I started analyzing the charge, I am talking about the time T is equal to minus Y, right, charge was at this position, right, then how magnetic fields were, right, magnetic fields were produced into the form of concentric circles, magnetic field as because of the point charge that is produced as because of the concentric circles, right, yes or no. concentric circles, the thing is quite important and you all should know it concentric circles, right, so this is how the charge that is able to produce this whatever the depiction, this all are the pictorial representation of the magnetic field, right, and that is nothing else"
+  },
+  {
+    "question": "A student claims: 'The magnetic field is produced by a book.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, this statement is incorrect. The magnetic field is not produced by a book but by moving charges (e.g., electric current in a conductor) or intrinsic magnetic properties of materials (e.g., permanent magnets). The transcript likely contains a speech recognition error where 'book' was mistakenly used instead of a term like 'due to' or 'because of.' The three sources of magnetic fields mentioned are: (1) moving charges, (2) current-carrying conductors, and (3) magnetic materials.",
+    "misconception": "The magnetic field is produced by a book.",
+    "start": "12:33",
+    "end": "14:11",
+    "chunk_id": 9,
+    "video_id": "Moving_Charges",
+    "content": " I am going to convey in front of you all. If I am talking about the magnetic field, the first thing that you all should understand, magnetic field that is produced as a book because of moving charge. This is different, as because of current caring conductor, this is different, matter shows, magnetism, this is different, somewhere this how this both are correlated with respect to each other. In three of the cases, we are not having any kind of the classification of the magnetic field, but this are the three kind of the sources in which we are going to deal with the magnetic field concept. Three different ways magnetic field will be introduced in front of you all, through three different ways. Students always why they, why they always used to get bored into the magnetism, why they hate it, okay, why they always get bored into it, why they hate it, the reason behind it, they are not actually able to grab the logic behind it, the source, the representation of the magnetic field, how it is represented into the multiple ways. The entire two chapters are based on the three"
+  },
+  {
+    "question": "A student claims that magnetism is just one chapter in the syllabus. Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, the statement is incorrect. Magnetism is not a single chapter but a broad topic that includes multiple subtopics such as moving charges and magnetism, magnetism and matter, electromagnetic induction (EMI), and alternating current. The speaker explicitly mentions that magnetism consists of 'four or five' chapters, so it is not just one chapter.",
+    "misconception": "Magnetism is a single chapter in the syllabus.",
+    "start": "00:30",
+    "end": "01:58",
+    "chunk_id": 0,
+    "video_id": "Moving_Charges",
+    "content": " So guys, this is Indrajit Singh, welcoming you all into the most sensible platform for an aspirants, those who are preparing for J.E.Nate kind of examination. I think it's fun, it's cool, it's awesome. So guys, the new chapter is going to begin today, directly moving on forward from the current electricity, we are on to the magnetism, magnetic field, moving charges and magnetism. Magnetism is having like a four or five, four kind of chapters, right? EMI, the most important one is this moving charges and magnetism, by the way, all are important. The biification lies on the moving charges and magnetism, magnetism and matter, apart from this EMI and alternating current. Today's class will be quite small, but I'm going to leave you all early, right? Because we are not going to move into the that much complex way, magnetic field, appear is quite horrible to all of those students, not I'm saying to the maximum number of the students, but to all of the students. But today, we are going to only discuss, we are only going to discuss about, right?"
+  },
+  {
+    "question": "A student claims that the magnetic field lines around a moving point charge disappear as you move away from the charge. Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, this is incorrect. The magnetic field lines around a moving point charge are indeed concentric circles, but their spacing indicates the field's intensity. When the lines are closely spaced, the magnetic field intensity is higher, and when they are widely spaced, the intensity is lower. The field does not disappear as you move away; it weakens but still exists.",
+    "misconception": "The magnetic field lines around a moving point charge disappear as you move away from the charge.",
+    "start": "33:34",
+    "end": "35:14",
+    "chunk_id": 22,
+    "video_id": "Moving_Charges",
+    "content": " depending on the position of the charge right magnetic field lines are produced like this way okay so in this case I want to tell you all what will how you are going to identify the magnetic field okay how you are going to identify the magnetic field within it okay it is important see at any point of the time any number of the students are getting confused please do not mind okay you can immediately write a reverse rewind this lecture okay and you can watch it again magnetic field is because of the point charge is in form of concentric circles it is in form of concentric circles like this way you can see magnetic field varies if we are moving away from the charge okay one thing that has been remaining into the previous part that here magnetic field intensity is higher when magnetic field lines are closely spaced magnetic field lines are largely spayed magnetic field intensity is less be various see if we are moving away from the charge then slowly slowly this concentric circles get disappeared slowly slowly this concentritic"
+  }
+]

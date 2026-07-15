@@ -1,0 +1,388 @@
+{
+  "mrr_before": 0.8072404371584699,
+  "mrr_after": 0.7583764739718147,
+  "hit_rate_before": {
+    "1": 0.6721311475409836,
+    "3": 0.9344262295081968,
+    "5": 0.9672131147540983
+  },
+  "hit_rate_after": {
+    "1": 0.6065573770491803,
+    "3": 0.9344262295081968,
+    "5": 0.9508196721311475
+  },
+  "rank_movement": {
+    "improved": 10,
+    "worsened": 14,
+    "unchanged": 37,
+    "average_movement": -0.3770491803278688
+  },
+  "per_question": [
+    {
+      "question": "What happens when you try to drop the teacher's string in the code?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How can you convert a floating point number to an integer in Python?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is used to denote a dictionary?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What can be stored in a dictionary?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is the purpose of the capitalize function in Python strings?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does Python index its strings?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What is the key difference between a tuple and a list in programming?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do you determine the data type of a variable in programming?",
+      "pre_rank": 8,
+      "post_rank": 19,
+      "movement": -11
+    },
+    {
+      "question": "What is the speaker's request to the viewers at the end of the video?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What type of programming language is being discussed in the transcript?",
+      "pre_rank": 5,
+      "post_rank": 3,
+      "movement": 2
+    },
+    {
+      "question": "How do you change the first element in a list in Python?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What method can be used to print all items in a dictionary?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How can you print only the keys in a dictionary?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What mode should be used to open a file for reading?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the purpose of closing a file after it has been opened?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What function is used to read the contents of a file?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the purpose of installing dependencies in a module?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do you import a built-in module in Python?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is the purpose of using a loop in programming?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "How does the range function work in a for loop?",
+      "pre_rank": 1,
+      "post_rank": 3,
+      "movement": -2
+    },
+    {
+      "question": "What is the first step to start working with Python?",
+      "pre_rank": 2,
+      "post_rank": 8,
+      "movement": -6
+    },
+    {
+      "question": "What version of Python is being downloaded in the video?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What happens to a string when it is capitalized?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is a list in Python?",
+      "pre_rank": 4,
+      "post_rank": 3,
+      "movement": 1
+    },
+    {
+      "question": "What is the difference between handling an exception and letting a program error through?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the main difference between a list and a dictionary in Python?",
+      "pre_rank": 1,
+      "post_rank": 3,
+      "movement": -2
+    },
+    {
+      "question": "What is the difference between a list and a set in Python?",
+      "pre_rank": 1,
+      "post_rank": 4,
+      "movement": -3
+    },
+    {
+      "question": "How do the data types of variables A and C differ?",
+      "pre_rank": 6,
+      "post_rank": 6,
+      "movement": 0
+    },
+    {
+      "question": "What is the difference between writing code from scratch and using modules in Python programming?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What is the difference between printing a dictionary and printing its keys?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the difference between the if and else statements in programming?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is the difference between using an if-else statement and a loop to print the 100th number?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do for loops and while loops differ in their implementation?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is the difference between built-in and installed modules in Python?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the main difference between a list in Python and an array?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is the similarity between a list in Python and an array in terms of indexing?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does indexing work in Python lists?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "Why is it important to pay attention to indexing when changing elements in a list?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why does the speaker mention that they cannot drop the teacher's string?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the speaker concatenate strings and numbers in the code?",
+      "pre_rank": 1,
+      "post_rank": 3,
+      "movement": -2
+    },
+    {
+      "question": "Why are some modules installed in the scope of the module, while others are built-in?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the map.flow function relate to the map.cost function in the given Python program?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is using a dictionary useful in this context?",
+      "pre_rank": 1,
+      "post_rank": 3,
+      "movement": -2
+    },
+    {
+      "question": "How can you add new values to an existing dictionary?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "Why does the speaker ask viewers to like the video?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How can you print all the items in a dictionary?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How can you print only the keys in a dictionary?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What happens when you try to change the value of a tuple?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do you determine if a variable is a tuple or a list?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the purpose of using 'try Accept' in the given code snippet?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How would you modify the code to avoid the 'index not defined' error?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What happens when you print a list in Python?",
+      "pre_rank": 3,
+      "post_rank": 3,
+      "movement": 0
+    },
+    {
+      "question": "How do you remove repeated items from a list in Python?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "If you want to concatenate the strings 'Hello', 'World', and 'Python', how would you do it?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "If you want to take a user's input in Python and store it in a variable, what function would you use?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "Is it correct to say that using 'try Accept' will prevent all errors in a program?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is it true that printing the type of a dictionary will display its key-value pairs?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Is it necessary to click on the 'new file' to write Python code?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Do you need to use the power shell to install a module in Python?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "Is it true that the 'capitalized' function in Python is used to capitalize the first letter of any string?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Does Python indexing start from 1?",
+      "pre_rank": 3,
+      "post_rank": 3,
+      "movement": 0
+    }
+  ]
+}

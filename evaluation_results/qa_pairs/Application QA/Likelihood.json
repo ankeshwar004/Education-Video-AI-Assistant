@@ -1,0 +1,122 @@
+[
+  {
+    "question": "In the given example, the log odds for a data point is -2.1. What is the predicted probability (p) for this point, and how is it derived from the logistic regression equation described in the transcript?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The predicted probability (p) is calculated by substituting the log odds into the logistic regression equation. For a log odds of -2.1, the transcript states that p equals 0.1. This means the y-coordinate on the logistic curve (squiggle) for that point is 0.1, representing the probability of the outcome (e.g., obesity) for that observation.",
+    "scenario": "You are analyzing a logistic regression model for predicting obesity in mice. The model uses log odds to calculate probabilities, and you are given a specific log odds value for a data point.",
+    "start": "04:21",
+    "end": "05:53",
+    "chunk_id": 3,
+    "video_id": "Likelihood",
+    "content": " odds. Then we add p times e to the log odds to both sides. Then we pull p out on the left side of the equation. Lastly, we divide both sides by 1 plus e to the log odds. Bam! Now let's see this fancy equation in action. For example, for this point, we substitute negative 2.1 for the log odds. And that gives us p equals 0.1. And that gives us a y-coordinate on the squiggle. And we do the same thing for all of the points. Now we use the observed status, obese or not obese, to calculate their likelihood given the shape of the squiggly line. We'll start by calculating the likelihood of the obese mice given the shape of the squiggle. The likelihood that this mouse is obese, given the shape of the squiggle, is the value on the y-axis where the point intersects the squiggle, 0.49. In other words, the likelihood that this mouse is obese, given the shape of the squiggle, is the same as the predicted probability. In this case, the probability is not calculated as the area under a curve, but instead is"
+  },
+  {
+    "question": "If a mouse's data point intersects the logistic curve (squiggle) at a y-axis value of 0.49, what is the likelihood that this mouse is obese, given the shape of the curve?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "The likelihood that a mouse is obese, given the shape of the logistic curve (squiggle), is the predicted probability (p) at the point where the mouse's data intersects the curve. In the transcript, this is explicitly stated as 0.49 for a specific mouse. Thus, the likelihood is 0.49, which is the y-axis value of the curve at that point.",
+    "scenario": "You are working with a logistic regression model to predict obesity in mice. The model provides a curve (squiggle) that maps log odds to probabilities, and you need to determine the likelihood of obesity for a specific mouse based on its position on the curve.",
+    "start": "04:21",
+    "end": "05:53",
+    "chunk_id": 3,
+    "video_id": "Likelihood",
+    "content": " odds. Then we add p times e to the log odds to both sides. Then we pull p out on the left side of the equation. Lastly, we divide both sides by 1 plus e to the log odds. Bam! Now let's see this fancy equation in action. For example, for this point, we substitute negative 2.1 for the log odds. And that gives us p equals 0.1. And that gives us a y-coordinate on the squiggle. And we do the same thing for all of the points. Now we use the observed status, obese or not obese, to calculate their likelihood given the shape of the squiggly line. We'll start by calculating the likelihood of the obese mice given the shape of the squiggle. The likelihood that this mouse is obese, given the shape of the squiggle, is the value on the y-axis where the point intersects the squiggle, 0.49. In other words, the likelihood that this mouse is obese, given the shape of the squiggle, is the same as the predicted probability. In this case, the probability is not calculated as the area under a curve, but instead is"
+  },
+  {
+    "question": "Why can't least squares be used to find the best-fitting line in this scenario, and what method is used instead?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "Maximum likelihood estimation is used because the transformation pushes raw data to positive and negative infinity, making residuals infinite. Least squares cannot handle infinite residuals, so maximum likelihood is applied to find the best-fitting line by projecting data points onto a candidate line and converting candidate log odds to probabilities using the inverse of the log-odds transformation (e.g., p = e^log_odds / (1 + e^log_odds)).",
+    "scenario": "You are analyzing a dataset where the transformation applied to the raw data results in values approaching positive and negative infinity. You need to determine the best-fitting line for this data.",
+    "start": "02:49",
+    "end": "04:21",
+    "chunk_id": 2,
+    "video_id": "Likelihood",
+    "content": " The only problem is that the transformation pushes the raw data to positive and negative infinity. And this means that the residuals, the distance from the data points to the line, are also equal to positive and negative infinity. And this means we can't use least squares to find the best fitting line. Instead, we use maximum likelihood. The first thing we do is project the original data points onto the candidate line. This gives each sample a candidate log odds value. In other words, the log odds of this point is 2.1. And the log odds of this point is 1.4. Then we transform the candidate log odds to candidate probabilities using this fancy looking formula, which is just a reordering of the transformation from probability to log odds. For those at home keeping score, here's how to convert the equation that takes probability as input and outputs log odds into an equation that takes log odds as input and outputs probability. First, we exponentiate both sides. Then we multiply both sides by 1 minus p, and then multiply 1 minus p and e to the log"
+  },
+  {
+    "question": "Given a candidate log odds value of 2.1 for a data point, how would you convert this to a candidate probability?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "First, exponentiate the log odds value (e.g., for log odds = 2.1, compute e^2.1). Then, use the formula p = e^log_odds / (1 + e^log_odds) to convert it to a probability. For log odds = 2.1, this gives p \u2248 0.89. For log odds = 1.4, p \u2248 0.80.",
+    "scenario": "You are working with a logistic regression model and need to convert log odds values to probabilities for interpretation.",
+    "start": "02:49",
+    "end": "04:21",
+    "chunk_id": 2,
+    "video_id": "Likelihood",
+    "content": " The only problem is that the transformation pushes the raw data to positive and negative infinity. And this means that the residuals, the distance from the data points to the line, are also equal to positive and negative infinity. And this means we can't use least squares to find the best fitting line. Instead, we use maximum likelihood. The first thing we do is project the original data points onto the candidate line. This gives each sample a candidate log odds value. In other words, the log odds of this point is 2.1. And the log odds of this point is 1.4. Then we transform the candidate log odds to candidate probabilities using this fancy looking formula, which is just a reordering of the transformation from probability to log odds. For those at home keeping score, here's how to convert the equation that takes probability as input and outputs log odds into an equation that takes log odds as input and outputs probability. First, we exponentiate both sides. Then we multiply both sides by 1 minus p, and then multiply 1 minus p and e to the log"
+  },
+  {
+    "question": "How is the best-fitting line determined in logistic regression, and how does it differ from linear regression?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "In logistic regression, the line is fitted using maximum likelihood estimation. Unlike linear regression, which minimizes the sum of squared residuals, logistic regression finds the coefficients that maximize the likelihood of observing the given data. This means the model adjusts the 'squiggle' (the logistic curve) to best predict the probability of the binary outcome based on the log odds.",
+    "scenario": "You are analyzing a dataset where the outcome is binary (e.g., pass/fail). You want to model the probability of passing an exam based on study hours. Explain how the logistic regression line is fitted to this data.",
+    "start": "00:00",
+    "end": "01:21",
+    "chunk_id": 0,
+    "video_id": "Likelihood",
+    "content": " Maximum likelihood in your neighborhood, I think that you should learn about it. StepQuest Hello, I'm Josh Starmer and welcome to StepQuest. Today we're going to follow up on our series of videos on logistic regression. This time we're going to talk about fitting a line using maximum likelihood. That is to say, we're going to talk about how this squiggle is optimized to fit the data the best. In the first video in this series, logistic regression details part one, coefficients, we saw that logistic regression is very similar to regular old linear models. Like linear regression, T-tests, and fancy stuff like multiple regression and ANOVA. The big difference is that logistic regression uses the log odds on the y-axis. However, you may recall that in that statQuest, I said, just take my word for it that this is the best fitting line. Well, the time for blindly trusting me is over. Let's see how this line is fit to the data. However, before we talk about how lines are fit in logistic regression, let's do a super"
+  },
+  {
+    "question": "In logistic regression, how does the algorithm ensure it finds the line with the maximum likelihood?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The algorithm iteratively rotates the line to increase the log likelihood, ensuring it converges to the line that maximizes the likelihood. This line is then chosen as the best fit for the logistic regression model.",
+    "scenario": "You are building a logistic regression model to predict whether a customer will purchase a product based on their browsing history. The algorithm needs to find the best-fitting line for the data.",
+    "start": "09:01",
+    "end": "10:18",
+    "chunk_id": 6,
+    "video_id": "Likelihood",
+    "content": " Note, the algorithm that finds the line with the maximum likelihood is pretty smart. Each time it rotates the line, it does so in a way that increases the log likelihood. Thus, the algorithm can find the optimal fit after a few rotations. Ultimately, we get a line that maximizes the likelihood and that's the one chosen to have the best fit. Bam! That's all there is to it. But just like with linear regression, there's more to logistic regression than just fitting a line. We want to know if that line represents a useful model, and that means we need an R-squared value and a P-value. However, in logistic regression, we have to do that without the usual residuals. So we'll learn about R-squared and P-values for logistic regression in the next stack Cool. Hooray! We've made it to the end of another exciting stat quest. If you like this stat quest and want to see more of them, please subscribe. And if you want to support stat quest, well, click the like button below and consider buying one or two of my original songs."
+  },
+  {
+    "question": "Why can't we use the usual residuals-based R-squared and P-values to assess the fit of a logistic regression model, and what alternatives are mentioned in the transcript?",
+    "question_type": "application",
+    "difficulty": "hard",
+    "answer": "In logistic regression, evaluating model usefulness requires alternative metrics like pseudo R-squared (e.g., McFadden\u2019s or Nagelkerke\u2019s) and P-values derived from likelihood ratio tests, as traditional residuals-based R-squared and P-values (used in linear regression) are not directly applicable.",
+    "scenario": "You are analyzing a logistic regression model to predict student pass/fail outcomes. Your supervisor asks how to assess the model's fit and significance without using residuals.",
+    "start": "09:01",
+    "end": "10:18",
+    "chunk_id": 6,
+    "video_id": "Likelihood",
+    "content": " Note, the algorithm that finds the line with the maximum likelihood is pretty smart. Each time it rotates the line, it does so in a way that increases the log likelihood. Thus, the algorithm can find the optimal fit after a few rotations. Ultimately, we get a line that maximizes the likelihood and that's the one chosen to have the best fit. Bam! That's all there is to it. But just like with linear regression, there's more to logistic regression than just fitting a line. We want to know if that line represents a useful model, and that means we need an R-squared value and a P-value. However, in logistic regression, we have to do that without the usual residuals. So we'll learn about R-squared and P-values for logistic regression in the next stack Cool. Hooray! We've made it to the end of another exciting stat quest. If you like this stat quest and want to see more of them, please subscribe. And if you want to support stat quest, well, click the like button below and consider buying one or two of my original songs."
+  },
+  {
+    "question": "You are comparing two lines in a logistic regression model. The log likelihood of the first line is -3.77, and the log likelihood of a rotated version of the line is -4.15. Which line is better, and why?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "The log likelihood of the original line is -3.77, and the log likelihood of the rotated line is -4.15. Since -3.77 is greater than -4.15, the original line is better because it maximizes the log likelihood (and thus the likelihood itself).",
+    "scenario": "You are fitting a logistic regression model and need to determine which line (original or rotated) better fits the data based on their log likelihood values.",
+    "start": "07:29",
+    "end": "09:01",
+    "chunk_id": 5,
+    "video_id": "Likelihood",
+    "content": " Note, although it is possible to calculate the likelihood as the product of the individual likelihoods, statisticians prefer to calculate the log of the likelihood instead. Either way works because the squiggle that maximizes the likelihood is the same one that maximizes the log of the likelihood. With the log of the likelihood or log likelihood to those in the now, we add the logs of the individual likelihoods instead of multiplying the individual likelihoods. Thus, the log likelihood of the data given the squiggle is negative 3.77. And this means that the log likelihood of the original line is negative 3.77. Now we rotate the line and calculate its log likelihood by projecting the data onto it, transforming the log odds to probabilities, and then calculating the log likelihood. And the final value for the log likelihood is negative 4.15. So this one is not as good as the first line. And we just keep rotating the log odds line and projecting the data onto it. And then transforming it to probabilities and calculating the log likelihood."
+  },
+  {
+    "question": "How is the best-fitting line determined in linear regression according to the transcript?",
+    "question_type": "application",
+    "difficulty": "easy",
+    "answer": "In linear regression, the best-fitting line is determined by minimizing the sum of squared residuals. Residuals are the vertical distances between the data points and the line. Squaring them ensures negative and positive residuals do not cancel each other out, and the line with the smallest sum of these squared residuals is chosen as the best fit.",
+    "scenario": "You are analyzing a dataset of house prices versus square footage and need to fit a line to predict prices. Explain how you would determine the best-fitting line using the method described in the transcript.",
+    "start": "01:21",
+    "end": "02:49",
+    "chunk_id": 1,
+    "video_id": "Likelihood",
+    "content": " quick review of how lines are fit in linear regression. We start with some data and we fit a line to it using least squares. In other words, we measure the residuals, the distances between the data and the line, then square them so that negative values do not cancel out positive values and then add them all up. Then we rotate the line a little bit and do the same thing. Measure the residuals, square them, and add them up. And the line with the smallest sum of squared residuals, the least squares, is the line chosen to fit best. Okay, now that we remember how to fit a line in linear regression, let's talk about logistic regression. In this example, we are using logistic regression to determine the effect of weight on obesity. These mice are obese and these mice are not obese. Our goal is to draw the best fitting squiggle for this data. As we know, in logistic regression, we transform the y-axis from the probability of obesity to the log odds of obesity. We can draw a candidate best fitting line on the graph."
+  },
+  {
+    "question": "How does logistic regression transform the y-axis to fit a line to the data, and what is the goal of this transformation?",
+    "question_type": "application",
+    "difficulty": "medium",
+    "answer": "In logistic regression, the y-axis is transformed from the probability of obesity to the log odds of obesity. This transformation allows the model to fit a line (or 'squiggle') to predict the probability of a binary outcome (e.g., obese or not obese) based on the input variable (e.g., weight). The best-fitting line is chosen to minimize the error in predicting these log odds.",
+    "scenario": "You are studying the relationship between weight and obesity in a group of mice. Explain how you would use logistic regression to model this relationship based on the transcript.",
+    "start": "01:21",
+    "end": "02:49",
+    "chunk_id": 1,
+    "video_id": "Likelihood",
+    "content": " quick review of how lines are fit in linear regression. We start with some data and we fit a line to it using least squares. In other words, we measure the residuals, the distances between the data and the line, then square them so that negative values do not cancel out positive values and then add them all up. Then we rotate the line a little bit and do the same thing. Measure the residuals, square them, and add them up. And the line with the smallest sum of squared residuals, the least squares, is the line chosen to fit best. Okay, now that we remember how to fit a line in linear regression, let's talk about logistic regression. In this example, we are using logistic regression to determine the effect of weight on obesity. These mice are obese and these mice are not obese. Our goal is to draw the best fitting squiggle for this data. As we know, in logistic regression, we transform the y-axis from the probability of obesity to the log odds of obesity. We can draw a candidate best fitting line on the graph."
+  }
+]

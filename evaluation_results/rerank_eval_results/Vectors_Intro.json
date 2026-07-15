@@ -1,0 +1,400 @@
+{
+  "mrr_before": 0.7864959114959115,
+  "mrr_after": 0.8748677248677249,
+  "hit_rate_before": {
+    "1": 0.6507936507936508,
+    "3": 0.9047619047619048,
+    "5": 0.9682539682539683
+  },
+  "hit_rate_after": {
+    "1": 0.7936507936507936,
+    "3": 0.9365079365079365,
+    "5": 1.0
+  },
+  "rank_movement": {
+    "improved": 16,
+    "worsened": 9,
+    "unchanged": 38,
+    "average_movement": 0.3968253968253968
+  },
+  "per_question": [
+    {
+      "question": "What is the cosine of the angle between two vectors when the angle is 0 degrees?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the dot product of two perpendicular vectors?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "What is a unit vector?",
+      "pre_rank": 8,
+      "post_rank": 1,
+      "movement": 7
+    },
+    {
+      "question": "What does the Pythagorean theorem describe in the context of a right-angled triangle?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How are the components of a two-dimensional vector typically written?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is added to a two-dimensional vector to make it three-dimensional?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is the formula for the length of the cross product of two vectors A and B?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What geometric interpretation can be given to the length of the cross product of vectors A and B?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is a scalar in the context of vector operations?",
+      "pre_rank": 2,
+      "post_rank": 4,
+      "movement": -2
+    },
+    {
+      "question": "What happens when a vector is multiplied by a scalar of -1?",
+      "pre_rank": 1,
+      "post_rank": 4,
+      "movement": -3
+    },
+    {
+      "question": "What are the three special cases for the dot product of two vectors based on their direction?",
+      "pre_rank": 1,
+      "post_rank": 5,
+      "movement": -4
+    },
+    {
+      "question": "How can the length of a vector be expressed using the dot product?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What is a unit vector?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What are the standard unit vectors along the x, y, and z axes called?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What are the two lines that make up a two-dimensional coordinate system?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "In what order are the coordinates of a point written in a two-dimensional coordinate system?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "In how many dimensions is the cross product defined?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the order of vectors affect the result of the cross product?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is the name and coordinates of the point where the x and y axes intersect?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How are vectors defined and represented differently from points?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How is the sum of two vectors visualized geometrically?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What does the result of subtracting vector b from vector a look like geometrically?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Why are vector components sometimes written as subscripts of the vector's name?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do you perform scalar multiplication on a vector?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the key difference between a regular vector and a unit vector?",
+      "pre_rank": 11,
+      "post_rank": 1,
+      "movement": 10
+    },
+    {
+      "question": "How do the purposes of the cross product and the dot product differ in measuring the relationship between two vectors?",
+      "pre_rank": 4,
+      "post_rank": 2,
+      "movement": 2
+    },
+    {
+      "question": "Compare the behavior of the cross product and the dot product when vectors are parallel or perpendicular.",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the purpose of the dot product differ from the purpose of unit vector notation?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the representation of a vector's length differ from the representation of its components in a coordinate system?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do points and vectors differ in terms of position and representation?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the relationship between the angle of two vectors and their product differ between the cross product and the dot product?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does the visualization of vector addition differ from the visualization of vector subtraction?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How are scalar multiplication and scalar division similar in the context of vector operations?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the difference between the x-axis and the y-axis in a 2D coordinate system?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do the results of the dot product and the cross product differ in terms of their output type and geometric interpretation?",
+      "pre_rank": 2,
+      "post_rank": 3,
+      "movement": -1
+    },
+    {
+      "question": "How do the dot product and cross product behave differently when the angle between two vectors is 90 degrees?",
+      "pre_rank": 3,
+      "post_rank": 4,
+      "movement": -1
+    },
+    {
+      "question": "How does scalar multiplication affect the length and direction of a vector, and what happens when the scalar is negative one?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How is the sum of two vectors calculated according to the transcript?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "How does unit vector notation help in representing vectors, and why is it useful for operations like the dot product?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is the dot product also referred to as the scalar product?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "Why does the dot product of vectors A and B equal the width of the triangle beneath vector B only when vector A is a unit vector?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the dot product of vectors A and B change if vector B gets shorter or the angle between A and B gets smaller?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do you visually represent the addition of two vectors using their graphical representation?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why does the vector resulting from subtracting vector b from vector a point from the tip of b to the tip of a?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why can the dot product be thought of as a measurement for how similar two vectors are?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How is the length of a vector related to its dot product with itself?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Two vectors, A and B, are parallel. What is the length of their cross product, and why?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How does the length of the cross product of two vectors change if the angle between them decreases from 90\u00b0 to 30\u00b0?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Represent the vectors A and B as 2D vectors in component form based on the following descriptions: Vector A moves 3 units downward, and Vector B moves 4 units to the left and 2 units up.",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A vector moves 2 units to the right, 1 unit downward, and 5 units outward from the screen. Represent this vector in 3D component form.",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "If vector A is (1, 0, 0) and vector B is (0, 1, 0), what is the relationship between the cross product of A and B and the cross product of B and A?",
+      "pre_rank": 3,
+      "post_rank": 3,
+      "movement": 0
+    },
+    {
+      "question": "How can you determine the direction of the cross product of two vectors A and B using your hand?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "Vector A is a unit vector, and vector B forms a right-angled triangle with a width equal to the dot product of A and B. If the angle between A and B is \u03b8, how is the width of the triangle related to the length of B and \u03b8?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Vector A has a length of 2, and vector B has a length of 3. The angle between them is 60 degrees. If a right-angled triangle is drawn beneath B, will the width of this triangle equal the dot product of A and B? Explain your reasoning.",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "If vector A is perpendicular to vector B, what is their dot product?",
+      "pre_rank": 3,
+      "post_rank": 1,
+      "movement": 2
+    },
+    {
+      "question": "If vector A points directly opposite to vector B (angle of 180 degrees), how can you express their dot product in terms of their magnitudes?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "A student claims that for point p, the coordinates can be written as (3, 5) instead of (5, 3) because the order does not matter. Is this statement correct?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "A student claims: 'The length of the cross product of two vectors is zero when they are perpendicular to each other.' Is this statement correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A student claims: 'The dot product of two vectors produces a new vector.' Is this statement correct?",
+      "pre_rank": 4,
+      "post_rank": 1,
+      "movement": 3
+    },
+    {
+      "question": "Is it correct to say that a scalar is a type of vector because it can scale a vector's length?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "A student claims that the length of a vector is the sum of the absolute values of its x and y components. Is this correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A student claims: 'A unit vector is a vector with a length of 0.' Is this statement correct?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "A student claims: 'The length of a 2D vector is the sum of its components (a + b).' Is this statement correct?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    }
+  ]
+}

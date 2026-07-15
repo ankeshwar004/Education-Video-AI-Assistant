@@ -1,0 +1,74 @@
+[
+  {
+    "question": "Is it correct to say that using 'try Accept' will prevent all errors in a program?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, using 'try Accept' will not prevent all errors in a program. It will only handle exceptions and prevent the program from exiting. The correct concept is that 'try Accept' is used for exception handling, not error prevention.",
+    "misconception": "Using 'try Accept' prevents all errors in a program.",
+    "start": "15:10",
+    "end": "16:07",
+    "chunk_id": 16,
+    "video_id": "Python_Intro",
+    "content": " I will tell you how to handle this comment. Try Accept. How to handle this comment? If you are a coder who can do this error, and you are scared that if you do this error, your next program will not work. If you think that if you do this error, then skip this program and start doing this. So you try Accept. For that you write try and call and enter and you will get a level of 1 in 1. Now I will write in index. I have not defined index in my entire program, so this will obviously error through. I do not want to error through. When you handle the exception, that is, do not exit the program. So I will use Accept. Accept is E and I will print the exception. I will write print. I will show you this error through. I will print it here. I will tell you this error. This program has generated and this index is not defined. The error comes from our data color. If I define index in my entire program, then I will write index is equal to 3. Then I will show you this error through. And I will print it here."
+  },
+  {
+    "question": "Is it true that printing the type of a dictionary will display its key-value pairs?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, printing the type of a dictionary will display its data type, not its key-value pairs. The correct way to display the key-value pairs is to simply print the dictionary.",
+    "misconception": "Printing the type of a dictionary displays its key-value pairs",
+    "start": "08:34",
+    "end": "09:26",
+    "chunk_id": 9,
+    "video_id": "Python_Intro",
+    "content": " If you want to change it again, then you can use a list. Another important thing is that I will comment on it in the dictionary. I will show you a dictionary. And I will write it in the dictionary. We will denote the dictionary from the curly braces. I will write the curly braces in the empty dictionary. Now if I will write the print type of Dict1, then you can see here that it is a dictionary. If I will write the type of Dict1, then I will print the dictionary as you can see here. Basically, this is the key value of the dictionary. So I will show you that I want to store in my dictionary the players and their run. I will write the dictionary in the dictionary, Dict1. And I will write the value of the value of my key and the value of the value. If I want to print my dictionary, then I will write the print Dict1. And after that, I will run the program and you can see here that it is a hundred. Similarly, I can add all the values in it. And I can increase my dictionary. I will write the print Dict1."
+  },
+  {
+    "question": "Is it necessary to click on the 'new file' to write Python code?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, it is not necessary to click on the 'new file' to write Python code. You can write Python code in an existing file or create a new one using a text editor or IDE.",
+    "misconception": "You must click on the 'new file' to write Python code.",
+    "start": "00:59",
+    "end": "01:54",
+    "chunk_id": 1,
+    "video_id": "Python_Intro",
+    "content": " After that, click on the new file and you can write your Python code here. You can do any basic programming language that you want to print on the console. You write some things in Python programming for printing. Same files like print statement, you open the bracket and then write hello world. You can close the bracket and you have applied the app file in your keyboard. You can save the file and click on save and run it. Now, look at my skin on the hello world. It means that my program is done. Whatever I will write here, it will show here. As you can see, I am talking about the hello world. Now, let's talk about the modules. You can use the code that you have written for someone else and you can import it. To use the modules, you have to write your start button. Now, the power shell is the command prompt option. Select the module and then you can install the name of the module. Now, I will write the name of the module that I will install in the file. I will write the name of the module and it will enter the file."
+  },
+  {
+    "question": "Do you need to use the power shell to install a module in Python?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, you don't need to use the power shell to install a module in Python. You can install modules using pip, which is the package installer for Python, in the command prompt or terminal.",
+    "misconception": "You need to use the power shell to install a module in Python.",
+    "start": "00:59",
+    "end": "01:54",
+    "chunk_id": 1,
+    "video_id": "Python_Intro",
+    "content": " After that, click on the new file and you can write your Python code here. You can do any basic programming language that you want to print on the console. You write some things in Python programming for printing. Same files like print statement, you open the bracket and then write hello world. You can close the bracket and you have applied the app file in your keyboard. You can save the file and click on save and run it. Now, look at my skin on the hello world. It means that my program is done. Whatever I will write here, it will show here. As you can see, I am talking about the hello world. Now, let's talk about the modules. You can use the code that you have written for someone else and you can import it. To use the modules, you have to write your start button. Now, the power shell is the command prompt option. Select the module and then you can install the name of the module. Now, I will write the name of the module that I will install in the file. I will write the name of the module and it will enter the file."
+  },
+  {
+    "question": "Is it true that the 'capitalized' function in Python is used to capitalize the first letter of any string?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, the correct function to capitalize the first letter of a string in Python is 'capitalize()', not 'capitalized'.",
+    "misconception": "The function name is 'capitalized' instead of 'capitalize()'.",
+    "start": "04:41",
+    "end": "05:40",
+    "chunk_id": 5,
+    "video_id": "Python_Intro",
+    "content": " And we will talk about the function of strings. In any program. There is a very important tool in string. And you can use any string function. And you can do it. It should be known. So, I will make a string. I think it is STR1. And I will write. This is my first python string. Now, if I write print STR1, then obviously. The string will be printed. In any string, there is a main operation. You have to capitalize its first letter. For this, there is a function in python. It is capitalized. F5 is a bug. And let's see what is print. So, you can see here. T is capitalized. And this is capitalized function. With this, we have a lot of functions in string. They have some fine. The string inside is a substring. If I write this like this. I will print it. You can see here. It will be zero print. I mean, zero is my index. Python index is zero. It starts from zero. This start is zero 1 to 3, 4 and this is my zero print index. You can see here. Another function is in string. If I write it like this, then I can print it."
+  },
+  {
+    "question": "Does Python indexing start from 1?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, Python indexing starts from 0, not 1. This means the first character of a string is at index 0.",
+    "misconception": "Python indexing starts from 1.",
+    "start": "04:41",
+    "end": "05:40",
+    "chunk_id": 5,
+    "video_id": "Python_Intro",
+    "content": " And we will talk about the function of strings. In any program. There is a very important tool in string. And you can use any string function. And you can do it. It should be known. So, I will make a string. I think it is STR1. And I will write. This is my first python string. Now, if I write print STR1, then obviously. The string will be printed. In any string, there is a main operation. You have to capitalize its first letter. For this, there is a function in python. It is capitalized. F5 is a bug. And let's see what is print. So, you can see here. T is capitalized. And this is capitalized function. With this, we have a lot of functions in string. They have some fine. The string inside is a substring. If I write this like this. I will print it. You can see here. It will be zero print. I mean, zero is my index. Python index is zero. It starts from zero. This start is zero 1 to 3, 4 and this is my zero print index. You can see here. Another function is in string. If I write it like this, then I can print it."
+  }
+]

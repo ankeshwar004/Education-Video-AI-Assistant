@@ -1,0 +1,4540 @@
+{
+  "Array_VS_LinkedList": {
+    "qa_count": 63,
+    "qa_distribution": {
+      "difficulty": {
+        "medium": 29,
+        "easy": 32,
+        "hard": 2
+      },
+      "question_type": {
+        "factual": 25,
+        "comparison": 13,
+        "reasoning": 10,
+        "application": 9,
+        "misconception": 6
+      },
+      "chunk_id": {
+        "15": 7,
+        "4": 2,
+        "14": 2,
+        "12": 4,
+        "1": 6,
+        "6": 8,
+        "8": 7,
+        "0": 4,
+        "11": 3,
+        "13": 5,
+        "2": 4,
+        "5": 4,
+        "10": 4,
+        "3": 3
+      }
+    },
+    "retrieval": {
+      "bm25_only": {
+        "hit_rate": {
+          "1": 0.3333333333333333,
+          "3": 0.6190476190476191,
+          "5": 0.8095238095238095
+        },
+        "mrr": 0.5244783435259626
+      },
+      "vector_only": {
+        "hit_rate": {
+          "1": 0.5238095238095238,
+          "3": 0.5238095238095238,
+          "5": 0.746031746031746
+        },
+        "mrr": 0.6054770626199197
+      },
+      "ensemble_only": {
+        "hit_rate": {
+          "1": 0.5238095238095238,
+          "3": 0.8253968253968254,
+          "5": 0.9841269841269841
+        },
+        "mrr": 0.7004409171075838
+      },
+      "ensemble_rerank": {
+        "hit_rate": {
+          "1": 0.5714285714285714,
+          "3": 0.9047619047619048,
+          "5": 0.9682539682539683
+        },
+        "mrr": 0.7478835978835979
+      }
+    },
+    "rerank": {
+      "mrr_before": 0.7004409171075838,
+      "mrr_after": 0.7525132275132275,
+      "hit_rate_before": {
+        "1": 0.5238095238095238,
+        "3": 0.8253968253968254,
+        "5": 0.9841269841269841
+      },
+      "hit_rate_after": {
+        "1": 0.5714285714285714,
+        "3": 0.9047619047619048,
+        "5": 0.9682539682539683
+      },
+      "rank_movement": {
+        "improved": 22,
+        "worsened": 16,
+        "unchanged": 25,
+        "average_movement": 0.2698412698412698
+      },
+      "per_question": [
+        {
+          "question": "What is the time complexity of deleting an element from the middle of a linked list?",
+          "pre_rank": 1,
+          "post_rank": 3,
+          "movement": -2
+        },
+        {
+          "question": "What is the time complexity of deleting an element from the start of a linked list?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is the time complexity of deleting an element from the end of a linked list?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is the time complexity of accessing data in an array?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is a characteristic of arrays in terms of size?",
+          "pre_rank": 3,
+          "post_rank": 4,
+          "movement": -1
+        },
+        {
+          "question": "What is the time complexity of inserting at the end of a list?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is the time complexity of deleting from the beginning of a list?",
+          "pre_rank": 2,
+          "post_rank": 6,
+          "movement": -4
+        },
+        {
+          "question": "What is the time complexity of inserting a node at the beginning of a linked list?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why can't you directly insert a node at the end of a linked list?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the primary advantage of using arrays in terms of accessing elements?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the compiler compute the address of an element in an array?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is the total memory allocated for an array with 7 elements, each taking 4 bytes?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How much memory is required to store 3 elements in a linked list, considering each node takes 8 bytes?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the primary drawback of using an array in terms of memory utilization?",
+          "pre_rank": 5,
+          "post_rank": 1,
+          "movement": 4
+        },
+        {
+          "question": "How does the memory requirement of an array compare to a linked list when storing 7 elements?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What determines whether to use an array or a linked list?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What factors influence the choice between arrays and linked lists?",
+          "pre_rank": 3,
+          "post_rank": 2,
+          "movement": 1
+        },
+        {
+          "question": "What is the time complexity of inserting an element at the beginning of an array?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How does the number of elements to be shifted affect the time complexity of inserting an element in an array?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is required to insert a node at the end of a linked list?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How do you insert a new node at the end of a linked list?",
+          "pre_rank": 2,
+          "post_rank": 8,
+          "movement": -6
+        },
+        {
+          "question": "What is the time complexity of accessing data in an array?",
+          "pre_rank": 3,
+          "post_rank": 2,
+          "movement": 1
+        },
+        {
+          "question": "Why is sequential access the only possibility in a linked list?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is the main difference in memory utilization between arrays and linked lists?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "Why do arrays have unused space?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What is the main difference in accessing elements between arrays and linked lists?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do arrays and linked lists compare in terms of accessing an element's location?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the memory requirement for storing 7 elements in an array versus a linked list?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the memory utilization of an array compare to a linked list when storing complex data types?",
+          "pre_rank": 3,
+          "post_rank": 2,
+          "movement": 1
+        },
+        {
+          "question": "What are the factors that determine whether to use an array or a linked list?",
+          "pre_rank": 3,
+          "post_rank": 2,
+          "movement": 1
+        },
+        {
+          "question": "What is the main difference between using an array and a linked list?",
+          "pre_rank": 5,
+          "post_rank": 2,
+          "movement": 3
+        },
+        {
+          "question": "What is the main difference in memory allocation between arrays and linked lists?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the memory requirement for storing 3 elements compare between arrays and linked lists?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does the time complexity of inserting an element at the beginning of an array compare to inserting an element at the middle of the array?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is the primary difference between inserting a node at the beginning and inserting a node at the end of a linked list?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "How does memory utilization in linked lists compare to arrays?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "What is the difference in memory requirements between arrays and linked lists?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "How does the cost of insertion and deletion compare between arrays and linked lists?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is inserting a node at the beginning of a linked list a constant time operation?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the sequential access nature of linked lists affect the time complexity of inserting a node at the end?",
+          "pre_rank": 9,
+          "post_rank": 2,
+          "movement": 7
+        },
+        {
+          "question": "Why does deleting an element from the end of a linked list take order of n time?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the time complexity of deleting an element from a linked list vary based on the position of the element?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "Why is random access possible in an array?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the compiler compute the address of an element in an array?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Why is memory utilization in an array considered ineffective?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the dynamic size of a linked list contribute to its memory efficiency?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is accessing an element in a linked list dependent on the number of nodes?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does the location of an element in a linked list affect the number of nodes that need to be traversed to access it?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is the time complexity of deleting an element from the middle position of a linked list?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the time complexity of deleting an element from the start of a linked list?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "Suppose you have a linked list with nodes having values 1, 2, and 3, and addresses 1000, 2000, and 3000 respectively. If you want to insert a new node with value 4 at the end of the list, what steps would you take?",
+          "pre_rank": 2,
+          "post_rank": 5,
+          "movement": -3
+        },
+        {
+          "question": "What is the time complexity of accessing an element in an array?",
+          "pre_rank": 4,
+          "post_rank": 4,
+          "movement": 0
+        },
+        {
+          "question": "How do you access an element in a linked list?",
+          "pre_rank": 4,
+          "post_rank": 2,
+          "movement": 2
+        },
+        {
+          "question": "Consider a scenario where you need to store 5 elements in an array. If each element requires 4 bytes of memory, how much memory will be allocated in total?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Suppose you want to store 5 elements in a linked list. If each node requires 8 bytes of memory (4 bytes for the integer and 4 bytes for the pointer variable), how much memory will be required in total?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A programmer wants to store 7 elements of integer data type. Which data structure would require less memory: array or linked list?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "Suppose we are storing a complex data type that takes 16 bytes to store. If we are storing only 3 elements, which data structure would be more memory efficient: array or linked list?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "When inserting a node at the end of a linked list, can you directly insert the node without traversing the list?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is it true that memory utilization is always more efficient in arrays than in linked lists?",
+          "pre_rank": 5,
+          "post_rank": 4,
+          "movement": 1
+        },
+        {
+          "question": "Is it true that memory utilization in linked lists is less efficient than in arrays?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "In an array, if only 3 elements are being used, then only 12 bytes of memory are allocated.",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "In a linked list, the memory requirement is less than that of an array because it only allocates memory for the nodes that are being used.",
+          "pre_rank": 2,
+          "post_rank": 3,
+          "movement": -1
+        },
+        {
+          "question": "Is it true that in a linked list, you can directly access any node without traversing the previous nodes?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        }
+      ]
+    }
+  },
+  "BDA_LECTURE": {
+    "qa_count": 59,
+    "qa_distribution": {
+      "difficulty": {
+        "medium": 28,
+        "easy": 28,
+        "hard": 3
+      },
+      "question_type": {
+        "factual": 23,
+        "comparison": 11,
+        "reasoning": 9,
+        "application": 9,
+        "misconception": 7
+      },
+      "chunk_id": {
+        "1": 11,
+        "3": 4,
+        "2": 7,
+        "0": 9,
+        "4": 12,
+        "6": 7,
+        "5": 9
+      }
+    },
+    "retrieval": {
+      "bm25_only": {
+        "hit_rate": {
+          "1": 0.6440677966101694,
+          "3": 0.7796610169491526,
+          "5": 0.864406779661017
+        },
+        "mrr": 0.7434221146085552
+      },
+      "vector_only": {
+        "hit_rate": {
+          "1": 0.6101694915254238,
+          "3": 0.6101694915254238,
+          "5": 0.847457627118644
+        },
+        "mrr": 0.6898305084745763
+      },
+      "ensemble_only": {
+        "hit_rate": {
+          "1": 0.6101694915254238,
+          "3": 0.9661016949152542,
+          "5": 1.0
+        },
+        "mrr": 0.7768361581920904
+      },
+      "ensemble_rerank": {
+        "hit_rate": {
+          "1": 0.7627118644067796,
+          "3": 0.9830508474576272,
+          "5": 1.0
+        },
+        "mrr": 0.8714689265536723
+      },
+      "ensemble_multiquery_rerank": {
+        "hit_rate": {
+          "1": 0.7627118644067796,
+          "3": 0.9830508474576272,
+          "5": 1.0
+        },
+        "mrr": 0.8714689265536723
+      }
+    },
+    "rerank": {
+      "mrr_before": 0.7768361581920904,
+      "mrr_after": 0.8714689265536723,
+      "hit_rate_before": {
+        "1": 0.6101694915254238,
+        "3": 0.9661016949152542,
+        "5": 1.0
+      },
+      "hit_rate_after": {
+        "1": 0.7627118644067796,
+        "3": 0.9830508474576272,
+        "5": 1.0
+      },
+      "rank_movement": {
+        "improved": 15,
+        "worsened": 4,
+        "unchanged": 40,
+        "average_movement": 0.2711864406779661
+      },
+      "per_question": [
+        {
+          "question": "What is the purpose of using spatial tools in analyzing big data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do companies like Amazon and Netflix utilize big data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What characterizes small data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is small data ideal for individuals and businesses?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What types of data models are mentioned?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What are the characteristics of a data model?",
+          "pre_rank": 1,
+          "post_rank": 4,
+          "movement": -3
+        },
+        {
+          "question": "What types of data are included in big data?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is the nature of a data model?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What is big data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What are the main sources of big data?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Why are special tools and techniques required for big data?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "What types of data models are mentioned in the context?",
+          "pre_rank": 3,
+          "post_rank": 3,
+          "movement": 0
+        },
+        {
+          "question": "What are some potential risks associated with the collection, storage, and analysis of large volumes of data?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is one of the challenges in ensuring data quality?",
+          "pre_rank": 3,
+          "post_rank": 2,
+          "movement": 1
+        },
+        {
+          "question": "Why is it important to consider data quality?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "What is a significant challenge for smaller organizations when dealing with big data?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What are some examples of regulatory departments and regulations mentioned in the context of big data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the cost of acquiring and analyzing big data affect smaller organizations?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is affected by the high cost and resource intensiveness of handling big data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What can affect the accuracy and reliability of data?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What type of skills are required to implement and manage big data infrastructure?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What laws require strict handling of personal data?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Why is regulatory compliance important for organizations?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the main difference between technical complexity and regulatory compliance in the context of big data infrastructure?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What are the main differences between structured, semi-structured, and unstructured data models in terms of their characteristics?",
+          "pre_rank": 3,
+          "post_rank": 2,
+          "movement": 1
+        },
+        {
+          "question": "How do the privacy and security concerns of collecting, storing, and analyzing large volumes of data compare to not collecting, storing, and analyzing data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What are the main types of data models mentioned in the transcript?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is the main difference between big data and small data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do companies like Amazon and Netflix use big data compared to how a small store uses small data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the main difference between transactional data and machine data?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "How do social data and transactional data differ in terms of their sources?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "What is the difference in the impact of cost and resource intensiveness on smaller organizations versus larger organizations?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What types of data are mentioned in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the transcript describe a data model?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "Why is ensuring the accuracy and completeness of data challenging?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "How do privacy and security concerns arise in data collection, storage, and analysis?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why are special tools and techniques required to analyze big data effectively?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "How do the three main sources of big data contribute to its complexity?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why do companies like Amazon and Netflix use big data to recommend products and shows?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the use of big data enable businesses to make better decisions?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why do organizations face technical challenges in implementing and managing big data infrastructure and analytics tools?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do data protection laws like GDPR affect organizations handling personal data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is a data model considered structured, semi-structured, and not dedicated?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "A small bookstore wants to determine which books to restock. What type of data should they use to make this decision?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How can a company like Amazon use big data to improve its services?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A company wants to analyze customer purchase history to understand buying trends. What type of data would this be an example of?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "A sensor in a manufacturing plant is recording temperature and pressure readings. What type of data is being generated?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "A small organization wants to acquire and store big data, but it has a limited budget and resources. What challenge will it likely face?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the cost and resource intensiveness of big data affect smaller organizations in terms of regulatory compliances and data quality?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A company is collecting and storing large volumes of customer data. What kind of risks may they be exposing themselves to?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A researcher is working with a dataset that consists of unstructured and heterogeneous data sources. What challenges may they face in ensuring the accuracy and completeness of the data?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What type of data can a data model be?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "Is it true that all data models are structured, semi-structured, and unstructured?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is a data model always structured?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "Is it true that big data is only used by large companies like Amazon and Netflix?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is it true that a data model is always structured?",
+          "pre_rank": 3,
+          "post_rank": 3,
+          "movement": 0
+        },
+        {
+          "question": "Does ensuring the accuracy and completeness of data quality only apply to structured data sources?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is it true that the technical complexity of big data infrastructure is not a significant challenge for organizations?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Does regulatory compliance with data protection laws like GDPR mean that organizations can handle personal data in any way they want?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        }
+      ]
+    }
+  },
+  "CS50_SQL": {
+    "qa_count": 62,
+    "qa_distribution": {
+      "difficulty": {
+        "easy": 25,
+        "medium": 36,
+        "hard": 1
+      },
+      "question_type": {
+        "factual": 24,
+        "comparison": 12,
+        "reasoning": 10,
+        "application": 10,
+        "misconception": 6
+      },
+      "chunk_id": {
+        "56": 2,
+        "27": 4,
+        "32": 4,
+        "34": 2,
+        "6": 2,
+        "16": 3,
+        "59": 2,
+        "62": 2,
+        "2": 2,
+        "10": 2,
+        "60": 4,
+        "36": 2,
+        "22": 3,
+        "26": 1,
+        "13": 1,
+        "39": 1,
+        "30": 1,
+        "14": 3,
+        "46": 2,
+        "24": 1,
+        "19": 2,
+        "41": 2,
+        "37": 2,
+        "21": 2,
+        "45": 3,
+        "0": 2,
+        "1": 1,
+        "58": 1,
+        "5": 1,
+        "35": 2
+      }
+    },
+    "retrieval": {
+      "bm25_only": {
+        "hit_rate": {
+          "1": 0.3225806451612903,
+          "3": 0.6129032258064516,
+          "5": 0.6612903225806451
+        },
+        "mrr": 0.48256473883596124
+      },
+      "vector_only": {
+        "hit_rate": {
+          "1": 0.532258064516129,
+          "3": 0.532258064516129,
+          "5": 0.8064516129032258
+        },
+        "mrr": 0.6095932293512939
+      },
+      "ensemble_only": {
+        "hit_rate": {
+          "1": 0.5161290322580645,
+          "3": 0.8064516129032258,
+          "5": 0.9032258064516129
+        },
+        "mrr": 0.6928945606364961
+      },
+      "ensemble_rerank": {
+        "hit_rate": {
+          "1": 0.7096774193548387,
+          "3": 0.9516129032258065,
+          "5": 0.967741935483871
+        },
+        "mrr": 0.831989247311828
+      }
+    },
+    "rerank": {
+      "mrr_before": 0.6928945606364961,
+      "mrr_after": 0.8361436950146628,
+      "hit_rate_before": {
+        "1": 0.5161290322580645,
+        "3": 0.8064516129032258,
+        "5": 0.9032258064516129
+      },
+      "hit_rate_after": {
+        "1": 0.7096774193548387,
+        "3": 0.9516129032258065,
+        "5": 0.967741935483871
+      },
+      "rank_movement": {
+        "improved": 22,
+        "worsened": 9,
+        "unchanged": 31,
+        "average_movement": 1.1290322580645162
+      },
+      "per_question": [
+        {
+          "question": "What data type is used for the 'type' column in the swipes table?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What data type is assigned to the 'date_time' and 'amount' columns in the swipes table?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is one advantage of using floating-point values over integers in representing monetary amounts?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What determines whether to use integers or real (floating-point) values in data storage?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What type affinity is assigned to the ID column in the 'riders' table?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What data type is used to represent the 'name' column in both the 'riders' and 'stations' tables?",
+          "pre_rank": 5,
+          "post_rank": 1,
+          "movement": 4
+        },
+        {
+          "question": "What are the key components needed to create a well-structured table in SQL according to the transcript?",
+          "pre_rank": 1,
+          "post_rank": 4,
+          "movement": -3
+        },
+        {
+          "question": "What is the purpose of type affinities in SQL as mentioned in the transcript?",
+          "pre_rank": 2,
+          "post_rank": 6,
+          "movement": -4
+        },
+        {
+          "question": "Which subway stop is mentioned as a central hub in Boston?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Which subway line connects Harvard and MIT in Boston?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the name of the SQL keyword or statement used to create a new table in a database?",
+          "pre_rank": 8,
+          "post_rank": 1,
+          "movement": 7
+        },
+        {
+          "question": "What name was given to the new database created to represent riders and stations?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What special value can be used as the default for a column to automatically insert the current date and time in SQLite?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How can you enforce a rule that prevents a column from containing a zero value in SQLite?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "Which database management systems are mentioned in the transcript?",
+          "pre_rank": 9,
+          "post_rank": 1,
+          "movement": 8
+        },
+        {
+          "question": "What is the default type affinity assigned by SQLite to a column if no data type is specified?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Which SQLite command is used to display the SQL statement that created a table?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What columns and data types are revealed when using the `.schema` command on the 'long list' table?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is assigning a unique ID to each person important in the table design?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the term used to describe a unique identifier for each person in a database table?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What are the possible values for the 'type' column in the swipes table as mentioned in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Which columns are explicitly mentioned as part of the swipes table in the transcript?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "What are the two main properties of a primary key as described in the transcript?",
+          "pre_rank": 14,
+          "post_rank": 11,
+          "movement": 3
+        },
+        {
+          "question": "What is the purpose of a table constraint in SQLite according to the transcript?",
+          "pre_rank": 13,
+          "post_rank": 1,
+          "movement": 12
+        },
+        {
+          "question": "How do data types and storage classes differ in SQLite, as described in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is using an integer data type preferred over a floating-point data type for storing fares in this context?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the relationship between riders and stations differ in terms of minimum association requirements?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What is the difference between using a joint primary key (rider ID + station ID) and SQLite's implicit row ID as the primary key in this table design?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the purpose of type affinity in SQLite differ from the purpose of the DROP TABLE statement?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How do the relationships between riders and stations differ in terms of cardinality?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the difference between the NOT NULL and UNIQUE constraints in database columns?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "How does the PRIMARY KEY constraint compare to the UNIQUE constraint in terms of null values and uniqueness?",
+          "pre_rank": 4,
+          "post_rank": 2,
+          "movement": 2
+        },
+        {
+          "question": "How does SQLite's approach to integer storage differ from its approach to storing text or blob data?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How are the 'writers' and 'stations' tables related in the database schema described in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What attributes are explicitly mentioned for the 'stations' table, and how does this compare to the information provided about the 'writers' table?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How does the purpose of the 'create table' SQL statement differ from the purpose of the database 'mbta.db' mentioned in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why might someone choose to use a floating-point value instead of an integer for representing monetary amounts, and what are the potential downsides of this choice?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How does the trade-off between floating-point values and integers relate to the accuracy of calculations in a system?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Why is it problematic to use the same ID for both riders and stations in a database design?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "How would you describe the relationship between riders and stations based on the transcript, and what database design element is needed to represent it?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How are data types and storage classes related but distinct in the context of SQLite?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is the BLOB storage class in SQLite described as representing data 'exactly as I give it to this value'?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is the type column in the swipes table restricted to certain values like 'enter', 'exit', or 'deposit'?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the correction from 'riders' to 'rider ID' in the swipes table improve the data model?",
+          "pre_rank": 20,
+          "post_rank": 2,
+          "movement": 18
+        },
+        {
+          "question": "Why is it recommended to include a comma after each column name in a SQL table definition, even if it is the last one?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does the placement of a comma affect the addition of a PRIMARY KEY constraint in a SQL table definition?",
+          "pre_rank": 2,
+          "post_rank": 3,
+          "movement": -1
+        },
+        {
+          "question": "How would you enforce a primary key constraint on the 'ID' column in the 'riders' table to ensure each rider has a unique identifier?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "How would you enforce a foreign key constraint to ensure that every entry in the 'rider_id' column of the 'visits' table corresponds to an existing 'ID' in the 'riders' table?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "In a database schema definition, is it mandatory to use four spaces for indentation before each column name? Explain your reasoning.",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What key elements are missing from the schema described in the transcript, and why are they important?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Write the SQL statement to create a table named 'riders' with an integer column for ID and a text column for name.",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Write the SQL statement to create a table named 'stations' with columns for ID (integer), name (text), and line (text).",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "In a database table, the ID column is defined as a primary key. Is it necessary to also explicitly add a NOT NULL constraint to this column?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "In a bike-sharing database, the table has foreign key constraints on rider_id and station_id, referencing the primary keys of the riders and stations tables, respectively. Should you also add explicit NOT NULL constraints to rider_id and station_id?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How would you design a database schema to organize the past five years of books long-listed for the International Booker Prize, as mentioned in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How can you use the concept of 'relating' tables to connect books and their authors in a database?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is it correct to say that the `SELECT` command is used to open a SQLite database file?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "If I set a `DEFAULT` constraint on a timestamp column in my database, will it automatically fill in the current time for every new row I add?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "Is it correct to say that the 'create table' command in SQL is used to physically construct real-world structures like Boston's subway system?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "A student claims: 'SQLite has a BOOLEAN data type to store true or false values, just like other database systems.' Is this statement correct?",
+          "pre_rank": 8,
+          "post_rank": 1,
+          "movement": 7
+        },
+        {
+          "question": "A student claims: 'If I run `SELECT * FROM riders` in SQLite, I will always see data in the results, even if the table is empty.' Is this statement correct?",
+          "pre_rank": 5,
+          "post_rank": 1,
+          "movement": 4
+        },
+        {
+          "question": "Is it necessary to explicitly add a NOT NULL constraint to a column that is already a primary key or a foreign key referencing a primary key?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        }
+      ]
+    }
+  },
+  "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry": {
+    "qa_count": 62,
+    "qa_distribution": {
+      "difficulty": {
+        "easy": 32,
+        "medium": 25,
+        "hard": 5
+      },
+      "question_type": {
+        "factual": 23,
+        "comparison": 13,
+        "reasoning": 10,
+        "application": 10,
+        "misconception": 6
+      },
+      "chunk_id": {
+        "5": 10,
+        "2": 9,
+        "1": 5,
+        "3": 10,
+        "6": 7,
+        "0": 9,
+        "4": 8,
+        "7": 4
+      }
+    },
+    "retrieval": {
+      "bm25_only": {
+        "hit_rate": {
+          "1": 0.5645161290322581,
+          "3": 0.8225806451612904,
+          "5": 0.9516129032258065
+        },
+        "mrr": 0.7248847926267281
+      },
+      "vector_only": {
+        "hit_rate": {
+          "1": 0.6612903225806451,
+          "3": 0.6612903225806451,
+          "5": 0.6612903225806451
+        },
+        "mrr": 0.6612903225806451
+      },
+      "ensemble_only": {
+        "hit_rate": {
+          "1": 0.6612903225806451,
+          "3": 0.8870967741935484,
+          "5": 0.9838709677419355
+        },
+        "mrr": 0.7889784946236559
+      },
+      "ensemble_rerank": {
+        "hit_rate": {
+          "1": 0.6774193548387096,
+          "3": 0.9516129032258065,
+          "5": 0.9516129032258065
+        },
+        "mrr": 0.7983870967741935
+      }
+    },
+    "rerank": {
+      "mrr_before": 0.7889784946236559,
+      "mrr_after": 0.8053955453149002,
+      "hit_rate_before": {
+        "1": 0.6612903225806451,
+        "3": 0.8870967741935484,
+        "5": 0.9838709677419355
+      },
+      "hit_rate_after": {
+        "1": 0.6774193548387096,
+        "3": 0.9516129032258065,
+        "5": 0.9516129032258065
+      },
+      "rank_movement": {
+        "improved": 10,
+        "worsened": 12,
+        "unchanged": 40,
+        "average_movement": 0.06451612903225806
+      },
+      "per_question": [
+        {
+          "question": "What happens to the internal energy of a system when work is done by it?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the sign of work done differ between chemistry and physics?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the key factor that determines whether work is considered positive or negative?",
+          "pre_rank": 1,
+          "post_rank": 3,
+          "movement": -2
+        },
+        {
+          "question": "What happens to energy in a system under practical conditions?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What are the three types of systems mentioned in the context of thermodynamics?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is a key characteristic of a closed system?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What happens to energy in a system?",
+          "pre_rank": 3,
+          "post_rank": 8,
+          "movement": -5
+        },
+        {
+          "question": "What is the relationship between energy gain and loss in a system?",
+          "pre_rank": 5,
+          "post_rank": 7,
+          "movement": -2
+        },
+        {
+          "question": "Is energy created or destroyed in a system?",
+          "pre_rank": 2,
+          "post_rank": 3,
+          "movement": -1
+        },
+        {
+          "question": "What can flow into and out of a closed system?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the equation for the change in internal energy of a system in chemistry?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is the equation for the change in internal energy different in physics and chemistry?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What happens to the energy of the surroundings when work is done by the system?",
+          "pre_rank": 3,
+          "post_rank": 3,
+          "movement": 0
+        },
+        {
+          "question": "How is the sign of Q determined in a thermodynamic process?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the difference between an endothermic and exothermic process?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the fundamental principle of the first law of thermodynamics?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How can a system's internal energy increase?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What happens to a system's internal energy when the surroundings perform work on it?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What happens to the internal energy of a system when work is done by the system?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "How does the sign of work (W) differ between chemistry and physics?",
+          "pre_rank": 5,
+          "post_rank": 2,
+          "movement": 3
+        },
+        {
+          "question": "What is the relationship between burning calories and the internal energy of the body?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the sign of W when work is done on a system in chemistry?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the sign of W when work is done by a system in chemistry?",
+          "pre_rank": 1,
+          "post_rank": 3,
+          "movement": -2
+        },
+        {
+          "question": "What is the primary difference between heat and work in the context of the first law of thermodynamics?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How do the surroundings increase the internal energy of a system, and what are the similarities between these methods?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the main difference between an endothermic and an exothermic process in terms of heat energy?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do the signs of Q and W differ when considering the system's perspective versus the surroundings' perspective?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the main difference between a closed system and an isolated system?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the equation for the change in internal energy differ between chemistry and physics?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the viewpoint differ between chemistry and physics when considering work done by a system?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the difference in the sign of work (W) when work is done by the system in chemistry versus physics?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is the difference between the sign of work done on the system and work done by the system?",
+          "pre_rank": 5,
+          "post_rank": 1,
+          "movement": 4
+        },
+        {
+          "question": "What is the main difference between an open system and a closed system?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How do open, closed, and isolated systems compare in terms of energy transfer?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is the main similarity between the transfer of energy and the transfer of money?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the concept of energy transfer in a system compare to the concept of money transfer in a transaction?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is the equation for the change in internal energy different in chemistry and physics textbooks?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the definition of a closed system versus an isolated system affect the flow of energy and matter?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why does the first law of thermodynamics state that energy is not created or destroyed in a practical sense?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do open and closed systems differ in terms of matter and energy transfer?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Why is Q positive in an endothermic process?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the sign of W change depending on the perspective of the system or surroundings?",
+          "pre_rank": 6,
+          "post_rank": 1,
+          "movement": 5
+        },
+        {
+          "question": "Why does the internal energy of the system decrease when work is done by the system?",
+          "pre_rank": 4,
+          "post_rank": 2,
+          "movement": 2
+        },
+        {
+          "question": "How does the sign of work (W) differ between chemistry and physics?",
+          "pre_rank": 5,
+          "post_rank": 2,
+          "movement": 3
+        },
+        {
+          "question": "Why is work considered positive in physics when it is done by the system?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the viewpoint taken in chemistry versus physics affect the sign of work done by the system?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A cup of coffee is left on a table in a room. After some time, the coffee becomes cooler. What happens to the internal energy of the coffee?",
+          "pre_rank": 5,
+          "post_rank": 1,
+          "movement": 4
+        },
+        {
+          "question": "A car engine performs 500 joules of work on the air inside the engine. What happens to the internal energy of the air?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "A car engine does work on the surroundings by pushing the car forward. From the viewpoint of the surroundings, is the work done positive or negative?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A chemical reaction in a container releases energy to the surroundings. From the viewpoint of the system (the chemical reaction), is the work done positive or negative?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A person is lifting weights at the gym. Is work being done by the system or on the system in this scenario?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A car is being lifted by a crane. Is the work being done by the system or on the system from the perspective of physics?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "A chemistry student is studying a reaction in a closed system. If the system gains 50 Joules of heat energy and does 20 Joules of work, what is the change in internal energy of the system?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A physics engineer is analyzing a system that does 30 Joules of work and loses 10 Joules of heat energy. What is the change in internal energy of the system from the surroundings point of view?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "A car engine is an example of what type of system, given that it takes in oxygen from the air and releases heat energy?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "If a cup of coffee gains 200 joules of energy, what happens to the energy in the surroundings?",
+          "pre_rank": 3,
+          "post_rank": 6,
+          "movement": -3
+        },
+        {
+          "question": "Is the statement 'W is always positive when work is done' correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is it correct to say that in physics, when work is done by the system, the internal energy of the system increases?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is the statement 'In a closed system, neither energy nor matter can flow in or out' correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is it correct to say that the first law of thermodynamics states that energy can be created or destroyed, but only through heat transfer?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is it correct to say that if the surroundings perform work on a system, the system's internal energy decreases?",
+          "pre_rank": 2,
+          "post_rank": 3,
+          "movement": -1
+        },
+        {
+          "question": "Is the statement 'In chemistry, W is positive when work is done by the system' correct?",
+          "pre_rank": 2,
+          "post_rank": 3,
+          "movement": -1
+        }
+      ]
+    }
+  },
+  "Leetcode_Word_BREAK": {
+    "qa_count": 59,
+    "qa_distribution": {
+      "difficulty": {
+        "medium": 39,
+        "hard": 7,
+        "easy": 13
+      },
+      "question_type": {
+        "factual": 24,
+        "comparison": 9,
+        "reasoning": 10,
+        "application": 10,
+        "misconception": 6
+      },
+      "chunk_id": {
+        "4": 6,
+        "15": 2,
+        "9": 2,
+        "1": 7,
+        "2": 7,
+        "14": 4,
+        "8": 2,
+        "7": 5,
+        "12": 4,
+        "13": 4,
+        "6": 3,
+        "11": 2,
+        "3": 3,
+        "10": 4,
+        "0": 2,
+        "5": 2
+      }
+    },
+    "retrieval": {
+      "bm25_only": {
+        "hit_rate": {
+          "1": 0.4745762711864407,
+          "3": 0.6949152542372882,
+          "5": 0.7966101694915254
+        },
+        "mrr": 0.6133241052732578
+      },
+      "vector_only": {
+        "hit_rate": {
+          "1": 0.4576271186440678,
+          "3": 0.6440677966101694,
+          "5": 0.6779661016949152
+        },
+        "mrr": 0.5561256512403073
+      },
+      "ensemble_only": {
+        "hit_rate": {
+          "1": 0.4745762711864407,
+          "3": 0.6949152542372882,
+          "5": 0.8305084745762712
+        },
+        "mrr": 0.6255252280676009
+      },
+      "ensemble_rerank": {
+        "hit_rate": {
+          "1": 0.6610169491525424,
+          "3": 0.864406779661017,
+          "5": 0.9491525423728814
+        },
+        "mrr": 0.7709039548022599
+      }
+    },
+    "rerank": {
+      "mrr_before": 0.6255252280676009,
+      "mrr_after": 0.777542372881356,
+      "hit_rate_before": {
+        "1": 0.4745762711864407,
+        "3": 0.6949152542372882,
+        "5": 0.8305084745762712
+      },
+      "hit_rate_after": {
+        "1": 0.6610169491525424,
+        "3": 0.864406779661017,
+        "5": 0.9491525423728814
+      },
+      "rank_movement": {
+        "improved": 24,
+        "worsened": 6,
+        "unchanged": 29,
+        "average_movement": 1.0
+      },
+      "per_question": [
+        {
+          "question": "What alternative approach is described in the transcript for solving the problem more efficiently?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "What is the time complexity of the approach described in the transcript?",
+          "pre_rank": 6,
+          "post_rank": 3,
+          "movement": 3
+        },
+        {
+          "question": "What is the purpose of breaking out of the for loop when dp[i] is true in the described word break algorithm?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "In what direction does the described word break algorithm process the indices?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the purpose of caching the result of DP[index] in the described dynamic programming approach for word breaking?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "What is the base case value for DP[length of the string] in this word-breaking algorithm?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "If the input string is 'leadlead' and the word dictionary contains 'lead', would the function return true?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How many ways are mentioned to structure a brute force solution for the problem described in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "After finding a matching word in the string, what is the next step in the described approach?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What does the approach involve doing from every starting position in the string?",
+          "pre_rank": 5,
+          "post_rank": 1,
+          "movement": 4
+        },
+        {
+          "question": "What is the purpose of comparing s[i:i+len(w)] with w in the described algorithm?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "According to the transcript, what relationship is established for dp[i] when a valid word break is found starting at index i?",
+          "pre_rank": 5,
+          "post_rank": 1,
+          "movement": 4
+        },
+        {
+          "question": "What action is taken with the pointer 'I' after matching four characters in the string?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What value does the function return when the entire string is matched?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Which word in the dictionary matches the first four characters of the string being checked in the example?",
+          "pre_rank": 3,
+          "post_rank": 2,
+          "movement": 1
+        },
+        {
+          "question": "How many characters are checked at a time when comparing words in the dictionary to the string?",
+          "pre_rank": 8,
+          "post_rank": 1,
+          "movement": 7
+        },
+        {
+          "question": "What is the purpose of checking the remainder of the string after matching a portion of it in the dynamic programming solution for word break problems?",
+          "pre_rank": 2,
+          "post_rank": 4,
+          "movement": -2
+        },
+        {
+          "question": "In the given example, why is dp[0] set to true after matching the word 'neat'?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How is the cache (or dp array) initialized in the described dynamic programming approach for the string problem?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the base case for the dynamic programming solution described in the transcript, and how is it initialized?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "In the described backtracking solution, what single variable is being tracked to represent the current state of the problem?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What determines the decisions in the decision tree for this backtracking approach?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the value of dp[3] in the described dynamic programming approach for word breaking?",
+          "pre_rank": 5,
+          "post_rank": 8,
+          "movement": -3
+        },
+        {
+          "question": "What is the value of dp[4] in the described dynamic programming approach for word breaking?",
+          "pre_rank": 5,
+          "post_rank": 5,
+          "movement": 0
+        },
+        {
+          "question": "How does the efficiency of the new approach (checking words in the dictionary as prefixes) compare to the original approach (checking every possible prefix)?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do the two string-matching approaches described in the transcript differ in terms of the number of comparisons they perform?",
+          "pre_rank": 6,
+          "post_rank": 6,
+          "movement": 0
+        },
+        {
+          "question": "How does the bottom-up approach described in the transcript differ from a typical top-down approach in dynamic programming for word break problems?",
+          "pre_rank": 5,
+          "post_rank": 2,
+          "movement": 3
+        },
+        {
+          "question": "How does the brute force approach described in the transcript compare to the alternative, more efficient approach mentioned for checking if an input string can be segmented into dictionary words?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the general problem statement of 'word break' compare to the example provided with the input string 'leadcode' and the word dictionary ['lead', 'code']?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the decision tree approach differ from the alternative approach mentioned in the transcript for solving the subproblem?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the caching approach (memoization) compare to the dynamic programming (DP) solution in terms of implementation and efficiency, as described in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the algorithm decide whether to continue down a path when comparing the strings 'elite', 'code', and 'neat' to the target string?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does the described word-breaking approach compare to a method that only checks the first matching prefix at each position?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the described algorithm handle the problem of breaking a string into words from a dictionary?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "Why does the algorithm need to check every prefix from every starting position in the string?",
+          "pre_rank": 5,
+          "post_rank": 3,
+          "movement": 2
+        },
+        {
+          "question": "How does the dynamic programming approach determine if the entire string can be segmented into dictionary words starting from index 0?",
+          "pre_rank": 9,
+          "post_rank": 1,
+          "movement": 8
+        },
+        {
+          "question": "Why is the equation dp[0] = dp[0 + length of the word] valid for determining if the string can be segmented starting at index 0?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How would you structure a brute force solution to check if an input string can be segmented into words from a given dictionary, as described in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why would the input string 'leadlead' return true when checked against a dictionary containing the word 'lead'?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "Why does the code compare the substring of 's' starting at index 'i' with the word 'w'?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does finding a valid word break at index 'i' allow the loop to terminate early?",
+          "pre_rank": 6,
+          "post_rank": 1,
+          "movement": 5
+        },
+        {
+          "question": "Why are the DP values for indices 7, 6, and 5 false in the bottom-up approach described in the transcript?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does the bottom-up approach described in the transcript help in solving the word break problem?",
+          "pre_rank": 3,
+          "post_rank": 3,
+          "movement": 0
+        },
+        {
+          "question": "How does the described approach handle the problem of breaking a string into words from a dictionary when a valid prefix is found?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "In the context of the word break problem, how does the algorithm ensure it explores all possible ways to segment a string into dictionary words?",
+          "pre_rank": 2,
+          "post_rank": 4,
+          "movement": -2
+        },
+        {
+          "question": "In the described algorithm, how does the system decide whether to continue checking a word from the dictionary against the input string?",
+          "pre_rank": 11,
+          "post_rank": 10,
+          "movement": 1
+        },
+        {
+          "question": "Given the input string 'neatcode', which dictionary words ('elite', 'code', 'neat') would the algorithm skip, and which would it continue checking?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Given a word dictionary containing the word 'lead', would the input string 'leadlead' return true when checking if it can be segmented into words from the dictionary?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How would you structure a brute force solution to check if the input string 'leadlead' can be segmented into words from a dictionary containing 'lead'?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the described approach improve the efficiency of checking prefixes in a string compared to the naive method?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the time complexity of the approach described in the transcript, and how is it derived?",
+          "pre_rank": 8,
+          "post_rank": 5,
+          "movement": 3
+        },
+        {
+          "question": "If the input string is 'apple', how many different substrings will the algorithm described in the transcript try in the worst case?",
+          "pre_rank": 9,
+          "post_rank": 4,
+          "movement": 5
+        },
+        {
+          "question": "Given the string 'leadgold' and a dictionary containing the word 'lead', how does the algorithm described in the transcript determine if 'lead' is a valid word in the string?",
+          "pre_rank": 7,
+          "post_rank": 2,
+          "movement": 5
+        },
+        {
+          "question": "A student claims: 'The base case for the DP array in this word break problem should be set to `true` for the last index of the string, since that\u2019s where the string ends.' Is this correct?",
+          "pre_rank": 6,
+          "post_rank": 2,
+          "movement": 4
+        },
+        {
+          "question": "A student claims: 'The DP array should be initialized to `true` for all positions to ensure we cover all possible word breaks.' Is this correct?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "A student claims: 'In the bottom-up approach for the word break problem, DP[i] is true only if the substring starting at index i exactly matches a word in the dictionary.' Is this statement correct?",
+          "pre_rank": 4,
+          "post_rank": 3,
+          "movement": 1
+        },
+        {
+          "question": "Is it true that each word in the word dictionary can only be used once when solving the word break problem?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A student claims: 'The time complexity of checking every word in the dictionary as a prefix for the string is O(N) because the dictionary size is smaller than the string length.' Is this statement correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A student claims that the time complexity of the algorithm described in the transcript is O(N * M) because it processes each of the N characters in the string once for each of the M patterns. Is this correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        }
+      ]
+    }
+  },
+  "Likelihood": {
+    "qa_count": 52,
+    "qa_distribution": {
+      "difficulty": {
+        "medium": 35,
+        "easy": 12,
+        "hard": 5
+      },
+      "question_type": {
+        "factual": 19,
+        "comparison": 7,
+        "reasoning": 10,
+        "application": 10,
+        "misconception": 6
+      },
+      "chunk_id": {
+        "6": 9,
+        "4": 7,
+        "1": 9,
+        "2": 7,
+        "0": 5,
+        "3": 8,
+        "5": 7
+      }
+    },
+    "retrieval": {
+      "bm25_only": {
+        "hit_rate": {
+          "1": 0.7115384615384616,
+          "3": 0.9423076923076923,
+          "5": 1.0
+        },
+        "mrr": 0.8275641025641025
+      },
+      "vector_only": {
+        "hit_rate": {
+          "1": 0.6730769230769231,
+          "3": 0.9423076923076923,
+          "5": 0.9807692307692307
+        },
+        "mrr": 0.7726495726495727
+      },
+      "ensemble_only": {
+        "hit_rate": {
+          "1": 0.6730769230769231,
+          "3": 0.9807692307692307,
+          "5": 1.0
+        },
+        "mrr": 0.8243589743589743
+      },
+      "ensemble_rerank": {
+        "hit_rate": {
+          "1": 0.9038461538461539,
+          "3": 1.0,
+          "5": 1.0
+        },
+        "mrr": 0.9487179487179488
+      }
+    },
+    "rerank": {
+      "mrr_before": 0.8243589743589743,
+      "mrr_after": 0.9487179487179488,
+      "hit_rate_before": {
+        "1": 0.6730769230769231,
+        "3": 0.9807692307692307,
+        "5": 1.0
+      },
+      "hit_rate_after": {
+        "1": 0.9038461538461539,
+        "3": 1.0,
+        "5": 1.0
+      },
+      "rank_movement": {
+        "improved": 15,
+        "worsened": 4,
+        "unchanged": 33,
+        "average_movement": 0.3076923076923077
+      },
+      "per_question": [
+        {
+          "question": "How does the algorithm find the line with the maximum likelihood in logistic regression?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What metrics are used to determine if the fitted line in logistic regression represents a useful model?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does logistic regression calculate R-squared and P-values differently from linear regression?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How is the overall likelihood for all obese mice calculated according to the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the formula for calculating the likelihood that a mouse is not obese?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "If the probability that a mouse is obese is 0.9, what is the likelihood that it is not obese?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the criterion used to select the best-fitting line in linear regression according to the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "In logistic regression, how is the y-axis transformed when fitting the model?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What method is used instead of least squares to find the best fitting line when residuals are infinite?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the first step in the maximum likelihood approach described in the transcript?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "What are the steps to convert the equation from probability to log odds into an equation from log odds to probability?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What method is used to fit a line in logistic regression according to the transcript?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What does logistic regression use on the y-axis, unlike regular linear models?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "In the example provided, what is the predicted probability (p) when the log odds is -2.1?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How is the likelihood of a mouse being obese determined using the squiggly line in the example?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the final algebraic step described to solve for p in the equation?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why do statisticians often use the log of the likelihood instead of the likelihood itself when finding the best-fitting model?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How is the log likelihood calculated from individual likelihoods?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the log likelihood of the rotated line, and how does it compare to the original line?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How do the methods for calculating the likelihood of obese mice and non-obese mice differ based on the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do the log likelihood values of the original line and the rotated line compare, and which line provides a better fit to the data?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "How does the calculation of R-squared and P-values differ between linear regression and logistic regression based on the transcript?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Why can't least squares be used to find the best fitting line in this scenario, and what method is used instead?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does the method of calculating the likelihood of a mouse being obese in this context differ from calculating probability as the area under a curve?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do the fitting processes of linear regression and logistic regression differ based on the transcript?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does logistic regression differ from linear regression, T-tests, multiple regression, and ANOVA in terms of the y-axis?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the algorithm in the transcript efficiently find the line with the maximum likelihood for the best fit?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why can't the usual residuals be used to calculate R-squared and P-values in logistic regression, according to the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is the sum of squared residuals used to determine the best-fitting line in linear regression?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does transforming the y-axis from probability to log odds help in logistic regression?",
+          "pre_rank": 5,
+          "post_rank": 1,
+          "movement": 4
+        },
+        {
+          "question": "How does substituting the log odds into the equation result in the predicted probability p, and what does this value represent in the context of the squiggle?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is the likelihood of a mouse being obese given the shape of the squiggle equal to the predicted probability, and how is this different from calculating probability as the area under a curve?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is the likelihood for all the obese mice the product of the individual likelihoods?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How is the likelihood that a mouse is not obese determined from its probability of being obese?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why do statisticians prefer to calculate the log of the likelihood instead of the likelihood itself?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do we determine that the rotated line is not as good as the original line based on their log likelihoods?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "In the given example, the log odds for a data point is -2.1. What is the predicted probability (p) for this point, and how is it derived from the logistic regression equation described in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "If a mouse's data point intersects the logistic curve (squiggle) at a y-axis value of 0.49, what is the likelihood that this mouse is obese, given the shape of the curve?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "Why can't least squares be used to find the best-fitting line in this scenario, and what method is used instead?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Given a candidate log odds value of 2.1 for a data point, how would you convert this to a candidate probability?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How is the best-fitting line determined in logistic regression, and how does it differ from linear regression?",
+          "pre_rank": 2,
+          "post_rank": 3,
+          "movement": -1
+        },
+        {
+          "question": "In logistic regression, how does the algorithm ensure it finds the line with the maximum likelihood?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why can't we use the usual residuals-based R-squared and P-values to assess the fit of a logistic regression model, and what alternatives are mentioned in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "You are comparing two lines in a logistic regression model. The log likelihood of the first line is -3.77, and the log likelihood of a rotated version of the line is -4.15. Which line is better, and why?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How is the best-fitting line determined in linear regression according to the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does logistic regression transform the y-axis to fit a line to the data, and what is the goal of this transformation?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A student claims: 'In linear regression, the best-fitting line is the one that minimizes the sum of the absolute residuals between the data points and the line.' Is this statement correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A student claims: 'In logistic regression, the best-fitting squiggle is drawn directly on the probability scale of the y-axis without any transformation.' Is this statement correct?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "A student claims: 'The residuals are infinite because the transformation pushes the raw data to positive and negative infinity, so we cannot use least squares.' Is this statement correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is it true that logistic regression fits the line by minimizing the sum of squared errors, similar to linear regression?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "A student claims: 'In logistic regression, the algorithm fits a straight line to the data, just like in linear regression, and uses R-squared and residuals to evaluate the model.' Is this statement correct?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "A student claims: 'The likelihood that a mouse is not obese is the same as the likelihood that it is obese.' Is this statement correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        }
+      ]
+    }
+  },
+  "Moving_Charges": {
+    "qa_count": 60,
+    "qa_distribution": {
+      "difficulty": {
+        "medium": 35,
+        "easy": 23,
+        "hard": 2
+      },
+      "question_type": {
+        "factual": 24,
+        "comparison": 12,
+        "reasoning": 9,
+        "application": 9,
+        "misconception": 6
+      },
+      "chunk_id": {
+        "9": 8,
+        "15": 1,
+        "27": 4,
+        "16": 4,
+        "20": 2,
+        "22": 4,
+        "29": 3,
+        "10": 4,
+        "14": 3,
+        "13": 3,
+        "25": 2,
+        "26": 2,
+        "8": 4,
+        "21": 1,
+        "19": 1,
+        "3": 1,
+        "7": 1,
+        "0": 2,
+        "24": 1,
+        "2": 2,
+        "17": 1,
+        "6": 2,
+        "1": 2,
+        "5": 1,
+        "12": 1
+      }
+    },
+    "retrieval": {
+      "bm25_only": {
+        "hit_rate": {
+          "1": 0.4,
+          "3": 0.6166666666666667,
+          "5": 0.6833333333333333
+        },
+        "mrr": 0.5515455146705147
+      },
+      "vector_only": {
+        "hit_rate": {
+          "1": 0.5333333333333333,
+          "3": 0.65,
+          "5": 0.6833333333333333
+        },
+        "mrr": 0.5974890995943627
+      },
+      "ensemble_only": {
+        "hit_rate": {
+          "1": 0.55,
+          "3": 0.7333333333333333,
+          "5": 0.8
+        },
+        "mrr": 0.6653305709635633
+      },
+      "ensemble_rerank": {
+        "hit_rate": {
+          "1": 0.55,
+          "3": 0.7666666666666667,
+          "5": 0.8666666666666667
+        },
+        "mrr": 0.6708333333333333
+      }
+    },
+    "rerank": {
+      "mrr_before": 0.6653305709635633,
+      "mrr_after": 0.6835888648388649,
+      "hit_rate_before": {
+        "1": 0.55,
+        "3": 0.7333333333333333,
+        "5": 0.8
+      },
+      "hit_rate_after": {
+        "1": 0.55,
+        "3": 0.7666666666666667,
+        "5": 0.8666666666666667
+      },
+      "rank_movement": {
+        "improved": 16,
+        "worsened": 16,
+        "unchanged": 27,
+        "average_movement": 0.864406779661017
+      },
+      "per_question": [
+        {
+          "question": "What are the three sources of magnetic fields mentioned in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 5,
+          "movement": -4
+        },
+        {
+          "question": "According to the transcript, why do students often find magnetism boring or difficult?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What are the three different representations or sources of magnetic fields mentioned in the transcript?",
+          "pre_rank": 5,
+          "post_rank": 1,
+          "movement": 4
+        },
+        {
+          "question": "According to the transcript, what is the simple reason why the magnetic field appears complex?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What does the chart in the transcript provide regarding the magnetic field?",
+          "pre_rank": 1,
+          "post_rank": 5,
+          "movement": -4
+        },
+        {
+          "question": "Are electric and magnetic fields dependent on the observer's frame of reference?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "Can an observer in a non-inertial frame of reference observe a magnetic field produced by stationary charges?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "In what direction does the electric field of a single positive charge point?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the direction of the magnetic field inside a magnet?",
+          "pre_rank": 5,
+          "post_rank": 1,
+          "movement": 4
+        },
+        {
+          "question": "What is the shape of the magnetic field lines produced by a point charge?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the spacing of magnetic field lines relate to magnetic field intensity?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What topic will be covered in the next video session?",
+          "pre_rank": 2,
+          "post_rank": 5,
+          "movement": -3
+        },
+        {
+          "question": "What are the three key concepts related to magnetic fields mentioned in the transcript?",
+          "pre_rank": 2,
+          "post_rank": 4,
+          "movement": -2
+        },
+        {
+          "question": "How many chapters are stated to depend on the concepts of magnetic fields, moving charges, and magnetism in matter?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What are the three ways magnetism can be demonstrated according to the transcript?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "Which law governs the magnetic field produced by a current-carrying conductor as mentioned in the transcript?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "In what direction do magnetic field lines flow around a bar magnet?",
+          "pre_rank": 2,
+          "post_rank": 3,
+          "movement": -1
+        },
+        {
+          "question": "What are some examples of matter that can exhibit magnetism?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What law is mentioned in the transcript for studying the magnetic field due to a moving charge or current-carrying conductor?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Which applications of magnetic force are discussed in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What are the types of materials mentioned in the context of magnetism in the transcript?",
+          "pre_rank": 7,
+          "post_rank": 2,
+          "movement": 5
+        },
+        {
+          "question": "Which force and its associated rule are discussed in relation to current-carrying conductors in the transcript?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What concept is introduced after discussing the electric field for moving charges?",
+          "pre_rank": 5,
+          "post_rank": 3,
+          "movement": 2
+        },
+        {
+          "question": "What is the most important application mentioned that requires resolving questions about the magnetic field?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What are the three different sources of magnetic fields mentioned in the transcript, and how do they compare in terms of their origin?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do the properties of electric field lines compare to those of magnetic field lines as described in the transcript?",
+          "pre_rank": 11,
+          "post_rank": 5,
+          "movement": 6
+        },
+        {
+          "question": "How do moving charges and current-carrying conductors differ in how they produce a magnetic field?",
+          "pre_rank": 4,
+          "post_rank": 7,
+          "movement": -3
+        },
+        {
+          "question": "How does the electric field differ from the magnetic field in terms of the type of charges they are associated with?",
+          "pre_rank": 2,
+          "post_rank": 11,
+          "movement": -9
+        },
+        {
+          "question": "How do the directions of magnetic field lines differ from electric field lines as described in the transcript?",
+          "pre_rank": 6,
+          "post_rank": 1,
+          "movement": 5
+        },
+        {
+          "question": "What is the primary difference between the study of electrostatics and the study of current electricity or capacitors in terms of charge behavior?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the key difference between the sources of electric fields and magnetic fields?",
+          "pre_rank": 14,
+          "post_rank": 2,
+          "movement": 12
+        },
+        {
+          "question": "How does the chapter 'moving charges and magnetism' relate to other chapters like EMI, magnetism and matter, and alternating current?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do the right-hand rule and Fleming's left-hand rule differ in their applications related to magnetic fields?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do electric fields and magnetic fields differ in terms of their sources?",
+          "pre_rank": 21,
+          "post_rank": 3,
+          "movement": 18
+        },
+        {
+          "question": "How do electric and magnetic fields differ in their dependence on the observer's frame of reference?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How does the behavior of a charge differ in producing electric and magnetic fields when it is stationary versus when it is moving?",
+          "pre_rank": 7,
+          "post_rank": 2,
+          "movement": 5
+        },
+        {
+          "question": "Why do students often find magnetism boring or difficult to understand, according to the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How are magnetic fields introduced in the transcript, and what are the three sources mentioned?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the experiment with a circuit and a magnetic compass demonstrate the relationship between electric current and magnetic fields?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why does a moving charge produce a magnetic field while a stationary charge does not?",
+          "pre_rank": 14,
+          "post_rank": 5,
+          "movement": 9
+        },
+        {
+          "question": "Why does the speaker suggest moving slowly and steadily when studying the magnetic field?",
+          "pre_rank": 11,
+          "post_rank": 1,
+          "movement": 10
+        },
+        {
+          "question": "How does the speaker indicate the topic for the next session is related to the current discussion?",
+          "pre_rank": 17,
+          "post_rank": 22,
+          "movement": -5
+        },
+        {
+          "question": "Why does the instructor state that there are two different sources of magnetic fields?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does the instructor justify keeping the lecture on magnetism short?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "What are the sources of a magnetic field according to the transcript?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Why does the magnetic field appear complex to students, and how can this complexity be reduced according to the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How should a student use the chart mentioned in the transcript to improve their understanding of magnetic field concepts in future lessons?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A straight wire carries a steady electric current. Does this setup produce a magnetic field? Explain using the concepts from the transcript.",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A student observes that the magnetic field lines around a point charge are closely spaced near the charge and become more spread out farther away. How does the magnetic field intensity change with distance from the charge?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A straight wire carries an electric current. According to the transcript, what is the source of the magnetic field observed around the wire?",
+          "pre_rank": null,
+          "post_rank": null,
+          "movement": null
+        },
+        {
+          "question": "An iron nail is placed near a current-carrying wire and becomes magnetized. Based on the transcript, why does the nail exhibit magnetism in this scenario?",
+          "pre_rank": 23,
+          "post_rank": 2,
+          "movement": 21
+        },
+        {
+          "question": "An observer is initially at rest near a stationary charge and only detects an electric field. If the observer begins moving with a constant velocity relative to the charge, will they observe a magnetic field as well?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A wire carrying an electric current is placed near a compass. The compass needle deflects, indicating the presence of a magnetic field. Which of the three sources of magnetic fields mentioned in the transcript is responsible for this observation?",
+          "pre_rank": 1,
+          "post_rank": 8,
+          "movement": -7
+        },
+        {
+          "question": "A bar magnet is brought close to iron filings, and the filings align themselves in a pattern around the magnet. Which source of magnetic field, as described in the transcript, is responsible for this behavior?",
+          "pre_rank": 3,
+          "post_rank": 8,
+          "movement": -5
+        },
+        {
+          "question": "A student claims: 'Magnetic field lines start at the North Pole and end at the South Pole, and do not exist inside the magnet.' Is this statement correct?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "A student claims: 'The magnetic field produced by a moving charge is independent of the observer's frame of reference.' Is this statement correct?",
+          "pre_rank": 7,
+          "post_rank": 9,
+          "movement": -2
+        },
+        {
+          "question": "A student claims: 'A stationary point charge produces a magnetic field in the form of concentric circles around it.' Is this statement correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A student claims: 'The magnetic field is produced by a book.' Is this statement correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A student claims that magnetism is just one chapter in the syllabus. Is this statement correct?",
+          "pre_rank": 1,
+          "post_rank": 8,
+          "movement": -7
+        },
+        {
+          "question": "A student claims that the magnetic field lines around a moving point charge disappear as you move away from the charge. Is this statement correct?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        }
+      ]
+    }
+  },
+  "Photographer": {
+    "qa_count": 62,
+    "qa_distribution": {
+      "difficulty": {
+        "easy": 25,
+        "medium": 33,
+        "hard": 4
+      },
+      "question_type": {
+        "factual": 25,
+        "comparison": 13,
+        "reasoning": 9,
+        "application": 9,
+        "misconception": 6
+      },
+      "chunk_id": {
+        "20": 2,
+        "0": 2,
+        "1": 2,
+        "18": 2,
+        "13": 3,
+        "25": 4,
+        "23": 2,
+        "6": 5,
+        "19": 2,
+        "21": 3,
+        "8": 2,
+        "3": 5,
+        "5": 4,
+        "29": 2,
+        "27": 2,
+        "10": 1,
+        "2": 1,
+        "26": 1,
+        "16": 3,
+        "15": 4,
+        "9": 2,
+        "22": 4,
+        "17": 2,
+        "24": 2
+      }
+    },
+    "retrieval": {
+      "bm25_only": {
+        "hit_rate": {
+          "1": 0.4032258064516129,
+          "3": 0.5806451612903226,
+          "5": 0.7096774193548387
+        },
+        "mrr": 0.5277613739307287
+      },
+      "vector_only": {
+        "hit_rate": {
+          "1": 0.532258064516129,
+          "3": 0.532258064516129,
+          "5": 0.532258064516129
+        },
+        "mrr": 0.5458570524984188
+      },
+      "ensemble_only": {
+        "hit_rate": {
+          "1": 0.532258064516129,
+          "3": 0.6774193548387096,
+          "5": 0.8064516129032258
+        },
+        "mrr": 0.6430413672349156
+      },
+      "ensemble_rerank": {
+        "hit_rate": {
+          "1": 0.6451612903225806,
+          "3": 0.8548387096774194,
+          "5": 0.8709677419354839
+        },
+        "mrr": 0.7505376344086021
+      }
+    },
+    "rerank": {
+      "mrr_before": 0.6430413672349156,
+      "mrr_after": 0.7623725736628962,
+      "hit_rate_before": {
+        "1": 0.532258064516129,
+        "3": 0.6774193548387096,
+        "5": 0.8064516129032258
+      },
+      "hit_rate_after": {
+        "1": 0.6451612903225806,
+        "3": 0.8548387096774194,
+        "5": 0.8709677419354839
+      },
+      "rank_movement": {
+        "improved": 22,
+        "worsened": 10,
+        "unchanged": 28,
+        "average_movement": 1.3333333333333333
+      },
+      "per_question": [
+        {
+          "question": "What does the phrase 'beckoned me in' mean in the context of the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the transcript define the word 'griver'?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the title of the short story being discussed in the video?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Which syllabus does the story 'The Photographer' belong to?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What key phrases in the transcript describe the photographer's temperament and physical appearance?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What does the color 'gray' and the term 'insipid' convey about the photographer in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What expression did the photographer have when he finally captured the perfect photo?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How does the narrator describe the term 'animation' in the context of the photograph?",
+          "pre_rank": 13,
+          "post_rank": 1,
+          "movement": 12
+        },
+        {
+          "question": "What specific behavior of the photographer is criticized in the transcript?",
+          "pre_rank": 3,
+          "post_rank": 5,
+          "movement": -2
+        },
+        {
+          "question": "According to the narrator, how do faces change when viewed three-quarters full?",
+          "pre_rank": 3,
+          "post_rank": 2,
+          "movement": 1
+        },
+        {
+          "question": "What does the term 'cowhide' refer to in the context of the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What does the speaker mean by the phrase 'emboss it' in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the purpose of the process referred to as 'self-ide' in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What causes the subject's temperament to change in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why does the narrator believe his actions were unwarranted toward the photographer?",
+          "pre_rank": 2,
+          "post_rank": 6,
+          "movement": -4
+        },
+        {
+          "question": "How does the narrator feel about his own physical appearance in the transcript?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "What type of expression is typically required for a USA visa photograph?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why was the narrator's expression described as 'animated' in the photograph?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What new photographic process is mentioned in the transcript?",
+          "pre_rank": 4,
+          "post_rank": 2,
+          "movement": 2
+        },
+        {
+          "question": "Why did the photographer draw a little black cloth over himself in the machine?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What effect does the statement 'I knew that he was praying and I kept still' have on the narrative?",
+          "pre_rank": 4,
+          "post_rank": 2,
+          "movement": 2
+        },
+        {
+          "question": "Why are photographers described as warm people in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What does the narrator find unusual about the photographer mentioned in the transcript?",
+          "pre_rank": 1,
+          "post_rank": 7,
+          "movement": -6
+        },
+        {
+          "question": "What trait does the narrator's action of waiting for an hour convey?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "What negative trait of the photographer is implied by the narrator's long wait?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the photographer in the story compare to the general perception of photographers?",
+          "pre_rank": 2,
+          "post_rank": 6,
+          "movement": -4
+        },
+        {
+          "question": "What is the difference between the photographer's initial and final behavior in the story?",
+          "pre_rank": 5,
+          "post_rank": 18,
+          "movement": -13
+        },
+        {
+          "question": "How does the theme of power dynamics in the story compare to the message of being true to oneself?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What is the difference between the narrator's desired representation and the actual photograph taken by the photographer?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the narrator's experience with the photograph compare to his expectation of how his friends would remember him after his death?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the narrator feel about his own looks?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "What is the difference between how the narrator perceives himself and how the photographer perceives him?",
+          "pre_rank": 7,
+          "post_rank": 2,
+          "movement": 5
+        },
+        {
+          "question": "What is the difference between the narrator's personality and the photographer's demeanor?",
+          "pre_rank": 14,
+          "post_rank": 1,
+          "movement": 13
+        },
+        {
+          "question": "How does the photographer's observation style compare to that of a scientist in a biology lab?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the difference between the narrator's perception of the photograph and its potential value to his friends?",
+          "pre_rank": 4,
+          "post_rank": 2,
+          "movement": 2
+        },
+        {
+          "question": "How does the speaker's tone change when saying 'stop'?",
+          "pre_rank": null,
+          "post_rank": null,
+          "movement": null
+        },
+        {
+          "question": "How does the narrator's patience compare to the photographer's attitude towards keeping a customer waiting?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the comparison between the narrator's perception of their actions and the photographer's behavior?",
+          "pre_rank": 20,
+          "post_rank": 3,
+          "movement": 17
+        },
+        {
+          "question": "Why do photographers often ask subjects to look up?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does the photographer adjust the subject's pose to achieve the desired effect?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is the narrator feeling uneasy during the photograph?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the narrator's behavior reveal his intimidation by the photographer?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why did the speaker hesitate when asking about the eyes in the photograph?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How did the photographer explain the difference in the speaker's eyebrows in the photograph?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why does the photographer use a fictional process called delified?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the photographer's tone change throughout the conversation?",
+          "pre_rank": null,
+          "post_rank": null,
+          "movement": null
+        },
+        {
+          "question": "Why is the speaker becoming emotional during the conversation with the photographer?",
+          "pre_rank": 6,
+          "post_rank": 2,
+          "movement": 4
+        },
+        {
+          "question": "What is the narrator's perception of his own looks?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What instruction did the speaker give to adjust the position of the face?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "How did the speaker want the subject to position their neck and waist?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What can be inferred about the photographer's attitude towards his craft?",
+          "pre_rank": 10,
+          "post_rank": 1,
+          "movement": 9
+        },
+        {
+          "question": "How does the photographer use rhetorical questions in his conversation?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "What does 'drawing myself up' mean in the context of the transcript?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the speaker feel when they say 'with withering scorn'?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the general perception of photographers according to the narrator?",
+          "pre_rank": 1,
+          "post_rank": 11,
+          "movement": -10
+        },
+        {
+          "question": "How does the narrator's description of the photographer in the story deviate from the general perception of photographers?",
+          "pre_rank": 1,
+          "post_rank": 9,
+          "movement": -8
+        },
+        {
+          "question": "The speaker in the transcript is upset because someone is criticizing their face.",
+          "pre_rank": 11,
+          "post_rank": 2,
+          "movement": 9
+        },
+        {
+          "question": "The speaker owns their face and knows its faults, so they can change it if they want to.",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "Is the photographer's inability to communicate politely an example of a humane behavior?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is the speaker's face actually flawed in terms of physical proportions?",
+          "pre_rank": 14,
+          "post_rank": 1,
+          "movement": 13
+        },
+        {
+          "question": "The speaker in the transcript is satisfied with the editing of the photograph.",
+          "pre_rank": 14,
+          "post_rank": 2,
+          "movement": 12
+        },
+        {
+          "question": "The speaker wants the editor to add more embellishments to the photograph.",
+          "pre_rank": 13,
+          "post_rank": 1,
+          "movement": 12
+        }
+      ]
+    }
+  },
+  "Python_Intro": {
+    "qa_count": 61,
+    "qa_distribution": {
+      "difficulty": {
+        "easy": 39,
+        "medium": 20,
+        "hard": 2
+      },
+      "question_type": {
+        "factual": 24,
+        "comparison": 12,
+        "reasoning": 9,
+        "application": 10,
+        "misconception": 6
+      },
+      "chunk_id": {
+        "12": 6,
+        "9": 6,
+        "5": 4,
+        "8": 4,
+        "18": 2,
+        "7": 6,
+        "10": 5,
+        "17": 3,
+        "2": 5,
+        "14": 4,
+        "0": 2,
+        "6": 2,
+        "16": 4,
+        "11": 4,
+        "1": 3,
+        "13": 1
+      }
+    },
+    "retrieval": {
+      "bm25_only": {
+        "hit_rate": {
+          "1": 0.4918032786885246,
+          "3": 0.7704918032786885,
+          "5": 0.8032786885245902
+        },
+        "mrr": 0.6405412337497554
+      },
+      "vector_only": {
+        "hit_rate": {
+          "1": 0.6721311475409836,
+          "3": 0.6721311475409836,
+          "5": 0.8852459016393442
+        },
+        "mrr": 0.7224439334371833
+      },
+      "ensemble_only": {
+        "hit_rate": {
+          "1": 0.6721311475409836,
+          "3": 0.9344262295081968,
+          "5": 0.9672131147540983
+        },
+        "mrr": 0.8072404371584699
+      },
+      "ensemble_rerank": {
+        "hit_rate": {
+          "1": 0.6065573770491803,
+          "3": 0.9344262295081968,
+          "5": 0.9508196721311475
+        },
+        "mrr": 0.7527322404371585
+      }
+    },
+    "rerank": {
+      "mrr_before": 0.8072404371584699,
+      "mrr_after": 0.7583764739718147,
+      "hit_rate_before": {
+        "1": 0.6721311475409836,
+        "3": 0.9344262295081968,
+        "5": 0.9672131147540983
+      },
+      "hit_rate_after": {
+        "1": 0.6065573770491803,
+        "3": 0.9344262295081968,
+        "5": 0.9508196721311475
+      },
+      "rank_movement": {
+        "improved": 10,
+        "worsened": 14,
+        "unchanged": 37,
+        "average_movement": -0.3770491803278688
+      },
+      "per_question": [
+        {
+          "question": "What happens when you try to drop the teacher's string in the code?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How can you convert a floating point number to an integer in Python?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is used to denote a dictionary?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What can be stored in a dictionary?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is the purpose of the capitalize function in Python strings?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does Python index its strings?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What is the key difference between a tuple and a list in programming?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do you determine the data type of a variable in programming?",
+          "pre_rank": 8,
+          "post_rank": 19,
+          "movement": -11
+        },
+        {
+          "question": "What is the speaker's request to the viewers at the end of the video?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What type of programming language is being discussed in the transcript?",
+          "pre_rank": 5,
+          "post_rank": 3,
+          "movement": 2
+        },
+        {
+          "question": "How do you change the first element in a list in Python?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What method can be used to print all items in a dictionary?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How can you print only the keys in a dictionary?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What mode should be used to open a file for reading?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the purpose of closing a file after it has been opened?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What function is used to read the contents of a file?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the purpose of installing dependencies in a module?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do you import a built-in module in Python?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is the purpose of using a loop in programming?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "How does the range function work in a for loop?",
+          "pre_rank": 1,
+          "post_rank": 3,
+          "movement": -2
+        },
+        {
+          "question": "What is the first step to start working with Python?",
+          "pre_rank": 2,
+          "post_rank": 8,
+          "movement": -6
+        },
+        {
+          "question": "What version of Python is being downloaded in the video?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What happens to a string when it is capitalized?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is a list in Python?",
+          "pre_rank": 4,
+          "post_rank": 3,
+          "movement": 1
+        },
+        {
+          "question": "What is the difference between handling an exception and letting a program error through?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the main difference between a list and a dictionary in Python?",
+          "pre_rank": 1,
+          "post_rank": 3,
+          "movement": -2
+        },
+        {
+          "question": "What is the difference between a list and a set in Python?",
+          "pre_rank": 1,
+          "post_rank": 4,
+          "movement": -3
+        },
+        {
+          "question": "How do the data types of variables A and C differ?",
+          "pre_rank": 6,
+          "post_rank": 6,
+          "movement": 0
+        },
+        {
+          "question": "What is the difference between writing code from scratch and using modules in Python programming?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What is the difference between printing a dictionary and printing its keys?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the difference between the if and else statements in programming?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is the difference between using an if-else statement and a loop to print the 100th number?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do for loops and while loops differ in their implementation?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is the difference between built-in and installed modules in Python?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the main difference between a list in Python and an array?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is the similarity between a list in Python and an array in terms of indexing?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does indexing work in Python lists?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "Why is it important to pay attention to indexing when changing elements in a list?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why does the speaker mention that they cannot drop the teacher's string?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the speaker concatenate strings and numbers in the code?",
+          "pre_rank": 1,
+          "post_rank": 3,
+          "movement": -2
+        },
+        {
+          "question": "Why are some modules installed in the scope of the module, while others are built-in?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the map.flow function relate to the map.cost function in the given Python program?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is using a dictionary useful in this context?",
+          "pre_rank": 1,
+          "post_rank": 3,
+          "movement": -2
+        },
+        {
+          "question": "How can you add new values to an existing dictionary?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "Why does the speaker ask viewers to like the video?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How can you print all the items in a dictionary?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How can you print only the keys in a dictionary?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What happens when you try to change the value of a tuple?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do you determine if a variable is a tuple or a list?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the purpose of using 'try Accept' in the given code snippet?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How would you modify the code to avoid the 'index not defined' error?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What happens when you print a list in Python?",
+          "pre_rank": 3,
+          "post_rank": 3,
+          "movement": 0
+        },
+        {
+          "question": "How do you remove repeated items from a list in Python?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "If you want to concatenate the strings 'Hello', 'World', and 'Python', how would you do it?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "If you want to take a user's input in Python and store it in a variable, what function would you use?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "Is it correct to say that using 'try Accept' will prevent all errors in a program?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Is it true that printing the type of a dictionary will display its key-value pairs?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Is it necessary to click on the 'new file' to write Python code?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Do you need to use the power shell to install a module in Python?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "Is it true that the 'capitalized' function in Python is used to capitalize the first letter of any string?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Does Python indexing start from 1?",
+          "pre_rank": 3,
+          "post_rank": 3,
+          "movement": 0
+        }
+      ]
+    }
+  },
+  "Vectors_Intro": {
+    "qa_count": 63,
+    "qa_distribution": {
+      "difficulty": {
+        "easy": 23,
+        "medium": 36,
+        "hard": 4
+      },
+      "question_type": {
+        "factual": 24,
+        "comparison": 12,
+        "reasoning": 10,
+        "application": 10,
+        "misconception": 7
+      },
+      "chunk_id": {
+        "10": 4,
+        "7": 5,
+        "2": 4,
+        "13": 5,
+        "4": 5,
+        "11": 6,
+        "8": 6,
+        "0": 4,
+        "12": 4,
+        "1": 3,
+        "5": 5,
+        "3": 3,
+        "14": 3,
+        "6": 2,
+        "9": 4
+      }
+    },
+    "retrieval": {
+      "bm25_only": {
+        "hit_rate": {
+          "1": 0.4126984126984127,
+          "3": 0.6984126984126984,
+          "5": 0.9682539682539683
+        },
+        "mrr": 0.598740236835475
+      },
+      "vector_only": {
+        "hit_rate": {
+          "1": 0.6507936507936508,
+          "3": 0.8412698412698413,
+          "5": 0.9047619047619048
+        },
+        "mrr": 0.7369881285847673
+      },
+      "ensemble_only": {
+        "hit_rate": {
+          "1": 0.6507936507936508,
+          "3": 0.9047619047619048,
+          "5": 0.9682539682539683
+        },
+        "mrr": 0.7864959114959115
+      },
+      "ensemble_rerank": {
+        "hit_rate": {
+          "1": 0.7936507936507936,
+          "3": 0.9365079365079365,
+          "5": 1.0
+        },
+        "mrr": 0.8748677248677249
+      }
+    },
+    "rerank": {
+      "mrr_before": 0.7864959114959115,
+      "mrr_after": 0.8748677248677249,
+      "hit_rate_before": {
+        "1": 0.6507936507936508,
+        "3": 0.9047619047619048,
+        "5": 0.9682539682539683
+      },
+      "hit_rate_after": {
+        "1": 0.7936507936507936,
+        "3": 0.9365079365079365,
+        "5": 1.0
+      },
+      "rank_movement": {
+        "improved": 16,
+        "worsened": 9,
+        "unchanged": 38,
+        "average_movement": 0.3968253968253968
+      },
+      "per_question": [
+        {
+          "question": "What is the cosine of the angle between two vectors when the angle is 0 degrees?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the dot product of two perpendicular vectors?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "What is a unit vector?",
+          "pre_rank": 8,
+          "post_rank": 1,
+          "movement": 7
+        },
+        {
+          "question": "What does the Pythagorean theorem describe in the context of a right-angled triangle?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How are the components of a two-dimensional vector typically written?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is added to a two-dimensional vector to make it three-dimensional?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "What is the formula for the length of the cross product of two vectors A and B?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What geometric interpretation can be given to the length of the cross product of vectors A and B?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is a scalar in the context of vector operations?",
+          "pre_rank": 2,
+          "post_rank": 4,
+          "movement": -2
+        },
+        {
+          "question": "What happens when a vector is multiplied by a scalar of -1?",
+          "pre_rank": 1,
+          "post_rank": 4,
+          "movement": -3
+        },
+        {
+          "question": "What are the three special cases for the dot product of two vectors based on their direction?",
+          "pre_rank": 1,
+          "post_rank": 5,
+          "movement": -4
+        },
+        {
+          "question": "How can the length of a vector be expressed using the dot product?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "What is a unit vector?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What are the standard unit vectors along the x, y, and z axes called?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What are the two lines that make up a two-dimensional coordinate system?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "In what order are the coordinates of a point written in a two-dimensional coordinate system?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "In how many dimensions is the cross product defined?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the order of vectors affect the result of the cross product?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What is the name and coordinates of the point where the x and y axes intersect?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How are vectors defined and represented differently from points?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How is the sum of two vectors visualized geometrically?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "What does the result of subtracting vector b from vector a look like geometrically?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "Why are vector components sometimes written as subscripts of the vector's name?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do you perform scalar multiplication on a vector?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the key difference between a regular vector and a unit vector?",
+          "pre_rank": 11,
+          "post_rank": 1,
+          "movement": 10
+        },
+        {
+          "question": "How do the purposes of the cross product and the dot product differ in measuring the relationship between two vectors?",
+          "pre_rank": 4,
+          "post_rank": 2,
+          "movement": 2
+        },
+        {
+          "question": "Compare the behavior of the cross product and the dot product when vectors are parallel or perpendicular.",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the purpose of the dot product differ from the purpose of unit vector notation?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the representation of a vector's length differ from the representation of its components in a coordinate system?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do points and vectors differ in terms of position and representation?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the relationship between the angle of two vectors and their product differ between the cross product and the dot product?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does the visualization of vector addition differ from the visualization of vector subtraction?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How are scalar multiplication and scalar division similar in the context of vector operations?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "What is the difference between the x-axis and the y-axis in a 2D coordinate system?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do the results of the dot product and the cross product differ in terms of their output type and geometric interpretation?",
+          "pre_rank": 2,
+          "post_rank": 3,
+          "movement": -1
+        },
+        {
+          "question": "How do the dot product and cross product behave differently when the angle between two vectors is 90 degrees?",
+          "pre_rank": 3,
+          "post_rank": 4,
+          "movement": -1
+        },
+        {
+          "question": "How does scalar multiplication affect the length and direction of a vector, and what happens when the scalar is negative one?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How is the sum of two vectors calculated according to the transcript?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "How does unit vector notation help in representing vectors, and why is it useful for operations like the dot product?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why is the dot product also referred to as the scalar product?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "Why does the dot product of vectors A and B equal the width of the triangle beneath vector B only when vector A is a unit vector?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How does the dot product of vectors A and B change if vector B gets shorter or the angle between A and B gets smaller?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How do you visually represent the addition of two vectors using their graphical representation?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why does the vector resulting from subtracting vector b from vector a point from the tip of b to the tip of a?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Why can the dot product be thought of as a measurement for how similar two vectors are?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "How is the length of a vector related to its dot product with itself?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Two vectors, A and B, are parallel. What is the length of their cross product, and why?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "How does the length of the cross product of two vectors change if the angle between them decreases from 90\u00b0 to 30\u00b0?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Represent the vectors A and B as 2D vectors in component form based on the following descriptions: Vector A moves 3 units downward, and Vector B moves 4 units to the left and 2 units up.",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A vector moves 2 units to the right, 1 unit downward, and 5 units outward from the screen. Represent this vector in 3D component form.",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "If vector A is (1, 0, 0) and vector B is (0, 1, 0), what is the relationship between the cross product of A and B and the cross product of B and A?",
+          "pre_rank": 3,
+          "post_rank": 3,
+          "movement": 0
+        },
+        {
+          "question": "How can you determine the direction of the cross product of two vectors A and B using your hand?",
+          "pre_rank": 1,
+          "post_rank": 2,
+          "movement": -1
+        },
+        {
+          "question": "Vector A is a unit vector, and vector B forms a right-angled triangle with a width equal to the dot product of A and B. If the angle between A and B is \u03b8, how is the width of the triangle related to the length of B and \u03b8?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "Vector A has a length of 2, and vector B has a length of 3. The angle between them is 60 degrees. If a right-angled triangle is drawn beneath B, will the width of this triangle equal the dot product of A and B? Explain your reasoning.",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "If vector A is perpendicular to vector B, what is their dot product?",
+          "pre_rank": 3,
+          "post_rank": 1,
+          "movement": 2
+        },
+        {
+          "question": "If vector A points directly opposite to vector B (angle of 180 degrees), how can you express their dot product in terms of their magnitudes?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "A student claims that for point p, the coordinates can be written as (3, 5) instead of (5, 3) because the order does not matter. Is this statement correct?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "A student claims: 'The length of the cross product of two vectors is zero when they are perpendicular to each other.' Is this statement correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A student claims: 'The dot product of two vectors produces a new vector.' Is this statement correct?",
+          "pre_rank": 4,
+          "post_rank": 1,
+          "movement": 3
+        },
+        {
+          "question": "Is it correct to say that a scalar is a type of vector because it can scale a vector's length?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        },
+        {
+          "question": "A student claims that the length of a vector is the sum of the absolute values of its x and y components. Is this correct?",
+          "pre_rank": 1,
+          "post_rank": 1,
+          "movement": 0
+        },
+        {
+          "question": "A student claims: 'A unit vector is a vector with a length of 0.' Is this statement correct?",
+          "pre_rank": 2,
+          "post_rank": 2,
+          "movement": 0
+        },
+        {
+          "question": "A student claims: 'The length of a 2D vector is the sum of its components (a + b).' Is this statement correct?",
+          "pre_rank": 2,
+          "post_rank": 1,
+          "movement": 1
+        }
+      ]
+    }
+  }
+}

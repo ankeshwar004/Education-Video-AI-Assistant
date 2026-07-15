@@ -1,0 +1,569 @@
+{
+  "scores": [
+    {
+      "reasoning": "The generated answer accurately describes the phrase 'beckoned me in' and its implications in the context of the transcript. It correctly captures the shift in the photographer's attitude and demeanor, and provides a clear explanation of the phrase's meaning. The answer is well-structured and easy to follow, but may benefit from a slightly more concise presentation.",
+      "correctness": 5,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What does the phrase 'beckoned me in' mean in the context of the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately describes the definition of 'griver' as provided in the source transcript and matches the reference answer. It also provides context from the source transcript, demonstrating faithfulness. The answer is clear and well-structured, making it easy to follow. The only area where it falls short of a perfect score is in completeness, as it could potentially include more details about the context in which 'griver' is used, but it does cover the main point and key details.",
+      "correctness": 5,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "How does the transcript define the word 'griver'?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear and well-structured, but it contains an error in the title of the short story. The source transcript does support the mention of 'the photographer' but not as the title 'With the Photographer'. The reference answer states the title is 'The Photographer', not 'With the Photographer'. Therefore, the correctness and completeness scores are low. The faithfulness score is 3 because the generated answer contains a claim that overreaches the transcript.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 3,
+      "clarity": 5,
+      "question": "What is the title of the short story being discussed in the video?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately matches the reference answer, is complete, faithful to the source transcript, and clear in its explanation.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "Which syllabus does the story 'The Photographer' belong to?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the key phrases from the transcript that describe the photographer's temperament and physical appearance, and it is well-structured and easy to follow. However, it does not fully match the reference answer, and some minor details are not included, such as the emphasis on the narrator's first impression and the specific connotations of the word 'insipid'.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What key phrases in the transcript describe the photographer's temperament and physical appearance?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately conveys the meaning of 'gray' and 'insipid' in relation to the photographer, matching the reference answer. It covers all key points, is well-supported by the source transcript, and is clear and well-structured.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What does the color 'gray' and the term 'insipid' convey about the photographer in the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the photographer's expression as a pleased smile, matching the reference answer. It also covers the key points from the reference answer and includes accurate details from the source transcript. The answer is clear and well-structured, making it easy for a student to follow.",
+      "correctness": 5,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What expression did the photographer have when he finally captured the perfect photo?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct and clear, but it contains some minor errors and lacks direct support from the source transcript for certain claims. It covers the main point of the reference answer but misses a secondary key point. The answer is well-structured and easy to follow, but it could be improved with more precise language and direct quotes from the source transcript.",
+      "correctness": 4,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "How does the narrator describe the term 'animation' in the context of the photograph?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer does not accurately reflect the reference answer or the source transcript. It introduces new information not present in the source transcript and does not capture the main points from the reference answer. The clarity is good but not perfect, as the writing is mostly clear and well-structured.",
+      "correctness": 2,
+      "completeness": 2,
+      "faithfulness": 1,
+      "clarity": 4,
+      "question": "What specific behavior of the photographer is criticized in the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and faithful to the source transcript. It accurately conveys the main point that faces appear wide, large, and almost boundless when viewed at a three-quarters angle. However, it adds a minor interpretation about the photographer's technical preference, which is not directly stated in the reference answer. The clarity is good, but not perfect, as the sentence structure is mostly clear but could be slightly improved for better flow.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "According to the narrator, how do faces change when viewed three-quarters full?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main point of the reference answer and includes extra accurate detail drawn from the source transcript. The answer is faithful to the source transcript and does not contain any fabricated information. However, it does not fully satisfy the completeness criterion as it does not explicitly state that cowhide refers to leather made from the skin of a cow in a straightforward manner, instead providing additional context and interpretation.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What does the term 'cowhide' refer to in the context of the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer provides a partially correct interpretation of the phrase 'emboss it', but it introduces an unsupported claim of sarcasm and over-the-top attempts, which is not directly supported by the Source Transcript. The answer is mostly clear and well-structured, but it misses the main point of the Reference Answer, which is to give it a decorative layer. The faithfulness is also compromised due to the introduction of unsupported claims.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "What does the speaker mean by the phrase 'emboss it' in the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct but misses important facts. It correctly identifies 'self-ide' as a process for removing and recreating ears, but it also introduces the idea that it's a 'made-up term' and 'fictional photographic process,' which is not directly supported by the Source Transcript. The answer is understandable but could be more concise and well-structured. It covers the main point but misses the simplicity of the Reference Answer. The faithfulness is compromised by the introduction of unsupported claims about the term being 'made-up' and 'fictional.'",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "What is the purpose of the process referred to as 'self-ide' in the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct but misses the specific detail about the photographer's name, Ergsin, which is present in the Reference Answer. It also contains some unsupported claims, such as the subject's frustration stemming from the loss of his unique identity, which is not directly supported by the Source Transcript. The answer is understandable but could be more clearly structured and concise.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "What causes the subject's temperament to change in the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and faithful to the source transcript. It accurately captures the narrator's feelings of intrusion and unwarranted action. The self-deprecating tone is also correctly identified. However, it does not fully capture the nuance of the narrator's description of the photographer as 'scientific' in demeanor, which is present in the reference answer. The clarity is good, but not perfect, as the sentence structure is mostly clear but could be improved for better flow.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "Why does the narrator believe his actions were unwarranted toward the photographer?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the narrator's feelings about his physical appearance, using relevant quotes from the source transcript. It also clearly conveys the emotional element of the story. However, it does not fully cover all key points in the reference answer, such as the specific phrases used by the narrator to indicate low self-confidence. The answer is well-structured and easy to follow, but may benefit from additional details to fully match the reference answer.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "How does the narrator feel about his own physical appearance in the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately reflects the reference answer and source transcript, providing a clear and well-structured explanation of the required expression for a USA visa photograph.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "What type of expression is typically required for a USA visa photograph?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main points from the reference answer and includes accurate details from the source transcript. The answer is mostly correct, with minor omissions. Every claim in the generated answer is directly supported by the source transcript.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "Why was the narrator's expression described as 'animated' in the photograph?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer contains some correct information but also includes incorrect details, such as mentioning the removal and recreation of ears, which is not present in the source transcript. The answer also overreaches by interpreting the tone of the passage as satirical, which is not directly supported by the transcript. The clarity is understandable but awkward due to the inclusion of unnecessary information and overanalysis.",
+      "correctness": 2,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 3,
+      "question": "What new photographic process is mentioned in the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and clear. However, it does not fully capture the nuances of the reference answer and contains some information not directly supported by the source transcript.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "Why did the photographer draw a little black cloth over himself in the machine?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer partially captures the essence of the reference answer, but it introduces additional interpretations that are not directly supported by the source transcript, such as the narrator's timid personality and submissive nature. While it does mention the irony and humor, it misses the direct comparison to a typical photography studio setting. The answer is understandable but somewhat awkward and verbose, making it less clear than ideal.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 3,
+      "question": "What effect does the statement 'I knew that he was praying and I kept still' have on the narrative?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the essence of the reference answer and source transcript, providing a clear and well-structured explanation of why photographers are perceived as warm people. It correctly identifies the key points, including the importance of interaction and eliciting genuine expressions, and does so in a way that is easy to follow and understand. The answer also remains faithful to the source transcript, drawing directly from it without introducing unsupported claims or fabricated information.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "Why are photographers described as warm people in the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer does not match the reference answer and contains fabricated information not present in the source transcript. It also misses the main point of the reference answer and is somewhat understandable but awkwardly structured.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 3,
+      "question": "What does the narrator find unusual about the photographer mentioned in the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main point of the reference answer and includes a secondary key point about the photographer's lack of concern for customer time. The answer is mostly correct, with one minor factual error not present but also does not fully capture the nuance of the reference answer. The answer is faithful to the source transcript, with every claim directly supported by it.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What trait does the narrator's action of waiting for an hour convey?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It correctly identifies the photographer's negative trait as indifference to the customer's time and implies a lack of professionalism. The answer covers the main point and includes accurate details from the source transcript. However, it does not fully capture the nuance of the narrator's apologetic tone and the implication that the photographer's indifference is a negative trait. The answer is mostly faithful to the source transcript but contains a minor inference that is not directly supported.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What negative trait of the photographer is implied by the narrator's long wait?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main point of the reference answer and includes extra accurate detail drawn from the source transcript. The answer is mostly correct, with minor errors. The claims in the generated answer are mostly supported by the source transcript, with some minor overreaching. Overall, the answer is of high quality but not perfect.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "How does the photographer in the story compare to the general perception of photographers?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer does not match the reference answer and contains fabricated information not present in the source transcript. It also misses the main point of the reference answer.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 4,
+      "question": "What is the difference between the photographer's initial and final behavior in the story?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct, missing some key points from the reference answer, and contains some unsupported claims. However, it is well-structured and easy to follow.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "How does the theme of power dynamics in the story compare to the message of being true to oneself?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the main points from the reference answer and source transcript, but may lack a bit in fully conveying the narrator's desire for authenticity as emphasized in the source transcript. The answer is clear, well-structured, and easy to follow, but might not fully satisfy all criteria for a perfect score due to minor potential for improvement in fully aligning with the source transcript's emphasis on authenticity and the loss of individuality.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What is the difference between the narrator's desired representation and the actual photograph taken by the photographer?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main points of the reference answer and is faithful to the source transcript. However, it does not fully capture the nuance of the reference answer, and some minor details are not perfectly aligned, which prevents it from receiving a perfect score in correctness and completeness.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "How does the narrator's experience with the photograph compare to his expectation of how his friends would remember him after his death?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the narrator's feelings about his own looks, using direct quotes from the source transcript to support the claim. The answer is well-structured, clear, and easy to follow, covering all key points from the reference answer and directly supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 5,
+      "question": "How does the narrator feel about his own looks?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct but misses some important facts from the reference answer. It also contains some claims that are not directly supported by the source transcript. The answer is well-structured and easy to follow, but may be slightly verbose in some areas.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What is the difference between how the narrator perceives himself and how the photographer perceives him?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main points in the Reference Answer and provides additional accurate details from the Source Transcript. The answer is mostly correct, with minor factual errors. The claims in the Generated Answer are mostly supported by the Source Transcript, with some minor overreaching. Overall, the answer demonstrates good reasoning and understanding of the topic.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What is the difference between the narrator's personality and the photographer's demeanor?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and faithful to the source transcript. It accurately compares the photographer's observation style to that of a scientist in a biology lab, highlighting their analytical and observant nature, as well as the lack of warmth and emotional connection. The answer is also clear and well-structured, making it easy for a student to follow. However, it does not fully capture the nuance of the reference answer, and some minor details are not perfectly aligned, which is why it does not receive a perfect score in any dimension.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "How does the photographer's observation style compare to that of a scientist in a biology lab?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers the main point of the difference between the narrator's perception and the potential value to his friends, and also includes some extra accurate details from the Source Transcript. The answer is mostly correct, with minor factual errors. The claims in the Generated Answer are mostly supported by the Source Transcript, with some minor overreaching. Overall, the answer demonstrates good reasoning and understanding of the topic.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What is the difference between the narrator's perception of the photograph and its potential value to his friends?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer does not match the reference answer, misses the main point, and contains fabricated information not present in the source transcript. The tone of the speaker is not described as evolving from initial timidity to growing frustration and bitterness in the reference answer, and phrases like 'What you have done is brutal' and 'Is that mine?' are not present in the source transcript.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 3,
+      "question": "How does the speaker's tone change when saying 'stop'?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the contrast between the narrator's patience and the photographer's indifference, covering all key points from the reference answer and directly supported by the source transcript, with clear and well-structured language.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "How does the narrator's patience compare to the photographer's attitude towards keeping a customer waiting?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the narrator's perception of their actions and the photographer's behavior, but contains minor errors and lacks perfect clarity and completeness.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What is the comparison between the narrator's perception of their actions and the photographer's behavior?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and faithful to the source transcript. It accurately explains that photographers instruct subjects to look upward to capture the light on their face, creating a more dynamic and flattering angle. However, it does not fully match the reference answer and contains a minor error in not fully explaining the effectiveness of this technique. The answer is clear and well-structured, but not perfect. Therefore, the scores are: correctness: 4, completeness: 4, faithfulness: 4, clarity: 4.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "Why do photographers often ask subjects to look up?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is clear, well-structured, and easy to follow. It covers all key points in the reference answer and includes extra accurate detail drawn from the source transcript. The answer is faithful to the source transcript, with every claim directly supported by it. However, it does not fully match the reference answer in terms of correctness, as it includes some minor differences in wording and emphasis.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "How does the photographer adjust the subject's pose to achieve the desired effect?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and faithful to the source transcript. It accurately captures the main points from the reference answer, including the narrator's unease due to the photographer's delay and the narrator's uncertainty about how to react. The answer is also clear and well-structured, making it easy for a student to follow. However, it does not fully satisfy the criteria for a perfect score, as it misses some minor details from the source transcript and reference answer, such as the narrator's concern about blinking in the photo.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "Why is the narrator feeling uneasy during the photograph?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct but misses some important facts from the reference answer. It also contains some unsupported claims and overreaches the source transcript. The answer is understandable but could be better organized for clarity.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "How does the narrator's behavior reveal his intimidation by the photographer?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and faithful to the source transcript. It accurately captures the narrator's hesitation and its reasons. However, it does not fully match the reference answer in terms of wording and detail, and it includes some minor rephrasing that slightly deviates from the original transcript. The clarity is good but could be improved with more concise language.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "Why did the speaker hesitate when asking about the eyes in the photograph?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct and clear, but it contains a minor factual error by referring to the process as 'Delphide' instead of the correct term used in the Source Transcript. It also misses a secondary key point from the Reference Answer, which is that the photographer explained the process for putting in new eyebrows. The answer is well-structured and easy to follow, but it contains a minor unsupported claim about the photographer proudly pointing out where the process was applied. Overall, the answer is partially complete, mostly correct, and mostly faithful to the Source Transcript.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "How did the photographer explain the difference in the speaker's eyebrows in the photograph?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct but missing or incorrect important facts, and it contains one unsupported claim. The answer is understandable but awkward, and it covers the main point but misses a secondary key point.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "Why does the photographer use a fictional process called delified?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer does not accurately capture the tone change of the photographer as described in the reference answer. It introduces unrelated details and does not directly support its claims with the source transcript, leading to low scores in correctness, completeness, and faithfulness. The clarity is also compromised due to the introduction of unrelated information and a lack of coherence with the reference answer.",
+      "correctness": 2,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 3,
+      "question": "How does the photographer's tone change throughout the conversation?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct but contains some incorrect facts and lacks key points from the reference answer. It also contains some claims not directly supported by the source transcript. The answer is understandable but could be improved in terms of clarity and organization.",
+      "correctness": 2,
+      "completeness": 3,
+      "faithfulness": 2,
+      "clarity": 4,
+      "question": "Why is the speaker becoming emotional during the conversation with the photographer?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately reflects the narrator's perception of his own looks, as stated in the reference answer and supported by the source transcript. The answer is clear, well-structured, and easy to follow, covering all key points from the reference answer and directly supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 5,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What is the narrator's perception of his own looks?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the main instruction from the speaker, which is to turn the face just a little upward. It also provides additional context about photographers' habits, which is supported by the Source Transcript. The answer is clear and well-structured, but it could be improved by being more concise. The correctness is perfect because it matches the Reference Answer. The completeness is partial because it covers the main point but adds extra information not present in the Reference Answer. The faithfulness is perfect because every claim in the Generated Answer is directly supported by the Source Transcript.",
+      "correctness": 5,
+      "completeness": 3,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "What instruction did the speaker give to adjust the position of the face?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately matches the reference answer and is well-supported by the source transcript. It clearly conveys the speaker's instructions for positioning the neck and waist. The only minor issue is that the generated answer does not fully capture the nuance of the speaker's intent, but this does not detract from its overall correctness and faithfulness.",
+      "correctness": 5,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "How did the speaker want the subject to position their neck and waist?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and faithful to the source transcript. It accurately captures the photographer's passion and pride in his craft, and supports its claims with evidence from the transcript. However, it does not fully satisfy the clarity criterion due to some minor awkwardness in phrasing, and it misses a secondary key point from the Reference Answer. Additionally, it contains a minor unsupported claim about the photographer's demeanor shifting from serious to proud, which is not directly supported by the Source Transcript.",
+      "correctness": 4,
+      "completeness": 3,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What can be inferred about the photographer's attitude towards his craft?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct and covers the main point, but misses the secondary key point of the photographer's annoyance. It is also mostly faithful to the source transcript, but contains some minor overreaching claims. The answer is clear and well-structured, but not perfect.",
+      "correctness": 3,
+      "completeness": 3,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "How does the photographer use rhetorical questions in his conversation?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct, complete, and faithful to the source transcript. It accurately captures the meaning of 'drawing myself up' as summoning courage and preparing to assert oneself. The answer is also clear and well-structured, making it easy for a student to follow. However, it does not fully match the reference answer, and some minor details are not perfectly aligned with the source transcript, which is why it does not receive a perfect score in any dimension.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 4,
+      "clarity": 4,
+      "question": "What does 'drawing myself up' mean in the context of the transcript?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the speaker's emotions when using the phrase 'withering scorn' and provides additional context from the source transcript. The answer is clear, well-structured, and easy to follow, with all claims directly supported by the source transcript.",
+      "correctness": 5,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "How does the speaker feel when they say 'with withering scorn'?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer does not match the reference answer and contains fabricated information not present in the source transcript. It also misses the main point of the reference answer.",
+      "correctness": 1,
+      "completeness": 1,
+      "faithfulness": 1,
+      "clarity": 4,
+      "question": "What is the general perception of photographers according to the narrator?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer does not accurately reflect the source transcript and reference answer. It introduces new information not present in the source transcript, such as the photographer being 'obsessed with technical manipulation' and 'retouching the photo to the point of unrecognizability.' The answer also fails to capture the main point from the reference answer, which is that the photographer is described as 'cold' and 'detached,' unlike the general perception of photographers being warm people. The clarity of the answer is good, but the other dimensions are lacking.",
+      "correctness": 2,
+      "completeness": 2,
+      "faithfulness": 1,
+      "clarity": 4,
+      "question": "How does the narrator's description of the photographer in the story deviate from the general perception of photographers?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is partially correct but contains some factual errors and unsupported claims. It captures the main point of the speaker's upset but misses key details from the Reference Answer. The answer is understandable but could be improved in terms of clarity and organization. The claims are mostly supported by the Source Transcript, but some details are overreached or fabricated.",
+      "correctness": 2,
+      "completeness": 3,
+      "faithfulness": 3,
+      "clarity": 4,
+      "question": "The speaker in the transcript is upset because someone is criticizing their face.",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly correct and faithful to the source transcript, but it misses a secondary key point from the reference answer, which is the distinction between owning one's face as a part of their body and identity, and the idea of physically changing it. The answer is clear and well-structured, but not perfect.",
+      "correctness": 4,
+      "completeness": 3,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "The speaker owns their face and knows its faults, so they can change it if they want to.",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer is mostly incorrect as it misinterprets the photographer's behavior as humane, which contradicts the reference answer. It also misses the main point of the reference answer and contains claims not directly supported by the source transcript. However, the generated answer is understandable and well-structured, which is why it scores 4 in clarity.",
+      "correctness": 1,
+      "completeness": 2,
+      "faithfulness": 2,
+      "clarity": 4,
+      "question": "Is the photographer's inability to communicate politely an example of a humane behavior?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the essence of the reference answer and source transcript, but may not fully satisfy all criteria for a perfect score in each dimension.",
+      "correctness": 4,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "Is the speaker's face actually flawed in terms of physical proportions?",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the speaker's dissatisfaction with the editing of the photograph, using strong language to express their disillusionment. It covers all key points in the reference answer and is directly supported by the source transcript. The answer is also clear and well-structured, making it easy for a student to follow.",
+      "correctness": 5,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "The speaker in the transcript is satisfied with the editing of the photograph.",
+      "source": "video"
+    },
+    {
+      "reasoning": "The generated answer accurately captures the speaker's criticism of the editor for altering the photograph too much and their desire to restore the original features. It also clearly conveys the speaker's emotions and intentions, and is well-supported by the source transcript. The answer is well-structured and easy to follow, but may benefit from a bit more detail to fully cover all key points.",
+      "correctness": 5,
+      "completeness": 4,
+      "faithfulness": 5,
+      "clarity": 4,
+      "question": "The speaker wants the editor to add more embellishments to the photograph.",
+      "source": "video"
+    }
+  ],
+  "averages": {
+    "correctness": 3.6129032258064515,
+    "completeness": 3.467741935483871,
+    "faithfulness": 3.806451612903226,
+    "clarity": 4.0,
+    "overall": 3.721774193548387
+  }
+}

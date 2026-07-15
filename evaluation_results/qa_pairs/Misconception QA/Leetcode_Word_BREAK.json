@@ -1,0 +1,74 @@
+[
+  {
+    "question": "A student claims: 'The base case for the DP array in this word break problem should be set to `true` for the last index of the string, since that\u2019s where the string ends.' Is this correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the base case should be set to `true` for the position *equal to* the length of the string (i.e., `dp[s.length] = true`), not for the last index of the string. The base case represents an empty substring (out of bounds), which is trivially a valid word break. The loop then iterates *backwards* from the last index to the start of the string to fill the DP array.",
+    "misconception": "The base case for the dynamic programming array should be set to `true` for the last index of the string (i.e., `dp[s.length - 1] = true`).",
+    "start": "12:36",
+    "end": "13:37",
+    "chunk_id": 13,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " right this is how we're going to compute it and this is what we're going to assign dp of 0 to and once we've done that we've computed the result we know we can return true for the overall function so with that being said let's jump into the code so our cache is going to be let's say a one dimensional array right because for every position i in the string s we are going to have a value so we're going to initialize this to false it's going to be the length of the string s plus one for our base case and we are going to initialize our base case we know that it's the last position basically the position the position out of bounds of the string so the length of s and we know that's going to be set to true that's our base case so now we're going to go through every position i in the length of the string starting at the last index and working our way to the beginning so that's why I'm using the decrementer of negative one and we're going to go up until the beginning of the string and for each position i we want to try every single word in"
+  },
+  {
+    "question": "A student claims: 'The DP array should be initialized to `true` for all positions to ensure we cover all possible word breaks.' Is this correct?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, the DP array should be initialized to `false` for all positions *except* the base case (`dp[s.length] = true`). The loop starts from the last index and decrements to the beginning, checking all possible word breaks. Initializing the entire array to `true` would incorrectly assume all substrings are valid word breaks, which is not the case.",
+    "misconception": "The DP array should be initialized to `true` for all positions, including the base case, because we want to assume all substrings are valid until proven otherwise.",
+    "start": "12:36",
+    "end": "13:37",
+    "chunk_id": 13,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " right this is how we're going to compute it and this is what we're going to assign dp of 0 to and once we've done that we've computed the result we know we can return true for the overall function so with that being said let's jump into the code so our cache is going to be let's say a one dimensional array right because for every position i in the string s we are going to have a value so we're going to initialize this to false it's going to be the length of the string s plus one for our base case and we are going to initialize our base case we know that it's the last position basically the position the position out of bounds of the string so the length of s and we know that's going to be set to true that's our base case so now we're going to go through every position i in the length of the string starting at the last index and working our way to the beginning so that's why I'm using the decrementer of negative one and we're going to go up until the beginning of the string and for each position i we want to try every single word in"
+  },
+  {
+    "question": "A student claims: 'In the bottom-up approach for the word break problem, DP[i] is true only if the substring starting at index i exactly matches a word in the dictionary.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the student's statement is incorrect. The bottom-up approach in dynamic programming for word break problems checks substrings starting from the end of the string (e.g., index 7) and moves backward. The DP value at an index (e.g., DP[4]) represents whether the substring from that index to the end can be segmented into dictionary words. The student's misconception assumes the DP value is determined by matching words starting *from* the index, but it actually depends on whether the *remainder* of the string (from the index onward) can be segmented. For example, DP[4] being true means the substring starting at index 4 can be broken into valid words, not that the word at index 4 matches a dictionary entry.",
+    "misconception": "A student thinks that in the bottom-up dynamic programming approach for the word break problem, the DP value at an index (e.g., DP[4]) is true only if the word starting exactly at that index matches a word in the dictionary.",
+    "start": "09:14",
+    "end": "10:17",
+    "chunk_id": 10,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " So what we're going to do is now do the bottom up approach, right? We're going to go through every single index in reverse order, right? So we would start at the last character, which is position seven, right? And see, can we word break the remainder of this string? You know, and we would try every single word, right? Like, neat, does neat match this string? Well, they're not even the same size, right? If we tried to match neat on four characters starting from here, we would go out of bounds of this string, right? There's not enough character. So of course, this is going to be false, right? It wouldn't match neat. It wouldn't match the other two words in our dictionary either. And that's obviously going to be true for DP of six, DP of five as well. So both of these are also going to be false. basically if we started from 6 or if we started from 5 we would not be able to match any of the words in our dictionary. But now if we start here index 4 so we're now trying to figure out dp of 4 is that true? Well yes it is right it doesn't match neat it doesn't match elite but it"
+  },
+  {
+    "question": "Is it true that each word in the word dictionary can only be used once when solving the word break problem?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the statement is incorrect. The problem allows reusing words from the word dictionary multiple times. The example given in the transcript confirms this: the word 'lead' and 'code' can be reused if they appear multiple times in the input string, as long as they are present in the dictionary. The correct understanding is that words in the dictionary can be reused as needed to break the input string into valid segments.",
+    "misconception": "A student might think that each word in the word dictionary can only be used once when breaking the input string into segments.",
+    "start": "00:00",
+    "end": "01:07",
+    "chunk_id": 0,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " Hey everyone, welcome back and let's write some more neat code today. So today, let's solve the problem word break. So we're given an input string and a dictionary of strings called word dict. And we want to return true if and only if S can be broken up into separate strings such that every separate string in S is also found inside of our word dict. And we are allowed to use words from the word dict multiple times. So for example, let's say we're given an input string, lead code and we're given a word dictionary of words called lead and code. So obviously, in this case, we could split this string right into separate strings, lead, right, break it down in this middle position. And then the second string would be code, right? So clearly, this can be broken up into words that are found in the word dictionary. So therefore, we are going to return true. Now, what if we took code outside of our word dictionary? Well, then in that case, this portion lead is a word, right? But we have no matching word in our dictionary for the remainder code."
+  },
+  {
+    "question": "A student claims: 'The time complexity of checking every word in the dictionary as a prefix for the string is O(N) because the dictionary size is smaller than the string length.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the student's statement is incorrect. The time complexity is not O(N) but rather O(N * M), where N is the length of the string and M is the number of words in the dictionary. The approach checks every starting position in the string (O(N)) and, for each position, checks every word in the dictionary (O(M)), leading to a total of O(N * M). The efficiency improvement comes from the fact that M is smaller than N, as stated in the problem, but it is not O(N).",
+    "misconception": "A student might think that the time complexity of the described approach is O(N) because the problem states that the dictionary size (M) is smaller than the string length (N), and they may overlook the multiplication by M.",
+    "start": "03:48",
+    "end": "04:43",
+    "chunk_id": 4,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " This does not match lead, right? So now let's check the next word in our word dictionary and check. Does that match the characters over here? It does, right? We found code. So this is basically another way to do this problem. Instead of checking every single possible prefix, right? Of any length, what we're going to be doing is we're going to be checking every single word in our word dictionary as the prefix. So instead of being O of N times N, we're going to be doing O of N because to potentially we are going to be going through every single starting position, but we're going to be multiplying by the number of words in our word dictionary, which is, let's call it M. And the reason why we're going to be doing this approach is because it's going to be a little bit more efficient. And the reason is they, they tell us below in the problem statement that the max size of word dictionary is going to be smaller than the max size of the string. So this is overall probably going to be more efficient."
+  },
+  {
+    "question": "A student claims that the time complexity of the algorithm described in the transcript is O(N * M) because it processes each of the N characters in the string once for each of the M patterns. Is this correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the student's statement is incorrect. The time complexity is actually O(N\u00b2 * M) because for each of the N positions in the string S, we may need to check up to N characters (for substring matching), and this is done for each of the M patterns or substrings being considered. The nested loops (one for the starting position and another for the substring length) lead to the quadratic term in N, multiplied by M.",
+    "misconception": "A student might think that the time complexity of the described algorithm is O(N * M) because they only account for the outer loop over the string and the number of patterns, ignoring the inner substring matching step.",
+    "start": "04:43",
+    "end": "05:36",
+    "chunk_id": 5,
+    "video_id": "Leetcode_Word_BREAK",
+    "content": " Now this isn't going to be the overall time complexity. We are actually going to multiply it by another N because when we're checking, for example, you know, this brief, this string, when we're checking, does that match the first four characters here? That's also a N time operation because it could, you know, potentially be the size of the input string S. So this is basically going to be the overall time complexity N squared multiplied by M. So I'm just going to basically show you the same formula that I usually do. I'm going to give you a quick illustration of what the decision tree would look like. Then we're going to understand how we could cash that to eliminate repeated work. And then by understanding that, we're going to go to the optimal dynamic programming solution, the bottom up approach. And then we're going to code that up. Usually the DP solution is a lot less code than caching. So we're going to be looking at our input string neat code. So I think that's a little bit better than neat code, wouldn't you say?"
+  }
+]

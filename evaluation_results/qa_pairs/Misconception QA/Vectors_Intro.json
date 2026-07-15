@@ -1,0 +1,86 @@
+[
+  {
+    "question": "A student claims that for point p, the coordinates can be written as (3, 5) instead of (5, 3) because the order does not matter. Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, the statement is incorrect. The x-coordinate is always written first, followed by the y-coordinate, as in (x, y). In the example given, point p has coordinates (5, 3), not (3, 5).",
+    "misconception": "The order of coordinates does not matter, so (3, 5) is the same as (5, 3).",
+    "start": "00:00",
+    "end": "01:10",
+    "chunk_id": 0,
+    "video_id": "Vectors_Intro",
+    "content": " Hello everyone, today we are going to talk about vectors, but before we dive into vectors, let's first have a look at coordinate systems. In two dimensions, a coordinate system consists of a horizontal line, which we call the x-axis, and a vertical line, which we call the y-axis. We divide these lines by adding ticks on them at a regular distance. Let's say that distance is 1, in that case we can number each tick according to the distance between them. If we now add a point, let's call it p, anywhere on this coordinate system, we can assign it some coordinates based on its position. We do that by tracing a line parallel to the y-axis onto the x-axis and a line parallel to the x-axis onto the y-axis. This gives us an x-coordinate of 5 and a y-coordinate of 3. We notice between parentheses. For fun, I'm going to add a point q, and to calculate its coordinates, we do the exact same thing. We trace two lines, and then we get an x-coordinate of negative 4 and a y-coordinate of 2. Do note that we always write the x-coordinate first and then the y-coordinate."
+  },
+  {
+    "question": "A student claims: 'The length of the cross product of two vectors is zero when they are perpendicular to each other.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the statement is incorrect. The length of the cross product of two vectors is zero only when they are parallel (angle \u03b8 = 0\u00b0 or 180\u00b0), not when they are perpendicular. When two vectors are perpendicular (\u03b8 = 90\u00b0 or 270\u00b0), the sine of the angle is 1, so the length of the cross product equals the product of their magnitudes (|A \u00d7 B| = |A||B|). The cross product measures how perpendicular two vectors are, not how parallel they are.",
+    "misconception": "The length of the cross product of two vectors is zero when they are perpendicular to each other.",
+    "start": "16:10",
+    "end": "17:18",
+    "chunk_id": 14,
+    "video_id": "Vectors_Intro",
+    "content": " if A and B are parallel to each other denoted with these two vertical bars then the length of the cross product is going to be equal to zero. Alternatively if the angle between A and B is 90 degrees or if it is 270 degrees then the sine of theta or the sine of the angle between A and B is going to be equal to one and therefore we can write another expression that says that if A and B are perpendicular to each other then the length of their cross product is going to be equal to the product of the length of A and B. Once again we can simplify all of these formulas when A and B are unit vectors. In conclusion the length of the cross product is equal to zero if two vectors are parallel and equal to one if two vectors are perpendicular. This means that you could think of the cross product as a measurement of how perpendicular two vectors are. This in contrast to the dot product which was a measurement for how parallel two vectors are. One last interesting property of the cross product is that if you take the cross product of the vector itself the"
+  },
+  {
+    "question": "A student claims: 'The dot product of two vectors produces a new vector.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the student's statement is incorrect. The dot product (scalar product) of two vectors results in a scalar (a single number), not a vector. The dot product is calculated as the sum of the products of the corresponding components of the vectors (e.g., in 2D: a\u00b7b = a_x*b_x + a_y*b_y). The result represents the magnitude of one vector projected onto the other, scaled by the magnitude of the other vector, and is always a scalar value.",
+    "misconception": "A student thinks that the dot product of two vectors results in another vector, not a scalar.",
+    "start": "09:01",
+    "end": "10:09",
+    "chunk_id": 8,
+    "video_id": "Vectors_Intro",
+    "content": " be a vector that points in the same direction as the original vector, but that has a length of 1. We also define a few standard unit vectors, being e hat x, which is a unit vector along the x-axis, e hat y, which is a unit vector along the y-axis, and e hat z, which is a unit vector along the z-axis. Using these unit vectors, we can introduce an alternative way to write vectors, and that is to write them as the sum of their components multiplied by the respective unit vector. We call this unit vector notation, and we'll need it in just a bit. But first we're going to discuss two ways in which we can multiply vectors. The first one being the dot product, also referred to as the scalar product, because its result is a scalar. We write a dot product of two vectors as a dot b, and in two dimensions it is defined using this formula. We can extend this formula to its root. dimensions and just like with the vectors length we can also write a generic version for end-dimensional vectors. To understand the dot product I'm going to"
+  },
+  {
+    "question": "Is it correct to say that a scalar is a type of vector because it can scale a vector's length?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, this statement is incorrect. A scalar is a single numerical value (like x in the transcript) that scales a vector by changing its magnitude (length) without altering its direction (unless the scalar is negative, which reverses the direction). A scalar does not have direction itself; it only affects the vector's magnitude and/or direction. The term 'scalar' comes from the fact that it 'scales' the vector.",
+    "misconception": "A student might think that a scalar is a vector because the transcript mentions 'scaled by a vector of three' when describing the effect of multiplying a vector by a scalar (x = 3).",
+    "start": "04:36",
+    "end": "05:42",
+    "chunk_id": 4,
+    "video_id": "Vectors_Intro",
+    "content": " To clarify these numbers, I'm going to visualize vector a, and the result of its multiplication with x would be a new vector that is three times longer. In other words, this new vector is scaled by a vector of three, and that is why we call x a scalar. For completeness, if we would have divided by x, we would get a vector that is three times shorter. There's a special case in which we multiply with an x-value of negative one. As you can see, in this case, the vector's components have become the opposite, and the vector itself also points in the opposite direction of the original vector. To simplify this, we just say that the green vector is just negative a. Now that we know what scale operations are, let's move on to vector operations, which are operations between two vectors. This could be either an addition or a subtraction. I'm going to continue to explain vector addition, but once again, vector subtraction is completely analogous. To calculate a sum of two vectors, we just calculate the sum of their x-components and"
+  },
+  {
+    "question": "A student claims that the length of a vector is the sum of the absolute values of its x and y components. Is this correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, the student's statement is incorrect. The length (or magnitude) of a vector is calculated using the Pythagorean theorem, which involves squaring the components, summing them, and then taking the square root. The formula for a 2D vector (x, y) is \u221a(x\u00b2 + y\u00b2). Simply adding the absolute values of the components (|x| + |y|) does not account for the diagonal nature of the vector's length in the coordinate system.",
+    "misconception": "A student thinks that the length of a vector is simply the sum of the absolute values of its x and y components (i.e., |x| + |y|).",
+    "start": "06:53",
+    "end": "07:56",
+    "chunk_id": 6,
+    "video_id": "Vectors_Intro",
+    "content": " between these two points. Talking of length, let's actually discuss the length of a vector. We also refer to it as the magnitude or norm. We represent it by writing these two vertical bars on either side of our vector, and in two dimensions, the length of a vector is defined by this formula. We can extend that to three dimensions, and even write a version for the generic and dimensional vector. To understand how that formula works, we're going to take our beloved coordinate system, and take a random vector in this case vector v. Then I'm going to draw a triangle beneath the vector, and you notice that I could have perfectly drawn it on top, it's just that I'd like to draw it beneath it. This triangle is a right angle triangle. The width of that triangle is the vector's x component. The height of that triangle is the vector's y component, and then the hypotenuse, or tilted side of the triangle, is the vector's length. At this point, we've got a right angle triangle of which we know the width and the height, and"
+  },
+  {
+    "question": "A student claims: 'A unit vector is a vector with a length of 0.' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "easy",
+    "answer": "No, this is incorrect. A unit vector (or normalized vector) is a vector with a length of exactly 1, not 0. The process of normalization involves dividing a vector by its length to achieve a length of 1, as stated in the transcript: 'we can take any arbitrary vector divided by its length, and then the result will [be a unit vector].'",
+    "misconception": "A unit vector is a vector with a length of 0.",
+    "start": "07:56",
+    "end": "09:01",
+    "chunk_id": 7,
+    "video_id": "Vectors_Intro",
+    "content": " we are looking for the length of its hypotenuse, and lucky for us, there's been a famous mathematician called Pythagoras, who came up with a Pythagoras theorem, a squared plus b squared equals c squared, where a and b are the width and height of a right angle triangle, and c is the length of its hypotenuse. We can now replace a, b, and c with our vector's components and the vector's length. We'll swap the left and right side of that equation, we'll take the square root of either side of the equation, and now we've got our expression for the length of a two-dimensional vector. If we fill in the components of that vector in this case, we can calculate that this vector's length is equal to 5.83 and a bit. Concerning a vector's length, there is a special case, which we call a unit vector. It's also referred to as a normalized vector. We write such a vector with a hat on top of it, and a normalized or unit vector is nothing more than a vector with a length of 1. In fact, we can take any arbitrary vector divided by its length, and then the result will"
+  },
+  {
+    "question": "A student claims: 'The length of a 2D vector is the sum of its components (a + b).' Is this statement correct?",
+    "question_type": "misconception",
+    "difficulty": "medium",
+    "answer": "No, this is incorrect. The Pythagorean theorem states that for a right-angled triangle, a\u00b2 + b\u00b2 = c\u00b2, where c is the hypotenuse. For a vector's length in 2D, the components (a and b) are squared, summed, and then the square root is taken to find the length (c). The transcript explicitly states: 'a squared plus b squared equals c squared,' and then 'we'll take the square root of either side of the equation' to find the length. The length is not simply the sum of the components.",
+    "misconception": "The length of a 2D vector is the sum of its components (a + b).",
+    "start": "07:56",
+    "end": "09:01",
+    "chunk_id": 7,
+    "video_id": "Vectors_Intro",
+    "content": " we are looking for the length of its hypotenuse, and lucky for us, there's been a famous mathematician called Pythagoras, who came up with a Pythagoras theorem, a squared plus b squared equals c squared, where a and b are the width and height of a right angle triangle, and c is the length of its hypotenuse. We can now replace a, b, and c with our vector's components and the vector's length. We'll swap the left and right side of that equation, we'll take the square root of either side of the equation, and now we've got our expression for the length of a two-dimensional vector. If we fill in the components of that vector in this case, we can calculate that this vector's length is equal to 5.83 and a bit. Concerning a vector's length, there is a special case, which we call a unit vector. It's also referred to as a normalized vector. We write such a vector with a hat on top of it, and a normalized or unit vector is nothing more than a vector with a length of 1. In fact, we can take any arbitrary vector divided by its length, and then the result will"
+  }
+]

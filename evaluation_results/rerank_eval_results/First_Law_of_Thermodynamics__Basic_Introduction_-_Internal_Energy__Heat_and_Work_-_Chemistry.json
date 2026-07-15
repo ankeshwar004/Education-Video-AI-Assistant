@@ -1,0 +1,394 @@
+{
+  "mrr_before": 0.7889784946236559,
+  "mrr_after": 0.8053955453149002,
+  "hit_rate_before": {
+    "1": 0.6612903225806451,
+    "3": 0.8870967741935484,
+    "5": 0.9838709677419355
+  },
+  "hit_rate_after": {
+    "1": 0.6774193548387096,
+    "3": 0.9516129032258065,
+    "5": 0.9516129032258065
+  },
+  "rank_movement": {
+    "improved": 10,
+    "worsened": 12,
+    "unchanged": 40,
+    "average_movement": 0.06451612903225806
+  },
+  "per_question": [
+    {
+      "question": "What happens to the internal energy of a system when work is done by it?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the sign of work done differ between chemistry and physics?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the key factor that determines whether work is considered positive or negative?",
+      "pre_rank": 1,
+      "post_rank": 3,
+      "movement": -2
+    },
+    {
+      "question": "What happens to energy in a system under practical conditions?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What are the three types of systems mentioned in the context of thermodynamics?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is a key characteristic of a closed system?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "What happens to energy in a system?",
+      "pre_rank": 3,
+      "post_rank": 8,
+      "movement": -5
+    },
+    {
+      "question": "What is the relationship between energy gain and loss in a system?",
+      "pre_rank": 5,
+      "post_rank": 7,
+      "movement": -2
+    },
+    {
+      "question": "Is energy created or destroyed in a system?",
+      "pre_rank": 2,
+      "post_rank": 3,
+      "movement": -1
+    },
+    {
+      "question": "What can flow into and out of a closed system?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the equation for the change in internal energy of a system in chemistry?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is the equation for the change in internal energy different in physics and chemistry?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What happens to the energy of the surroundings when work is done by the system?",
+      "pre_rank": 3,
+      "post_rank": 3,
+      "movement": 0
+    },
+    {
+      "question": "How is the sign of Q determined in a thermodynamic process?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the difference between an endothermic and exothermic process?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the fundamental principle of the first law of thermodynamics?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How can a system's internal energy increase?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What happens to a system's internal energy when the surroundings perform work on it?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What happens to the internal energy of a system when work is done by the system?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "How does the sign of work (W) differ between chemistry and physics?",
+      "pre_rank": 5,
+      "post_rank": 2,
+      "movement": 3
+    },
+    {
+      "question": "What is the relationship between burning calories and the internal energy of the body?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the sign of W when work is done on a system in chemistry?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the sign of W when work is done by a system in chemistry?",
+      "pre_rank": 1,
+      "post_rank": 3,
+      "movement": -2
+    },
+    {
+      "question": "What is the primary difference between heat and work in the context of the first law of thermodynamics?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "How do the surroundings increase the internal energy of a system, and what are the similarities between these methods?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the main difference between an endothermic and an exothermic process in terms of heat energy?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do the signs of Q and W differ when considering the system's perspective versus the surroundings' perspective?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the main difference between a closed system and an isolated system?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the equation for the change in internal energy differ between chemistry and physics?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the viewpoint differ between chemistry and physics when considering work done by a system?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "What is the difference in the sign of work (W) when work is done by the system in chemistry versus physics?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "What is the difference between the sign of work done on the system and work done by the system?",
+      "pre_rank": 5,
+      "post_rank": 1,
+      "movement": 4
+    },
+    {
+      "question": "What is the main difference between an open system and a closed system?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "How do open, closed, and isolated systems compare in terms of energy transfer?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "What is the main similarity between the transfer of energy and the transfer of money?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the concept of energy transfer in a system compare to the concept of money transfer in a transaction?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why is the equation for the change in internal energy different in chemistry and physics textbooks?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the definition of a closed system versus an isolated system affect the flow of energy and matter?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Why does the first law of thermodynamics state that energy is not created or destroyed in a practical sense?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How do open and closed systems differ in terms of matter and energy transfer?",
+      "pre_rank": 2,
+      "post_rank": 1,
+      "movement": 1
+    },
+    {
+      "question": "Why is Q positive in an endothermic process?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the sign of W change depending on the perspective of the system or surroundings?",
+      "pre_rank": 6,
+      "post_rank": 1,
+      "movement": 5
+    },
+    {
+      "question": "Why does the internal energy of the system decrease when work is done by the system?",
+      "pre_rank": 4,
+      "post_rank": 2,
+      "movement": 2
+    },
+    {
+      "question": "How does the sign of work (W) differ between chemistry and physics?",
+      "pre_rank": 5,
+      "post_rank": 2,
+      "movement": 3
+    },
+    {
+      "question": "Why is work considered positive in physics when it is done by the system?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "How does the viewpoint taken in chemistry versus physics affect the sign of work done by the system?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A cup of coffee is left on a table in a room. After some time, the coffee becomes cooler. What happens to the internal energy of the coffee?",
+      "pre_rank": 5,
+      "post_rank": 1,
+      "movement": 4
+    },
+    {
+      "question": "A car engine performs 500 joules of work on the air inside the engine. What happens to the internal energy of the air?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "A car engine does work on the surroundings by pushing the car forward. From the viewpoint of the surroundings, is the work done positive or negative?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A chemical reaction in a container releases energy to the surroundings. From the viewpoint of the system (the chemical reaction), is the work done positive or negative?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A person is lifting weights at the gym. Is work being done by the system or on the system in this scenario?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A car is being lifted by a crane. Is the work being done by the system or on the system from the perspective of physics?",
+      "pre_rank": 2,
+      "post_rank": 2,
+      "movement": 0
+    },
+    {
+      "question": "A chemistry student is studying a reaction in a closed system. If the system gains 50 Joules of heat energy and does 20 Joules of work, what is the change in internal energy of the system?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "A physics engineer is analyzing a system that does 30 Joules of work and loses 10 Joules of heat energy. What is the change in internal energy of the system from the surroundings point of view?",
+      "pre_rank": 1,
+      "post_rank": 2,
+      "movement": -1
+    },
+    {
+      "question": "A car engine is an example of what type of system, given that it takes in oxygen from the air and releases heat energy?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "If a cup of coffee gains 200 joules of energy, what happens to the energy in the surroundings?",
+      "pre_rank": 3,
+      "post_rank": 6,
+      "movement": -3
+    },
+    {
+      "question": "Is the statement 'W is always positive when work is done' correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is it correct to say that in physics, when work is done by the system, the internal energy of the system increases?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is the statement 'In a closed system, neither energy nor matter can flow in or out' correct?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is it correct to say that the first law of thermodynamics states that energy can be created or destroyed, but only through heat transfer?",
+      "pre_rank": 1,
+      "post_rank": 1,
+      "movement": 0
+    },
+    {
+      "question": "Is it correct to say that if the surroundings perform work on a system, the system's internal energy decreases?",
+      "pre_rank": 2,
+      "post_rank": 3,
+      "movement": -1
+    },
+    {
+      "question": "Is the statement 'In chemistry, W is positive when work is done by the system' correct?",
+      "pre_rank": 2,
+      "post_rank": 3,
+      "movement": -1
+    }
+  ]
+}
