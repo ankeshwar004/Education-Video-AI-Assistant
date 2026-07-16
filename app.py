@@ -5,14 +5,11 @@ import argparse
 import config
 import os
 from evaluation.eval_piepline import evaluation_pipeline
-from evaluation.generate_qa import sample_and_generate
 from src.retrieval import create_text_retriever, create_bm25_retriever, create_ensemble_retriever
 from src.chat import lcel_chat
-from src.ingest import create_text_docs, preprocess_video
-from src.llm import eval_llm
+from src.ingest import  preprocess_video
 from src.loader import load_clip_model, load_text_embedding_model, load_reranker
 from src.logger import get_logger
-from src.memory import chat_history
 from src.utils import load_json
 
 logger = get_logger(__name__)
