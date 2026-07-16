@@ -30,7 +30,7 @@ OUTPUTS_DIR=BASE_DIR/"outputs"
 LOG_DIR=OUTPUTS_DIR/"logs"
 LOG_FILE=LOG_DIR/"app.log"
 
-YOUTUBE_URL="https://www.youtube.com/watch?v=INM9H2KFVA0"
+YOUTUBE_URL="YOUTUBE_URL"
 
 
 DEVICE="cuda"
@@ -52,7 +52,6 @@ FRAME_DETECTION_THRESHOLD_PERCENTILE=92
 
 
 
-
 BM25_K=20
 ENSEMBLE_WEIGHTS=[0.3, 0.7]
 RERANKER_MODEL="BAAI/bge-reranker-base"
@@ -65,10 +64,9 @@ MAX_TURNS=3
 
 TOTAL_QA_PAIRS=60
 
-
 MAIN_LLM_MODEL="gemini-2.5-flash"
 DECISION_LLM_MODEL="llama-3.1-8b-instant"
-SUMMARY_LLM_MODEL = "meta-llama/llama-3.3-70b-instruct:free"
+SUMMARY_LLM_MODEL="meta-llama/llama-3.3-70b-instruct:free"
 EVAL_LLM_MODEL="llama-3.3-70b-versatile"
 JUDGE_LLM_MODEL="mistral-medium-3-5"
 
@@ -76,14 +74,15 @@ GEMINI_API_KEY=os.getenv("GEMINI_API_KEY")
 GROQ_API_KEY=os.getenv("GROQ_API_KEY")
 OPENROUTER_API_KEY=os.getenv("OPENROUTER_API_KEY")
 
-# if GOOGLE_API_KEY:
-# 	os.environ.setdefault("GOOGLE_API_KEY", GOOGLE_API_KEY)
 
-LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING", "true")
-LANGSMITH_ENDPOINT = os.getenv("LANGSMITH_ENDPOINT", "https://apac.api.smith.langchain.com")
-LANGSMITH_PROJECT = os.getenv("LANGSMITH_PROJECT", "RAG_VideoAssistant")
-LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")
+LANGSMITH_TRACING=os.getenv("LANGSMITH_TRACING", "true")
+LANGSMITH_ENDPOINT=os.getenv("LANGSMITH_ENDPOINT", "https://apac.api.smith.langchain.com")
+LANGSMITH_PROJECT=os.getenv("LANGSMITH_PROJECT", "RAG_VideoAssistant")
+LANGSMITH_API_KEY=os.getenv("LANGSMITH_API_KEY")
 
-OPENAI_API_KEY = os.getenv("NANAROUTER_API_KEY")
-OPENAI_BASE_URL = os.getenv("NANAROUTER_BASE_URL")
+OPENAI_API_KEY=os.getenv("NANAROUTER_API_KEY")
+OPENAI_BASE_URL=os.getenv("NANAROUTER_BASE_URL")
 
+
+VIDEO_ID="VIDEO_ID FOR EVALUATION"
+VIDEO_PATH= "PATH TO VIDEO FILE FOR CHAT"
