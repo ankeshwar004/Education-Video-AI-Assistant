@@ -1,6 +1,5 @@
 import config
 import easyocr
-import torch
 
 from langchain_huggingface import HuggingFaceEmbeddings
 from faster_whisper import WhisperModel
@@ -12,7 +11,7 @@ def load_whisper_model(model_name=config.WHISPER_MODEL):
     return WhisperModel(model_name)
 
 def load_reader():
-    return easyocr.Reader(['en'], gpu=torch.cuda.is_available())
+    return easyocr.Reader(['en'])
 
 def load_clip_model(model_name=config.CLIP_MODEL):
     return SentenceTransformer(model_name)
