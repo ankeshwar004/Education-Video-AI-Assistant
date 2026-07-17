@@ -95,6 +95,6 @@ def calibrate_threshold(video_path, sample_every=config.FRAME_DETECTION_INTERVAL
     diffs=np.array(diffs)
     if diffs.size == 0:
         logger.warning("No frame differences collected; using default frame threshold")
-        return config.FRAME_THRESHOLD
+        return config.FRAME_SCORE_THRESHOLD
     logger.info(f"frame-to-frame noise floor - median:{np.median(diffs):.3f} p95:{np.percentile(diffs,95):.3f}")
     return max(2.0, np.percentile(diffs, percentile) * 4)
