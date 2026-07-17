@@ -34,8 +34,7 @@ def evaluation_pipeline(video_id):
     
     logger.info("Loading Docs")
     docs_path=os.path.join(str(config.TRANSCRIPTS_CHUNK_DIR),f"{video_id}.json")
-    with open(docs_path) as f:
-        docs=load_json(f)
+    docs=load_json(docs_path)
     docs=[Document(**item) for item in docs]
     
     qa_pairs_path=os.path.join(str(config.QA_PAIRS_DIR),"all_qa_pairs",f"{video_id}.json")
@@ -44,16 +43,15 @@ def evaluation_pipeline(video_id):
         qa_pairs=load_json(qa_pairs_path)
     else:   
         logger.info(f"Generating QA pairs for evaluation.")    
-        qa_pairs=sample_and_generate(docs,eval_llm,video_id,n=config.EVAL_QA_PAIRS_PER_CHUNK)
+        qa_pairs=sample_and_generate(docs,eval_llm,video_id,n=config.TOTAL_QA_PAIRS)
         
     
     logger.info("Loading  DB and initializing retrieval components...")
     text_embedding_model=load_text_embedding_model(config.TEXT_EMBEDDING_MODEL)
     text_db_path=os.path.join(str(config.TEXT_DB_PATH), video_id)
-    text_db=Chroma.from_documents(
-        documents=docs,
-        embedding=text_embedding_model,
+    text_db=Chroma(
         persist_directory=text_db_path,
+        embedding_function=text_embedding_model,
     )
     
     frame_db_path=os.path.join(str(config.FRAME_DB_PATH), video_id)
