@@ -4,7 +4,7 @@ import chromadb
 import argparse
 import config
 import os
-from evaluation.eval_piepline import evaluation_pipeline
+from evaluation.eval_pipeline import evaluation_pipeline
 from src.retrieval import create_text_retriever, create_bm25_retriever, create_ensemble_retriever
 from src.chat import lcel_chat
 from src.ingest import  preprocess_video
@@ -21,10 +21,9 @@ def load_existing_artifacts(video_id):
     docs=[Document(**item) for item in docs]
     text_embedding_model=load_text_embedding_model(config.TEXT_EMBEDDING_MODEL)
     text_db_path=os.path.join(str(config.TEXT_DB_PATH), video_id)
-    text_db=Chroma.from_documents(
-        documents=docs,
-        embedding=text_embedding_model,
+    text_db=Chroma(
         persist_directory=text_db_path,
+        embedding_function=text_embedding_model,
     )
     
     frame_db_path=os.path.join(str(config.FRAME_DB_PATH), video_id)
@@ -100,10 +99,17 @@ def main(args):
     text_docs = None
     retrieval_components = None
     video_id=config.VIDEO_ID
-    if args.preprocess:
+
+    # --url needs ingestion to know its video_id, even without --preprocess
+    need_preprocess=args.preprocess or (args.url and (args.chat or args.query))
+
+    if need_preprocess:
         logger.info("Starting preprocessing.")
 
-        results = preprocess_video(video_path=config.VIDEO_PATH)
+        if args.url:
+            results = preprocess_video(video_path=None, url=args.url)
+        else:
+            results = preprocess_video(video_path=config.VIDEO_PATH)
 
         text_docs = results["text_docs"]
         video_id = results["video_id"]
@@ -154,6 +160,12 @@ if __name__ == "__main__":
         "--query",
         type=str,
         help="Ask a single question.",
+    )
+
+    parser.add_argument(
+        "--url",
+        type=str,
+        help="YouTube URL to use. With --preprocess ingests it; with --chat/--query ingests then chats. Defaults to config values if omitted.",
     )
 
     parser.add_argument(
