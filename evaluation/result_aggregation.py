@@ -11,20 +11,23 @@ logger=get_logger(__name__)
 retrieval_eval_dir=config.RETRIEVAL_EVAL_RESULTS_DIR
 rerank_eval_dir=config.RERANK_EVAL_RESULTS_DIR
 qa_pairs_dir=config.QA_PAIRS_DIR
-video_path=config.VIDEO_DIR
 
-video_ids=[]
-video_folder=Path(video_path)
-for video_file in os.listdir(video_folder):
-    if video_file.endswith(".mp4"):
-        video_id=Path(video_file).stem
-        video_ids.append(video_id)
-
-logger.info(f"Found {len(video_ids)} videos for evaluation")
 
 qa_pairs_path=os.path.join(qa_pairs_dir, "all_qa_pairs")
 if not os.path.exists(qa_pairs_path):
     logger.error(f"QA pairs directory {qa_pairs_path} does not exist.")
+
+video_ids=[]
+for result_dir in (qa_pairs_path, retrieval_eval_dir, rerank_eval_dir):
+    if not os.path.exists(result_dir):
+        continue
+    for result_file in os.listdir(result_dir):
+        if result_file.endswith(".json"):
+            video_id=Path(result_file).stem
+            if video_id not in video_ids:
+                video_ids.append(video_id)
+
+logger.info(f"Found {len(video_ids)} videos for evaluation")
 
 qa_details={}
 qa_counts={}  
