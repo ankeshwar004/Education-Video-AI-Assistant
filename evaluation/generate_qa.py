@@ -25,8 +25,8 @@ def generate_qa_pairs(docs,qa_type,eval_llm,target_n):
     random.shuffle(doc_pool)
     
     max_per_doc=math.ceil(target_n/len(doc_pool))  #bec if we have 10 docs and we need 20 pairs, we need to generate 2 pairs per doc.
-    max_per_doc=min(max_per_doc,6)  #max 6 pairs per doc to avoid overfitting to a single chunk.
-    max_per_doc=max(max_per_doc,2)  #min 2 pairs per doc to ensure we get enough pairs.
+    max_per_doc=min(max_per_doc,6)  
+    max_per_doc=max(max_per_doc,2) 
     
     doc_tried=0
     for doc in doc_pool:
@@ -48,8 +48,9 @@ def generate_qa_pairs(docs,qa_type,eval_llm,target_n):
                 "video_id": doc.metadata["video_id"],
                 "content": doc.page_content,
             })
-        
-    time.sleep(5)  # Sleep for 5 seconds to avoid rate limiting
+            
+        time.sleep(5)  # Sleep to avoid rate limiting
+
     return qa_pairs
 
 
