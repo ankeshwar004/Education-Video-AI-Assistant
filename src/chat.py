@@ -110,7 +110,7 @@ def lcel_chat(query,retrieval):
         )).with_config({"run_name":"Ensemble Retriever"})
 
     reranker_step=RunnableLambda(
-        lambda x: {**x, "docs":rerank(x["query"],x["docs"],retrieval['reranker'],k=3)}
+        lambda x: {**x, "docs":rerank(x["query"],x["docs"],retrieval['reranker'],k=config.CHAT_RERANK_K)}
         ).with_config({"run_name":"Reranker"})
 
     retrieval_pipeline=retriever_step|reranker_step
@@ -155,15 +155,16 @@ def lcel_chat(query,retrieval):
         lambda x: {**x,"messages":build_multimodal_message(x["prompt_value_messages"],x["images"])}
         ).with_config({"run_name":"Build Message"}) 
 
-    llm_result=(
-        RunnableLambda(lambda x: x['messages']) | main_strutured_llm
+    llm_result=RunnablePassthrough.assign(
+        response=RunnableLambda(lambda x: x['messages']) | main_strutured_llm
         ).with_config({"run_name":"LLM Result"})
 
 
     chat_pipeline=(standalone_query|retrieval_pipeline|text_context_builder|
     vision_pipeline|prompt_builder|message_builder|llm_result).with_config({"run_name":"Chat Pipeline"})
 
-    response=chat_pipeline.invoke({"query":query})
-    update_memory(query,response) 
+    result=chat_pipeline.invoke({"query":query})
+    response=result["response"]
+    update_memory(result["query"],response) 
 
     return response
