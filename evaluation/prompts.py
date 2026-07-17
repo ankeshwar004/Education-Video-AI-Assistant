@@ -1,11 +1,6 @@
 from langchain_core.prompts import PromptTemplate
 
 
-general_rules="""
-If the transcript contains obvious speech recognition or OCR mistakes (e.g., "not dedicated" instead of "unstructured"), 
-infer the intended academic term when it is unambiguous. Do not preserve obvious transcription errors in the generated question 
-or answer"""
-
 misconception_qa_generation_prompt = PromptTemplate.from_template(
   """
   You are creating misconception-based evaluation questions for an  educational video assistant.
