@@ -4,7 +4,7 @@ from langsmith import traceable
 
 from src.llm import summarize_llm
 from src.prompts import summarize_prompt
-
+import config
 
 chat_history=InMemoryChatMessageHistory()
 chat_summary=""
@@ -25,7 +25,7 @@ def update_summary(messages):
   return chat_summary
 
 
-def update_memory(query,llm_response,message_window_size=3):
+def update_memory(query,llm_response,message_window_size=config.MAX_TURNS):
   MAX_TURNS=message_window_size
 
   if len(chat_history.messages)>MAX_TURNS*2:
@@ -36,4 +36,10 @@ def update_memory(query,llm_response,message_window_size=3):
   chat_history.add_user_message(query)
   chat_history.add_ai_message(llm_response.response)
 
+  return
+
+def clear_memory():
+  global chat_summary
+  chat_history.clear()
+  chat_summary=""
   return
