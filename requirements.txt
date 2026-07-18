@@ -19,7 +19,6 @@ pydantic
 pydub
 rank_bm25
 sentence-transformers
-torch
 yt-dlp
 tiktoken
 python-dotenv
