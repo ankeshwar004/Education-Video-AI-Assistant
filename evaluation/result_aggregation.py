@@ -195,9 +195,12 @@ def micro_average_rerank(rerank_eval_results):
     total_improved=total_worsened=total_unchanged=0
     total_movement=0.0
 
+    total_n_valid=0
+
     for video_id, result in rerank_eval_results.items():
         rm=result["rank_movement"]
-        n=rm["improved"] + rm["worsened"] + rm["unchanged"]
+        n_valid=rm["improved"] + rm["worsened"] + rm["unchanged"]
+        n=len(result.get("per_question") or []) or n_valid
         if n == 0:
             continue
         for k in K_VALUES:
@@ -208,7 +211,9 @@ def micro_average_rerank(rerank_eval_results):
         total_improved += rm["improved"]
         total_worsened += rm["worsened"]
         total_unchanged += rm["unchanged"]
-        total_movement += rm["average_movement"] * n
+        if rm["average_movement"] is not None:
+            total_movement += rm["average_movement"] * n_valid
+            total_n_valid += n_valid
         total_n += n
 
 
@@ -225,7 +230,7 @@ def micro_average_rerank(rerank_eval_results):
             "improved": total_improved,
             "worsened": total_worsened,
             "unchanged": total_unchanged,
-            "average_movement": total_movement / total_n,
+            "average_movement": total_movement / total_n_valid if total_n_valid else None,
         },
         "n_pairs": total_n,
     }

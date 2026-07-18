@@ -70,12 +70,12 @@ def evaluate_retrieval_configs(qa_pairs,retrieval,eval_llm,video_id):
 
     def full_pipeline(query):
         docs = ensemble_retriever.invoke(query)
-        return rerank(query,docs,reranker,k=config.RERANK_K)
+        return rerank(query,docs,reranker)
 
     def multiquery_full_pipeline(query):
         docs=multiquery_retrieve(query,ensemble_retriever,eval_llm)
         docs=remove_duplicates(docs)
-        docs=rerank(query,docs,reranker,k=config.RERANK_K)
+        docs=rerank(query,docs,reranker)
         return docs
 
     configs = {

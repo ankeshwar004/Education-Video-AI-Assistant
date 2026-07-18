@@ -4,6 +4,7 @@ import config
 import os 
 from src.utils import save_json
 from evaluation.utils import compute_mrr, hit_rate_at_k, get_rank
+from src.retrieval import rerank
 from src.logger import get_logger
 
 
@@ -60,11 +61,7 @@ def evaluate_reranker(qa_pairs,retrieval,video_id):
       pre_rank=get_rank(target_start,pre_docs)
 
       # After reranking
-      pairs=[(query, doc.page_content) for doc in pre_docs]
-      scores=reranker.predict(pairs)
-      reranked=sorted(zip(pre_docs,scores),key=lambda x:x[1],reverse=True)
-
-      post_docs=[doc for doc, score in reranked]
+      post_docs=rerank(query,pre_docs,reranker)
       post_rank=get_rank(target_start,post_docs)
 
       movement=None
