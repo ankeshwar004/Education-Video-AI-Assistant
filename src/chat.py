@@ -14,7 +14,7 @@ from src.memory import chat_history, update_memory
 from src.llm import build_multimodal_message,decision_strutured_llm, main_llm, main_strutured_llm
 from src.utils import load_images
 from src.prompts import contextualize_qa_prompt, decision_prompt, qa_prompt
-
+from src.cache import get_cache, set_cache
 
 
 logger = get_logger(__name__)
@@ -22,9 +22,16 @@ logger = get_logger(__name__)
 
 
 @traceable(name="Query Needs Images")
-def query_needs_images(query):
+def query_needs_images(query,video_id):
+  cache=get_cache("vision",video_id,query)
+  if cache is not None:
+    return cache['answer']
+
   decision_chain=decision_prompt|decision_strutured_llm
   decision=decision_chain.with_config({"run_name":"Decision LLM"}).invoke({"query":query})
+  
+  set_cache("vision",{"answer":decision.answer},config.VISION_DECISION_CACHE_TTL,video_id,query)
+  
   return decision.answer
 
 
@@ -57,8 +64,10 @@ def chat(query,retrieval):
   frames_metadata=frames['metadatas'][0]
 
   ocr_context=build_ocr_context(frames_metadata)
+  
+  video_id=docs[0].metadata['video_id']
 
-  needs_vision = query_needs_images(standalone_ques)
+  needs_vision = query_needs_images(standalone_ques,video_id)
 
   images=[]
   if needs_vision:
@@ -73,13 +82,19 @@ def chat(query,retrieval):
   prompt_value_messages=prompt_value.messages
 
   messages=build_multimodal_message(prompt_value_messages,images)
-  try:
-    logger.info("Calling LLM")
-    start = time.time()
-    llm_response=main_strutured_llm.invoke(messages)
-    end = time.time()
+  
+  cache=get_cache("main_llm_answer",video_id,standalone_ques)
+  
+  if cache is not None:
+    logger.info("Cache hit for answer")
+    llm_response=cache['answer']
 
-    logger.info("Time taken for LLM response: %s",end-start)
+  try:
+    if(cache is None):  
+        logger.info("Calling LLM")
+        llm_response=main_strutured_llm.invoke(messages)
+        
+        set_cache("main_llm_answer",{"answer":llm_response},config.CHAT_ANSWER_CACHE_TTL,video_id,standalone_ques)
   except Exception as e:
     logger.error(type(e))
     logger.error(e)
@@ -129,7 +144,7 @@ def lcel_chat(query,retrieval):
         ).with_config({"run_name":"Build OCR Context"})
 
     vision_decision=RunnablePassthrough.assign(
-        need_vision=RunnableLambda(lambda x: query_needs_images(x["query"])) # inside it llm is called (i.e llm.invoke(query))
+        need_vision=RunnableLambda(lambda x: query_needs_images(x["query"],x["docs"][0].metadata["video_id"]))
         ).with_config({"run_name":"Vision Decision"})
 
     vision_loader=RunnableBranch(
