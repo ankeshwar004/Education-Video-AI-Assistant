@@ -8,14 +8,13 @@ from langsmith import traceable
 
 import config
 from src.retrieval import docs_retriever,frame_retriever, build_text_context, build_ocr_context ,rerank
-from src.logger import get_logger
-from src.prompts import contextualize_qa_prompt, qa_prompt
-from src.memory import chat_history, update_memory
+from src.memory import get_messages, get_summary, update_memory
 from src.llm import build_multimodal_message,decision_strutured_llm, main_llm, main_strutured_llm
 from src.utils import load_images
 from src.prompts import contextualize_qa_prompt, decision_prompt, qa_prompt
-from src.cache import get_cache, set_cache
-
+from src.base_models import Answer
+from src.cache import get_cache, set_cache, make_messages_hash
+from src.logger import get_logger
 
 logger = get_logger(__name__)
 
@@ -35,16 +34,38 @@ def query_needs_images(query,video_id):
   return decision.answer
 
 
+@traceable(name="Main LLM Response")
+def main_llm_response(messages,video_id):
+    
+    messages_hash = make_messages_hash(messages)
+
+    cache=get_cache("main_llm_answer",video_id,messages_hash)
+
+    if cache is not None:
+        logger.info("Cache hit for answer")
+        return Answer(**cache['answer'])
+    
+    logger.info("Calling LLM")
+    llm_response=main_strutured_llm.invoke(messages)
+    
+    set_cache("main_llm_answer",{"answer":llm_response.response},config.CHAT_ANSWER_CACHE_TTL,video_id,messages_hash)
+    
+    return llm_response
+
+
 #Option 1
 
 @traceable(name="Python chat pipeline")
-def chat(query,retrieval):
-
-  if chat_history.messages:
+def chat(query,retrieval,session_id):
+ 
+  chat_messages=get_messages(session_id)
+  chat_summary=get_summary(session_id)
+  
+  if chat_messages:
     contextualize_chain=contextualize_qa_prompt|main_llm|StrOutputParser()
     standalone_ques=contextualize_chain.with_config({"run_name":"Contextualize Query"}).invoke({
         "query":query,
-        "chat_history":chat_history.messages
+        "chat_history":chat_messages
     })
   else:
     standalone_ques=query
@@ -77,43 +98,31 @@ def chat(query,retrieval):
       "context":text_context,
       "ocr_context":ocr_context,
       "query":standalone_ques,
-      "chat_history":chat_history.messages
+      "chat_history":chat_messages
   })
   prompt_value_messages=prompt_value.messages
 
   messages=build_multimodal_message(prompt_value_messages,images)
   
-  cache=get_cache("main_llm_answer",video_id,standalone_ques)
+  llm_response=main_llm_response(messages,video_id)
   
-  if cache is not None:
-    logger.info("Cache hit for answer")
-    llm_response=cache['answer']
-
-  try:
-    if(cache is None):  
-        logger.info("Calling LLM")
-        llm_response=main_strutured_llm.invoke(messages)
-        
-        set_cache("main_llm_answer",{"answer":llm_response},config.CHAT_ANSWER_CACHE_TTL,video_id,standalone_ques)
-  except Exception as e:
-    logger.error(type(e))
-    logger.error(e)
-    raise
-
-  update_memory(standalone_ques,llm_response)
+  update_memory(session_id,standalone_ques,llm_response)
 
   return llm_response
 
 
 #Option 2
 
-def lcel_chat(query,retrieval):
+def lcel_chat(query,retrieval,session_id):
+
+    chat_messages=get_messages(session_id)
+    chat_summary=get_summary(session_id)
     
     contextualize_chain=contextualize_qa_prompt|main_llm|StrOutputParser()
     standalone_query=RunnableBranch(
-        (lambda x:bool(chat_history.messages),RunnablePassthrough.assign(
+        (lambda x:bool(chat_messages),RunnablePassthrough.assign(
             query=RunnableLambda(
-            lambda x: {"query":x["query"], "chat_history":chat_history.messages}
+            lambda x: {"query":x["query"], "chat_history":chat_messages}
             )|contextualize_chain.with_config({"run_name":"Contextualize Query"})
             )),
         RunnablePassthrough()
@@ -163,7 +172,7 @@ def lcel_chat(query,retrieval):
             lambda x: {"context":x["text_context"],
                     "ocr_context":x["ocr_context"],
                     "query":x["query"],
-                    "chat_history":chat_history.messages}
+                    "chat_history":chat_messages}
         )|qa_prompt).with_config({"run_name":"Prompt Builder"})
 
     message_builder=RunnableLambda(
@@ -171,7 +180,7 @@ def lcel_chat(query,retrieval):
         ).with_config({"run_name":"Build Message"}) 
 
     llm_result=RunnablePassthrough.assign(
-        response=RunnableLambda(lambda x: x['messages']) | main_strutured_llm
+        response=RunnableLambda(lambda x: main_llm_response(x["messages"],x["docs"][0].metadata["video_id"]))
         ).with_config({"run_name":"LLM Result"})
 
 
@@ -180,6 +189,6 @@ def lcel_chat(query,retrieval):
 
     result=chat_pipeline.invoke({"query":query})
     response=result["response"]
-    update_memory(result["query"],response) 
+    update_memory(session_id,result["query"],response) 
 
     return response
