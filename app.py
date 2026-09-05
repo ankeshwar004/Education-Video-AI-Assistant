@@ -52,7 +52,7 @@ def load_existing_artifacts(video_id):
 def run_chat_query(query,retrieval_components):
     logger.info("User: %s", query)
 
-    response = lcel_chat(query,retrieval_components)
+    response = lcel_chat(query,retrieval_components,config.SESSION_ID)
 
     print("\nAssistant:\n")
     print(response)
