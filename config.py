@@ -84,7 +84,8 @@ OPENAI_API_KEY=os.getenv("NARAROUTER_API_KEY")
 OPENAI_BASE_URL=os.getenv("NARAROUTER_BASE_URL")
 
 
-VIDEO_ID="VIDEO_ID FOR EVALUATION"
+# VIDEO_ID="VIDEO_ID FOR EVALUATION"
+VIDEO_ID="First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry"
 VIDEO_PATH= "PATH TO VIDEO FILE FOR CHAT"
 
 
@@ -93,6 +94,11 @@ CHAT_ANSWER_CACHE_TTL=120
 
 REDIS_HOST=os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT=int(os.getenv("REDIS_PORT", "6379"))
+
+
+DB_HOST=os.getenv("DB_HOST", "localhost")
+DB_PORT=int(os.getenv("DB_PORT", "5432"))
+DATABASE_URL=os.getenv("DATABASE_URL")
 
 
 SESSION_ID="abc123"

@@ -23,3 +23,9 @@ tiktoken
 python-dotenv
 imageio_ffmpeg
 redis
+psycopg
+psycopg_pool
+asyncpg
+fastapi
+uvicorn 
+python-multipart
