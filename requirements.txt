@@ -21,3 +21,5 @@ sentence-transformers
 yt-dlp
 tiktoken
 python-dotenv
+imageio_ffmpeg
+redis
