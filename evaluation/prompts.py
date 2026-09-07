@@ -1,4 +1,4 @@
-from langchain_core.prompts import PromptTemplate
+from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 
 
 misconception_qa_generation_prompt = PromptTemplate.from_template(
@@ -162,3 +162,20 @@ multi_query_prompt=PromptTemplate.from_template(
     Return one query per line.
     """
   )
+
+hyde_prompt=ChatPromptTemplate.from_messages([
+  
+  ("system", """You are generating a hypothetical passage for information retrieval.
+
+    Given the user's question, write a concise hypothetical answer that could
+    plausibly appear in an educational lecture transcript.
+
+    Use relevant technical terminology, concepts, definitions, and relationships
+    that would likely appear in the source material.
+
+    Do not mention that the answer is hypothetical.
+    Do not say "I don't know".
+    """ ),
+    ("human", "{query}")
+])
+  

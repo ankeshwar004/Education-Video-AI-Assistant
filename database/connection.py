@@ -1,15 +1,14 @@
 from psycopg_pool import ConnectionPool
-# from psycopg_pool import ConnectionPool
 
 from psycopg.rows import dict_row
 
 import config
 import os
 
-DATABASE_URL = config.DATABASE_URL
+DATABASE_URL=config.DATABASE_URL
 
 
-pool = ConnectionPool(
+pool=ConnectionPool(
     conninfo=DATABASE_URL,
     min_size=1,
     max_size=10,
@@ -31,12 +30,14 @@ def create_tables():
     schema_path=os.path.join(os.path.dirname(__file__), "schema.sql")
     
     with open(schema_path, "r") as f:
-        schema = f.read()
+        schema=f.read()
     
     with pool.connection() as conn:
-        conn.execute(schema)
-        conn.commit()
+        with conn.cursor() as cur:
+            cur.execute(schema)
+            conn.commit()
 
 
 def check_pool():
-    print("Pool closed:", pool.closed)
+    with pool.connection() as conn:
+        print("Pool is open:", not conn.closed)

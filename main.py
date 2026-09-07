@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from database.connection import init_db, close_db, create_tables, check_pool
-from database.queries import *
+from database.queries import create_video, get_videos
 
 
 @asynccontextmanager
@@ -36,14 +36,14 @@ def health_check():
     }
     
 @app.get("/videos")
-async def videos():
+def videos():
 
     return get_videos()
     
 
 
 @app.post("/test-video")
-async def test_video():
+def test_video():
 
     video = create_video(
         video_id="test123",

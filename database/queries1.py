@@ -1,14 +1,14 @@
 from database.connection import pool
 
 
-async def create_video(video_id: str,title: str | None = None,youtube_url: str | None = None,blob_url: str | None = None,duration: int | None = None):
+def create_video(video_id: str,title: str,youtube_url: str ,storage_path_url: str | None = None,duration: int | None = None,status: str = "processing"):
 
     query = """
         INSERT INTO videos (
             video_id,
             title,
             youtube_url,
-            blob_url,
+            storage_path_url,
             duration,
             status
         )
@@ -16,29 +16,29 @@ async def create_video(video_id: str,title: str | None = None,youtube_url: str |
         RETURNING *;
     """
 
-    async with pool.connection() as conn:
-        async with conn.cursor() as cur:
-            await cur.execute(
+    with pool.connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(
                 query,
                 (
                     video_id,
                     title,
                     youtube_url,
-                    blob_url,
+                    storage_path_url,
                     duration,
-                    "processing",
+                    status,
                 ),
             )
 
-            video = await cur.fetchone()
+            video = cur.fetchone()
 
-        await conn.commit()
+        conn.commit()
 
     return video
 
 
 
-async def get_video(video_id: str):
+def get_video(video_id: str):
 
     query = """
         SELECT *
@@ -46,16 +46,16 @@ async def get_video(video_id: str):
         WHERE video_id = %s;
     """
 
-    async with pool.connection() as conn:
-        async with conn.cursor() as cur:
-            await cur.execute(query,(video_id,),)
+    with pool.connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(query,(video_id,),)
 
-            return await cur.fetchone()
+            return cur.fetchone()
         
         
         
         
-async def update_video_status(
+def update_video_status(
     video_id: str,
     status: str,
 ):
@@ -67,11 +67,11 @@ async def update_video_status(
         RETURNING *;
     """
 
-    async with pool.connection() as conn:
+    with pool.connection() as conn:
 
-        async with conn.cursor() as cur:
+        with conn.cursor() as cur:
 
-            await cur.execute(
+            cur.execute(
                 query,
                 (
                     status,
@@ -79,16 +79,16 @@ async def update_video_status(
                 ),
             )
 
-            video = await cur.fetchone()
+            video = cur.fetchone()
 
-        await conn.commit()
+        conn.commit()
 
     return video
 
 
 
 
-async def get_videos():
+def get_videos():
 
     query = """
         SELECT *
@@ -96,19 +96,19 @@ async def get_videos():
         ORDER BY created_at DESC;
     """
 
-    async with pool.connection() as conn:
+    with pool.connection() as conn:
 
-        async with conn.cursor() as cur:
+        with conn.cursor() as cur:
 
-            await cur.execute(query)
+            cur.execute(query)
 
-            return await cur.fetchall()
+            return cur.fetchall()
         
    
    
    
         
-async def delete_video(video_id: str):
+def delete_video(video_id: str):
 
     query = """
         DELETE FROM videos
@@ -116,17 +116,17 @@ async def delete_video(video_id: str):
         RETURNING *;
     """
 
-    async with pool.connection() as conn:
+    with pool.connection() as conn:
 
-        async with conn.cursor() as cur:
+        with conn.cursor() as cur:
 
-            await cur.execute(
+            cur.execute(
                 query,
                 (video_id,),
             )
 
-            video = await cur.fetchone()
+            video = cur.fetchone()
 
-        await conn.commit()
+        conn.commit()
 
     return video

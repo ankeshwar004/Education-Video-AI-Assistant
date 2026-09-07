@@ -90,3 +90,5 @@ def transcribe(chunks, whisper):
     offset+=info.duration
   return transcript_segments
 
+
+

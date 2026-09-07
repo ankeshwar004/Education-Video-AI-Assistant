@@ -5,10 +5,10 @@ from langsmith import traceable
 import config
 import os
 
-from evaluation.utils import remove_duplicates,compute_mrr, hit_rate_at_k, get_rank
-from evaluation.prompts import multi_query_prompt
+from evaluation.utils import compute_mrr, hit_rate_at_k, get_rank
+from evaluation.prompts import multi_query_prompt,hyde_prompt
 from src.retrieval import rerank
-from src.utils import save_json
+from src.utils import save_json, deduplication
 from src.logger import get_logger
 
 
@@ -33,7 +33,7 @@ def multiquery_retrieve(question,retriever,eval_llm):
 
 
 @traceable(name="evaluate_retrieval")
-def evaluate_retrieval(qa_pairs, retrieval_fn, k_values=[1, 3, 5]):
+def evaluate_retrieval(qa_pairs, retrieval_fn, k_values=[1, 3, 5, 10, 20]):
 
     ranks=[]
     for qa in qa_pairs:
@@ -58,6 +58,9 @@ def evaluate_retrieval_configs(qa_pairs,retrieval,eval_llm,video_id):
     text_retriever=retrieval['text_retriever']
     ensemble_retriever=retrieval['ensemble_retriever']
     reranker=retrieval['reranker']
+
+    embedder = retrieval['text_retriever'].vectorstore.embeddings
+
     
     def bm25_only(query):
         return bm25_retriever.invoke(query)
@@ -74,21 +77,34 @@ def evaluate_retrieval_configs(qa_pairs,retrieval,eval_llm,video_id):
 
     def multiquery_full_pipeline(query):
         docs=multiquery_retrieve(query,ensemble_retriever,eval_llm)
-        docs=remove_duplicates(docs)
+        docs=deduplication(docs,embedder)
         docs=rerank(query,docs,reranker)
         return docs
+    
+    def hyde_ensemble_rerank(query):
+        hyde_chain=hyde_prompt|eval_llm|StrOutputParser()
+        hypothetical_answer=hyde_chain.invoke({"query": query})
+        
+        bm25=bm25_retriever.invoke(query)
+        vector=text_retriever.invoke(hypothetical_answer)
+        docs=deduplication(bm25+vector,embedder)
+        docs=rerank(query,docs,reranker)
+        
+        return docs
+        
 
     configs = {
         "bm25_only":bm25_only,
         "vector_only":vector_only,
         "ensemble_only":ensemble_only,
         "ensemble_rerank":full_pipeline,
-        "ensemble_multiquery_rerank":multiquery_full_pipeline
+        "ensemble_multiquery_rerank":multiquery_full_pipeline,
+        "hyde_ensemble_rerank":hyde_ensemble_rerank
     }
 
     retrieval_results = {}
     for name, fn in configs.items():
-        retrieval_results[name] = evaluate_retrieval(qa_pairs, fn, k_values=[1, 3, 5])
+        retrieval_results[name] = evaluate_retrieval(qa_pairs, fn)
 
     save_json(retrieval_results, os.path.join(config.RETRIEVAL_EVAL_RESULTS_DIR,f"{video_id}.json"))
     return retrieval_results
