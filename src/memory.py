@@ -4,144 +4,84 @@ from langsmith import traceable
 
 from src.llm import summarize_llm
 from src.prompts import summarize_prompt
-from database.connection import pool
+from database.queries.chat_message_query import create_chat_message
+from database.queries.chat_session_query import create_chat_session, get_chat_session
+from database.queries.memory_query import (
+    clear_session_memory,
+    get_all_messages as query_all_messages,
+    get_recent_messages,
+    get_session_summary,
+    update_session_summary,
+)
+
+
+def initialize_memory(session_id, video_id, title=None):
+
+    session = get_chat_session(session_id)
+    if session is not None:
+        return session
+
+    return create_chat_session(session_id, video_id, title)
 
 
 def get_messages(session_id):
-    """
-    Get the recent messages for active chat context.
-
-    PostgreSQL keeps ALL messages permanently.
-    Only the latest MAX_TURNS*2 messages are returned here
-    for the LLM conversation context.
-    """
 
     max_messages = config.MAX_TURNS * 2
+    summary = get_summary(session_id)
 
-    with pool.connection() as conn:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT role, content
-                FROM chat_messages
-                WHERE session_id = %s
-                ORDER BY created_at DESC
-                LIMIT %s
-                """,
-                (session_id, max_messages)
-            )
+    rows = get_recent_messages(session_id, max_messages)
 
-            rows = cur.fetchall()
-
-    # We queried newest → oldest, so reverse them
-    # to return chronological order.
-    return [
-        {"role": role, "content": content}
-        for role, content in reversed(rows)
+    messages = [
+        {"role": row["role"], "content": row["content"]}
+        for row in reversed(rows)
     ]
+
+    if summary:
+        messages.insert(0, {
+            "role": "system",
+            "content": f"Conversation summary:\n{summary}"
+        })
+
+    return messages
 
 
 def get_all_messages(session_id):
-    """
-    Get the complete chat history of a session.
 
-    Useful when the user opens an old session.
-    """
-
-    with pool.connection() as conn:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT role, content, created_at
-                FROM chat_messages
-                WHERE session_id = %s
-                ORDER BY created_at ASC
-                """,
-                (session_id,)
-            )
-
-            rows = cur.fetchall()
+    rows = query_all_messages(session_id)
 
     return [
         {
-            "role": role,
-            "content": content,
-            "created_at": created_at
+            "id": row["id"],
+            "role": row["role"],
+            "content": row["content"],
+            "created_at": row["created_at"]
         }
-        for role, content, created_at in rows
+        for row in rows
     ]
 
 
 def add_message(session_id, role, content):
-    """
-    Permanently store a message in PostgreSQL.
-    """
 
-    with pool.connection() as conn:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                INSERT INTO chat_messages
-                    (session_id, role, content)
-                VALUES
-                    (%s, %s, %s)
-                """,
-                (session_id, role, content)
-            )
 
-            conn.commit()
+    create_chat_message(session_id, content, role)
 
 
 def get_summary(session_id):
-    """
-    Get the current summary of a chat session.
-    """
 
-    with pool.connection() as conn:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT summary
-                FROM chat_sessions
-                WHERE session_id = %s
-                """,
-                (session_id,)
-            )
-
-            row = cur.fetchone()
-
-    if row is None:
-        return ""
-
-    return row[0] or ""
+    return get_session_summary(session_id)["summary"] or ""
 
 
-def set_summary(session_id, summary):
-    """
-    Save/update the summary of a chat session.
-    """
+def set_summary(session_id, summary, summary_through_message_id):
 
-    with pool.connection() as conn:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                UPDATE chat_sessions
-                SET summary = %s,
-                    updated_at = NOW()
-                WHERE session_id = %s
-                """,
-                (summary, session_id)
-            )
-
-            conn.commit()
+    update_session_summary(
+        session_id,
+        summary,
+        summary_through_message_id,
+    )
 
 
 @traceable(name="Update Summary")
-def update_summary(session_id, messages):
-    """
-    Summarize older messages and store the summary
-    in PostgreSQL.
-    """
+def update_summary(session_id, messages, summary_through_message_id):
 
     old_summary = get_summary(session_id)
 
@@ -159,71 +99,46 @@ def update_summary(session_id, messages):
         }
     )
 
-    set_summary(session_id, new_summary)
+    set_summary(session_id, new_summary, summary_through_message_id)
 
     return new_summary
 
 
-def update_memory(
-    session_id,
-    query,
-    llm_response,
-    message_window_size=config.MAX_TURNS
-):
-    """
-    Save the user query and assistant response.
+def update_memory( session_id, query, llm_response, message_window_size=config.MAX_TURNS):
 
-    PostgreSQL stores the complete history.
-
-    The old Redis implementation removed old messages after
-    MAX_TURNS. We DO NOT do that anymore because PostgreSQL
-    is our permanent history store.
-    """
-
-    # Store user message
     add_message(
         session_id,
         "user",
         query
     )
 
-    # Store assistant response
     add_message(
         session_id,
         "assistant",
         llm_response.response
     )
 
-    # Get all messages to determine whether summarization
-    # is required.
-    with pool.connection() as conn:
-        with conn.cursor() as cur:
-            cur.execute(
-                """
-                SELECT role, content
-                FROM chat_messages
-                WHERE session_id = %s
-                ORDER BY created_at ASC
-                """,
-                (session_id,)
-            )
-
-            rows = cur.fetchall()
-
-    messages = [
-        {"role": role, "content": content}
-        for role, content in rows
-    ]
+    all_messages = get_all_messages(session_id)
 
     max_messages = message_window_size * 2
 
-    if len(messages) > max_messages:
-        old_messages = messages[:-max_messages]
+    if len(all_messages) > max_messages:
+        summary_state = get_session_summary(session_id)
+        marker = summary_state["summary_through_message_id"]
+        old_messages = [
+            row for row in all_messages[:-max_messages]
+            if marker is None or row["id"] > marker
+        ]
 
-        update_summary(
-            session_id,
-            old_messages
-        )
+        if old_messages:
+            update_summary(
+                session_id,
+                [
+                    {"role": row["role"], "content": row["content"]}
+                    for row in old_messages
+                ],
+                old_messages[-1]["id"],
+            )
 
 
 def clear_memory(session_id):
@@ -231,25 +146,4 @@ def clear_memory(session_id):
     Delete the complete chat session history.
     """
 
-    with pool.connection() as conn:
-        with conn.cursor() as cur:
-
-            cur.execute(
-                """
-                DELETE FROM chat_messages
-                WHERE session_id = %s
-                """,
-                (session_id,)
-            )
-
-            cur.execute(
-                """
-                UPDATE chat_sessions
-                SET summary = NULL,
-                    updated_at = NOW()
-                WHERE session_id = %s
-                """,
-                (session_id,)
-            )
-
-            conn.commit()
+    clear_session_memory(session_id)
