@@ -19,8 +19,6 @@ def create_chat_session(session_id: str, video_id: str, title: str | None = None
             if video is None:
                 raise ValueError("Video does not exist")
 
-            video_db_id = video[0]
-
             cur.execute(
                 """
                 INSERT INTO chat_sessions (
@@ -31,7 +29,7 @@ def create_chat_session(session_id: str, video_id: str, title: str | None = None
                 VALUES (%s, %s, %s)
                 RETURNING id, session_id, video_id, title, created_at, updated_at;
                 """,
-                (session_id, video_db_id, title),
+                (session_id, video_id, title),
             )
 
             session = cur.fetchone()
@@ -49,7 +47,7 @@ def get_chat_session(session_id: str):
     """
     with pool.connection() as conn:
         with conn.cursor() as cur:
-            cur.execute(query, (session_id,),)
+            cur.execute(query, (session_id,))
             session= cur.fetchone()
             
     return session
@@ -59,9 +57,9 @@ def get_chat_session(session_id: str):
 def get_chat_sessions_for_video(video_id: str):
 
     query = """
-        SELECTcs.id,cs.session_id,cs.title,cs.created_at,cs.updated_at
+        SELECT cs.id, cs.session_id, cs.title, cs.created_at, cs.updated_at
         FROM chat_sessions cs
-        JOIN videos v ON cs.video_id = v.id
+        JOIN videos v ON cs.video_id = v.video_id
         WHERE v.video_id = %s
         ORDER BY cs.updated_at DESC;
     """
@@ -69,8 +67,7 @@ def get_chat_sessions_for_video(video_id: str):
     with pool.connection() as conn:
         with conn.cursor() as cur:
 
-            cur.execute(
-                query,(video_id,),)
+            cur.execute(query,(video_id,))
 
             sessions = cur.fetchall()
 
@@ -86,7 +83,7 @@ def delete_chat_session(session_id: str):
     """
     with pool.connection() as conn:
         with conn.cursor() as cur:
-            cur.execute(query, (session_id,),)
+            cur.execute(query, (session_id,))
             session = cur.fetchone()
             conn.commit()
             
