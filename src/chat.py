@@ -8,7 +8,7 @@ from langsmith import traceable
 
 import config
 from src.retrieval import docs_retriever,frame_retriever, build_text_context, build_ocr_context ,rerank
-from src.memory import get_messages, get_summary, update_memory
+from src.memory import get_messages, update_memory
 from src.llm import build_multimodal_message,decision_strutured_llm, main_llm, main_strutured_llm
 from src.utils import load_images
 from src.prompts import contextualize_qa_prompt, decision_prompt, qa_prompt
@@ -59,7 +59,6 @@ def main_llm_response(messages,video_id):
 def chat(query,retrieval,session_id):
  
   chat_messages=get_messages(session_id)
-  chat_summary=get_summary(session_id)
   
   if chat_messages:
     contextualize_chain=contextualize_qa_prompt|main_llm|StrOutputParser()
@@ -116,7 +115,6 @@ def chat(query,retrieval,session_id):
 def lcel_chat(query,retrieval,session_id):
 
     chat_messages=get_messages(session_id)
-    chat_summary=get_summary(session_id)
     
     contextualize_chain=contextualize_qa_prompt|main_llm|StrOutputParser()
     standalone_query=RunnableBranch(
