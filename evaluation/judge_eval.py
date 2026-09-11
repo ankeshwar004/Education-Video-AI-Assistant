@@ -57,7 +57,7 @@ def evaluate_llm_as_judge(qa_pairs,chat_fn,retrieval,llm,video_id,force_restart=
     for idx in range(start_index, len(qa_pairs)):
         qa = qa_pairs[idx]
         try:
-            clear_memory() 
+            clear_memory(config.SESSION_ID)
             result = chat_fn(qa["question"],retrieval,config.SESSION_ID)
             
             generated = result.response
