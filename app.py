@@ -12,6 +12,8 @@ from src.loader import load_clip_model, load_text_embedding_model, load_reranker
 from src.logger import get_logger
 from src.utils import load_json
 from src.memory import initialize_memory
+from database.connection import close_db, create_tables, init_db
+from database.queries.videos_query import create_video, get_video
 
 logger = get_logger(__name__)
 
@@ -50,10 +52,23 @@ def load_existing_artifacts(video_id):
     return  retrieval_components 
 
 
-def run_chat_query(query,retrieval_components):
+def ensure_video_record(video_id, video_path=None, youtube_url=None):
+    if get_video(video_id) is not None:
+        return
+
+    create_video(
+        video_id=video_id,
+        title=video_id,
+        youtube_url=youtube_url or config.YOUTUBE_URL,
+        storage_path_url=str(video_path) if video_path else None,
+        status="ready",
+    )
+
+
+def run_chat_query(query,retrieval_components, video_id):
     logger.info("User: %s", query)
 
-    initialize_memory(config.SESSION_ID, config.VIDEO_ID)
+    initialize_memory(config.SESSION_ID, video_id)
 
     response = lcel_chat(query,retrieval_components,config.SESSION_ID)
 
@@ -63,7 +78,7 @@ def run_chat_query(query,retrieval_components):
     return response
 
 
-def interactive_chat(retrieval_components):
+def interactive_chat(retrieval_components, video_id):
     logger.info("Interactive chat started.")
     print("Type 'exit' or 'quit' to stop.\n")
 
@@ -78,7 +93,7 @@ def interactive_chat(retrieval_components):
             break
 
         try:
-            run_chat_query(query, retrieval_components)
+            run_chat_query(query, retrieval_components, video_id)
         except KeyboardInterrupt:
             print()
             break
@@ -101,6 +116,7 @@ def main(args):
 
     text_docs = None
     retrieval_components = None
+    results = None
     video_id=config.VIDEO_ID
 
     # --url needs ingestion to know its video_id, even without --preprocess
@@ -125,13 +141,19 @@ def main(args):
         if retrieval_components is None:
             logger.info("Loading persisted retrieval.")
             retrieval_components = load_existing_artifacts(video_id)
+
+        ensure_video_record(
+            video_id,
+            video_path=results["video_path"] if results else config.VIDEO_PATH,
+            youtube_url=args.url,
+        )
     
 
     if args.chat:
-        interactive_chat(retrieval_components)
+        interactive_chat(retrieval_components, video_id)
 
     if args.query:
-        run_chat_query(args.query, retrieval_components)
+        run_chat_query(args.query, retrieval_components, video_id)
 
     if args.eval:
         run_eval_pipeline(config.VIDEO_ID)
@@ -179,4 +201,9 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    main(args)
+    init_db()
+    try:
+        create_tables()
+        main(args)
+    finally:
+        close_db()
