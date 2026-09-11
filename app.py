@@ -11,6 +11,7 @@ from src.ingest import  preprocess_video
 from src.loader import load_clip_model, load_text_embedding_model, load_reranker
 from src.logger import get_logger
 from src.utils import load_json
+from src.memory import initialize_memory
 
 logger = get_logger(__name__)
 
@@ -51,6 +52,8 @@ def load_existing_artifacts(video_id):
 
 def run_chat_query(query,retrieval_components):
     logger.info("User: %s", query)
+
+    initialize_memory(config.SESSION_ID, config.VIDEO_ID)
 
     response = lcel_chat(query,retrieval_components,config.SESSION_ID)
 
