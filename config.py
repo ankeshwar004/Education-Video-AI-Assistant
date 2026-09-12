@@ -66,7 +66,7 @@ TOTAL_QA_PAIRS=60
 
 MAIN_LLM_MODEL="gemini-2.5-flash"
 DECISION_LLM_MODEL="openai/gpt-oss-20b"
-SUMMARY_LLM_MODEL="openai/gpt-oss-120b:free"
+SUMMARY_LLM_MODEL="nvidia/nemotron-3-ultra-550b-a55b:free"
 EVAL_LLM_MODEL="llama-3.3-70b-versatile"
 JUDGE_LLM_MODEL="mistral-medium-3-5"
 

@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from database.connection import init_db, close_db, create_tables, check_pool
-from database.queries import create_video, get_videos
-
+from api.routes.video_router import router as video_router
+from api.routes.chat_router import router as chat_router
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -24,8 +24,8 @@ app = FastAPI(
     lifespan=lifespan,
 )
 
-# app.include_router(video_router, prefix="/api")
-# app.include_router(chat_router, prefix="/api")
+app.include_router(video_router, prefix="/api")
+app.include_router(chat_router, prefix="/api")
 
 
 @app.get("/health")
@@ -34,22 +34,3 @@ def health_check():
         "status": "healthy",
         "service": "education-video-ai-assistant"
     }
-    
-@app.get("/videos")
-def videos():
-
-    return get_videos()
-    
-
-
-@app.post("/test-video")
-def test_video():
-
-    video = create_video(
-        video_id="test123",
-        title="Python Introduction",
-        youtube_url="https://youtube.com/test",
-        duration=600,
-    )
-
-    return video
