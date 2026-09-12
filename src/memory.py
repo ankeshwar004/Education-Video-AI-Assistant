@@ -19,6 +19,8 @@ def initialize_memory(session_id, video_id, title=None):
 
     session = get_chat_session(session_id)
     if session is not None:
+        if session["video_id"] != video_id:
+            raise ValueError("Session belongs to a different video")
         return session
 
     return create_chat_session(session_id, video_id, title)
@@ -142,8 +144,5 @@ def update_memory( session_id, query, llm_response, message_window_size=config.M
 
 
 def clear_memory(session_id):
-    """
-    Delete the complete chat session history.
-    """
 
     clear_session_memory(session_id)
