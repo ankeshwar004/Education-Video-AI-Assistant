@@ -48,7 +48,13 @@ def main_llm_response(messages,video_id):
     logger.info("Calling LLM")
     llm_response=main_strutured_llm.invoke(messages)
     
-    set_cache("main_llm_answer",{"answer":llm_response.response},config.CHAT_ANSWER_CACHE_TTL,video_id,messages_hash)
+    set_cache(
+        "main_llm_answer",
+        {"answer": llm_response.model_dump()},
+        config.CHAT_ANSWER_CACHE_TTL,
+        video_id,
+        messages_hash,
+    )
     
     return llm_response
 
