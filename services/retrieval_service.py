@@ -5,6 +5,7 @@ import chromadb
 import config
 import os
 
+from api.exceptions import not_found
 from src.retrieval import create_text_retriever,create_bm25_retriever,create_ensemble_retriever
 from src.loader import load_clip_model,load_text_embedding_model,load_reranker
 
@@ -14,6 +15,9 @@ from src.utils import load_json
 def load_retrieval_components(video_id):
     
     docs_path=os.path.join(str(config.TRANSCRIPTS_CHUNK_DIR),f"{video_id}.json")
+    if not os.path.exists(docs_path):
+        not_found(f"Transcripts for video {video_id} not found. Please run the ingestion process first.")
+    
     docs=load_json(docs_path)
     docs=[Document(**item) for item in docs]
     
@@ -48,19 +52,3 @@ def load_retrieval_components(video_id):
 
 
     return  retrieval_components 
-
-
-
-
-# For later add ->threathing
-# def get_retrieval_components(video_id):
-#     with _lock:
-#         if video_id not in _store:
-#             logger.info("Loading retrieval artifacts for %s", video_id)
-#             _store[video_id] = load_existing_artifacts(video_id)
-#         return _store[video_id]
- 
- 
-# def invalidate_retrieval_components(video_id):
-#     with _lock:
-#         _store.pop(video_id, None)

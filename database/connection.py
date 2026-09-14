@@ -8,15 +8,7 @@ import os
 DATABASE_URL=config.DATABASE_URL
 
 
-pool=ConnectionPool(
-    conninfo=DATABASE_URL,
-    min_size=1,
-    max_size=10,
-    open=False,
-    kwargs={
-        "row_factory": dict_row
-    },
-)
+pool=ConnectionPool(conninfo=DATABASE_URL,min_size=1,max_size=10,open=False,kwargs={"row_factory": dict_row})
 
 
 def init_db():
@@ -40,4 +32,7 @@ def create_tables():
 
 def check_pool():
     with pool.connection() as conn:
-        print("Pool is open:", not conn.closed)
+        with conn.cursor() as cur:
+            cur.execute("SELECT 1;")
+            result=cur.fetchone()
+            return result

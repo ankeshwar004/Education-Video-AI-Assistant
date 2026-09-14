@@ -24,8 +24,6 @@ def create_chat_message(session_id: str, content: str, role: str):
             cur.execute(create_message_query, (session_id, content, role))
 
             message = cur.fetchone()
-            if message is None:
-                raise ValueError("Failed to create chat message")
             
             cur.execute(update_session_query, (session_id,))
             conn.commit()

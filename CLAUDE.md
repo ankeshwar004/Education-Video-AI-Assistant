@@ -4,7 +4,13 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-RAG Video Assistant: a retrieval-augmented assistant for lecture videos. It ingests a video (YouTube URL or local file), transcribes speech with faster-whisper, extracts changed frames, runs EasyOCR, stores transcript chunks and frame embeddings in Chroma, and answers questions via a LangChain LCEL pipeline. The original notebook (`notebooks/VideoAssistant.ipynb`) is the reference implementation and is kept unchanged.
+RAG Video Assistant: a multimodal retrieval-augmented assistant for lecture videos. It ingests a video (YouTube URL or local file), transcribes speech with faster-whisper, extracts changed frames with calibrated change detection, runs EasyOCR on detected frames, stores transcript chunks (vector + BM25) and frame CLIP embeddings in Chroma DBs, and answers questions via a LangChain LCEL pipeline. Frame docs are linked to transcript chunks via `chunk_id` metadata, enabling frame-aware retrieval at query time. The original notebook (`notebooks/VideoAssistant.ipynb`) is the reference implementation and is kept unchanged.
+
+Persistence is handled by PostgreSQL (`database/schema.sql`): chat sessions, messages, and video metadata are stored relationally, while an LLM-generated running summary is maintained per session to keep context within `MAX_TURNS*2`. Redis (`src/cache.py`) provides TTL-based caching for vision-decision and chat-answer responses.
+
+The API layer (`api/`) exposes FastAPI routers:
+- `chat_router.py`: chat endpoints (single query, streaming, session management)
+- `video_router.py`: video ingestion status, metadata, list available videos
 
 ## Commands
 

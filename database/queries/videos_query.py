@@ -18,17 +18,7 @@ def create_video(video_id: str,title: str,youtube_url: str ,storage_path_url: st
 
     with pool.connection() as conn:
         with conn.cursor() as cur:
-            cur.execute(
-                query,
-                (
-                    video_id,
-                    title,
-                    youtube_url,
-                    storage_path_url,
-                    duration,
-                    status,
-                ),
-            )
+            cur.execute(query,(video_id,title,youtube_url,storage_path_url,duration,status,),)
 
             video = cur.fetchone()
             
@@ -70,6 +60,31 @@ def get_videos():
         
            
         
+
+def update_video(video_id: str,storage_path_url: str | None = None,title: str | None = None,duration: int | None = None,status: str | None = None):
+ 
+    query = """
+        UPDATE videos
+        SET storage_path_url = COALESCE(%s, storage_path_url),
+        status = COALESCE(%s, status),
+        title = COALESCE(%s, title),
+        duration = COALESCE(%s, duration)
+        WHERE video_id = %s
+        RETURNING *;
+    """
+ 
+    with pool.connection() as conn:
+        with conn.cursor() as cur:
+            cur.execute(query,(storage_path_url,status,title,duration,video_id,),)
+ 
+            video = cur.fetchone()
+ 
+        conn.commit()
+ 
+    return video
+ 
+
+        
         
         
 def update_video_status(video_id: str,status: str):
@@ -83,13 +98,7 @@ def update_video_status(video_id: str,status: str):
 
     with pool.connection() as conn:
         with conn.cursor() as cur:
-            cur.execute(
-                query,
-                (
-                    status,
-                    video_id,
-                ),
-            )
+            cur.execute(query,(status,video_id,),)
 
             video = cur.fetchone()
 
@@ -112,10 +121,7 @@ def delete_video(video_id: str):
 
     with pool.connection() as conn:
         with conn.cursor() as cur:
-            cur.execute(
-                query,
-                (video_id,),
-            )
+            cur.execute(query,(video_id,))
 
             video = cur.fetchone()
 

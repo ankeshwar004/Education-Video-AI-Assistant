@@ -37,3 +37,18 @@ class MessageResponse(BaseModel):
     role: str
     content: str
     created_at: datetime
+    
+    
+    
+class SessionCreateRequest(BaseModel):
+    video_id: str
+    session_id: str
+    title: str | None = None
+ 
+ 
+class SessionResponse(BaseModel):
+    session_id: str
+    video_id: str
+    title: str | None = None
+    created_at: datetime
+    updated_at: datetime

@@ -27,7 +27,7 @@ def create_chat_session(session_id: str, video_id: str, title: str | None = None
                     title
                 )
                 VALUES (%s, %s, %s)
-                RETURNING id, session_id, video_id, title, created_at, updated_at;
+                RETURNING *;
                 """,
                 (session_id, video_id, title),
             )
@@ -57,7 +57,7 @@ def get_chat_session(session_id: str):
 def get_chat_sessions_for_video(video_id: str):
 
     query = """
-        SELECT cs.id, cs.session_id, cs.title, cs.created_at, cs.updated_at
+        SELECT cs.id, cs.session_id, cs.video_id, cs.title, cs.created_at, cs.updated_at
         FROM chat_sessions cs
         JOIN videos v ON cs.video_id = v.video_id
         WHERE v.video_id = %s
