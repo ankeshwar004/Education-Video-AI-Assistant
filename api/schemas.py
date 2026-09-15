@@ -25,7 +25,6 @@ class ChatRequest(BaseModel):
 
 
 class ChatResponse(BaseModel):
-    answer: str
     response: str
     timestamps: list[str] = Field(default_factory=list)
     source: Literal["video","general_knowledge","hybrid"]

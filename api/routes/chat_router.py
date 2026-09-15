@@ -13,7 +13,6 @@ def chat(request: ChatRequest):
     answer = ask_question(request.question,request.video_id,request.session_id)
 
     return ChatResponse(
-        answer=answer.response,
         response=answer.response,
         timestamps=answer.timestamps,
         source=answer.source,
