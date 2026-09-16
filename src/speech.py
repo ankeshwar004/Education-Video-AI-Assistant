@@ -29,7 +29,9 @@ def download_video(url=config.YOUTUBE_URL, video_dir=config.VIDEO_DIR):
     ydl_opts = {
         'format':'best',
         'outtmpl':video_name,
-        'merge_output_format':'mp4'}
+        'merge_output_format':'mp4',
+        'cookiefile': 'cookies.txt',
+        'remote_components': ['ejs:github'],}
 
     logger.info("Loading video...")
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
