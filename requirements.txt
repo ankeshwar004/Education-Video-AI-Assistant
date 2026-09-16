@@ -28,4 +28,7 @@ psycopg_pool
 asyncpg
 fastapi
 uvicorn 
+PyJWT
 python-multipart
+requests
+streamlit

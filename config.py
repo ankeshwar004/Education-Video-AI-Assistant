@@ -92,6 +92,13 @@ VIDEO_PATH= "PATH TO VIDEO FILE FOR CHAT"
 VISION_DECISION_CACHE_TTL=60
 CHAT_ANSWER_CACHE_TTL=120
 
+JWT_SECRET_KEY=os.getenv("JWT_SECRET_KEY", "change-this-development-secret-32-bytes-minimum")
+JWT_ALGORITHM="HS256"
+JWT_EXPIRE_MINUTES=int(os.getenv("JWT_EXPIRE_MINUTES", "60"))
+ANONYMOUS_OWNER_COOKIE=os.getenv("ANONYMOUS_OWNER_COOKIE", "anonymous_owner")
+ANONYMOUS_OWNER_COOKIE_MAX_AGE=int(os.getenv("ANONYMOUS_OWNER_COOKIE_MAX_AGE", str(60 * 60 * 24 * 30)))
+CORS_ORIGINS=[origin.strip() for origin in os.getenv("CORS_ORIGINS", "*").split(",") if origin.strip()]
+
 REDIS_HOST=os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT=int(os.getenv("REDIS_PORT", "6379"))
 

@@ -3,9 +3,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 
 from contextlib import asynccontextmanager
+import config
 from database.connection import init_db, close_db, create_tables, check_pool
 from api.routes.video_router import router as video_router
 from api.routes.chat_router import router as chat_router
+from api.routes.auth_router import router as auth_router
 from src.cache import redis_client
 
 @asynccontextmanager
@@ -26,7 +28,13 @@ app = FastAPI(title="Education Video AI Assistant",lifespan=lifespan)
 
 
 
-app.add_middleware(CORSMiddleware,allow_origins=["*"],allow_credentials=False,allow_methods=["*"],allow_headers=["*"])
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=config.CORS_ORIGINS,
+    allow_credentials=config.CORS_ORIGINS != ["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.exception_handler(ValueError)
@@ -34,9 +42,26 @@ async def value_error_handler(request: Request, exc: ValueError):
     return JSONResponse(status_code=400, content={"detail": str(exc)})
 
 
+@app.middleware("http")
+async def set_anonymous_owner_cookie(request: Request, call_next):
+    response = await call_next(request)
+    token = getattr(request.state, "new_anonymous_owner", None)
+    if token is not None:
+        response.set_cookie(
+            key=config.ANONYMOUS_OWNER_COOKIE,
+            value=token,
+            max_age=config.ANONYMOUS_OWNER_COOKIE_MAX_AGE,
+            httponly=True,
+            samesite="lax",
+            secure=False,
+        )
+    return response
+
+
 
 app.include_router(video_router, prefix="/api")
 app.include_router(chat_router, prefix="/api")
+app.include_router(auth_router, prefix="/api")
 
 
 @app.get("/health")

@@ -7,7 +7,7 @@ from services.retrieval_service import load_retrieval_components
 from database.queries.videos_query import get_video
 
 
-def ask_question(question, video_id, session_id):
+def ask_question(question, video_id, session_id, principal):
     
     if not question or not question.strip():
         raise bad_request("question is required")
@@ -28,7 +28,7 @@ def ask_question(question, video_id, session_id):
         
     retrieval_components = load_retrieval_components(video_id)
 
-    initialize_memory(session_id,video_id)
+    initialize_memory(session_id, video_id, principal=principal)
 
     response = lcel_chat(question,retrieval_components,session_id)
 

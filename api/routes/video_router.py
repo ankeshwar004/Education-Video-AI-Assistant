@@ -1,5 +1,7 @@
-from fastapi import APIRouter, BackgroundTasks
+from fastapi import APIRouter, BackgroundTasks, Depends
 
+from api.auth_dependencies import optional_principal
+from api.auth_schema import AuthPrincipal
 from services.session_service import list_sessions
 from api.schemas import VideoResponse, VideoCreateRequest, SessionResponse
 from services.video_services import get_video_by_id, list_videos, queue_video_processing, process_video_in_background, remove_video
@@ -30,8 +32,8 @@ def process(request: VideoCreateRequest, background_tasks: BackgroundTasks):
 
  
 @router.get("/{video_id}/sessions",response_model=list[SessionResponse])
-def get_video_sessions(video_id: str):
-    return list_sessions(video_id)
+def get_video_sessions(video_id: str, principal: AuthPrincipal = Depends(optional_principal)):
+    return list_sessions(video_id, principal)
 
 
 @router.delete("/{video_id}", response_model=VideoResponse)
