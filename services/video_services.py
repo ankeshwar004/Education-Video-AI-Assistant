@@ -66,11 +66,14 @@ def get_video_by_id(video_id):
     return video
 
 
-def remove_video(video_id):
+def remove_video(video_id,principal):
     video=get_video(video_id)
     
     if video is None:
         raise not_found("Video not found")
+    
+    if video["owner_id"] != principal.user_id:
+        raise bad_request("You do not have permission to delete this video")
         
     if video["status"] == "processing":
         raise conflict("Video is not ready to be deleted")
