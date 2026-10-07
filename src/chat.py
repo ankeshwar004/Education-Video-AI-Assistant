@@ -137,24 +137,41 @@ def lcel_chat(query,retrieval,session_id):
         lambda x: docs_retriever(x["query"], retrieval["ensemble_retriever"])
         )).with_config({"run_name":"Ensemble Retriever"})
 
-    reranker_step=RunnableLambda(
-        lambda x: {**x, "docs":rerank(x["query"],x["docs"],retrieval['reranker'],k=config.CHAT_RERANK_K)}
-        ).with_config({"run_name":"Reranker"})
+    reranker_step = RunnablePassthrough.assign(
+        docs=RunnableLambda(
+            lambda x: rerank(x["query"], x["docs"], retrieval["reranker"], k=config.CHAT_RERANK_K),
+        )
+    ).with_config({"run_name": "Reranker"})
 
     retrieval_pipeline=retriever_step|reranker_step
 
-    text_context_builder=RunnableLambda(
-        lambda x: {**x,"text_context":build_text_context(x["docs"]),
-        "chunk_ids":[doc.metadata['chunk_id'] for doc in x["docs"]]}
-        ).with_config({"run_name":"Build Text Context"})
 
-    frame_retrival=RunnableLambda(
-        lambda x: {**x,"frames":frame_retriever(x["query"],x["chunk_ids"],retrieval['frame_db'],retrieval['clip_model'],n=config.FRAME_RETRIEVER_N)}
-        ).with_config({"run_name":"Frame Retriever"})
+    text_context_builder=RunnablePassthrough.assign(
+        text_context=RunnableLambda(
+            lambda x: build_text_context(x["docs"])
+        ),
+        chunk_ids=RunnableLambda(
+            lambda x: [doc.metadata['chunk_id'] for doc in x["docs"]]
+        )
+    ).with_config({"run_name":"Build Text Context"})
 
-    ocr_context_builder=RunnableLambda(
-        lambda x: {**x,"ocr_context":build_ocr_context(x["frames"]["metadatas"][0])}
-        ).with_config({"run_name":"Build OCR Context"})
+    frame_retrival = RunnablePassthrough.assign(
+            frame=RunnableLambda(
+                lambda x: frame_retriever(
+                    x["query"],
+                    x["chunk_ids"],
+                    retrieval["frame_db"],
+                    retrieval["clip_model"],
+                    n=config.FRAME_RETRIEVER_N,
+                )
+            ),
+    ).with_config({"run_name": "Frame Retriever"})
+
+    ocr_context_builder = RunnablePassthrough.assign(
+        ocr_context=RunnableLambda(
+            lambda x: build_ocr_context(x["frames"]["metadatas"][0])
+        )
+    ).with_config({"run_name": "Build OCR Context"})
 
     vision_decision=RunnablePassthrough.assign(
         need_vision=RunnableLambda(lambda x: query_needs_images(x["query"],x["docs"][0].metadata["video_id"]))
