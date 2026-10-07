@@ -38,7 +38,9 @@ def download_video(url=config.YOUTUBE_URL, video_dir=config.VIDEO_DIR):
         info=ydl.extract_info(url,download=True)
         video_path = ydl.prepare_filename(info)
     video_id = sanitize_video_id(info.get("id") or Path(video_path).stem)
-    return video_path, video_id
+    title = info.get("title") or video_id
+    duration = int(info.get("duration")) if info.get("duration") else None
+    return video_path, video_id, title, duration
 
 
 def extract_audio(video_path, video_id=None, wav_path=None):

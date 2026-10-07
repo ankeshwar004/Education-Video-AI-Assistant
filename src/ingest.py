@@ -136,13 +136,27 @@ def create_frame_db(frame_docs, video_id, clip_embedding, persist_path=None):
     return frame_db
 
 
+def get_video_duration(video_path):
+    cap = cv2.VideoCapture(video_path)
+    if not cap.isOpened():
+        return None
+    fps = cap.get(cv2.CAP_PROP_FPS)
+    frame_count = cap.get(cv2.CAP_PROP_FRAME_COUNT)
+    cap.release()
+    if fps > 0 and frame_count > 0:
+        return int(frame_count / fps)
+    return None
+
+
 def preprocess_video(video_path=None,url=config.YOUTUBE_URL,persist_directory=None,frame_persist_directory=None):
     logger.info("Starting video preprocessing...")
 
     if video_path is None:
-        video_path, video_id=download_video(url,config.VIDEO_DIR)
+        video_path, video_id, title, duration = download_video(url, config.VIDEO_DIR)
     else:
-        video_id=sanitize_video_id(Path(video_path).stem)
+        video_id = sanitize_video_id(Path(video_path).stem)
+        title = video_id
+        duration = get_video_duration(video_path)
 
     wav_path=extract_audio(video_path, video_id=video_id)
     audio_chunks=chunk_audio(wav_path,config.AUDIO_CHUNK_MINUTES)
@@ -188,6 +202,8 @@ def preprocess_video(video_path=None,url=config.YOUTUBE_URL,persist_directory=No
     return {
         "video_id": video_id,
         "video_path": video_path,
+        "title": title,
+        "duration": duration,
         "wav_path": wav_path,
         "audio_chunks": audio_chunks,
         "transcripts": transcripts,
