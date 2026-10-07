@@ -43,7 +43,7 @@ def register(username,password):
     try:
         return create_user(username.strip(), normalized, hash_password(password))
     except Exception as exc:
-        if "unique" in (exc).lower():
+        if "unique" in str(exc).lower():
             raise conflict("Username is already registered") from exc
         raise
 
