@@ -52,15 +52,16 @@ def load_existing_artifacts(video_id):
     return  retrieval_components 
 
 
-def ensure_video_record(video_id, video_path=None, youtube_url=None):
+def ensure_video_record(video_id, video_path=None, youtube_url=None, title=None, duration=None):
     if get_video(video_id) is not None:
         return
 
     create_video(
         video_id=video_id,
-        title=video_id,
+        title=title or video_id,
         youtube_url=youtube_url or config.YOUTUBE_URL,
         storage_path_url=str(video_path) if video_path else None,
+        duration=duration,
         status="ready",
     )
 
@@ -146,6 +147,8 @@ def main(args):
             video_id,
             video_path=results["video_path"] if results else config.VIDEO_PATH,
             youtube_url=args.url,
+            title=results.get("title") if results else None,
+            duration=results.get("duration") if results else None,
         )
     
 
