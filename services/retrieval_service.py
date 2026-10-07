@@ -11,12 +11,76 @@ from src.loader import load_clip_model,load_text_embedding_model,load_reranker
 
 from src.utils import load_json
 
+from collections import OrderedDict
+from threading import Lock
+
+
+ 
+retrieval_cache = OrderedDict()
+retrieval_cache_lock = Lock()
+video_load_locks = {}
+video_load_locks_guard = Lock()
+ 
+  
+ 
+def get_video_load_lock(video_id):
+    with video_load_locks_guard:
+        lock = video_load_locks.get(video_id)
+        if lock is None:
+            lock = Lock()
+            video_load_locks[video_id] = lock
+        return lock
+ 
+ 
+def get_cached_retrieval_components(video_id):
+    with retrieval_cache_lock:
+        if video_id not in retrieval_cache:
+            return None
+        retrieval_cache.move_to_end(video_id)
+        return retrieval_cache[video_id]
+ 
+ 
+def set_cached_retrieval_components(video_id, components):
+    maxsize = config.RETRIEVAL_CACHE_MAXSIZE
+    with retrieval_cache_lock:
+        if video_id in retrieval_cache:
+            retrieval_cache.move_to_end(video_id)
+            retrieval_cache[video_id] = components
+            return
+        retrieval_cache[video_id] = components
+        while len(retrieval_cache) > maxsize:
+            retrieval_cache.popitem(last=False)
+ 
+ 
+def invalidate_retrieval_cache(video_id=None):
+    with retrieval_cache_lock:
+        if video_id is None:
+            retrieval_cache.clear()
+            return
+        retrieval_cache.pop(video_id, None)
+
+
 
 def load_retrieval_components(video_id):
+    cached = get_cached_retrieval_components(video_id)
+    if cached is not None:
+        return cached
+
+    with get_video_load_lock(video_id):
+        cached = get_cached_retrieval_components(video_id)
+        if cached is not None:
+            return cached
+
+        components = build_retrieval_components(video_id)
+        set_cached_retrieval_components(video_id, components)
+        return components
+ 
+ 
+def build_retrieval_components(video_id):
     
     docs_path=os.path.join(str(config.TRANSCRIPTS_CHUNK_DIR),f"{video_id}.json")
     if not os.path.exists(docs_path):
-        not_found(f"Transcripts for video {video_id} not found. Please run the ingestion process first.")
+        raise not_found(f"Transcripts for video {video_id} not found. Please run the ingestion process first.")
     
     docs=load_json(docs_path)
     docs=[Document(**item) for item in docs]
