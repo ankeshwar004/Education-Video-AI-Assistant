@@ -61,11 +61,12 @@ def get_videos():
            
         
 
-def update_video(video_id: str,storage_path_url: str | None = None,title: str | None = None,duration: int | None = None,status: str | None = None):
+def update_video(video_id: str,storage_path_url: str | None = None,youtube_url: str | None = None,title: str | None = None,duration: int | None = None,status: str | None = None):
  
     query = """
         UPDATE videos
         SET storage_path_url = COALESCE(%s, storage_path_url),
+        youtube_url = COALESCE(%s, youtube_url),
         status = COALESCE(%s, status),
         title = COALESCE(%s, title),
         duration = COALESCE(%s, duration)
@@ -75,7 +76,7 @@ def update_video(video_id: str,storage_path_url: str | None = None,title: str | 
  
     with pool.connection() as conn:
         with conn.cursor() as cur:
-            cur.execute(query,(storage_path_url,status,title,duration,video_id,),)
+            cur.execute(query,(storage_path_url,youtube_url,status,title,duration,video_id,),)
  
             video = cur.fetchone()
  

@@ -1,6 +1,8 @@
 from api.exceptions import bad_request, conflict, not_found
 
 from src.ingest import preprocess_video
+from src.speech import sanitize_video_id
+from services.retrieval_service import invalidate_retrieval_cache
 from database.queries.videos_query import create_video, get_video, get_videos, delete_video, update_video
 import yt_dlp
 
@@ -32,6 +34,9 @@ def queue_video_processing(youtube_url):
             raise conflict("Video is already processing")
         if existing_video["status"] == "ready":
             raise conflict("Video already exists")
+        if existing_video["status"] == "failed":
+            invalidate_retrieval_cache(video_id)
+            return update_video(video_id=video_id,youtube_url=youtube_url,title=title,status="processing")
 
         return update_video(video_id=video_id,title=title,status="processing")
 
@@ -45,7 +50,8 @@ def process_video_in_background(youtube_url, video_id):
         if result["video_id"] != video_id:
             raise RuntimeError("Video ID changed during preprocessing")
 
-        return update_video(video_id,result.get("video_path"),result.get("title") or video_id,duration=result.get("duration"),status="ready")
+        invalidate_retrieval_cache(video_id)
+        return update_video(video_id=video_id,storage_path_url=result.get("video_path"),title=result.get("title") or video_id,duration=result.get("duration"),status="ready")
     
     except Exception:
         update_video(video_id=video_id, status="failed")
@@ -72,10 +78,11 @@ def remove_video(video_id,principal):
     if video is None:
         raise not_found("Video not found")
     
-    if video["owner_id"] != principal.user_id:
-        raise bad_request("You do not have permission to delete this video")
+    if not principal.is_authenticated:
+        raise bad_request("Only authenticated users can delete videos")
         
     if video["status"] == "processing":
         raise conflict("Video is not ready to be deleted")
     
+    invalidate_retrieval_cache(video_id)
     return delete_video(video_id)
