@@ -28,12 +28,12 @@ def initialize_memory(session_id, video_id, title=None, principal=None):
     return create_chat_session(session_id, video_id, principal, title)
 
 
-def get_messages(session_id):
+def get_messages(session_id, principal=None):
 
     max_messages = config.MAX_TURNS * 2
-    summary = get_summary(session_id)
+    summary = get_summary(session_id, principal)
 
-    rows = get_recent_messages(session_id, max_messages)
+    rows = get_recent_messages(session_id, max_messages, principal)
 
     messages = [
         {"role": row["role"], "content": row["content"]}
@@ -49,8 +49,8 @@ def get_messages(session_id):
     return messages
 
 
-def get_all_messages(session_id):
-    rows = query_all_messages(session_id)
+def get_all_messages(session_id, principal=None):
+    rows = query_all_messages(session_id, principal)
 
     return [
         {
@@ -63,22 +63,22 @@ def get_all_messages(session_id):
     ]
 
 
-def add_message(session_id, role, content):
-    create_chat_message(session_id, content, role)
+def add_message(session_id, role, content, principal=None):
+    create_chat_message(session_id, content, role, principal)
 
 
-def get_summary(session_id):
-    return get_session_summary(session_id)["summary"] or ""
+def get_summary(session_id, principal=None):
+    return get_session_summary(session_id, principal)["summary"] or ""
 
 
-def set_summary(session_id, summary, summary_through_message_id):
-    update_session_summary(session_id,summary,summary_through_message_id)
+def set_summary(session_id, summary, summary_through_message_id, principal=None):
+    update_session_summary(session_id, summary, summary_through_message_id, principal)
 
 
 @traceable(name="Update Summary")
-def update_summary(session_id, messages, summary_through_message_id):
+def update_summary(session_id, messages, summary_through_message_id, principal=None):
 
-    old_summary = get_summary(session_id)
+    old_summary = get_summary(session_id, principal)
 
     chain = summarize_prompt | summarize_llm | StrOutputParser()
 
@@ -86,23 +86,23 @@ def update_summary(session_id, messages, summary_through_message_id):
 
     new_summary = chain.invoke({"summary": old_summary,"new_messages": formatted})
 
-    set_summary(session_id, new_summary, summary_through_message_id)
+    set_summary(session_id, new_summary, summary_through_message_id, principal)
 
     return new_summary
 
 
-def update_memory( session_id, query, llm_response, message_window_size=config.MAX_TURNS):
+def update_memory(session_id, query, llm_response, principal=None, message_window_size=config.MAX_TURNS):
 
-    add_message(session_id,"user",query)
+    add_message(session_id, "user", query, principal)
 
-    add_message(session_id,"assistant",llm_response.response)
+    add_message(session_id, "assistant", llm_response.response, principal)
 
-    all_messages = get_all_messages(session_id)
+    all_messages = get_all_messages(session_id, principal)
 
     max_messages = message_window_size * 2
 
     if len(all_messages) > max_messages:
-        summary_state = get_session_summary(session_id)
+        summary_state = get_session_summary(session_id, principal)
         marker = summary_state["summary_through_message_id"]
         old_messages = [
             row for row in all_messages[:-max_messages]
@@ -117,9 +117,10 @@ def update_memory( session_id, query, llm_response, message_window_size=config.M
                     for row in old_messages
                 ],
                 old_messages[-1]["id"],
+                principal,
             )
 
 
-def clear_memory(session_id):
+def clear_memory(session_id, principal=None):
 
-    clear_session_memory(session_id)
+    clear_session_memory(session_id, principal)

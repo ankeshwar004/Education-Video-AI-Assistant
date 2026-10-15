@@ -49,7 +49,7 @@ def list_session_messages(session_id, principal):
     session = get_chat_session(session_id, principal)
     if session is None:
         raise not_found("Session not found")
-    return get_all_messages(session_id)
+    return get_all_messages(session_id, principal)
  
  
 def reset_session(session_id, principal):
@@ -57,7 +57,7 @@ def reset_session(session_id, principal):
     session = get_chat_session(session_id, principal)
     if session is None:
         raise not_found("Session not found")
-    clear_memory(session_id)
+    clear_memory(session_id, principal)
     return get_chat_session(session_id, principal)
  
  

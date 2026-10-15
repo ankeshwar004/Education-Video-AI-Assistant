@@ -1,7 +1,21 @@
 from database.connection import pool
+from database.queries.chat_session_query import owner_filter
 
 
-def create_chat_message(session_id: str, content: str, role: str):
+def create_chat_message(session_id: str, content: str, role: str, principal=None):
+
+    if principal is not None:
+        owner_clause, owner_params = owner_filter(principal)
+        # Verify ownership before inserting
+        verify_query = f"""
+            SELECT session_id FROM chat_sessions
+            WHERE session_id = %s AND {owner_clause};
+        """
+        with pool.connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(verify_query, (session_id, *owner_params))
+                if cur.fetchone() is None:
+                    raise PermissionError("Session does not belong to this user")
 
     create_message_query = """
         INSERT INTO chat_messages (

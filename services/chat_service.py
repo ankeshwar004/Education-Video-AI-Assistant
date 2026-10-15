@@ -30,6 +30,6 @@ def ask_question(question, video_id, session_id, principal):
 
     initialize_memory(session_id, video_id, principal=principal)
 
-    response = lcel_chat(question,retrieval_components,session_id)
+    response = lcel_chat(question,retrieval_components,session_id,principal)
 
     return response
