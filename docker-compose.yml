@@ -1,0 +1,69 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: education-video-ai-assistant:local
+    ports:
+      - "${API_PORT:-8000}:8000"
+    environment:
+      GEMINI_API_KEY: ${GEMINI_API_KEY:-}
+      GROQ_API_KEY: ${GROQ_API_KEY:-}
+      OPENROUTER_API_KEY: ${OPENROUTER_API_KEY:-}
+      NARAROUTER_API_KEY: ${NARAROUTER_API_KEY:-}
+      NARAROUTER_BASE_URL: ${NARAROUTER_BASE_URL:-}
+      LANGSMITH_API_KEY: ${LANGSMITH_API_KEY:-}
+      LANGSMITH_TRACING: ${LANGSMITH_TRACING:-false}
+      LANGSMITH_PROJECT: ${LANGSMITH_PROJECT:-RAG_VideoAssistant}
+      JWT_SECRET_KEY: ${JWT_SECRET_KEY:-change-me-in-development}
+      JWT_EXPIRE_MINUTES: ${JWT_EXPIRE_MINUTES:-60}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:3000}
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      DB_HOST: postgres
+      DB_PORT: 5432
+      DB_NAME: ${POSTGRES_DB:-video_assistant}
+      DB_USER: ${POSTGRES_USER:-video_assistant}
+      DB_PASSWORD: ${POSTGRES_PASSWORD:-video_assistant}
+      DEVICE: cpu
+    volumes:
+      - video_data:/app/data
+      - app_logs:/app/outputs/logs
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-video_assistant}
+      POSTGRES_USER: ${POSTGRES_USER:-video_assistant}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-video_assistant}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+volumes:
+  video_data:
+  app_logs:
+  postgres_data:
+  redis_data:

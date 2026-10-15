@@ -33,7 +33,7 @@ LOG_FILE=LOG_DIR/"app.log"
 YOUTUBE_URL="YOUTUBE_URL"
 
 
-DEVICE="cuda"
+DEVICE=os.getenv("DEVICE", "cpu")
 WHISPER_MODEL="base"
 AUDIO_CHUNK_MINUTES=10
 
@@ -80,13 +80,16 @@ LANGSMITH_ENDPOINT=os.getenv("LANGSMITH_ENDPOINT", "https://apac.api.smith.langc
 LANGSMITH_PROJECT=os.getenv("LANGSMITH_PROJECT", "RAG_VideoAssistant")
 LANGSMITH_API_KEY=os.getenv("LANGSMITH_API_KEY")
 
-OPENAI_API_KEY=os.getenv("NARAROUTER_API_KEY")
-OPENAI_BASE_URL=os.getenv("NARAROUTER_BASE_URL")
+OPENAI_API_KEY=os.getenv("NANAROUTER_API_KEY", os.getenv("NARAROUTER_API_KEY"))
+OPENAI_BASE_URL=os.getenv("NANAROUTER_BASE_URL", os.getenv("NARAROUTER_BASE_URL"))
 
 
 # VIDEO_ID="VIDEO_ID FOR EVALUATION"
-VIDEO_ID="First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry"
-VIDEO_PATH= "PATH TO VIDEO FILE FOR CHAT"
+VIDEO_ID=os.getenv(
+    "VIDEO_ID",
+    "First_Law_of_Thermodynamics__Basic_Introduction_-_Internal_Energy__Heat_and_Work_-_Chemistry",
+)
+VIDEO_PATH=os.getenv("VIDEO_PATH", "PATH TO VIDEO FILE FOR CHAT")
 
 
 VISION_DECISION_CACHE_TTL=60

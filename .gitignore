@@ -20,6 +20,7 @@ ENV/
 # Environment and secrets
 .env
 .env.*
+!.env.example
 *.key
 
 # Generated data and media
@@ -50,3 +51,6 @@ imp_point/
 notebooks/
 
 cookies.txt
+
+ui/
+.archify/
