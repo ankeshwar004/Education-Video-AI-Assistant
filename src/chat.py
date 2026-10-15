@@ -62,9 +62,9 @@ def main_llm_response(messages,video_id):
 #Option 1
 
 @traceable(name="Python chat pipeline")
-def chat(query,retrieval,session_id):
+def chat(query,retrieval,session_id,principal=None):
  
-  chat_messages=get_messages(session_id)
+  chat_messages=get_messages(session_id, principal)
   
   if chat_messages:
     contextualize_chain=contextualize_qa_prompt|main_llm|StrOutputParser()
@@ -80,6 +80,16 @@ def chat(query,retrieval,session_id):
   docs=docs_retriever(standalone_ques,retrieval['ensemble_retriever'])
 
   docs=rerank(standalone_ques,docs,retrieval['reranker'],k=config.CHAT_RERANK_K)
+
+  if not docs:
+    empty_response = Answer(
+        response="I couldn't find any relevant information for your question in this video.",
+        timestamps=[],
+        source="general_knowledge",
+        key_takeway=["No relevant content found."],
+    )
+    update_memory(session_id, standalone_ques, empty_response, principal)
+    return empty_response
 
   text_context=build_text_context(docs)
 
@@ -111,16 +121,16 @@ def chat(query,retrieval,session_id):
   
   llm_response=main_llm_response(messages,video_id)
   
-  update_memory(session_id,standalone_ques,llm_response)
+  update_memory(session_id,standalone_ques,llm_response, principal)
 
   return llm_response
 
 
 #Option 2
 
-def lcel_chat(query,retrieval,session_id):
+def lcel_chat(query,retrieval,session_id,principal=None):
 
-    chat_messages=get_messages(session_id)
+    chat_messages=get_messages(session_id, principal)
     
     contextualize_chain=contextualize_qa_prompt|main_llm|StrOutputParser()
     standalone_query=RunnableBranch(
@@ -156,7 +166,7 @@ def lcel_chat(query,retrieval,session_id):
     ).with_config({"run_name":"Build Text Context"})
 
     frame_retrival = RunnablePassthrough.assign(
-            frame=RunnableLambda(
+            frames=RunnableLambda(
                 lambda x: frame_retriever(
                     x["query"],
                     x["chunk_ids"],
@@ -204,12 +214,40 @@ def lcel_chat(query,retrieval,session_id):
         response=RunnableLambda(lambda x: main_llm_response(x["messages"],x["docs"][0].metadata["video_id"]))
         ).with_config({"run_name":"LLM Result"})
 
+    # Guard: return a controlled response when retrieval yields no documents
+    def _check_empty_docs(x):
+        if not x.get("docs"):
+            return {
+                **x,
+                "_empty_docs": True,
+                "response": Answer(
+                    response="I couldn't find any relevant information for your question in this video.",
+                    timestamps=[],
+                    source="general_knowledge",
+                    key_takeway=["No relevant content found."],
+                ),
+            }
+        return {**x, "_empty_docs": False}
 
-    chat_pipeline=(standalone_query|retrieval_pipeline|text_context_builder|
-    vision_pipeline|prompt_builder|message_builder|llm_result).with_config({"run_name":"Chat Pipeline"})
+    empty_docs_guard = RunnableLambda(_check_empty_docs).with_config({"run_name": "Empty Docs Guard"})
+
+    full_pipeline = (
+        text_context_builder
+        | vision_pipeline
+        | prompt_builder
+        | message_builder
+        | llm_result
+    )
+
+    guarded_pipeline = RunnableBranch(
+        (lambda x: x.get("_empty_docs"), RunnablePassthrough()),
+        full_pipeline,
+    ).with_config({"run_name": "Guarded Pipeline"})
+
+    chat_pipeline=(standalone_query|retrieval_pipeline|empty_docs_guard|guarded_pipeline).with_config({"run_name":"Chat Pipeline"})
 
     result=chat_pipeline.invoke({"query":query})
     response=result["response"]
-    update_memory(session_id,result["query"],response) 
+    update_memory(session_id,result["query"],response, principal) 
 
     return response
